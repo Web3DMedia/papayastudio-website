@@ -1,10 +1,23 @@
 module.exports = {
   mode: "jit",
-  content: ["./components/**/*.js", "./pages/**/*.js"],
+  content: [
+    "./public/**/*.html",
+    "./components/**/*.{js,jsx,ts,tsx,vue}",
+    "./pages/**/*.{js,jsx,ts,tsx,vue}",
+  ],
   theme: {
+    fontFamily: {
+      heading: ["Casper", "ui-sans-serif", "sans-serif"],
+      body: ["Casper", "sans-serif"],
+    },
     extend: {
+      screens:{
+        '3xl':'1950px',
+        '4xl':'2400px',
+      },
       colors: {
-        primary: "#00A75D",
+        primary: "#FCD1CA",
+        navbarBg:"rgba(255, 255, 255, 0.04);",
         accent: "",
         _1: "#1D293F",
         _2: "#20E9BC",

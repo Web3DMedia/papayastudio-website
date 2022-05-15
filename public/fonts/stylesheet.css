@@ -1,0 +1,24 @@
+@font-face {
+    font-family: 'Casper Outline';
+    src: url('Casper-Outline.eot');
+    src: local('Casper Outline'), local('Casper-Outline'),
+        url('Casper-Outline.eot?#iefix') format('embedded-opentype'),
+        url('Casper-Outline.woff2') format('woff2'),
+        url('Casper-Outline.woff') format('woff'),
+        url('Casper-Outline.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Casper';
+    src: url('Casper-Regular.eot');
+    src: local('Casper Regular'), local('Casper-Regular'),
+        url('Casper-Regular.eot?#iefix') format('embedded-opentype'),
+        url('Casper-Regular.woff2') format('woff2'),
+        url('Casper-Regular.woff') format('woff'),
+        url('Casper-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
