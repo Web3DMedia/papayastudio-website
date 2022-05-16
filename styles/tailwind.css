@@ -4,6 +4,19 @@
 
 @tailwind utilities;
 
+:root {
+   --Main: #FF6EFF;
+   --Secondary: #0AB7F6;
+   --GradientOne: linear-gradient(98.41deg, #23262E 0%, #FF706B 100%);
+   --GradientTwo: linear-gradient(98.41deg, #FF6661 0%, #FCD1CA 100%);
+   --PrimaryOne: #FF6661;
+   --PrimaryTwo: #FF9D8D;
+   --PrimaryThree: #FCD1CA;
+   --FooterBg: #131313;
+   --FooterText: #9CA3AF;
+   --FooterText2: #C4C4C4;
+   --FooterText3: #FFFFFF;
+}
 
 @keyframes interChangeOne {
    0%{
