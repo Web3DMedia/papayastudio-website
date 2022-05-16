@@ -3,6 +3,7 @@ import Head from "next/head";
 import Navbar from "../components/molecules/Navbar";
 import HeroSection from "../components/organisms/HeroSection";
 import Menubar from "../components/molecules/Menubar";
+import Footer from "../components/organisms/Footer";
 
 /** eslint-ignore react/react-in-jsx-scope */
 const Home = () => {
@@ -19,6 +20,8 @@ const Home = () => {
         <Menubar isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen}/>
         <HeroSection/>
       </main> 
+
+        <Footer></Footer>
     </div>
   );
 }
