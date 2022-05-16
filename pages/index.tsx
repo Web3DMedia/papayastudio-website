@@ -5,7 +5,7 @@ import HeroSection from "../components/organisms/HeroSection";
 import Menubar from "../components/molecules/Menubar";
 
 /** eslint-ignore react/react-in-jsx-scope */
-export default function Home() {
+const Home = () => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false)
   return (
     <div className="font-body">
@@ -22,3 +22,5 @@ export default function Home() {
     </div>
   );
 }
+
+export default Home
