@@ -17,7 +17,6 @@
    --FooterText2: #C4C4C4;
    --FooterText3: #FFFFFF;
 }
-
 @keyframes interChangeOne {
    0%{
       transform: translateX(50%);
