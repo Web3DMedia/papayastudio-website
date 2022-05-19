@@ -5,6 +5,7 @@ import HeroSection from "../components/organisms/HeroSection";
 import Menubar from "../components/molecules/Menubar";
 import Footer from "../components/organisms/Footer";
 import BackBoneSection from "../components/organisms/BackBoneSection";
+import LearnWithPapayaSection from "../components/organisms/LearnWithPapayaSection";
 
 /** eslint-ignore react/react-in-jsx-scope */
 const Home = () => {
@@ -22,6 +23,8 @@ const Home = () => {
         <HeroSection/>
       </main> 
 
+
+      <LearnWithPapayaSection></LearnWithPapayaSection>
 
       <BackBoneSection></BackBoneSection>
 

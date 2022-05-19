@@ -12,7 +12,7 @@ font-size: 12px;
 line-height: 130%;
 `
 const SecondText = styled.h2`
-font-weight: 600;
+font-weight: 500;
 font-size: 48px;
 line-height: 111%;
 letter-spacing: -0.03em;
@@ -60,7 +60,8 @@ padding: 10px;
 }
 `
 const PartnerContainer = styled.div`
-
+::-webkit-scrollbar {
+  width: 0;
 `
 const Img = styled.img`
 width:110px;
