@@ -4,6 +4,7 @@ import Navbar from "../components/molecules/Navbar";
 import HeroSection from "../components/organisms/HeroSection";
 import Menubar from "../components/molecules/Menubar";
 import Footer from "../components/organisms/Footer";
+import BackBoneSection from "../components/organisms/BackBoneSection";
 
 /** eslint-ignore react/react-in-jsx-scope */
 const Home = () => {
@@ -21,7 +22,10 @@ const Home = () => {
         <HeroSection/>
       </main> 
 
-        <Footer></Footer>
+
+      <BackBoneSection></BackBoneSection>
+
+      <Footer></Footer>
     </div>
   );
 }

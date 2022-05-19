@@ -27,6 +27,8 @@ module.exports = {
         primary2: "#FF9D8D",
         primary3: "#FCD1CA",
         footerBg: '#131313',
+        backboneText: '#23262E',
+        backboneText1: '#555555',
         footerText: '#9CA3AF',
         footerText2: '#C4C4C4',
         footerText3: '#FFFFFF',
