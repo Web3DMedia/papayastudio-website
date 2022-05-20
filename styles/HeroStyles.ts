@@ -19,6 +19,10 @@ export const TextDiv = styled.div`
       @media screen and (max-width:768px){
          font-size: 45px;
       }
+
+      @media screen and (max-width:640px){
+         font-size: 40px;
+      }
    }
 `
 
@@ -41,7 +45,7 @@ export const TextSpan = styled.span<{width:string}>`
       content: "";
       position: absolute;
       width: ${(props) => props.width};
-      height: 3px;
+      height: 2px;
       background: #FF6661;
       bottom: 5px;
       left: 0;

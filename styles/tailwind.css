@@ -4,6 +4,7 @@
 
 @tailwind utilities;
 
+<<<<<<< HEAD
 :root {
    --Main: #FF6EFF;
    --Secondary: #0AB7F6;
@@ -21,6 +22,13 @@
    --FooterText2: #C4C4C4;
    --FooterText3: #FFFFFF;
 }
+=======
+*::-webkit-scrollbar {
+   display: none;
+}
+
+
+>>>>>>> c6bde431a6184af803c7a5f7a397a9968ff2d54c
 @keyframes interChangeOne {
    0%{
       transform: translateX(50%);
@@ -73,7 +81,7 @@
    background: linear-gradient(129.47deg, #F6D242 -4.57%, #FF52E5 102.29%);
    opacity: 0.1;
    filter: blur(172px);
-   /* transform: matrix(-1, 0, 0, 1, 0, 0); */
+   transform: matrix(-1, 0, 0, 1, 0, 0);
    animation: interChangeOne 4s ease-in-out infinite;
 
 }
