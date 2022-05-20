@@ -4,7 +4,6 @@
 
 @tailwind utilities;
 
-<<<<<<< HEAD
 :root {
    --Main: #FF6EFF;
    --Secondary: #0AB7F6;
@@ -22,13 +21,11 @@
    --FooterText2: #C4C4C4;
    --FooterText3: #FFFFFF;
 }
-=======
 *::-webkit-scrollbar {
    display: none;
 }
 
 
->>>>>>> c6bde431a6184af803c7a5f7a397a9968ff2d54c
 @keyframes interChangeOne {
    0%{
       transform: translateX(50%);
