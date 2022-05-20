@@ -4,11 +4,31 @@
 
 @tailwind utilities;
 
+<<<<<<< HEAD
+:root {
+   --Main: #FF6EFF;
+   --Secondary: #0AB7F6;
+   --GradientOne: linear-gradient(98.41deg, #23262E 0%, #FF706B 100%);
+   --GradientTwo: linear-gradient(98.41deg, #FF6661 0%, #FCD1CA 100%);
+   --PrimaryOne: #FF6661;
+   --PrimaryTwo: #FF9D8D;
+   --PrimaryThree: #FCD1CA;
+   --LearnPapayaText: #F9FAFB;
+   --LearnPapayaText2:#9CA3AF;
+   --BackboneText:#23262E;
+   --BackboneText1:#555555;
+   --FooterBg: #131313;
+   --FooterText: #9CA3AF;
+   --FooterText2: #C4C4C4;
+   --FooterText3: #FFFFFF;
+}
+=======
 *::-webkit-scrollbar {
    display: none;
 }
 
 
+>>>>>>> c6bde431a6184af803c7a5f7a397a9968ff2d54c
 @keyframes interChangeOne {
    0%{
       transform: translateX(50%);

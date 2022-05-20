@@ -3,6 +3,9 @@ import Head from "next/head";
 import Navbar from "../components/molecules/Navbar";
 import HeroSection from "../components/organisms/HeroSection";
 import Menubar from "../components/molecules/Menubar";
+import Footer from "../components/organisms/Footer";
+import BackBoneSection from "../components/organisms/BackBoneSection";
+import LearnWithPapayaSection from "../components/organisms/LearnWithPapayaSection";
 import CreateSection from "../components/organisms/CreateSection";
 import ProductsSection from "../components/organisms/ProductsSection";
 import SectionSeperator from "../components/molecules/SectionSeperator";
@@ -28,6 +31,13 @@ const Home = () => {
           <ProductsSection/>
         </div>
       </main> 
+
+
+      <LearnWithPapayaSection></LearnWithPapayaSection>
+
+      <BackBoneSection></BackBoneSection>
+
+      <Footer></Footer>
     </div>
   );
 }
