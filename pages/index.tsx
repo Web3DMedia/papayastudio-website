@@ -18,7 +18,7 @@ const Home = () => {
       </Head>
 
       <main className="w-full relative h-full overflow-hidden">
-        <Navbar isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen}/>
+        <Navbar setIsMenuOpen={setIsMenuOpen}/>
         <Menubar isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen}/>
         <div>
           <HeroSection/>
