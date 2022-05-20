@@ -5,7 +5,7 @@ const FooterContainer = styled.div`
 overflow: hidden;
 width:100%;
 background: var(--FooterBg) url(/assets/footer-bg.jpeg);
- background-blend-mode: screen;
+background-blend-mode: screen;
 `
 const FirstText = styled.h1`
 font-style: normal;
