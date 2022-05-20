@@ -1,20 +1,19 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import {FiMenu} from "react-icons/fi"
-import { TrackerInner, TrackerOutter } from '../../styles/NavbarStyles'
+import { TrackerInner, TrackerOutter, HeaderBar } from '../../styles/NavbarStyles'
 import {Dispatch,SetStateAction} from 'react'
 
 interface IProps {
-   isMenuOpen: boolean
    setIsMenuOpen: Dispatch<SetStateAction<boolean>>
 }
 
-const Navbar = ({isMenuOpen, setIsMenuOpen}: IProps) => {
+const Navbar = ({ setIsMenuOpen }: IProps) => {
    const openMenuBar = () => {
       setIsMenuOpen(true)
    }
    return (
-      <div className="fixed top-0 left-0 w-full bg-navbarBg h-20 flex items-center justify-between px-[10px] sm:px-[50px] lg:px-[100px] xl:px-[150px] 3xl:px-[200px] 4xl:px-[250px] z-40 font-body">
+      <HeaderBar className="fixed top-0 left-0 w-full h-[80px] flex items-center justify-between px-[10px] sm:px-[50px] lg:px-[100px] xl:px-[150px] 3xl:px-[200px] 4xl:px-[250px] z-40 font-body">
          <Link href="/">
             <a className="flex items-center">
                <span className="relative w-[30px] h-[30px] md:w-[40px] md:h-[40px] xl:w-[50px] xl:h-[50px]">
@@ -66,7 +65,7 @@ const Navbar = ({isMenuOpen, setIsMenuOpen}: IProps) => {
             className="text-white bg-[#FF6661] p-2 rounded-full cursor-pointer flex items-center justify-center lg:hidden outline-none">
             <FiMenu fontSize={20}/>
          </button>
-      </div>
+      </HeaderBar>
    )
 }
 

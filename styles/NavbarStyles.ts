@@ -1,5 +1,12 @@
 import styled from 'styled-components'
 
+
+export const HeaderBar = styled.div`
+   -webkit-backdrop-filter: grayscale() blur(10px); /* Safari 9+ */
+    backdrop-filter: grayscale() blur(10px); /* Chrome and Opera */
+   background-color: rgba(255, 255, 255, 0.3);
+`
+
 export const TrackerOutter = styled.div`
    width: 30px;
    height: 5px;

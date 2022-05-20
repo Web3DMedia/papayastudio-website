@@ -4,6 +4,10 @@
 
 @tailwind utilities;
 
+*::-webkit-scrollbar {
+   display: none;
+}
+
 
 @keyframes interChangeOne {
    0%{
@@ -57,7 +61,7 @@
    background: linear-gradient(129.47deg, #F6D242 -4.57%, #FF52E5 102.29%);
    opacity: 0.1;
    filter: blur(172px);
-   /* transform: matrix(-1, 0, 0, 1, 0, 0); */
+   transform: matrix(-1, 0, 0, 1, 0, 0);
    animation: interChangeOne 4s ease-in-out infinite;
 
 }

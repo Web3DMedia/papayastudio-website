@@ -3,6 +3,9 @@ import Head from "next/head";
 import Navbar from "../components/molecules/Navbar";
 import HeroSection from "../components/organisms/HeroSection";
 import Menubar from "../components/molecules/Menubar";
+import CreateSection from "../components/organisms/CreateSection";
+import ProductsSection from "../components/organisms/ProductsSection";
+import SectionSeperator from "../components/molecules/SectionSeperator";
 
 /** eslint-ignore react/react-in-jsx-scope */
 const Home = () => {
@@ -17,7 +20,13 @@ const Home = () => {
       <main className="w-full relative h-full overflow-hidden">
         <Navbar isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen}/>
         <Menubar isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen}/>
-        <HeroSection/>
+        <div>
+          <HeroSection/>
+          <SectionSeperator/>
+          <CreateSection/>
+          <SectionSeperator/>
+          <ProductsSection/>
+        </div>
       </main> 
     </div>
   );
