@@ -84,7 +84,7 @@ const BackBoneSection = () => {
 
         <SecondText className='pl-6 md:pl-20 xl:pl-40 text-backboneText'>Meet The Super Heroes Shaping The Web3 & Blockchain Industry</SecondText>
 
-        <Person className='flex pt-12 xl:pt-20 pl-6 md:pl-20 xl:pl-40 overflow-x-scroll'>
+        <Person className='flex pt-12 xl:pt-20 pl-6 md:pl-20 xl:pl-40 overflow-x-scroll pb-12'>
           {data.map(person => {
             return (
               <div key={person.id} className='mr-6'>
@@ -101,6 +101,7 @@ const BackBoneSection = () => {
             )
           })}
         </Person>
+        
 
         <div className='text-center pt-9 pb-32 text-backboneText'>
           <h1 className='pb-9'>OUR PARTNERS</h1>
