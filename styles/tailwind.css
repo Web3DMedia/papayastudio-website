@@ -23,6 +23,8 @@
 }
 *::-webkit-scrollbar {
    display: none;
+   list-style: circle;
+   list-style-image: var(--PrimaryOne);
 }
 
 
