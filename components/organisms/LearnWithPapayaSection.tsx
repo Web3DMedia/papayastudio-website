@@ -95,10 +95,11 @@ const Im = styled.div`
 margin-left:360px;
 `
 const Span = styled.div<Props>`
- background: url(${({imgs}) => imgs ? `${imgs}` : ''});
- background-size: cover;
- margin-left: 34px;
- &:nth-child(1){
+background: url(${({imgs}) => imgs ? `${imgs}` : ''});
+background-size: cover;
+margin-left: 34px;
+transition: background 0.3s;
+&:nth-child(1){
 width:122px;
 height:111px;
 background-size: 1050px;
@@ -155,9 +156,10 @@ background-position-x: -150px;
 }
 `
 const SpanTwo = styled.div<Props>`
- background: url(${({imgs}) => imgs ? `${imgs}` : ''});
- background-size: cover;  
-  margin-left: 34px;
+background: url(${({imgs}) => imgs ? `${imgs}` : ''});
+background-size: cover;  
+margin-left: 34px;
+transition: background 0.3s;
 &:nth-child(1){
 margin-left: 0px;
 width:521px;
