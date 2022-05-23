@@ -1,8 +1,8 @@
 
 import React from 'react'
 import styled from 'styled-components'
-
 import data from '../molecules/BackBone'
+
 const Div = styled.div`
 
 `
@@ -46,7 +46,7 @@ font-size: 14px;
 }`
 const Person = styled.div`
 ::-webkit-scrollbar {
-  width: 0;
+  width: 0;}
 `
 const ImageContainer = styled.div`
 background: #FFF5F3;
@@ -61,7 +61,7 @@ padding: 10px;
 `
 const PartnerContainer = styled.div`
 ::-webkit-scrollbar {
-  width: 0;
+  width: 0;}
 `
 const Img = styled.img`
 width:110px;
@@ -78,7 +78,7 @@ const BackBoneSection = () => {
         <div className="bgTransformationOne">
             <div className="bgTransformationOneLeft"/>
             <div className="bgTransformationOneRight"/>
-         </div>
+        </div>
 
         <FirstText className='pt-24 pl-6 md:pl-20 pb-12 text-backboneText'>THE <br/>BACKBONE</FirstText>
 

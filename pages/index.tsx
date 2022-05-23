@@ -23,21 +23,16 @@ const Home = () => {
       <main className="w-full relative h-full overflow-hidden">
         <Navbar setIsMenuOpen={setIsMenuOpen}/>
         <Menubar isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen}/>
-        <div>
+  
           <HeroSection/>
           <SectionSeperator/>
           <CreateSection/>
           <SectionSeperator/>
           <ProductsSection/>
-        </div>
+          <LearnWithPapayaSection/>
+          <BackBoneSection/>
+          <Footer/>
       </main> 
-
-
-      <LearnWithPapayaSection></LearnWithPapayaSection>
-
-      <BackBoneSection></BackBoneSection>
-
-      <Footer></Footer>
     </div>
   );
 }

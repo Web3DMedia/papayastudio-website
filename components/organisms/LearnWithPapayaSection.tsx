@@ -141,9 +141,9 @@ const LearnWithPapayaSection = () => {
 
         <Im>
             <div className='flex items-end'>
-                <Span></Span>            
-                <Span></Span>            
-                <Span></Span>            
+                <Span></Span> 
+                <Span></Span> 
+                <Span></Span> 
             </div>
             <div className='flex pt-10'>
                 <SpanTwo></SpanTwo>            
