@@ -32,13 +32,13 @@ const CreateSection = () => {
       },
    ]
    return (
-      <div className="w-full min-h-screen py-28 md:py-32 xl:py-28 4xl:pt-36 font-body">
+      <div className="relative w-full min-h-screen py-28 md:py-32  xl:py-28 4xl:pt-36 font-body">
          <div className="bgTransformationOne">
             <div className="bgTransformationOneLeft"/>
             <div className="bgTransformationOneRight"/>
          </div>
          <div className="relative w-full h-full max-w-[1440px] 4xl:max-w-[2000px] mx-auto sm:px-20 4xl:px-10 4xl:py-20">
-            <p className="absolute left-5 -top-[50px] md:left-10 xl:left-0 md:-top-[100px] xl:-top-[100px] 4xl:-top-[50px] font-normal text-xs xl:text-base">
+            <p className="absolute left-5 -top-[50px] md:left-10 xl:left-0 md:-top-[100px] xl:-top-[100px] 4xl:-top-[50px] font-normal text-xs xl:text-base uppercase">
                What We <br/> Do
             </p>
             <div className="h-full w-full ">
