@@ -77,21 +77,24 @@
 .bgTransformationOneLeft{
    height: 100%;
    width: 100%;
-   background: linear-gradient(129.47deg, #F6D242 -4.57%, #FF52E5 102.29%);
-   opacity: 0.1;
+   background-image: url('../public/assets/orang-hero-section-min.png');
+   background-position: left center;
+   background-repeat: no-repeat;
+   background-size: cover;
    filter: blur(172px);
-   transform: matrix(-1, 0, 0, 1, 0, 0);
    animation: interChangeOne 4s ease-in-out infinite;
+   border-radius: 70% 68% 48% 48% / 28% 28% 72% 72%;
 
 }
 
 .bgTransformationOneRight{
    height: 100%;
    width: 100%;
-   background: linear-gradient(132.88deg, #ABDCFF 2.24%, #0396FF 104.79%);
-   opacity: 0.1;
+   background-image: url('../public/assets/blue-hero-section-min.png');
+   background-position: right center;
+   background-repeat: no-repeat;
+   background-size: cover;
    filter: blur(56px);
-   transform: matrix(-1, 0, 0, 1, 0, 0);
    animation: interChangeTwo 4s ease-in-out infinite;
 
 }

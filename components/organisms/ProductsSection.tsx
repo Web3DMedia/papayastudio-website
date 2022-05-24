@@ -72,7 +72,7 @@ const ProductsSection = () => {
             <Image src="/assets/products-mascot.png" layout='fill' alt="Product" />
          </div>
          <div className="relative w-full h-full max-w-[1440px] 4xl:max-w-[2000px] mx-auto sm:px-20 4xl:px-10 4xl:py-20">
-            <p className="absolute left-5 -top-[50px] md:left-10 xl:left-0 md:-top-[100px] xl:-top-[100px] 4xl:-top-[50px] font-normal text-xs xl:text-base">
+            <p className="absolute left-5 -top-[50px] md:left-10 xl:left-0 md:-top-[100px] xl:-top-[100px] 4xl:-top-[50px] font-normal text-xs xl:text-base uppercase">
                Our <br/> Products
             </p>
             <div className="w-full h-full">
