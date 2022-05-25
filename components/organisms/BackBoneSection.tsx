@@ -1,15 +1,15 @@
+/* eslint-disable @next/next/no-img-element */
 
 import React from 'react'
 import styled from 'styled-components'
+
+
+import SectionHeader from '../atoms/SectionHeader'
 import data from '../molecules/BackBone'
+import SectionSeperator from '../molecules/SectionSeperator'
 
 const Div = styled.div`
 
-`
-const FirstText = styled.h1`
-font-weight: 400;
-font-size: 12px;
-line-height: 130%;
 `
 const SecondText = styled.h2`
 font-weight: 500;
@@ -80,11 +80,11 @@ const BackBoneSection = () => {
             <div className="bgTransformationOneRight"/>
         </div>
 
-        <FirstText className='pt-24 pl-6 md:pl-20 pb-12 text-backboneText'>THE <br/>BACKBONE</FirstText>
+        <SectionHeader>THE <br/>BACKBONE</SectionHeader>
 
         <SecondText className='pl-6 md:pl-20 xl:pl-40 text-backboneText'>Meet The Super Heroes Shaping The Web3 & Blockchain Industry</SecondText>
 
-        <Person className='flex pt-12 xl:pt-20 pl-6 md:pl-20 xl:pl-40 overflow-x-scroll pb-12'>
+        <Person className='flex pt-12 xl:pt-20 pl-6 md:pl-20 xl:pl-40 overflow-x-scroll pb-24'>
           {data.map(person => {
             return (
               <div key={person.id} className='mr-6'>
@@ -103,6 +103,8 @@ const BackBoneSection = () => {
         </Person>
         
 
+        <SectionSeperator></SectionSeperator>
+        
         <div className='text-center pt-9 pb-32 text-backboneText'>
           <h1 className='pb-9'>OUR PARTNERS</h1>
             <PartnerContainer className='flex items-center md:justify-center overflow-x-scroll px-4 md:px-0'>

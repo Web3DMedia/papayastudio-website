@@ -6,6 +6,9 @@ width:110px;
 padding: 15px 10px;
 border: 1px solid var(--PrimaryTwo);
 border-radius: 50%;
+@media (max-width:800px) {
+   padding: 10px;
+}
 `
 const Line = styled.div`
 background:white;
