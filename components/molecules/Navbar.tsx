@@ -49,9 +49,11 @@ const Navbar = ({ setIsMenuOpen }: IProps) => {
                </a>
             </Link>
          </div>
-         <button className=" border border-primary hidden lg:block lg:px-[25px] lg:py-[10px] xl:px-[30px] xl:py-[15px] font-bold text-[18px] text-black rounded-xl cursor-pointer">
-            Get in touch
-         </button>
+         <Link href="/contact">
+            <a className=" border border-primary hidden lg:block lg:px-[25px] lg:py-[10px] xl:px-[30px] xl:py-[15px] font-bold text-[18px] text-black rounded-xl cursor-pointer">
+               Get in touch
+            </a>
+         </Link>
          <div className="flex w-[150px] items-center justify-center lg:hidden">
             <h4 className="text-xs">01</h4>
             <div className="relative mx-1">
