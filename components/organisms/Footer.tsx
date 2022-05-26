@@ -2,148 +2,144 @@ import styled from 'styled-components'
 import Image from "next/image";
 
 const FooterContainer = styled.div`
-overflow: hidden;
-width:100%;
-background: var(--FooterBg) url(/assets/footer-bg.jpeg);
-background-blend-mode: screen;
+    overflow: hidden;
+    width:100%;
+    background: var(--FooterBg) url(/assets/footer-bg.jpeg);
+    background-blend-mode: screen;
 `
 const FirstText = styled.h1`
-font-style: normal;
-font-weight: 700;
-font-size: 48px;
-line-height: 52px;
-padding: 43px 0 32px;
-position: relative;
-z-index:2;
-@media (max-width: 1024px) {
-font-size: 36px;
-line-height: 39px;  
-}
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 52px;
+    padding: 43px 0 32px;
+    position: relative;
+    z-index:2;
+    @media (max-width: 1024px) {
+        font-size: 36px;
+        line-height: 39px;  
+    }
 `
 const SecondText = styled.div`
-font-weight: 400;
-font-size: 18px;
-line-height: 160%;
-padding: 0 0 92px;
-position:relative;
-z-index:2;
-@media (max-width: 1024px) {
-font-size: 16px;
-}
-@media (max-width: 1024px) {
-padding: 0 0 48px;
-}
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 160%;
+    padding: 0 0 92px;
+    position:relative;
+    z-index:2;
+    @media (max-width: 1024px) {
+        font-size: 16px;
+    }
+    @media (max-width: 1024px) {
+        padding: 0 0 48px;
+    }
 `
 const ThirdText = styled.div`
-font-weight: 400;
-font-size: 18px;
-line-height: 20px;
-z-index:2;
-@media (max-width: 1024px) {
- font-size: 16px;  
-}
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 20px;
+    z-index:2;
+    @media (max-width: 1024px) {
+        font-size: 16px;  
+    }
 `
 const Aya = styled.div`
-position: absolute;
-left: 0;
-bottom: 0;
-@media (max-width: 1024px) {
-   
-}
-@media (max-width: 600px) {
-width: 209px;
-height:229px;
-}
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    @media (max-width: 600px) {
+    width: 209px;
+    height:229px;
+    }
 `
 const Pap = styled.div`
-position: absolute;
-right: 0;
-top: 123px;
-@media (max-width: 1024px) {
-   
-}
-@media (max-width: 600px) {
-width: 205px;
-height:229px;
-top: 204px;
-}
+    position: absolute;
+    right: 0;
+    top: 123px;
+
+    @media (max-width: 600px) {
+    width: 205px;
+    height:229px;
+    top: 204px;
+    }
 `
 const Vector = styled.div`
-opacity: 0.2;
-position: absolute;
-right: 0;
-top: 0px;
-@media (max-width: 1024px) {
-width: 428px;
-height:477px;
-right: 60px;
-top:-30px;
-}
-@media (max-width: 600px) {
-width: 215px;
-height:229px;
-top: 80px;
-right: 50px;
-}
+    opacity: 0.2;
+    position: absolute;
+    right: 0;
+    top: 0px;
+    @media (max-width: 1024px) {
+        width: 428px;
+        height:477px;
+        right: 60px;
+        top:-30px;
+    }
+    @media (max-width: 600px) {
+        width: 215px;
+        height:229px;
+        top: 80px;
+        right: 50px;
+    }
 `
 const Mascot = styled.div`
-position: absolute;
-top: -220px;
-width:548px;
-transform: scaleX(-1);
-right: -10px;
-@media (max-width: 1024px) {
-top: -110px;
-width:316px;
-}
-@media (max-width: 600px) {
-width:195px;
-top: 80px;
-}
+    position: absolute;
+    top: -220px;
+    width:548px;
+    transform: scaleX(-1);
+    right: -10px;
+    @media (max-width: 1024px) {
+        top: -110px;
+        width:316px;
+    }
+    @media (max-width: 600px) {
+        width:195px;
+        top: 80px;
+    }
 `
 const Circle = styled.div`
-margin: 0 18px;
-width: 5px;
-height: 5px;
-background: var(--PrimaryOne);
-border-radius: 50%;
+    margin: 0 18px;
+    width: 5px;
+    height: 5px;
+    background: var(--PrimaryOne);
+    border-radius: 50%;
 `
 const Socials = styled.div`
-font-style: normal;
-Width: 80px;
-font-weight: 500;
-font-size: 24px;
-text-align:left;
-line-height: 26px;
-color: var(--FooterText3);
-margin-left: 120px;
-z-index:2;
-&:nth-child(1) {
-    margin-left: 0px;
-}
-&:nth-child(5) {
-    margin-left: -40px;
-}
-@media (max-width: 1024px) {
-margin-left: 70px;
-font-size: 20px;
-width:40px;
-}
-@media (max-width: 800px) {
-width:40px;
-}
-@media (max-width: 600px) {
-margin-left: 0px;
-padding-bottom: 25px;
-}
+    font-style: normal;
+    width: 80px;
+    font-weight: 500;
+    font-size: 24px;
+    text-align:left;
+    line-height: 26px;
+    color: var(--FooterText3);
+    margin-left: 120px;
+    z-index:2;
+    &:nth-child(1) {
+        margin-left: 0px;
+    }
+    &:nth-child(5) {
+        margin-left: -40px;
+    }
+    @media (max-width: 1024px) {
+        margin-left: 70px;
+        font-size: 20px;
+        width:40px;
+    }
+    @media (max-width: 800px) {
+        width:40px;
+    }
+    @media (max-width: 600px) {
+        margin-left: 0px;
+        padding-bottom: 25px;
+    }
 `
 const SocialContainer = styled.div`
-display: flex;
-}
-@media (max-width: 600px) {
-flex-direction: column;
-width:130%;
-}
+    display: flex;
+
+    @media (max-width: 600px) {
+        flex-direction: column;
+        width:130%;
+    }
 `
 const Div = styled.div`
 
