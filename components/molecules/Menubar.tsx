@@ -27,7 +27,7 @@ const Menubar = ({isMenuOpen, setIsMenuOpen}: IProps) => {
             </div>
             <div className="relative flex flex-col items-center justify-center mt-[70px] bg-transparent z-10">
                <Link href="/">
-                  <a className="flex items-center font-bold xl:text-lg text-[#FFFFFF] mb-10">
+                  <a className="flex items-center font-bold xl:text-lg text-[#FFFFFF] mb-10" onClick={closeMenuBar}>
                      <Image 
                         src='/assets/orange-logo.svg' 
                         width={25} 
@@ -38,18 +38,20 @@ const Menubar = ({isMenuOpen, setIsMenuOpen}: IProps) => {
                   </a>
                </Link>
                <Link href="/">
-                  <a className="flex items-center mx-12 font-bold xl:text-lg text-[#FFFFFF] mb-10">
+                  <a className="flex items-center mx-12 font-bold xl:text-lg text-[#FFFFFF] mb-10" onClick={closeMenuBar}>
                      what
                   </a>
                </Link>
                <Link href="/">
-                  <a className="flex items-center font-bold xl:text-lg text-[#FFFFFF] mb-10">
+                  <a className="flex items-center font-bold xl:text-lg text-[#FFFFFF] mb-10" onClick={closeMenuBar}>
                      products
                   </a>
                </Link>
-               <button className=" border border-primary px-[20px] py-[10px] font-bold text-[18px] text-white rounded-xl cursor-pointer">
-                  Get in touch
-               </button>
+               <Link href="/contact">
+                  <a  onClick={closeMenuBar} className=" border border-primary px-[20px] py-[10px] font-bold text-[18px] text-white rounded-xl cursor-pointer">
+                     Get in touch
+                  </a>
+               </Link>
             </div>
             <div className="absolute top-80 left-3 w-[150px] h-[150px] z-0 rounded-full border border-dashed border-[#FCD1CA] opacity-30 bg-transparent">
                <div className="absolute left-[42px] top-12 w-[95px] h-[95px] z-0 rounded-full border border-dashed border-[#FCD1CA] opacity-60 bg-transparent">

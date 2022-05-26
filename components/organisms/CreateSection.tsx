@@ -37,8 +37,8 @@ const CreateSection = () => {
             <div className="bgTransformationOneLeft"/>
             <div className="bgTransformationOneRight"/>
          </div>
-         <div className="relative w-full h-full max-w-[1440px] 4xl:max-w-[2000px] mx-auto sm:px-20 4xl:px-10 4xl:py-20">
-            <p className="absolute left-5 -top-[50px] md:left-10 xl:left-0 md:-top-[100px] xl:-top-[100px] 4xl:-top-[50px] font-normal text-xs xl:text-base uppercase">
+         <div className="relative w-full h-full mx-auto md:px-20 xl:px-40 4xl:py-20">
+            <p className="absolute left-5 -top-[60px] md:left-20 xl:left-[80px] md:-top-[70px] xl:-top-[100px] 4xl:-top-[50px] 4xl:left-20 font-normal text-xs uppercase">
                What We <br/> Do
             </p>
             <div className="h-full w-full ">
