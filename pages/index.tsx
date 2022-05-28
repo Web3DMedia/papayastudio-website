@@ -9,6 +9,7 @@ import LearnWithPapayaSection from "../components/organisms/LearnWithPapayaSecti
 import CreateSection from "../components/organisms/CreateSection";
 import ProductsSection from "../components/organisms/ProductsSection";
 import SectionSeperator from "../components/molecules/SectionSeperator";
+import PageIndicator from "../components/molecules/PageIndicator";
 
 /** eslint-ignore react/react-in-jsx-scope */
 const Home = () => {
@@ -23,15 +24,16 @@ const Home = () => {
       <main className="w-full relative h-full overflow-hidden">
         <Navbar setIsMenuOpen={setIsMenuOpen}/>
         <Menubar isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen}/>
-  
-          <HeroSection/>
-          <SectionSeperator/>
-          <CreateSection/>
-          <SectionSeperator/>
-          <ProductsSection/>
-          <LearnWithPapayaSection/>
-          <BackBoneSection/>
-          <Footer/>
+        
+        <HeroSection/>
+        <SectionSeperator/>
+        <PageIndicator/>
+        <CreateSection/>
+        <SectionSeperator/>
+        <ProductsSection/>
+        <LearnWithPapayaSection/>
+        <BackBoneSection/>
+        <Footer/>
       </main> 
     </div>
   );

@@ -11,8 +11,7 @@ const HeroSection = () => {
          </div>
          <div className="relative w-full h-full max-w-[1440px] 4xl:max-w-[2000px] mx-auto sm:px-20 4xl:px-10 4xl:py-20 flex flex-col-reverse md:flex-row">
             <div className="relative z-10 w-full sm:pt-6 md:pt-24 lg:pt-28 4xl:pt-36 4xl:pl-24">
-
-               <p className="absolute -top-20 left-4 sm:-top-14 sm:-left-16 md:-left-10 md:top-4 lg:-left-10 xl:-left-[70px] lg:top-[20px] xl:top-[10px] 4xl:-top-[50px] font-normal text-xs xl:text-base uppercase">
+               <p className="absolute -top-20 left-4 sm:-top-14 sm:-left-16 md:left-0 md:top-4 lg:-left-0 xl:-left-[80px] lg:top-[20px] xl:top-[30px]  3xl:left-0 4xl:-left-[150px] 4xl:top-14 font-normal text-xs uppercase">
                   Who We <br/> Are
                </p>
                <span className='flex items-center'>
