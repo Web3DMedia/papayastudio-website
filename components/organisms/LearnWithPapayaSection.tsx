@@ -27,6 +27,11 @@ width:40%;
 font-size: 36px;
 line-height: 111%;
 }
+@media (max-width: 850px) {
+font-size: 36px;
+line-height: 111%;
+width:60%;
+}
 @media (max-width: 600px) {
 font-size: 24px;
 width:80%;
@@ -105,8 +110,8 @@ z-index:2;
 @media (max-width: 1024px) {
 margin-left:145px;
 }
-@media (max-width: 800px) {
-margin-left:20px;
+@media (max-width: 850px) {
+margin-left:30px;
 }
 `
 const Span = styled.div<Props>`
@@ -162,6 +167,28 @@ height: 192px;
 background-size: 900px;
 background-position-x: 270px;
 background-position-y: -85px;
+}
+
+@media (max-width: 850px) {
+&:nth-child(1){
+width:88px;
+height:96px;
+background-size: 700px;
+background-position-x: 0;
+}
+&:nth-child(2){
+width:421px;
+height: 231px;
+background-size: 750px;
+background-position-x: -100px;
+background-position-y: -15px;
+}
+&:nth-child(3){
+width:167px;
+height: 192px;
+background-size: 750px;
+background-position-x: 225px;
+background-position-y: -55px;
 }
 
 @media (max-width: 600px) {
@@ -231,16 +258,32 @@ background-position-x: -540px;
 background-position-y: -320px;
 }
 
+@media (max-width: 850px) {
+&:nth-child(1){
+width:521px;
+height: 237px;
+background-size: 750px;
+background-position-x: 15px;
+background-position-y: -265px;
+}
+&:nth-child(2){
+width:517px;
+height: 285px;
+background-size: 750px;
+background-position-x: -365px;
+background-position-y: -265px;
+}
+
 @media (max-width: 600px) {
 &:nth-child(1){
-width:170px;
+width:175px;
 height: 80px;
 background-size: 325px;
 background-position-x: 5px;
 background-position-y: -125px;
 }
 &:nth-child(2){
-width:170px;
+width:175px;
 height: 93px;
 background-size: 325px;
 background-position-x: -175px;
@@ -250,14 +293,14 @@ background-position-y: -125px;
 const LearnWithPapayaSection = () => {
     const [bg, setBg] = useState<Number>(1)
     
-     useEffect(() => {
-         const interval = setInterval(() => {
-             setBg(bg => Number(bg) + Number(1) > 3 ? 1 : Number(bg) + Number(1))
-     }, 5000)
-     return () => {
-       clearInterval(interval)
-     }
-}, [])
+//      useEffect(() => {
+//          const interval = setInterval(() => {
+//              setBg(bg => Number(bg) + Number(1) > 3 ? 1 : Number(bg) + Number(1))
+//      }, 5000)
+//      return () => {
+//        clearInterval(interval)
+//      }
+// }, [])
   return (
     <LearnWithPapayaContainer className='font-heading relative'>
         <FirstText className='pt-24 pl-6 md:pl-20 pb-12 text-primary3'>LEARN <br/>  WITH PAPAYAS</FirstText>
