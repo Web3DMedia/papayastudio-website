@@ -1,12 +1,18 @@
 /* eslint-disable @next/next/no-img-element */
 
 import React from 'react'
-import styled from 'styled-components'
+import styled, { keyframes} from 'styled-components'
 
 
 import SectionHeader from '../atoms/SectionHeader'
 import data from '../molecules/BackBone'
 import SectionSeperator from '../molecules/SectionSeperator'
+import Slider from '../molecules/Slider'
+
+const slider = keyframes`
+  0% { left: 0%; }
+  100% { left: -100%; }
+`
 
 const Div = styled.div`
 
@@ -107,11 +113,11 @@ const BackBoneSection = () => {
         
         <div className='text-center pt-9 pb-32 text-backboneText'>
           <h1 className='pb-9'>OUR PARTNERS</h1>
-            <PartnerContainer className='flex items-center md:justify-center overflow-x-scroll px-4 md:px-0'>
+
+            <PartnerContainer className='hidden sm:flex items-center md:justify-center overflow-x-scroll px-4 md:px-0'>
                 <Img src='/assets/polygon.png' alt="polygon"  />
               
                 <Img src='/assets/polygon-studios.png' alt="polygon"  />
-
 
                 <Img src='/assets/polygon.png' alt="polygon"  />
 
@@ -126,6 +132,8 @@ const BackBoneSection = () => {
 
               
             </PartnerContainer>
+
+            <Slider></Slider>
         </div>
     </Div>
   )
