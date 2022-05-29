@@ -36,6 +36,8 @@ font-weight: 400;
 font-size: 24px;
 line-height: 30px;
 width:55%;
+z-index:1;
+position: relative;
 @media (max-width: 1024px) {
 font-size: 20px; 
 }
@@ -52,6 +54,8 @@ line-height: 30px;
 font-size: 16px;
 margin-bottom:90px;
 }`
+const Img = styled.img`
+`
 const Aya = styled.div`
 position: absolute;
 left: 0;
@@ -79,7 +83,7 @@ top: 204px;
 }
 `
 const Vector = styled.div`
-opacity: 0.5;
+opacity: 0.3;
 position: absolute;
 right: 0;
 top: -40px;
@@ -113,8 +117,8 @@ transition: background 0.2s;
 @media (max-width: 1024px) {
 margin-left:20px;
 }
-@media (max-width: 700px) {
-margin-left: 12px;
+@media (max-width: 800px) {
+margin-left: 13px;
 }
 &:nth-child(1){
 width:122px;
@@ -190,8 +194,8 @@ transition: background 0.2s;
 @media (max-width: 1024px) {
 margin-left:20px;
 }
-@media (max-width: 600px) {
-margin-left: 12px;
+@media (max-width: 800px) {
+margin-left: 13px;
 }
 &:nth-child(1){
 margin-left: 0px;
@@ -228,19 +232,19 @@ background-position-y: -320px;
 }
 
 @media (max-width: 600px) {
- &:nth-child(1){
-width:172px;
-height:18px;
-background-size: 500px;
-background-position-x: 30%;
-background-position-y: -290px;
+&:nth-child(1){
+width:170px;
+height: 80px;
+background-size: 325px;
+background-position-x: 5px;
+background-position-y: -125px;
 }
 &:nth-child(2){
 width:170px;
 height: 93px;
-background-size: 600px;
-background-position-x: -540px;
-background-position-y: -320px;
+background-size: 325px;
+background-position-x: -175px;
+background-position-y: -125px;
 }
 `
 const LearnWithPapayaSection = () => {
@@ -263,7 +267,7 @@ const LearnWithPapayaSection = () => {
         <div className='pl-6 md:pl-20 xl:pl-56 pt-11'>
             <ThirdText className=' text-learnpapayatext2'>At Papaya Studios we are one of the best in the utmost ultimate universe if we are going to the summmer intern product good best inspire gorgueous</ThirdText>
 
-            <FourthText className='flex items-center text-learnpapayatext pt-6'> Contact Us <img src='/assets/component-btn.png' alt='Linkedln' className='ml-2 w-6 h-6'/>  </FourthText>
+            <FourthText className='flex items-center text-learnpapayatext pt-6'> Contact Us <Img src='/assets/component-btn.png' alt='right arrow button' className='ml-2 w-6 h-6'/>  </FourthText>
         </div>
 
         <Im>
@@ -272,7 +276,7 @@ const LearnWithPapayaSection = () => {
                 <Span imgs={`/assets/Learn${bg}.jpeg`}></Span>            
                 <Span imgs={`/assets/Learn${bg}.jpeg`}></Span>            
             </div>
-            <div className='flex pt-3 md:pt-5 xl:pt-10'>
+            <div className='flex pt-3 md:pt-6 xl:pt-10'>
                 <SpanTwo imgs={`/assets/Learn${bg}.jpeg`}></SpanTwo>            
                 <SpanTwo imgs={`/assets/Learn${bg}.jpeg`}></SpanTwo>
             </div>            
