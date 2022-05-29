@@ -293,14 +293,14 @@ background-position-y: -125px;
 const LearnWithPapayaSection = () => {
     const [bg, setBg] = useState<Number>(1)
     
-//      useEffect(() => {
-//          const interval = setInterval(() => {
-//              setBg(bg => Number(bg) + Number(1) > 3 ? 1 : Number(bg) + Number(1))
-//      }, 5000)
-//      return () => {
-//        clearInterval(interval)
-//      }
-// }, [])
+      useEffect(() => {
+          const interval = setInterval(() => {
+              setBg(bg => Number(bg) + Number(1) > 3 ? 1 : Number(bg) + Number(1))
+      }, 5000)
+      return () => {
+        clearInterval(interval)
+      }
+}, [])
   return (
     <LearnWithPapayaContainer className='font-heading relative'>
         <FirstText className='pt-24 pl-6 md:pl-20 pb-12 text-primary3'>LEARN <br/>  WITH PAPAYAS</FirstText>
