@@ -3,7 +3,7 @@ import ContactForm from '../molecules/ContactForm'
 
 const ContactSection = () => {
    return (
-      <div className=" min-h-[60vh]   ">
+      <div className=" min-h-[60vh]  mb-5">
          <div className="bgTransformationOne">
             <div className="bgTransformationOneLeft"/>
             <div className="bgTransformationOneRight"/>

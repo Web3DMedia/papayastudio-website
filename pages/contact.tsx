@@ -6,7 +6,7 @@ import Footer from "../components/organisms/Footer";
 import SectionSeperator from "../components/molecules/SectionSeperator";
 import ContactSection from "../components/organisms/ContactSection";
 
-const ContactUs = () => {
+const Contact = () => {
     const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false)
   return (
     <div>
@@ -27,4 +27,4 @@ const ContactUs = () => {
   )
 }
 
-export default ContactUs
+export default Contact

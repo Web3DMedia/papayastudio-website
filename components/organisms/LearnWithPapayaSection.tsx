@@ -62,30 +62,25 @@ margin-bottom:90px;
 const Img = styled.img`
 `
 const Aya = styled.div`
-position: absolute;
-left: 0;
-bottom: 0;
-@media (max-width: 1024px) {
-   
-}
-@media (max-width: 600px) {
-width: 209px;
-height:229px;
-bottom:-20px;
-}
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    @media (max-width: 600px) {
+    width: 209px;
+    height:229px;
+    bottom:-20px;
+    }
 `
 const Pap = styled.div`
-position: absolute;
-right: 0;
-top: 123px;
-@media (max-width: 1024px) {
-   
-}
-@media (max-width: 600px) {
-width: 205px;
-height:229px;
-top: 204px;
-}
+    position: absolute;
+    right: 0;
+    top: 123px;
+
+    @media (max-width: 600px) {
+    width: 205px;
+    height:229px;
+    top: 204px;
+    }
 `
 const Vector = styled.div`
 opacity: 0.3;
@@ -242,21 +237,22 @@ background-position-x: -540px;
 background-position-y: -370px;
 }
 
-@media (max-width: 1024px) {
- &:nth-child(1){
-width:427px;
-height:193px;
-background-size: 900px;
-background-position-x: -30px;
-background-position-y: -320px;
-}
-&:nth-child(2){
-width:421px;
-height: 232px;
-background-size: 900px;
-background-position-x: -540px;
-background-position-y: -320px;
-}
+    @media (max-width: 1024px) {
+        &:nth-child(1){
+            width:427px;
+            height:193px;
+            background-size: 900px;
+            background-position-x: -30px;
+            background-position-y: -320px;
+        }
+        &:nth-child(2){
+            width:421px;
+            height: 232px;
+            background-size: 900px;
+            background-position-x: -540px;
+            background-position-y: -320px;
+        }
+    }
 
 @media (max-width: 850px) {
 &:nth-child(1){
