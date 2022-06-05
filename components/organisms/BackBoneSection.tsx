@@ -62,7 +62,10 @@ padding: 10px;
 `
 const PartnerContainer = styled.div`
 ::-webkit-scrollbar {
-  width: 0;}
+  width: 0;
+  display:none;}
+   -ms-overflow-style: none;
+  scrollbar-width: none;
 `
 const Img = styled.img`
 width:110px;
