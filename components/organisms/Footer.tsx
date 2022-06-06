@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import Image from "next/image";
+import Link from 'next/link';
 
 const FooterContainer = styled.div`
     overflow: hidden;
@@ -169,8 +170,16 @@ const Footer = () => {
                                 <Socials>Discord</Socials>
                             </SocialContainer>
                             <SocialContainer>
-                                <Socials>Twitter</Socials>
-                                <Socials>Instagram</Socials>
+                                <Socials>
+                                    <Link href='https://twitter.com/studiopapayas'>
+                                        <a target="_blank">Twitter</a>
+                                    </Link>
+                                </Socials>
+                                <Socials>
+                                    <Link href='https://www.instagram.com/studiopapayas/'>
+                                        <a target='_blank'>Instagram</a>
+                                    </Link>
+                                </Socials>
                                 <Socials>Linkedln</Socials>
                                 <Socials>Opensea</Socials>
                                 <Socials className='md:hidden flex items-center ml-2'> <Circle className='p-1'></Circle> Legal</Socials>

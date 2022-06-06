@@ -9,28 +9,23 @@ import data from '../molecules/BackBone'
 import SectionSeperator from '../molecules/SectionSeperator'
 import Slider from '../molecules/Slider'
 
-const slider = keyframes`
-  0% { left: 0%; }
-  100% { left: -100%; }
-`
-
 const Div = styled.div`
 
 `
 const SecondText = styled.h2`
-font-weight: 500;
+font-weight: 600;
 font-size: 48px;
 line-height: 111%;
 letter-spacing: -0.03em;
-width:60%;
+width:65%;
 @media (max-width: 1024px) {
 font-size: 36px;
 line-height: 111%;
-width:70%;
+width:80%;
 }
 @media (max-width: 600px) {
 font-size: 24px;
-width:80%;
+width:90%;
 }`
 const ThirdText = styled.h3`
 font-weight: 400;
@@ -67,7 +62,10 @@ padding: 10px;
 `
 const PartnerContainer = styled.div`
 ::-webkit-scrollbar {
-  width: 0;}
+  width: 0;
+  display:none;}
+   -ms-overflow-style: none;
+  scrollbar-width: none;
 `
 const Img = styled.img`
 width:110px;

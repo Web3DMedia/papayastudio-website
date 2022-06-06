@@ -18,7 +18,7 @@ font-size: 12px;
 line-height: 130%;
 `
 const SecondText = styled.h2`
-font-weight: 500;
+font-weight: 600;
 font-size: 48px;
 line-height: 111%;
 letter-spacing: -0.03em;
