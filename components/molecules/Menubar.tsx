@@ -3,7 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import {MenuDiv} from '../../styles/MenubarStyles'
 import {Dispatch,SetStateAction} from 'react'
-
+import {Link as ScrollLink} from 'react-scroll'
 
 interface IProps {
    isMenuOpen: boolean
@@ -27,28 +27,35 @@ const Menubar = ({isMenuOpen, setIsMenuOpen}: IProps) => {
             </div>
             <div className="relative flex flex-col items-center justify-center mt-[70px] bg-transparent z-10">
                <Link href="/">
-                  <a className="flex items-center font-bold xl:text-lg text-[#FFFFFF] mb-10" onClick={closeMenuBar}>
-                     <Image 
-                        src='/assets/orange-logo.svg' 
-                        width={25} 
-                        height={25} 
-                        alt="orange logo" 
-                     />
-                     <h2 className="ml-1">who</h2>
-                  </a>
+                     <ScrollLink to="whoSection" spy={true} smooth={true} offset={50} duration={500}  onClick={closeMenuBar}>
+                        <a className="flex items-center font-bold xl:text-lg text-[#FFFFFF] mb-10">
+                           <Image 
+                              src='/assets/orange-logo.svg' 
+                              width={25} 
+                              height={25} 
+                              alt="orange logo" 
+                           />
+                           <h2 className="ml-1">who</h2>
+                        </a>
+                     </ScrollLink>
+
                </Link>
                <Link href="/">
-                  <a className="flex items-center mx-12 font-bold xl:text-lg text-[#FFFFFF] mb-10" onClick={closeMenuBar}>
-                     what
-                  </a>
+                  <ScrollLink to="whatSection" spy={true} smooth={true} offset={50} duration={500} onClick={closeMenuBar}>
+                     <a className="flex items-center font-bold xl:text-lg text-[#FFFFFF] mb-10">
+                        what
+                     </a>
+                  </ScrollLink>
                </Link>
                <Link href="/">
-                  <a className="flex items-center font-bold xl:text-lg text-[#FFFFFF] mb-10" onClick={closeMenuBar}>
-                     products
-                  </a>
+                     <ScrollLink to="productsSection" spy={true} smooth={true} offset={50} duration={500}  onClick={closeMenuBar}>
+                        <a className="flex items-center font-bold xl:text-lg text-[#FFFFFF] mb-10">
+                           products
+                        </a>
+                     </ScrollLink>
                </Link>
                <Link href="/contact">
-                  <a  onClick={closeMenuBar} className=" border border-primary px-[20px] py-[10px] font-bold text-[18px] text-white rounded-xl cursor-pointer">
+                  <a onClick={closeMenuBar}  className="border-2 border-[#FCD1CA] px-[20px] py-[10px] font-bold text-[18px] text-white rounded-xl cursor-pointer">
                      Get in touch
                   </a>
                </Link>

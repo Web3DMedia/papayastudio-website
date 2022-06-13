@@ -60,8 +60,8 @@ padding: 10px;
 }
 `
 const PartnerContainer = styled.div`
-::-webkit-scrollbar {
-  width: 0;}
+&::-webkit-scrollbar {
+ display: none;}
 `
 const Img = styled.img`
 width:110px;
@@ -79,6 +79,7 @@ const BackBoneSection = () => {
             <div className="bgTransformationOneLeft"/>
             <div className="bgTransformationOneRight"/>
         </div>
+        <div className="absolute top-20 left-7 w-[2px] hidden lg:block h-40 bg-[#FCD1CA]"/>
 
         <SectionHeader>THE <br/>BACKBONE</SectionHeader>
 

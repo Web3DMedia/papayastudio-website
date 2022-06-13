@@ -7,13 +7,14 @@ module.exports = {
   ],
   theme: {
     fontFamily: {
-      body: ["Casper", "sans-serif"],
+      body: ["casper", "sans-serif"],
     },
     extend: {
       screens: {
         '2xl':'1420px',
-        '3xl': '1950px',
-        '4xl': '2400px',
+        '3xl':'1680px',
+        '4xl': '1900px',
+        '5xl': '2400px',
       },
       colors: {
         primary: "#FCD1CA",
