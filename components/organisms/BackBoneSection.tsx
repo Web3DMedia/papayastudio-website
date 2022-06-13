@@ -1,30 +1,31 @@
 /* eslint-disable @next/next/no-img-element */
 
 import React from 'react'
-import styled from 'styled-components'
+import styled, { keyframes} from 'styled-components'
 
 
 import SectionHeader from '../atoms/SectionHeader'
 import data from '../molecules/BackBone'
 import SectionSeperator from '../molecules/SectionSeperator'
+import Slider from '../molecules/Slider'
 
 const Div = styled.div`
 
 `
 const SecondText = styled.h2`
-font-weight: 500;
+font-weight: 600;
 font-size: 48px;
 line-height: 111%;
 letter-spacing: -0.03em;
-width:60%;
+width:65%;
 @media (max-width: 1024px) {
 font-size: 36px;
 line-height: 111%;
-width:70%;
+width:80%;
 }
 @media (max-width: 600px) {
 font-size: 24px;
-width:80%;
+width:90%;
 }`
 const ThirdText = styled.h3`
 font-weight: 400;
@@ -60,8 +61,16 @@ padding: 10px;
 }
 `
 const PartnerContainer = styled.div`
+<<<<<<< HEAD
 &::-webkit-scrollbar {
  display: none;}
+=======
+::-webkit-scrollbar {
+  width: 0;
+  display:none;}
+   -ms-overflow-style: none;
+  scrollbar-width: none;
+>>>>>>> 77188e9b50f0bd030aa3a65c64aa2e36232d6950
 `
 const Img = styled.img`
 width:110px;
@@ -108,11 +117,11 @@ const BackBoneSection = () => {
         
         <div className='text-center pt-9 pb-32 text-backboneText'>
           <h1 className='pb-9'>OUR PARTNERS</h1>
-            <PartnerContainer className='flex items-center md:justify-center overflow-x-scroll px-4 md:px-0'>
+
+            <PartnerContainer className='hidden sm:flex items-center md:justify-center overflow-x-scroll px-4 md:px-0'>
                 <Img src='/assets/polygon.png' alt="polygon"  />
               
                 <Img src='/assets/polygon-studios.png' alt="polygon"  />
-
 
                 <Img src='/assets/polygon.png' alt="polygon"  />
 
@@ -127,6 +136,8 @@ const BackBoneSection = () => {
 
               
             </PartnerContainer>
+
+            <Slider></Slider>
         </div>
     </Div>
   )
