@@ -1,3 +1,4 @@
+@import '/public/fonts/stylesheet.css';
 @tailwind base;
 
 @tailwind components;
@@ -21,10 +22,9 @@
    --FooterText2: #C4C4C4;
    --FooterText3: #FFFFFF;
 }
-*::-webkit-scrollbar {
-   display: none;
-   list-style: circle;
-   list-style-image: var(--PrimaryOne);
+
+body {
+   font-family: "Casper", sans-serif;
 }
 
 
@@ -98,3 +98,32 @@
    animation: interChangeTwo 4s ease-in-out infinite;
 
 }
+
+.cardsContainer::-webkit-scrollbar, .productCards::-webkit-scrollbar{
+   display: none;
+}
+
+
+.customInfoWrapper::-webkit-scrollbar{
+   width: 10px !important; 
+   
+}
+
+.customInfoWrapper::-webkit-scrollbar-button{
+   height: 100px !important;
+   max-height: 100px !important;
+   margin: auto;
+}
+
+.customInfoWrapper::-webkit-scrollbar-track{
+   background: #E5E7EB !important;
+   border-radius: 50px !important;
+
+}
+
+.customInfoWrapper::-webkit-scrollbar-thumb{
+   background: #9BA8AF !important;
+   border-radius: 50px !important;
+
+}
+

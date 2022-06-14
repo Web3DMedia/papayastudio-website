@@ -61,11 +61,16 @@ padding: 10px;
 }
 `
 const PartnerContainer = styled.div`
+<<<<<<< HEAD
+&::-webkit-scrollbar {
+ display: none;}
+=======
 ::-webkit-scrollbar {
   width: 0;
   display:none;}
    -ms-overflow-style: none;
   scrollbar-width: none;
+>>>>>>> 77188e9b50f0bd030aa3a65c64aa2e36232d6950
 `
 const Img = styled.img`
 width:110px;
@@ -83,6 +88,7 @@ const BackBoneSection = () => {
             <div className="bgTransformationOneLeft"/>
             <div className="bgTransformationOneRight"/>
         </div>
+        <div className="absolute top-20 left-7 w-[2px] hidden lg:block h-40 bg-[#FCD1CA]"/>
 
         <SectionHeader>THE <br/>BACKBONE</SectionHeader>
 

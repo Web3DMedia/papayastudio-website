@@ -35,7 +35,7 @@ const SecondText = styled.div`
         padding: 0 0 48px;
     }
 `
-const ThirdText = styled.div`
+const ThirdText = styled.a`
     font-weight: 400;
     font-size: 18px;
     line-height: 20px;
@@ -182,7 +182,14 @@ const Footer = () => {
                                 </Socials>
                                 <Socials>Linkedln</Socials>
                                 <Socials>Opensea</Socials>
-                                <Socials className='md:hidden flex items-center ml-2'> <Circle className='p-1'></Circle> Legal</Socials>
+                                <Socials className='md:hidden flex items-center ml-2'> 
+                                    <Circle className='p-1'></Circle>  
+                                    <Link href="/legal">
+                                        <a className='cursor-pointer'>
+                                            Legal
+                                        </a>
+                                    </Link>
+                                </Socials>
                             </SocialContainer>
                         </div>
                         
@@ -193,7 +200,11 @@ const Footer = () => {
                         <ThirdText className='text-footerText2'>© 2022 Web3D Media Inc. All rights reserved</ThirdText>
                         <div className='hidden md:flex md:items-center' >
                             <Circle></Circle>
-                            <ThirdText className='text-footerText3'>Legal</ThirdText>
+                            <Link href="/legal">
+                                <a>
+                                    <ThirdText className='text-footerText3 z-10'>Legal</ThirdText>
+                                </a>
+                            </Link>
                         </div>
                     </div>
 

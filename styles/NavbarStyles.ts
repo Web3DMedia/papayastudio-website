@@ -7,14 +7,15 @@ export const HeaderBar = styled.div`
    background-color: rgba(255, 255, 255, 0.3);
 `
 
-export const TrackerOutter = styled.div`
-   width: 30px;
+export const TrackerOutter = styled.div<{textNumber: number}>`
+   width: ${({textNumber}) => textNumber === 1 ? '35%' : textNumber === 2 ? '70%' : textNumber === 3 ? '100%' : `35%`};
    height: 5px;
    background:  #FF6661;
    border-radius: 8px;
    z-index: 2;
    position: absolute;
    top: 0;
+   transition: .8s ease-in width;
 `
 
 export const TrackerInner = styled.div`

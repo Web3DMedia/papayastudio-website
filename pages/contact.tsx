@@ -7,7 +7,7 @@ import SectionSeperator from "../components/molecules/SectionSeperator";
 import ContactSection from "../components/organisms/ContactSection";
 
 const Contact = () => {
-    const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false)
+  const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false)
   return (
     <div>
       <Head>

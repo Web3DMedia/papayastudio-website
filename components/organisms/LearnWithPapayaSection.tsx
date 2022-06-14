@@ -299,6 +299,7 @@ const LearnWithPapayaSection = () => {
 }, [])
   return (
     <LearnWithPapayaContainer className='font-heading relative'>
+        <div className="absolute top-20 left-7 w-[2px] hidden lg:block h-40 bg-[#FCD1CA]"/>
         <FirstText className='pt-24 pl-6 md:pl-20 pb-12 text-primary3'>LEARN <br/>  WITH PAPAYAS</FirstText>
 
         <SecondText className='pl-6 md:pl-20 xl:pl-40 text-learnpapayatext'>Join Our Learning Academy</SecondText>

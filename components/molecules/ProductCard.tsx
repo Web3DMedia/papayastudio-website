@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import {VscArrowRight} from 'react-icons/vsc'
 
 const CardDiv = styled.div`
+   cursor: pointer;
    &:first-child {
       margin-left: 0px;
    }
