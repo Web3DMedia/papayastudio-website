@@ -155,7 +155,7 @@ const HeroSection = () => {
                </span>
                <div className="pl-4 sm:pl-0 lg:pl-32 4xl:pl-40 md:mt-[20px] sm:mt-[18px] xl:mt-[40px]">
                   <p className="lg:max-w-[600px] xl:max-w-[700px] 4xl:max-w-[780px] text-[16px] sm:text-[18px] lg:text-[20px] xl:text-[24px] font-normal leading-[30px] px-2">
-                     At Papaya Studios we are one of the best in the utmost ultimate universe if we are going to the summmer intern product good best inspire gorgueous 
+                     At Papaya Studios we are one of the best in the utmost ultimate universe if we are going to the summmer intern product good best inspire gorgueous  
                   </p>
                   <BtnLink to="productsSection" spy={true} smooth={true} offset={50} duration={500} className="flex items-center text-base xl:text-lg font-bold sm:mt-3 lg:mt-3 xl:mt-5 cursor-pointer ml-2">
                      Our Products <BtnSpan><MdKeyboardArrowRight/></BtnSpan>
