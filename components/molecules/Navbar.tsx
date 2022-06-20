@@ -14,7 +14,7 @@ const Navbar = ({ setIsMenuOpen }: IProps) => {
    const [textNumber, setTextNumber] = useState(1)
 
    useEffect(() => {
-      if(textNumber <= 4){
+      if(textNumber <= 3){
          const interval = setInterval(() => {
             setTextNumber(textNumber + 1)
          }, 5000)
