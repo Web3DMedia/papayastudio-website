@@ -9,7 +9,7 @@ const HeroSection = () => {
    const [textNumber, setTextNumber] = useState(1)
 
    useEffect(() => {
-      if(textNumber <= 3){
+      if(textNumber <= 4){
          const interval = setInterval(() => {
             setTextNumber(textNumber + 1)
          }, 5000)
@@ -50,14 +50,21 @@ const HeroSection = () => {
                   {
                      textNumber === 2 && (
                         <h2 className="hidden sm:block sm:text-[35px] md:text-[40px] lg:text-[60px] xl:text-[65px] 4xl:text-[80px] duration-500 ease-in font-bold">
-                           We are an intuitive design
+                           We are an <TextSpan width="100%">intuitive</TextSpan> <TextSpan width="85%">design</TextSpan> 
                         </h2>
                      )
                   }
                   {
                      textNumber === 3 && (
                         <h2 className="hidden sm:block sm:text-[35px] md:text-[40px] lg:text-[60px] xl:text-[65px] 4xl:text-[80px] duration-500 ease-in font-bold">
-                           We are a creative design 
+                           We curate <TextSpan width="100%">creative</TextSpan> <TextSpan width="85%">web3</TextSpan>  
+                        </h2>
+                     )
+                  }
+                  {
+                     textNumber === 4 && (
+                        <h2 className="hidden sm:block sm:text-[35px] md:text-[40px] lg:text-[60px] xl:text-[65px] 4xl:text-[80px] duration-500 ease-in font-bold">
+                           We create <TextSpan width="100%">stylized</TextSpan> <TextSpan width="85%">animations</TextSpan>  
                         </h2>
                      )
                   }
@@ -72,14 +79,21 @@ const HeroSection = () => {
                   {
                      textNumber === 2 && (
                         <h2 className="block sm:hidden text-[32px] font-bold ml-4">
-                           We are an intuitive
+                           We are an <TextSpan width="100%">intuitive</TextSpan>
                         </h2>
                      )
                   }
                   {
                      textNumber === 3 && (
                         <h2 className="block sm:hidden text-[32px] font-bold ml-4">
-                           We are a creative 
+                           We curate <TextSpan width="100%">creative</TextSpan> 
+                        </h2>
+                     )
+                  }
+                  {
+                     textNumber === 4 && (
+                        <h2 className="block sm:hidden text-[32px] font-bold ml-4">
+                           We create <TextSpan width="100%">stylized</TextSpan>  
                         </h2>
                      )
                   }
@@ -91,14 +105,29 @@ const HeroSection = () => {
                   {
                      textNumber === 1 && (
                         <h3 className="block sm:hidden text-[32px] font-bold ml-4">
-                           <TextSpan width="85%">thinking</TextSpan> blockchain
+                           <TextSpan width="85%">thinking</TextSpan> web3
                         </h3>
                      )
                   }
                   {
                      textNumber === 2 && (
                         <h3 className="block sm:hidden text-[32px] font-bold ml-4">
-                           design studio for
+                           <TextSpan width="85%">design</TextSpan> studio
+                        </h3>
+                     )
+                  }
+                  {
+                     textNumber === 3 && (
+                        <h3 className="block sm:hidden text-[32px] font-bold ml-4">
+                           <TextSpan width="85%">web3</TextSpan> and
+                        </h3>
+                     )
+                  }
+                  {
+                     textNumber === 4 && (
+                        <h3 className="block sm:hidden text-[32px] font-bold ml-4">
+                           <TextSpan width="85%">animations</TextSpan> &amp;
+
                         </h3>
                      )
                   }
@@ -111,21 +140,28 @@ const HeroSection = () => {
                   {
                      textNumber === 1 && (
                         <h3 className="block sm:hidden text-[32px] font-bold">
-                           design studio
+                          blockchain design studio
                         </h3>
                      )
                   }
                   {
                      textNumber === 2 && (
                         <h3 className="block sm:hidden text-[32px] font-bold">
-                           Web3D creators
+                           for Web3D content
                         </h3>
                      )
                   }
                   {
                      textNumber === 3 && (
                         <h3 className="block sm:hidden text-[32px] font-bold">
-                           for Web3D creators
+                           blockchain content
+                        </h3>
+                     )
+                  }
+                  {
+                     textNumber === 4 && (
+                        <h3 className="block sm:hidden text-[32px] font-bold">
+                           live action video content
                         </h3>
                      )
                   }
@@ -141,14 +177,21 @@ const HeroSection = () => {
                   {
                      textNumber === 2 && (
                         <h3 className="hidden sm:block sm:text-[35px] md:text-[40px] lg:text-[60px] xl:text-[65px] 4xl:text-[80px] duration-500 ease-in font-bold">
-                           studio for Web3D creators
+                           studio for Web3D content
                         </h3>
                      )
                   }
                   {
                      textNumber === 3 && (
                         <h3 className="hidden sm:block sm:text-[35px] md:text-[40px] lg:text-[60px] xl:text-[65px] 4xl:text-[80px] duration-500 ease-in font-bold">
-                           for Web3D creators
+                           and blockchain content
+                        </h3>
+                     )
+                  }
+                  {
+                     textNumber === 4 && (
+                        <h3 className="hidden sm:block sm:text-[35px] md:text-[40px] lg:text-[60px] xl:text-[65px] 4xl:text-[80px] duration-500 ease-in font-bold">
+                           &amp; live action video content
                         </h3>
                      )
                   }
