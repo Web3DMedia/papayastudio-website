@@ -30,7 +30,7 @@ const HeroSection = () => {
                <TrackerOutter textNumber={textNumber}/>
                <TrackerInner/>
             </div>
-            <h4 className="text-xs font-normal">03</h4>
+            <h4 className="text-xs font-normal">04</h4>
          </div>
          <p className="absolute left-5 md:left-20 top-[380px] md:top-32 2xl:top-36 4xl:left-[85px] 5xl:left-[80px] 4xl:top-48 font-normal text-xs uppercase">
             Who We <br/> Are
@@ -222,7 +222,7 @@ const HeroSection = () => {
 
 const TrackerOutter = styled.div<{textNumber: number}>`
    width: 5px;
-   height: ${({textNumber}) => textNumber === 1 ? '35%' : textNumber === 2 ? '70%' : textNumber === 3 ? '100%' : `35%`};
+   height: ${({textNumber}) => textNumber === 1 ? '25%' : textNumber === 2 ? '50%' : textNumber === 3 ? '75%' : textNumber === 4 ? '100%' : '25%'};
    background: #FF6661;
    border-radius: 8px;
    z-index: 2;

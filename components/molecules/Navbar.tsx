@@ -14,7 +14,7 @@ const Navbar = ({ setIsMenuOpen }: IProps) => {
    const [textNumber, setTextNumber] = useState(1)
 
    useEffect(() => {
-      if(textNumber <= 3){
+      if(textNumber <= 4){
          const interval = setInterval(() => {
             setTextNumber(textNumber + 1)
          }, 5000)
@@ -83,7 +83,7 @@ const Navbar = ({ setIsMenuOpen }: IProps) => {
                <TrackerOutter textNumber={textNumber}/>
                <TrackerInner/>
             </div>
-            <h4 className="text-xs">03</h4>
+            <h4 className="text-xs">04</h4>
          </div>
          <button 
             onClick={openMenuBar}

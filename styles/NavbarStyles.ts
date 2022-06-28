@@ -8,7 +8,7 @@ export const HeaderBar = styled.div`
 `
 
 export const TrackerOutter = styled.div<{textNumber: number}>`
-   width: ${({textNumber}) => textNumber === 1 ? '35%' : textNumber === 2 ? '70%' : textNumber === 3 ? '100%' : `35%`};
+   width: ${({textNumber}) => textNumber === 1 ? '25%' : textNumber === 2 ? '50%' : textNumber === 3 ? '75%' : textNumber === 4 ? '100%' : '25%'};;
    height: 5px;
    background:  #FF6661;
    border-radius: 8px;
