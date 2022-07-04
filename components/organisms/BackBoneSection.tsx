@@ -61,16 +61,8 @@ padding: 10px;
 }
 `
 const PartnerContainer = styled.div`
-<<<<<<< HEAD
 &::-webkit-scrollbar {
  display: none;}
-=======
-::-webkit-scrollbar {
-  width: 0;
-  display:none;}
-   -ms-overflow-style: none;
-  scrollbar-width: none;
->>>>>>> 77188e9b50f0bd030aa3a65c64aa2e36232d6950
 `
 const Img = styled.img`
 width:110px;
