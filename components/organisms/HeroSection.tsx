@@ -249,9 +249,6 @@ const textTransition = keyframes`
    transform:translateY(-30px);
    transition: opacity 225ms cubic-bezier(0.25, 0.46, 0.45, 0.94)
 }
-50.01 {
-   transform:translateY(0px);
-}
 100% {
    transform:translateY(0px);
    transition: opacity 300ms cubic-bezier(0.55, 0.085, 0.68, 0.53);

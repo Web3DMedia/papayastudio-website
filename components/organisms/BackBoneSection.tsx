@@ -84,7 +84,7 @@ const BackBoneSection = () => {
 
         <SectionHeader>THE <br/>BACKBONE</SectionHeader>
 
-        <SecondText className='pl-6 md:pl-20 xl:pl-40 text-backboneText'>Meet The Super Heroes Shaping The Web3 & Blockchain Industry</SecondText>
+        <SecondText className='pl-6 md:pl-20 xl:pl-40 text-backboneText'>Meet The Super Heroes Shaping The Web3 &amp; Blockchain ecosystem</SecondText>
 
         <Person className='flex pt-12 xl:pt-20 pl-6 md:pl-20 xl:pl-40 overflow-x-scroll pb-24'>
           {data.map(person => {
@@ -92,7 +92,7 @@ const BackBoneSection = () => {
               <div key={person.id} className='mr-6'>
                 
                 <ImageContainer>
-                  <img src={person.image} alt={person.name} className="rounded-2xl" />
+                  <img src={person.image} alt={person.name} className="rounded-2xl" draggable="false" />
                 </ImageContainer>
 
                 <ThirdText className='text-backboneText1 pt-3'>{person.name}</ThirdText> 
