@@ -11,26 +11,26 @@ import styled, {keyframes} from 'styled-components'
 const ProductsSection = () => {
    const products = [
       {
-         cardH2:"Crypto Pack for Blocasset",
-         cardP:"We create super cool web3d fonts if they are not in the catgeory kingdomw",
+         cardH2:"Assets for Blocasset",
+         cardP:"Hundreds of digital asset and designs created for Web3 designers and digital creators. ",
          btnTxt:"View Product",
          cardImage: CryptoPack,
       },
       {
-         cardH2:"Crypto Pack for Blocasset",
-         cardP:"We create super cool web3d fonts if they are not in the catgeory kingdomw",
+         cardH2:"Papayas YouTube show",
+         cardP:"Highly interactive and engaging videos produced in-house for Papayas YouTube Channel",
          btnTxt:"View Product",
          cardImage: CryptoBundle,
       },
       {
-         cardH2:"Fish NFT",
-         cardP:"We create super cool web3d fonts if they are not in the catgeory kingdomw",
+         cardH2:"Papito and Papina Mascot",
+         cardP:"Our signature brand mascot for Papayas studio",
          btnTxt:"View Product",
          cardImage: FishNft,
       },
       {
-         cardH2:"Crypto Pack for Blocasset",
-         cardP:"We create super cool web3d fonts if they are not in the catgeory kingdomw",
+         cardH2:"Blocasset Ad Videot",
+         cardP:"We create super cool web3d fonts if they are nont in the category kingdomw",
          btnTxt:"View Product",
          cardImage: CryptoPack,
       },

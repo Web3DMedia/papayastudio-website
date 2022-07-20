@@ -5,31 +5,27 @@ const CreateSection = () => {
    const activityData = [
       {
          name: '2D Animation (Animes)',
-         text:"We create super cool web3d fonts if they are nont in the category kingdomw"
+         text:"We create 2D animations that are forging the future of community-driven edutainment for the new web."
       },
       {
-         name: '3D Animation',
-         text:"We create super cool web3d fonts if they are nont in the category kingdomw"
-      },
-      {
-         name: ' Audio(FX) Production',
-         text:"We create super cool web3d fonts if they are nont in the category kingdomw"
+         name: 'Rendering Farm',
+         text:"Our render farm technology offers high-quality renders that are 10X faster than the average speed. web3 creators can now render their large project files at our studio."
       },
       {
          name: 'Video Production',
-         text:"We create super cool web3d fonts if they are nont in the category kingdomw"
+         text:"We produce live-action videos in our in-house studio with great stories woven around web3, blockchain, and emerging technologies."
       },
       {
-         name: 'Manga Production',
-         text:"We create super cool web3d fonts if they are nont in the category kingdomw"
+         name: 'Content Development',
+         text:"We tell relatable and edutaining stories that are carefully crafted to drive community engagement in the web3 media space."
+      },
+      {
+         name: '3D Animations',
+         text:"We create 3D animations that are forging the future of community-driven edutainment for the new web."
       },
       {
          name: 'Motion Graphics Design',
-         text:"We create super cool web3d fonts if they are nont in the category kingdomw"
-      },
-      {
-         name: 'Live Web3 Production',
-         text:"We create super cool web3d fonts if they are nont in the category kingdomw"
+         text:"We create stunning motion graphics spots on web3 content."
       },
    ]
    return (
