@@ -28,42 +28,6 @@ const ProductsSection = () => {
          btnTxt:"View Product",
          cardImage: FishNft,
       },
-      {
-         cardH2:"Blocasset Ad Videot",
-         cardP:"We create super cool web3d fonts if they are nont in the category kingdomw",
-         btnTxt:"View Product",
-         cardImage: CryptoPack,
-      },
-      {
-         cardH2:"Crypto Pack for Blocasset",
-         cardP:"We create super cool web3d fonts if they are not in the catgeory kingdomw",
-         btnTxt:"View Product",
-         cardImage: CryptoBundle,
-      },
-      {
-         cardH2:"Fish NFT",
-         cardP:"We create super cool web3d fonts if they are not in the catgeory kingdomw",
-         btnTxt:"View Product",
-         cardImage: FishNft,
-      },
-      {
-         cardH2:"Crypto Pack for Blocasset",
-         cardP:"We create super cool web3d fonts if they are not in the catgeory kingdomw",
-         btnTxt:"View Product",
-         cardImage: CryptoPack,
-      },
-      {
-         cardH2:"Crypto Pack for Blocasset",
-         cardP:"We create super cool web3d fonts if they are not in the catgeory kingdomw",
-         btnTxt:"View Product",
-         cardImage: CryptoBundle,
-      },
-      {
-         cardH2:"Fish NFT",
-         cardP:"We create super cool web3d fonts if they are not in the catgeory kingdomw",
-         btnTxt:"View Product",
-         cardImage: FishNft,
-      },
    ]
 
 
