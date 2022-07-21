@@ -217,7 +217,7 @@ const Footer = () => {
 
 
                 <Pap>
-                    <Image src="/assets/pap.png" width={307} height={148} alt="papaya" />
+                    <Image src="/assets/papaya-text.png" width={307} height={148} alt="papaya" />
                 </Pap>
 
                 <Vector>
