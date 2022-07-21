@@ -167,7 +167,6 @@ const Footer = () => {
                                 <Socials>Dribble</Socials>
                                 <Socials>Behance</Socials>
                                 <Socials>Youtube</Socials>
-                                <Socials>Discord</Socials>
                             </SocialContainer>
                             <SocialContainer>
                                 <Socials>
@@ -181,7 +180,6 @@ const Footer = () => {
                                     </Link>
                                 </Socials>
                                 <Socials>Linkedln</Socials>
-                                <Socials>Opensea</Socials>
                                 <Socials className='md:hidden flex items-center ml-2'> 
                                     <Circle className='p-1'></Circle>  
                                     <Link href="/legal">
@@ -217,7 +215,7 @@ const Footer = () => {
 
 
                 <Pap>
-                    <Image src="/assets/pap.png" width={307} height={148} alt="papaya" />
+                    <Image src="/assets/papaya-text.png" width={307} height={148} alt="papaya" />
                 </Pap>
 
                 <Vector>
