@@ -15,18 +15,42 @@ const ProductsSection = () => {
          cardP:"Hundreds of digital asset and designs created for Web3 designers and digital creators. ",
          btnTxt:"View Product",
          cardImage: CryptoPack,
+         Links: "https://blocasset.com/"
       },
       {
          cardH2:"Papayas YouTube show",
          cardP:"Highly interactive and engaging videos produced in-house for Papayas YouTube Channel",
          btnTxt:"View Product",
          cardImage: CryptoBundle,
+         Links: "/"
       },
       {
          cardH2:"Papito and Papina Mascot",
          cardP:"Our signature brand mascot for Papayas studio",
          btnTxt:"View Product",
          cardImage: FishNft,
+         Links: "/"
+      },
+      {
+         cardH2:"Avatars",
+         cardP:"Stunning custom-made avatars for days!",
+         btnTxt:"View Product",
+         cardImage: CryptoPack,
+         Links: "/"
+      },
+      {
+         cardH2:"Blocasset Ad Video",
+         cardP:"Thrilling launch video created for Blocasset to introduce its platform to users",
+         btnTxt:"View Product",
+         cardImage: CryptoBundle,
+         Links: "/"
+      },
+      {
+         cardH2:"Blocasset Contributor Launch Video",
+         cardP:"Super engaging explainer video created for Blocasset contributors launch",
+         btnTxt:"View Product",
+         cardImage: FishNft,
+         Links: "/"
       },
    ]
 
