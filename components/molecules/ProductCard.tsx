@@ -23,7 +23,7 @@ const ProductCard = ({info}) => {
          <div className="mt-[15px] ">
             <h2 className="font-bold text-lg xl:text-2xl mb-[10px] leading-[160%]">{info.cardH2}</h2>
             <p className="break-words leading-[17px] font-normal 4xl:text-[16px] max-w-[300px] 4xl:max-w-[310px] mb-[10px]">{info.cardP}</p>
-            <Link href={`/${info.Links}`} passHref>
+            <Link href={info.Links}>
                <a target="_blank">
                   <button className="flex items-center">
                      {info.btnTxt}<span className='ml-4'><VscArrowRight/></span>
