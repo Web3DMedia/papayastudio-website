@@ -29,18 +29,18 @@ const CreateSection = () => {
       },
    ]
    return (
-      <Element name="whatSection" className="relative w-full min-h-screen py-28 md:py-32  xl:py-28 4xl:pt-36">
+      <Element name="whatSection" className="relative w-full min-h-screen py-28 md:py-32  xl:py-48 4xl:pt-36">
          <div className="bgTransformationOne">
             <div className="bgTransformationOneLeft"/>
             <div className="bgTransformationOneRight"/>
          </div>
-         <div className="absolute top-0 left-7 w-[2px] hidden lg:block h-40 bg-[#FCD1CA]"/>
+         <div className="absolute top-20 left-7 w-[2px] hidden lg:block h-40 bg-[#FCD1CA]"/>
          <div className="relative w-full h-full mx-auto md:px-20 xl:px-40 4xl:py-20">
-            <p className="absolute left-5 -top-[60px] md:left-20 xl:left-[80px] md:-top-[70px] xl:-top-[100px] 4xl:-top-[50px] 4xl:left-20 font-normal text-xs uppercase">
+            <p className="absolute left-5 -top-[60px] md:left-20 xl:left-[80px] md:-top-[70px] xl:-top-[115px] 4xl:-top-[110px] 4xl:left-20 font-normal text-xs uppercase">
                What We <br/> Do
             </p>
             <div className="h-full w-full ">
-               <h2 className="text-[24px] md:text-[32px] lg:text-[36px] xl:text-[48px] font-bold pl-5 md:pl-0">We create blockchain <br/> and web3 focused</h2>
+               <h2 className="text-[24px] md:text-[32px] lg:text-[36px] xl:text-[48px] font-bold pl-5 md:pl-0">We weave stories from the metaverse and create amazing digital assets for Web3D designers and creators. We collaborate with creatives from across the media and tech space to tell web3 and blockchain-led stories that are educative and entertaining.</h2>
                <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-4 mt-5 px-5 md:px-3 lg:px-0">
                   {
                      activityData?.map((info, index) => (

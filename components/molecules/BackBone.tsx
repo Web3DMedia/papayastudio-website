@@ -3,17 +3,17 @@ const data = [
     {
         id:1,
         name: 'CEO Papayas',
-        image: '/assets/Backbone2.png'
+        image: '/assets/backbone11.jpeg'
     },
     {
         id:2,
         name: 'CTO Papayas',
-        image: '/assets/Backbone1.png'
+        image: '/assets/backbone21.jpeg'
     },
     {
         id:3,
         name: 'PM Papayas',
-        image: '/assets/Backbone3.png'
+        image: '/assets/backbone31.jpeg'
     },
 ]
 

@@ -32,7 +32,7 @@ const HeroSection = () => {
             </div>
             <h4 className="text-xs font-normal">04</h4>
          </div>
-         <p className="absolute left-5 md:left-20 top-[380px] md:top-32 2xl:top-36 4xl:left-[85px] 5xl:left-[80px] 4xl:top-48 font-normal text-xs uppercase">
+         <p className="absolute left-5 md:left-20 top-[380px] md:top-32 2xl:top-40 4xl:left-[85px] 5xl:left-[80px] 4xl:top-40 font-normal text-xs uppercase">
             Who We <br/> Are
          </p>
          <div className="relative w-full h-full max-w-[1440px] 4xl:max-w-[2000px] mx-auto sm:px-20 4xl:px-10 4xl:py-20 flex flex-col-reverse md:flex-row">

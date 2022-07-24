@@ -80,7 +80,7 @@ const BackBoneSection = () => {
             <div className="bgTransformationOneLeft"/>
             <div className="bgTransformationOneRight"/>
         </div>
-        <div className="absolute top-20 left-7 w-[2px] hidden lg:block h-40 bg-[#FCD1CA]"/>
+        <div className="absolute top-24 left-7 w-[2px] hidden lg:block h-40 bg-[#FCD1CA]"/>
 
         <SectionHeader>THE <br/>BACKBONE</SectionHeader>
 
