@@ -30,6 +30,7 @@ const ContactForm = () => {
                   name="userMail"
                   value={userMail}
                   onChange={(e) => setUserMail(e.target.value)}
+                  placeholder="Enter your email"
                />
                <p className="text-[#9CA3AF] text-xs font-medium">Tell us your email adderess so we can follow up!</p>
             </div>
@@ -63,6 +64,13 @@ const Input = styled.input`
       box-shadow: 0px 0px 0px 4px #E1E1FE;
       transition: all 0.1s ease-out;
    }
+
+   &::placeholder{
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 24px;
+      color: var(--LearnPapayaText2);
+   }
 `
 
 const MessageArea = styled.textarea`
@@ -74,7 +82,21 @@ const MessageArea = styled.textarea`
 
    resize: none;
    
+   
+   &::placeholder{
+   font-weight: 400;
+   font-size: 14px;
+   line-height: 24px;
+   color: var(--LearnPapayaText2);
+   }
 
+   &::-webkit-scrollbar {
+      display: none;
+   }
+
+
+   -ms-overflow-style: none; 
+   scrollbar-width: none; 
    &:hover, &:focus {
       box-shadow: 0px 0px 0px 4px #E1E1FE;
       transition: all 0.1s ease-out;

@@ -21,11 +21,11 @@ const ProductCard = ({info}) => {
             <Image src={info.cardImage} layout="fill" objectFit='cover' alt="image"/>
          </div>
          <div className="mt-[15px] ">
-            <h2 className="font-bold text-lg xl:text-2xl mb-[10px] leading-[160%]">{info.cardH2}</h2>
-            <p className="break-words leading-[17px] font-normal 4xl:text-[16px] max-w-[300px] 4xl:max-w-[310px] mb-[10px]">{info.cardP}</p>
+            <h2 className="font-bold text-backboneText text-lg xl:text-2xl mb-[10px] leading-[160%]">{info.cardH2}</h2>
+            <p className="break-words leading-[17px] font-normal text-backboneText1 4xl:text-[16px] max-w-[300px] 4xl:max-w-[310px] mb-[10px]">{info.cardP}</p>
             <Link href={info.Links}>
                <a target="_blank">
-                  <button className="flex items-center">
+                  <button className="flex items-center text-backboneText">
                      {info.btnTxt}<span className='ml-4'><VscArrowRight/></span>
                   </button>
                </a>
