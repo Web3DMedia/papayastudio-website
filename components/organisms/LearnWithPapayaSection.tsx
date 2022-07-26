@@ -100,13 +100,13 @@ right: 50px;
 `
 const Im = styled.div`
 position:relative;
-margin-left:360px;
+margin-left:460px;
 z-index:2;
 @media (max-width: 1024px) {
-margin-left:145px;
+margin-left:275px;
 }
 @media (max-width: 850px) {
-margin-left:30px;
+margin-left:110px;
 }
 `
 const Span = styled.div<Props>`

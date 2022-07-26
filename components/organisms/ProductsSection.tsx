@@ -65,12 +65,12 @@ const ProductsSection = () => {
          <div className="absolute -top-12 sm:-top-16 w-[250px] h-[250px] lg:-top-16 xl:-top-20 -right-10 sm:right-0 md:w-[300px] md:h-[300px] lg:w-[340px] lg:h-[340px] xl:w-[420px] xl:h-[420px]">
             <Image src="/assets/products-mascot.png" layout='fill' alt="Product" />
          </div>
-         <div className="relative w-full h-full mx-auto md:px-20 xl:px-40 4xl:py-20">
+         <div className="relative w-full h-full mx-auto Tmd:px-20 xl:pl-40 4xl:py-20">
             <p className="absolute left-5 -top-[60px] md:left-20 xl:left-[80px] md:-top-[70px] xl:-top-[115px] 4xl:-top-[115px] 4xl:left-20 font-normal text-xs uppercase">
                Our <br/> Products
             </p>
             <div className="w-full h-full">
-               <h2 className="text-[24px] md:text-[32px] lg:text-[36px] xl:text-[48px] font-bold pl-5 md:pl-0">What we’ve created <br/> overtime & more</h2>
+               <h2 className="text-[24px] leading-tight md:text-[32px] lg:text-[36px] xl:text-[48px] font-bold pl-5 md:pl-0">What we’ve created <br/> overtime & more</h2>
                {/*@ts-ignore */}
                <Carousel
                   autoplay={true}

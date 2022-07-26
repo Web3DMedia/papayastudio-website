@@ -40,7 +40,7 @@ const CreateSection = () => {
                What We <br/> Do
             </p>
             <div className="h-full w-full ">
-               <h2 className="text-[24px] md:text-[32px] lg:text-[36px] xl:text-[48px] font-bold pl-5 md:pl-0">We weave stories from the metaverse and create amazing digital assets for Web3D designers and creators. We collaborate with creatives from across the media and tech space to tell web3 and blockchain-led stories that are educative and entertaining.</h2>
+               <h2 className="text-[24px] leading-tight md:text-[32px] lg:text-[36px] xl:text-[48px] font-bold pl-5 md:pl-0">We weave stories from the metaverse and create amazing digital assets for Web3D designers and creators. We collaborate with creatives from across the media and tech space to tell web3 and blockchain-led stories that are educative and entertaining.</h2>
                <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-4 mt-5 px-5 md:px-3 lg:px-0">
                   {
                      activityData?.map((info, index) => (

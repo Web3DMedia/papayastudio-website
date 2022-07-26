@@ -142,7 +142,7 @@ const HeroSection = () => {
                   {
                      textNumber === 1 && (
                         <Span className="block sm:hidden text-[32px] font-bold">
-                          blockchain design studio
+                           design studio
                         </Span>
                      )
                   }
@@ -172,7 +172,7 @@ const HeroSection = () => {
                   {
                      textNumber === 1 && (
                         <Span className="hidden sm:block sm:text-[35px] md:text-[40px] lg:text-[60px] xl:text-[65px] 4xl:text-[80px] duration-500 ease-in font-bold">
-                           blockchain design studio
+                           design studio
                         </Span>
                      )
                   }
