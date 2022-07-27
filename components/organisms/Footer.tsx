@@ -99,13 +99,19 @@ const Mascot = styled.div`
     }
 `
 const Circle = styled.div`
+    position: relative;
     margin: 0 18px;
     width: 5px;
     height: 5px;
     background: var(--PrimaryOne);
     border-radius: 50%;
+    @media (max-width: 600px) {
+        position: absolute;
+        left: 180px;
+    }
 `
 const Socials = styled.div`
+    positon: relative;
     font-style: normal;
     width: 80px;
     font-weight: 500;
@@ -119,7 +125,7 @@ const Socials = styled.div`
         margin-left: 0px;
     }
     &:nth-child(5) {
-        margin-left: -40px;
+        margin-left: -20px;
     }
     @media (max-width: 1024px) {
         margin-left: 70px;
@@ -180,7 +186,7 @@ const Footer = () => {
                                     </Link>
                                 </Socials>
                                 <Socials>Linkedln</Socials>
-                                <Socials className='md:hidden flex items-center ml-2'> 
+                                <Socials className='md:hidden flex items-center ml-0'> 
                                     <Circle className='p-1'></Circle>  
                                     <Link href="/legal">
                                         <a className='cursor-pointer'>
