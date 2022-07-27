@@ -2,7 +2,7 @@ import Image from 'next/image'
 import styled from 'styled-components'
 
 const Imgs = styled.div`
-width:160px;
+width:131px;
 padding: 20px 20px;
 border: 1px solid var(--PrimaryTwo);
 border-radius: 50%;
@@ -23,7 +23,7 @@ const SectionSeperator = () => {
       <div className='flex justify-center items-center'>
          <Line></Line>
          <Imgs className='flex justify-center items-center'>
-            <Image src="/assets/seperator-papay.png" width={190} height={184} objectFit="cover" alt="image"/>
+            <Image src="/assets/seperator-papay.png" width={130} height={120} objectFit="cover" alt="image"/>
          </Imgs>
          <Line></Line>
       </div>
