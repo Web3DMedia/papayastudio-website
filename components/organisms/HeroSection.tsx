@@ -210,7 +210,7 @@ const HeroSection = () => {
             <div 
             className="relative top-2 -right-32 sm:-right-14 md:absolute bg-transparent md:-top-20 lg:-top-16 md:-right-[230px] lg:-right-[350px] xl:-top-10 xl:-right-20 w-[400px] h-[400px] sm:h-[500px] sm:w-[500px] lg:h-[650px] lg:w-[700px] 4xl:w-[900px] 4xl:h-[1000px]">
                <Image
-                  src='/assets/hero-mascot.png'
+                  src='/assets/papayas1.png'
                   layout='fill'
                   alt="mascot image"
                   objectFit='contain'
