@@ -85,7 +85,7 @@ const Vector = styled.div`
 `
 const Mascot = styled.div`
     position: absolute;
-    top: -220px;
+    top: -90px;
     width:548px;
     transform: scaleX(-1);
     right: -10px;
@@ -231,7 +231,7 @@ const Footer = () => {
             </FooterContainer >
             
             <Mascot>
-                <Image src="/assets/footer-mascot.png" width={548} height={548} objectFit="contain" alt="papaya mascot" />
+                <Image src="/assets/papayas3.png" width={548} height={548} objectFit="contain" alt="papaya mascot" />
             </Mascot>
         </div>
     )
