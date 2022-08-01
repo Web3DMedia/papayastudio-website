@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 
+import Link from 'next/link'
 import React from 'react'
 import styled, { keyframes} from 'styled-components'
 
@@ -97,8 +98,11 @@ const BackBoneSection = () => {
 
                 <ThirdText className='text-backboneText1 pt-3'>{person.name}</ThirdText> 
 
-                <FourthText className='text-backboneText flex items-center pt-1'> <img src='/assets/linkedln.png' alt='Linkedln' className='mr-2 w-4 h-4'/>  Linkedln <span className='ml-2'>&#8594;</span> </FourthText>   
-
+                <Link href={person.linkedin}>
+                    <a target="_blank">
+                      <FourthText className='text-backboneText flex items-center pt-1'> <img src='/assets/linkedln.png' alt='Linkedln' className='mr-2 w-4 h-4'/>  Linkedln <span className='ml-2'>&#8594;</span> </FourthText>   
+                    </a>
+                </Link>
               </div>
             )
           })}
