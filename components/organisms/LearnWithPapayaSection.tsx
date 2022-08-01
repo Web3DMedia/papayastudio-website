@@ -257,7 +257,7 @@ width:517px;
 height: 285px;
 background-size: 1050px;
 background-repeat: no-repeat;
-background-position-x: -500px;
+background-position-x: -540px;
 background-position-y: -370px;
 }
 
