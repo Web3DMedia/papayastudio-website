@@ -56,6 +56,7 @@ const FourthText = styled.h4`
 font-weight: 400;
 font-size: 18px;
 line-height: 30px;
+width:120px;
 @media (max-width: 1024px) {
 font-size: 16px;
 margin-bottom:20px;
@@ -346,7 +347,7 @@ const LearnWithPapayaSection = () => {
             <ThirdText className=' text-learnpapayatext2'>Learn from professionals across the animation and tech industry and build expert skills. We help creative talent build expert skills by training, hiring, and empowering them.</ThirdText>
 
          <Link href="/contact">
-                <FourthText className='flex items-center text-learnpapayatext pt-6'> Contact Us <Img src='/assets/component-btn.png' alt='right arrow button' className='ml-2 w-6 h-6'/>  </FourthText>
+                <FourthText className='flex items-center text-learnpapayatext pt-6 cursor-pointer'> Contact Us <Img src='/assets/component-btn.png' alt='right arrow button' className='ml-2 w-6 h-6'/>  </FourthText>
          </Link>
         </div>
 
