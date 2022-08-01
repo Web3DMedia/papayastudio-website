@@ -1,5 +1,4 @@
 import ActivityCard from "../molecules/ActivityCard"
-import {Element} from 'react-scroll'
 
 const CreateSection = () => {
    const activityData = [
@@ -29,7 +28,7 @@ const CreateSection = () => {
       },
    ]
    return (
-      <Element name="whatSection" className="relative w-full min-h-screen py-28 md:py-32  xl:py-48 4xl:pt-36">
+      <section className="relative w-full min-h-screen py-28 md:py-32  xl:py-48 4xl:pt-36" id="WhatWeDo">
          <div className="bgTransformationOne">
             <div className="bgTransformationOneLeft"/>
             <div className="bgTransformationOneRight"/>
@@ -51,7 +50,7 @@ and web3 focused</h2>
                </div>
             </div>
          </div>
-      </Element>
+      </section>
    )
 }
 

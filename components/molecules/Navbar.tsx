@@ -5,6 +5,7 @@ import { TrackerInner, TrackerOutter, HeaderBar } from '../../styles/NavbarStyle
 import {Dispatch,SetStateAction} from 'react'
 import {Link as ScrollLink} from 'react-scroll'
 import {useState, useEffect} from 'react'
+import { getEventListeners } from 'events'
 
 interface IProps {
    setIsMenuOpen: Dispatch<SetStateAction<boolean>>
@@ -42,9 +43,8 @@ const Navbar = ({ setIsMenuOpen }: IProps) => {
                </ScrollLink>
          </Link>
          <div className="hidden lg:flex items-center">
-            <Link href="/">
-               <a>
-                  <ScrollLink to="whoSection" spy={true} smooth={true} offset={50} duration={500} className="flex items-center font-bold xl:text-lg">
+            <Link href="/#WhoAreWe">
+                  <div className="flex items-center font-bold cursor-pointer xl:text-lg">
                      <Image 
                         src='/assets/orange-logo.svg' 
                         width={25} 
@@ -52,22 +52,17 @@ const Navbar = ({ setIsMenuOpen }: IProps) => {
                         alt="orange logo" 
                      />
                      <h2 className="ml-1">who</h2>
-                  </ScrollLink>
-               </a>
+                  </div>
             </Link>
-            <Link href="/">
-               <a>
-                  <ScrollLink to="whatSection" spy={true} smooth={true} offset={50} duration={500} className="flex items-center mx-12 cursor-pointer font-bold xl:text-lg">
+            <Link href="/#WhatWeDo">
+                  <div className="flex items-center mx-12 cursor-pointer font-bold xl:text-lg">
                      what
-                  </ScrollLink>
-               </a>
+                  </div>
             </Link>
-            <Link href="/">
-               <a>
-                  <ScrollLink to="productsSection" spy={true} smooth={true} offset={50} duration={500} className="flex items-center font-bold xl:text-lg">
+            <Link href="/#OurProuducts">
+                  <div className="flex items-center font-bold cursor-pointer xl:text-lg">
                      products
-                  </ScrollLink>
-               </a>
+                  </div>
             </Link>
          </div>
          <Link href="/contact">

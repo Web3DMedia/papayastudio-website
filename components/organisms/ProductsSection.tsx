@@ -56,13 +56,13 @@ const ProductsSection = () => {
 
 
    return (
-      <Element name="productsSection" className="relative w-full min-h-screen py-28 md:py-32 xl:py-48 4xl:pt-36">
+      <section id="OurProuducts" className="relative w-full min-h-screen py-28 md:py-32 xl:py-48 4xl:pt-36">
          <div className="bgTransformationOne">
             <div className="bgTransformationOneLeft"/>
             <div className="bgTransformationOneRight"/>
          </div>
-         <div className="absolute top-20 left-7 w-[2px] hidden lg:block h-40 bg-[#FCD1CA]"/>
-         <div className="absolute -top-12 sm:-top-16 w-[250px] h-[250px] lg:-top-16 xl:-top-20 -right-10 sm:right-0 md:w-[300px] md:h-[300px] lg:w-[340px] lg:h-[340px] xl:w-[435px] xl:h-[435px]">
+         <div className="absolute top-20 left-7 w-[2px] hidden lg:block h-40 bg-[#FCD1CA]" id='what'/>
+         <div className="absolute -top-12 sm:-top-16 w-[250px] h-[250px] lg:-top-24 xl:-top-40 -right-10 sm:right-0 md:w-[300px] md:h-[300px] lg:w-[340px] lg:h-[340px] xl:w-[500px] xl:h-[500px]">
             <Image src="/assets/papayas2.png" layout='fill' alt="Product" />
          </div>
          <div className="relative w-full h-full mx-auto Tmd:px-20 xl:pl-40 4xl:py-20">
@@ -70,7 +70,7 @@ const ProductsSection = () => {
                Our <br/> Products
             </p>
             <div className="w-full h-full">
-               <h2 className="text-[24px] leading-tight md:text-[32px] lg:text-[36px] xl:text-[48px] font-bold pl-5 md:pl-0">What we’ve created <br/> overtime & more</h2>
+               <h2 className="text-[24px] leading-tight md:text-[32px] lg:text-[36px] xl:text-[48px] font-bold pl-5 md:pl-20 xl:pl-0">What we’ve created</h2>
                {/*@ts-ignore */}
                <Carousel
                   autoplay={true}
@@ -80,7 +80,7 @@ const ProductsSection = () => {
                   easing="easeCubicInOut"
                   pauseOnHover={true}
                   withoutControls={true}
-                  className="productCards overflow-x-scroll flex items-center mt-10 px-5 lg:px-0 cursor-pointer"
+                  className="productCards overflow-x-scroll flex items-center mt-10 px-5 sm:pl-[60px] xl:pl-0 cursor-pointer z-0"
                >
                   {
                      products?.map((info, index) => (
@@ -90,7 +90,7 @@ const ProductsSection = () => {
                </Carousel>
             </div>
          </div>
-      </Element>
+      </section>
    )
 }
 

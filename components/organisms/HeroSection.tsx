@@ -19,7 +19,7 @@ const HeroSection = () => {
       }
    },[textNumber])
    return (
-      <Element name="whoSection" className="relative w-full h-full md:min-h-screen py-10 md:py-32 xl:py-28 4xl:pt-36 ">
+      <section id="WhoAreWe" className="relative w-full h-full md:min-h-screen py-10 md:py-32 xl:py-28 4xl:pt-36 ">
          <div className="bgTransformationOne">
             <div className="bgTransformationOneLeft"/>
             <div className="bgTransformationOneRight"/>
@@ -218,7 +218,7 @@ const HeroSection = () => {
                />
             </div>
          </div>
-      </Element>
+      </section>
    )
 }
 
