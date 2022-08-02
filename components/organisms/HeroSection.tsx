@@ -19,7 +19,7 @@ const HeroSection = () => {
       }
    },[textNumber])
    return (
-      <section id="WhoAreWe" className="relative w-full h-full md:min-h-screen py-10 md:py-32 xl:py-28 4xl:pt-36 ">
+      <section id="WhoAreWe" className="relative w-full py-10 md:py-32 xl:py-28 4xl:pt-36 ">
          <div className="bgTransformationOne">
             <div className="bgTransformationOneLeft"/>
             <div className="bgTransformationOneRight"/>
@@ -32,7 +32,9 @@ const HeroSection = () => {
             </div>
             <h4 className="text-xs font-normal">04</h4>
          </div>
-         <p className="absolute left-5 md:left-20 top-[380px] md:top-32 2xl:top-40 4xl:left-[85px] 5xl:left-[80px] 4xl:top-40 font-normal text-xs uppercase">
+
+         <div className='2xl:w-[1440px] m-auto'>
+            <p className="absolute left-5 md:left-20 top-[380px] md:top-32 2xl:top-40 4xl:left-[630px] 4xl:top-40 font-normal text-xs uppercase">
             Who We <br/> Are
          </p>
          <div className="relative w-full h-full max-w-[1440px] 4xl:max-w-[2000px] mx-auto sm:px-20 4xl:px-10 4xl:py-20 flex flex-col-reverse md:flex-row">
@@ -97,7 +99,7 @@ const HeroSection = () => {
                         </SpanFour>
                      )
                   }
-                  <Span className="relative ml-2 sm:ml-4 xl:ml-4 4xl:ml-8 lg:pt-3 w-[20px] h-[25px] sm:w-[25px] sm:h-[30px] md:h-[40px] lg:w-[25px] lg:h-[80px]">
+                  <Span className="relative ml-2 sm:ml-4 xl:ml-4 4xl:ml-5 lg:pt-3 w-[20px] h-[25px] sm:w-[25px] sm:h-[30px] md:h-[40px] lg:w-[25px] lg:h-[80px]">
                      <Image src='/assets/wave-vector.svg' layout='fill' alt="image" />
                   </Span>
                </span>
@@ -208,7 +210,7 @@ const HeroSection = () => {
                </div>
             </div>
             <div 
-            className="relative top-2 right-2 sm:-right-14 md:absolute bg-transparent md:-top-20 lg:-top-28 md:-right-[230px] lg:-right-[410px] xl:-top-36 xl:-right-28 w-[400px] h-[400px] sm:h-[500px] sm:w-[500px] lg:h-[850px] lg:w-[800px] 4xl:w-[900px] 4xl:h-[1000px]">
+            className="relative top-2 right-2 sm:-right-14 md:absolute bg-transparent md:-top-20 lg:-top-28 md:-right-[230px] lg:-right-[410px] xl:-top-36 xl:-right-28 4xl:-right-96 w-[400px] h-[400px] sm:h-[500px] sm:w-[500px] lg:h-[850px] lg:w-[800px] 4xl:w-[900px] 4xl:h-[1000px]">
                <Image
                   src='/assets/papayas1.png'
                   layout='fill'
@@ -217,6 +219,7 @@ const HeroSection = () => {
                   objectPosition="top"
                />
             </div>
+         </div>
          </div>
       </section>
    )

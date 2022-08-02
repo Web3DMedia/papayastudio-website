@@ -56,13 +56,14 @@ const ProductsSection = () => {
 
 
    return (
-      <section id="OurProuducts" className="relative w-full min-h-screen py-28 md:py-32 xl:py-48 4xl:pt-36">
+      <section id="OurProuducts" className="relative w-full py-28 md:py-32 xl:py-48 4xl:pt-36">
          <div className="bgTransformationOne">
             <div className="bgTransformationOneLeft"/>
             <div className="bgTransformationOneRight"/>
          </div>
-         <div className="absolute top-20 left-7 w-[2px] hidden lg:block h-40 bg-[#FCD1CA]" id='what'/>
-         <div className="absolute -top-12 sm:-top-16 w-[250px] h-[250px] lg:-top-24 xl:-top-40 -right-10 sm:right-0 md:w-[300px] md:h-[300px] lg:w-[340px] lg:h-[340px] xl:w-[500px] xl:h-[500px]">
+         <div className="absolute top-20 left-7 w-[2px] hidden lg:block h-40 bg-[#FCD1CA]"/>
+         <div className='2xl:w-[1440px] m-auto'>
+            <div className="absolute -top-12 sm:-top-16 w-[250px] h-[250px] lg:-top-24 xl:-top-40 -right-10 sm:right-0 md:w-[300px] md:h-[300px] lg:w-[340px] lg:h-[340px] xl:w-[500px] xl:h-[500px]">
             <Image src="/assets/papayas2.png" layout='fill' alt="Product" />
          </div>
          <div className="relative w-full h-full mx-auto Tmd:px-20 xl:pl-40 4xl:py-20">
@@ -89,6 +90,7 @@ const ProductsSection = () => {
                   }
                </Carousel>
             </div>
+         </div>
          </div>
       </section>
    )

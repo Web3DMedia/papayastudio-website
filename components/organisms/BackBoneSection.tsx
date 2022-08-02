@@ -83,7 +83,8 @@ const BackBoneSection = () => {
         </div>
         <div className="absolute top-24 left-7 w-[2px] hidden lg:block h-40 bg-[#FCD1CA]"/>
 
-        <SectionHeader>THE <br/>BACKBONE</SectionHeader>
+        <div className='2xl:w-[1440px] m-auto'>
+          <SectionHeader>THE <br/>BACKBONE</SectionHeader>
 
         <SecondText className='pl-6 md:pl-20 xl:pl-40 text-backboneText'>Meet The Super Heroes Shaping The Web3 &amp; Blockchain ecosystem</SecondText>
 
@@ -112,6 +113,7 @@ const BackBoneSection = () => {
             )
           })}
         </Person>
+        </div>
         
 
         <SectionSeperator></SectionSeperator>
