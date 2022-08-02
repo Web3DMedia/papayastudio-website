@@ -19,7 +19,7 @@ const HeroSection = () => {
       }
    },[textNumber])
    return (
-      <Element name="whoSection" className="relative w-full h-full md:min-h-screen py-10 md:py-32 xl:py-28 4xl:pt-36 ">
+      <section id="WhoAreWe" className="relative w-full h-full md:min-h-screen py-10 md:py-32 xl:py-28 4xl:pt-36 ">
          <div className="bgTransformationOne">
             <div className="bgTransformationOneLeft"/>
             <div className="bgTransformationOneRight"/>
@@ -97,7 +97,7 @@ const HeroSection = () => {
                         </SpanFour>
                      )
                   }
-                  <Span className="relative sm:ml-2 xl:ml-1 4xl:ml-8 lg:pt-3 w-[20px] h-[25px] sm:w-[25px] sm:h-[30px] md:h-[40px] lg:w-[25px] lg:h-[80px]">
+                  <Span className="relative ml-2 sm:ml-4 xl:ml-4 4xl:ml-8 lg:pt-3 w-[20px] h-[25px] sm:w-[25px] sm:h-[30px] md:h-[40px] lg:w-[25px] lg:h-[80px]">
                      <Image src='/assets/wave-vector.svg' layout='fill' alt="image" />
                   </Span>
                </span>
@@ -105,7 +105,7 @@ const HeroSection = () => {
                   {
                      textNumber === 1 && (
                         <Span className="block sm:hidden text-[32px] font-bold ml-4">
-                           <TextSpan width="85%">thinking</TextSpan> web3
+                           <TextSpan width="85%">thinking</TextSpan> web3 design
                         </Span>
                      )
                   }
@@ -113,7 +113,7 @@ const HeroSection = () => {
                      {
                      textNumber === 2 && (
                         <SpanTwo className="block sm:hidden text-[32px] font-bold ml-4">
-                           <TextSpan width="85%">design</TextSpan> studio
+                           <TextSpan width="85%">design</TextSpan> studio for 
                         </SpanTwo>
                      )
                   }
@@ -121,49 +121,49 @@ const HeroSection = () => {
                   {
                      textNumber === 3 && (
                         <SpanThree className="block sm:hidden text-[32px] font-bold ml-4">
-                           <TextSpan width="85%">web3</TextSpan> and
+                           <TextSpan width="85%">web3</TextSpan> and blockchain
                         </SpanThree>
                      )
                   }
                   {
                      textNumber === 4 && (
                         <SpanFour className="block sm:hidden text-[32px] font-bold ml-4">
-                           <TextSpan width="85%">animations</TextSpan> &amp;
+                           <TextSpan width="85%">animations</TextSpan> &amp; live action
 
                         </SpanFour>
                      )
                   }
                </span>
                <span className='flex items-center'>
-                  <Span className="relative ml-20 sm:ml-0 sm:mr-2 md:mr-4 w-[30px] h-[30px] sm:w-[50px] sm:h-[50px] md:h-[60px] lg:w-[60px] lg:h-[80px]">
+                  <Span className="relative ml-20 mr-2 sm:ml-0 sm:mr-2 md:mr-4 w-[30px] h-[30px] sm:w-[50px] sm:h-[50px] md:h-[60px] lg:w-[60px] lg:h-[80px]">
                      <Image src='/assets/star-vector.svg' layout='fill' alt="image" />
                   </Span>
                   {/*Mobile*/}
                   {
                      textNumber === 1 && (
                         <Span className="block sm:hidden text-[32px] font-bold">
-                           design studio
+                            studio
                         </Span>
                      )
                   }
                   {
                      textNumber === 2 && (
                         <SpanTwo className="block sm:hidden text-[32px] font-bold">
-                           for Web3D content
+                           Web3D content
                         </SpanTwo>
                      )
                   }
                   {
                      textNumber === 3 && (
                         <SpanThree className="block sm:hidden text-[32px] font-bold">
-                           blockchain content
+                            content
                         </SpanThree>
                      )
                   }
                   {
                      textNumber === 4 && (
                         <SpanFour className="block sm:hidden text-[32px] font-bold">
-                           live action video content
+                            video content
                         </SpanFour>
                      )
                   }
@@ -198,17 +198,17 @@ const HeroSection = () => {
                      )
                   }
                </span>
-               <div className="pl-4 sm:pl-0 lg:pl-32 4xl:pl-40 md:mt-[20px] sm:mt-[18px] xl:mt-[40px]">
+               <div className="pt-10 pl-4 sm:pt-0 sm:pl-0 lg:pl-32 4xl:pl-40 md:mt-[20px] sm:mt-[18px] xl:mt-[40px]">
                   <p className="lg:max-w-[600px] xl:max-w-[700px] 4xl:max-w-[780px] text-[16px] sm:text-[18px] lg:text-[20px] xl:text-[24px] font-normal leading-[30px] px-2">
                      At Papayas studios we are at the forefront of decentralized content creation, helping to simplify the complexities of Blockchain and emerging technologies  
                   </p>
-                  <BtnLink to="productsSection" spy={true} smooth={true} offset={50} duration={500} className="flex items-center text-base xl:text-lg font-bold sm:mt-3 lg:mt-3 xl:mt-5 cursor-pointer ml-2">
+                  <BtnLink to="productsSection" spy={true} smooth={true} offset={50} duration={500} className="pb-[175px] sm:pb-0 flex items-center text-base xl:text-lg font-bold sm:mt-3 lg:mt-3 xl:mt-5 cursor-pointer ml-2">
                      Our Products <BtnSpan><MdKeyboardArrowRight/></BtnSpan>
                   </BtnLink>
                </div>
             </div>
             <div 
-            className="relative top-2 -right-32 sm:-right-14 md:absolute bg-transparent md:-top-20 lg:-top-16 md:-right-[230px] lg:-right-[350px] xl:-top-10 xl:-right-20 w-[400px] h-[400px] sm:h-[500px] sm:w-[500px] lg:h-[650px] lg:w-[700px] 4xl:w-[900px] 4xl:h-[1000px]">
+            className="relative top-2 right-2 sm:-right-14 md:absolute bg-transparent md:-top-20 lg:-top-28 md:-right-[230px] lg:-right-[410px] xl:-top-36 xl:-right-28 w-[400px] h-[400px] sm:h-[500px] sm:w-[500px] lg:h-[850px] lg:w-[800px] 4xl:w-[900px] 4xl:h-[1000px]">
                <Image
                   src='/assets/papayas1.png'
                   layout='fill'
@@ -218,7 +218,7 @@ const HeroSection = () => {
                />
             </div>
          </div>
-      </Element>
+      </section>
    )
 }
 

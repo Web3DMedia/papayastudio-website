@@ -10,16 +10,16 @@ const ContactForm = () => {
       e.preventDefault()
       if (userMail.length === 0 || userMeassage.length === 0) {
          setError("Please fill all the fields")
-      } else {
-         setError("")
+      } else {`
+         setError("")`
          console.log("Submitted")
       }
    }
 
    return (
-      <div className="bg-white md:w-[600px]  xl:w-[650px] mds:h-[680px] px-10 py-5 rounded-t-[32px]">
+      <FormContainer className="bg-white md:w-[600px]  xl:w-[650px] mds:h-[680px] px-10 py-5 rounded-t-[32px]">
          <div className="text-left">
-            <h2 className="text-[#002F31] text-[40px] font-bold leading-[46px]">Contact Us</h2>
+            <h2 className="text-[#002F31] text-[40px] font-bold leading-[46px] pt-10">Contact Us</h2>
             <p className="text-[#4A5567] text-[16px] font-normal leading-[16px]">Send us a message</p>
          </div>
          <form className="mt-[33px]" onSubmit={handleSubmit}>
@@ -44,14 +44,21 @@ const ContactForm = () => {
                   placeholder="Type your message here..."
                ></MessageArea>
             </div>
-            {error && <h2 className="text-red-700 mt-5">{error}</h2>}
-            <button type='submit' className="mt-[30px] bg-[#FF6661] w-full md:w-3/6 cursor-pointer py-3 md:py-5 text-[#FFFFFF] font-bold text-[16px] rounded-xl">
+            {error && <h2 className="text-red-700">{error}</h2>}
+            <button type='submit' className="mt-[24px] mb-[84px] bg-[#FF6661] w-full md:w-3/6 cursor-pointer py-3 md:py-5 text-[#FFFFFF] font-bold text-[16px] rounded-xl">
                Send Message
             </button>
          </form>
-      </div>
+      </FormContainer>
    )
 }
+
+const FormContainer = styled.div`
+    @media (max-width: 600px) {
+     border: 1px solid #FEEEEC;
+border-radius: 32px 32px 0px 0px;
+    }
+`
 
 const Input = styled.input`
    border: 1px solid #E3E8EF;

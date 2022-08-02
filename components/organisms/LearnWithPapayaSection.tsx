@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import styled from 'styled-components'
 import Image from 'next/image'
+import Link from 'next/link'
 
 interface Props {
   imgs: String,
@@ -55,9 +56,10 @@ const FourthText = styled.h4`
 font-weight: 400;
 font-size: 18px;
 line-height: 30px;
+width:120px;
 @media (max-width: 1024px) {
 font-size: 16px;
-margin-bottom:90px;
+margin-bottom:20px;
 }`
 const Img = styled.img`
 `
@@ -170,19 +172,20 @@ width:88px;
 height:96px;
 background-size: 700px;
 background-position-x: 0;
+background-position-y: -15px;
 }
 &:nth-child(2){
 width:421px;
 height: 231px;
 background-size: 750px;
-background-position-x: -100px;
+background-position-x: -110px;
 background-position-y: -15px;
 }
 &:nth-child(3){
 width:167px;
 height: 192px;
 background-size: 750px;
-background-position-x: 225px;
+background-position-x: 255px;
 background-position-y: -55px;
 }
 
@@ -206,6 +209,27 @@ height: 78px;
 background-size: 325px;
 background-position-x: -225px;
 background-position-y: -30px;
+}
+@media (max-width: 400px) {
+ &:nth-child(1){
+width:36px;
+ height:39px;
+background-size: 400px;
+background-position-x: 0;
+}
+&:nth-child(2){
+width:170px;
+height: 93px;
+background-size: 300px;
+background-position-x: -50px;
+background-position-y: -10px;
+}
+&:nth-child(3){
+width:71px;
+height: 78px;
+background-size: 300px;
+background-position-x: -210px;
+background-position-y: -27px;
 }
 `
 const SpanTwo = styled.div<Props>`
@@ -248,9 +272,9 @@ background-position-y: -370px;
         &:nth-child(2){
             width:421px;
             height: 232px;
-            background-size: 900px;
-            background-position-x: -540px;
-            background-position-y: -320px;
+            background-size: 800px;
+            background-position-x: -380px;
+            background-position-y: -270px;
         }
     }
 
@@ -258,16 +282,16 @@ background-position-y: -370px;
 &:nth-child(1){
 width:521px;
 height: 237px;
-background-size: 750px;
-background-position-x: 15px;
-background-position-y: -265px;
+background-size: 800px;
+background-position-x: -15px;
+background-position-y: -275px;
 }
 &:nth-child(2){
 width:517px;
 height: 285px;
-background-size: 750px;
-background-position-x: -365px;
-background-position-y: -265px;
+background-size: 800px;
+background-position-x: -350px;
+background-position-y: -275px;
 }
 
 @media (max-width: 600px) {
@@ -284,6 +308,21 @@ height: 93px;
 background-size: 325px;
 background-position-x: -175px;
 background-position-y: -125px;
+}
+@media (max-width: 400px) {
+&:nth-child(1){
+width:175px;
+height: 80px;
+background-size: 300px;
+background-position-x: 5px;
+background-position-y: -105px;
+}
+&:nth-child(2){
+width:175px;
+height: 93px;
+background-size: 300px;
+background-position-x: -130px;
+background-position-y: -105px;
 }
 `
 const LearnWithPapayaSection = () => {
@@ -307,7 +346,9 @@ const LearnWithPapayaSection = () => {
         <div className='pl-6 md:pl-20 xl:pl-56 pt-11'>
             <ThirdText className=' text-learnpapayatext2'>Learn from professionals across the animation and tech industry and build expert skills. We help creative talent build expert skills by training, hiring, and empowering them.</ThirdText>
 
-            <FourthText className='flex items-center text-learnpapayatext pt-6'> Contact Us <Img src='/assets/component-btn.png' alt='right arrow button' className='ml-2 w-6 h-6'/>  </FourthText>
+         <Link href="/contact">
+                <FourthText className='flex items-center text-learnpapayatext pt-6 cursor-pointer'> Contact Us <Img src='/assets/component-btn.png' alt='right arrow button' className='ml-2 w-6 h-6'/>  </FourthText>
+         </Link>
         </div>
 
         <Im>
@@ -316,7 +357,7 @@ const LearnWithPapayaSection = () => {
                 <Span imgs={`/assets/Learn${bg}.jpeg`}></Span>            
                 <Span imgs={`/assets/Learn${bg}.jpeg`}></Span>            
             </div>
-            <div className='flex pt-3 md:pt-6 xl:pt-10'>
+            <div className='flex pt-[13px] md:pt-[20px] xl:pt-[34px]'>
                 <SpanTwo imgs={`/assets/Learn${bg}.jpeg`}></SpanTwo>            
                 <SpanTwo imgs={`/assets/Learn${bg}.jpeg`}></SpanTwo>
             </div>            

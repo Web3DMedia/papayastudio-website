@@ -107,7 +107,7 @@ const Circle = styled.div`
     border-radius: 50%;
     @media (max-width: 600px) {
         position: absolute;
-        left: 180px;
+        left: 35%;
     }
 `
 const Socials = styled.div`
@@ -142,7 +142,6 @@ const Socials = styled.div`
 `
 const SocialContainer = styled.div`
     display: flex;
-
     @media (max-width: 600px) {
         flex-direction: column;
         width:130%;
@@ -157,7 +156,7 @@ const Footer = () => {
             <FooterContainer className='px-6 xl:pl-24 xl:px-0 relative'>
 
                 <div className='pt-16 xl:pt-28'>
-                    <Image src="/assets/footer-logo.png" width={127} height={35} alt="papaya" objectFit='contain' />
+                    <Image src="/assets/footer-logos.png" width={150} height={35} alt="papaya" objectFit='cover' />
 
                     <FirstText className='text-footerText'>
                         Have an Idea?
@@ -168,9 +167,9 @@ const Footer = () => {
                             <SecondText className='text-footerText3 w-48'> Reach out to us <a href="mailto:info @papayas.com"></a>info@papayas.com</SecondText>
                         </div>
 
-                        <div className='flex justify-between md:block md:pr-12 xl:pr-32'>
+                        <div className='flex justify-between pr-10 md:block md:pr-12 xl:pr-32'>
                             <SocialContainer className='md:pb-5'>
-                                <Socials>Dribble</Socials>
+                                <Socials>Dribbble</Socials>
                                 <Socials>Behance</Socials>
                                 <Socials>Youtube</Socials>
                             </SocialContainer>
@@ -185,8 +184,12 @@ const Footer = () => {
                                         <a target='_blank'>Instagram</a>
                                     </Link>
                                 </Socials>
-                                <Socials>Linkedln</Socials>
-                                <Socials className='md:hidden flex items-center ml-0'> 
+                                <Socials>
+                                    <Link href='https://wwww.linkedin.com/showcase/papayasstudio/about/'>
+                                        <a target='_blank'>Linkedin</a>
+                                    </Link>
+                                </Socials>
+                                <Socials className='sm:hidden flex items-center ml-0'> 
                                     <Circle className='p-1'></Circle>  
                                     <Link href="/legal">
                                         <a className='cursor-pointer'>
@@ -202,7 +205,7 @@ const Footer = () => {
 
                     <div className='flex items-center pb-7 pt-12 md:pt-0'>
                         <ThirdText className='text-footerText2'>© 2022 Web3D Media Inc. All rights reserved</ThirdText>
-                        <div className='hidden md:flex md:items-center' >
+                        <div className='hidden sm:flex sm:items-center' >
                             <Circle></Circle>
                             <Link href="/legal">
                                 <a>

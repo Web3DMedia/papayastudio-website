@@ -11,7 +11,7 @@ const data = [
         id:2,
         name: 'CTO Papayas',
         image: '/assets/backbone21.jpeg',
-        linkedin: 'https://www.linkedin.com/in/koderholic/'
+        linkedin: 'https://www.linkedin.com/in/okwu-kinikachi/'
     },
     {
         id:3,

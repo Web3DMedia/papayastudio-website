@@ -67,7 +67,7 @@ const LegalContainer = () => {
                               alt="Notice icon"
                            />
                         </div>
-                        <h2 className="font-normal leading-8 text-xl">Discalaimer notice</h2>
+                        <h2 className="font-normal leading-8 text-xl">Disclaimer notice</h2>
                      </div>
                   </a>
                </Link>
