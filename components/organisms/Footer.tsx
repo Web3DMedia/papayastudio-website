@@ -156,7 +156,7 @@ const Footer = () => {
             <FooterContainer className='px-6 xl:pl-24 xl:px-0 relative'>
 
                 <div className='pt-16 xl:pt-28'>
-                    <Image src="/assets/footer-logo.png" width={127} height={35} alt="papaya" objectFit='contain' />
+                    <Image src="/assets/footer-logos.png" width={150} height={35} alt="papaya" objectFit='cover' />
 
                     <FirstText className='text-footerText'>
                         Have an Idea?

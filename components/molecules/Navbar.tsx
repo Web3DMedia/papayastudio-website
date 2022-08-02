@@ -39,7 +39,7 @@ const Navbar = ({ setIsMenuOpen }: IProps) => {
                         alt="logo"
                      />
                   </span>
-                  <h2 className=" text-[18px] sm:text-[22px] md:text-[25px] xl:text-[35px] font-bold sm:ml-2">Papaya</h2>
+                  <h2 className=" text-[18px] sm:text-[22px] md:text-[25px] xl:text-[35px] font-bold sm:ml-2">Papayas</h2>
                </ScrollLink>
          </Link>
          <div className="hidden lg:flex items-center">
