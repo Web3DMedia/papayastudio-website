@@ -46,6 +46,13 @@ line-height: 160%;
 @media (max-width: 1024px) {
 font-size: 14px;
 }`
+const FifthText = styled.h4`
+font-weight: 400;
+font-size: 16px;
+line-height: 160%;
+@media (max-width: 1024px) {
+font-size: 14px;
+}`
 const Person = styled.div`
 ::-webkit-scrollbar {
   width: 0;}
@@ -97,15 +104,18 @@ const BackBoneSection = () => {
                   <img src={person.image} alt={person.name} className="rounded-2xl" draggable="false" />
                 </ImageContainer>
 
-                <ThirdText className='text-backboneText1 pt-3'>{person.name}</ThirdText> 
+                
+                <ThirdText className='text-black pt-3'>{person.name}</ThirdText> 
+
+                <FourthText className='text-backboneText1'>{person.title}</FourthText> 
 
               {
                 person.id === 3 ? (
-                      <FourthText className='text-backboneText flex items-center pt-1 opacity-30'> <img src='/assets/linkedln.png' alt='Linkedln' className='mr-2 w-4 h-4'/>  Linkedin <span className='ml-2'>&#8594;</span> </FourthText>   
+                      <FifthText className='text-backboneText flex items-center pt-1 opacity-30'> <img src='/assets/linkedln.png' alt='Linkedln' className='mr-2 w-4 h-4'/>  Linkedin <span className='ml-2'>&#8594;</span> </FifthText>   
                     
                 ) : (                <Link href={person.linkedin}>
                     <a target="_blank">
-                      <FourthText className='text-backboneText flex items-center pt-1'> <img src='/assets/linkedln.png' alt='Linkedln' className='mr-2 w-4 h-4'/>  Linkedin <span className='ml-2'>&#8594;</span> </FourthText>   
+                      <FifthText className='text-backboneText flex items-center pt-1'> <img src='/assets/linkedln.png' alt='Linkedln' className='mr-2 w-4 h-4'/>  Linkedin <span className='ml-2'>&#8594;</span> </FifthText>   
                     </a>
                 </Link>)
               }

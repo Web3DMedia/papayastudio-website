@@ -249,8 +249,13 @@ const TrackerInner = styled.div`
 
 const textTransition = keyframes`
 0% {
+   opacity: 0;
    transform:translateY(-30px);
    transition: opacity 225ms cubic-bezier(0.25, 0.46, 0.45, 0.94)
+}
+50% {
+   transform:translateY(15px);
+   transition: opacity 300ms cubic-bezier(0.55, 0.085, 0.68, 0.53);
 }
 100% {
    transform:translateY(0px);
