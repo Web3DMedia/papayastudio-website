@@ -67,7 +67,7 @@ const ProductsSection = () => {
             <Image src="/assets/papayas2.png" layout='fill' alt="Product" />
          </div>
          <div className="relative w-full h-full mx-auto Tmd:px-20 xl:pl-40 4xl:py-20">
-            <p className="absolute left-5 -top-[60px] md:left-20 xl:left-[80px] md:-top-[70px] xl:-top-[115px] 4xl:-top-[115px] 4xl:left-20 font-normal text-xs uppercase">
+            <p className="absolute left-5 -top-[60px] md:left-20 xl:left-[80px] md:-top-[70px] xl:-top-[115px] 4xl:-top-20 4xl:left-20 font-normal text-xs uppercase">
                Our <br/> Products
             </p>
             <div className="w-full h-full">
