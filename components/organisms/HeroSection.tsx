@@ -73,28 +73,28 @@ const HeroSection = () => {
                   {/*Mobile view*/}
                   {
                      textNumber === 1 && (
-                        <Span  className="block sm:hidden text-[32px] font-bold ml-4">
+                        <Span  className="block sm:hidden leading-9  text-[32px] font-bold ml-4">
                            We are a <TextSpan width="100%">forward</TextSpan>
                         </Span>
                      )
                   }
                   {
                      textNumber === 2 && (
-                        <SpanTwo className="block sm:hidden text-[32px] font-bold ml-4">
+                        <SpanTwo className="block sm:hidden leading-9 text-[32px] font-bold ml-4">
                            We are an <TextSpan width="100%">intuitive</TextSpan>
                         </SpanTwo>
                      )
                   }
                   {
                      textNumber === 3 && (
-                        <SpanThree className="block sm:hidden text-[32px] font-bold ml-4">
+                        <SpanThree className="block sm:hidden leading-9 text-[32px] font-bold ml-4">
                            We curate <TextSpan width="100%">creative</TextSpan> 
                         </SpanThree>
                      )
                   }
                   {
                      textNumber === 4 && (
-                        <SpanFour className="block sm:hidden text-[32px] font-bold ml-4">
+                        <SpanFour className="block sm:hidden leading-9 text-[32px] font-bold ml-4">
                            We create <TextSpan width="100%">stylized</TextSpan>  
                         </SpanFour>
                      )
@@ -143,28 +143,28 @@ const HeroSection = () => {
                   {/*Mobile*/}
                   {
                      textNumber === 1 && (
-                        <Span className="block sm:hidden text-[32px] font-bold">
+                        <Span className="block sm:hidden leading-9 text-[32px] font-bold">
                             studio
                         </Span>
                      )
                   }
                   {
                      textNumber === 2 && (
-                        <SpanTwo className="block sm:hidden text-[32px] font-bold">
+                        <SpanTwo className="block sm:hidden leading-9 text-[32px] font-bold">
                            Web3D content
                         </SpanTwo>
                      )
                   }
                   {
                      textNumber === 3 && (
-                        <SpanThree className="block sm:hidden text-[32px] font-bold">
+                        <SpanThree className="block sm:hidden leading-9 text-[32px] font-bold">
                             content
                         </SpanThree>
                      )
                   }
                   {
                      textNumber === 4 && (
-                        <SpanFour className="block sm:hidden text-[32px] font-bold">
+                        <SpanFour className="block sm:hidden leading-9 text-[32px] font-bold">
                             video content
                         </SpanFour>
                      )
@@ -201,10 +201,10 @@ const HeroSection = () => {
                   }
                </span>
                <div className="pt-10 pl-4 sm:pt-0 sm:pl-0 lg:pl-32 4xl:pl-40 md:mt-[20px] sm:mt-[18px] xl:mt-[40px]">
-                  <p className="lg:max-w-[600px] xl:max-w-[700px] 4xl:max-w-[780px] text-[16px] sm:text-[18px] lg:text-[20px] xl:text-[24px] font-normal leading-[30px] px-2">
+                  <p className="lg:max-w-[600px] xl:max-w-[700px] 4xl:max-w-[780px] text-[16px] sm:text-[18px] lg:text-[20px] xl:text-[24px] font-normal text-backboneText leading-[30px] px-2">
                      At Papayas studios we are at the forefront of decentralized content creation, helping to simplify the complexities of Blockchain and emerging technologies  
                   </p>
-                  <BtnLink to="productsSection" spy={true} smooth={true} offset={50} duration={500} className="pb-[175px] sm:pb-0 flex items-center text-base xl:text-lg font-bold sm:mt-3 lg:mt-3 xl:mt-5 cursor-pointer ml-2">
+                  <BtnLink to="productsSection" spy={true} smooth={true} offset={50} duration={500} className="pb-[175px] pt-[18px] sm:pb-0 flex items-center text-base xl:text-lg font-bold sm:mt-3 lg:mt-3 xl:mt-5 cursor-pointer ml-2">
                      Our Products <BtnSpan><MdKeyboardArrowRight/></BtnSpan>
                   </BtnLink>
                </div>

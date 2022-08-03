@@ -17,7 +17,7 @@ const ContactForm = () => {
    }
 
    return (
-      <FormContainer className="bg-white md:w-[600px]  xl:w-[650px] mds:h-[680px] px-10 py-5 rounded-t-[32px]">
+      <FormContainer className="bg-white md:w-[600px]  xl:w-[650px] mds:h-[680px] px-4 py-5 rounded-t-[32px]">
          <div className="text-left">
             <h2 className="text-[#002F31] text-[40px] font-bold leading-[46px] pt-10">Contact Us</h2>
             <p className="text-[#4A5567] text-[16px] font-normal leading-[16px]">Send us a message</p>
