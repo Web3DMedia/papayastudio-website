@@ -73,22 +73,15 @@ const ProductsSection = () => {
             <div className="w-full h-full">
                <h2 className="text-[24px] leading-tight md:text-[32px] lg:text-[36px] xl:text-[48px] font-bold pl-5 md:pl-20 xl:pl-0">What we’ve created</h2>
                {/*@ts-ignore */}
-               <Carousel
-                  autoplay={true}
-                  autoplayInterval={2000}
-                  wrapAround={true}
-                  cellSpacing={54}
-                  easing="easeCubicInOut"
-                  pauseOnHover={true}
-                  withoutControls={true}
-                  className="productCards overflow-x-scroll flex items-center mt-10 px-5 sm:pl-[60px] xl:pl-0 cursor-pointer z-0"
+               <div
+                  className="productCards overflow-x-scroll flex mt-10 px-5 sm:pl-[60px] xl:pl-0 cursor-pointer z-0"
                >
                   {
                      products?.map((info, index) => (
                         <ProductCard key={index} info={info}/>
                      ))
                   }
-               </Carousel>
+               </div>
             </div>
          </div>
          </div>
