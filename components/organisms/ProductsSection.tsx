@@ -1,6 +1,8 @@
 import CryptoPack from '../../public/assets/crypto-pack.png'
 import CryptoBundle from '../../public/assets/crypto-bundle.png'
 import FishNft from '../../public/assets/fish-nft.png'
+import Bloccassests from '../../public/assets/bloccassets.png'
+import PapitoandPapina from '../../public/assets/papitoandpapina.png'
 import ProductCard from '../molecules/ProductCard'
 import Image from 'next/image'
 import {Element} from 'react-scroll'
@@ -14,7 +16,7 @@ const ProductsSection = () => {
          cardH2:"Assets for Blocasset",
          cardP:"Hundreds of digital asset and designs created for Web3 designers and digital creators. ",
          btnTxt:"View Product",
-         cardImage: CryptoPack,
+         cardImage: Bloccassests,
          Links: "https://blocasset.com/"
       },
       {
@@ -28,7 +30,7 @@ const ProductsSection = () => {
          cardH2:"Papito and Papina Mascot",
          cardP:"Our signature brand mascot for Papayas studio",
          btnTxt:"View Product",
-         cardImage: FishNft,
+         cardImage: PapitoandPapina,
          Links: "/"
       },
       {
