@@ -58,7 +58,7 @@ const ProductsSection = () => {
 
 
    return (
-      <section id="OurProuducts" className="relative w-full py-28 md:py-32 xl:py-48 4xl:pt-36">
+      <Element id="OurProuducts" name="productsSection" className="relative w-full py-28 md:py-32 xl:py-48 4xl:pt-36">
          <div className="bgTransformationOne">
             <div className="bgTransformationOneLeft"/>
             <div className="bgTransformationOneRight"/>
@@ -87,7 +87,7 @@ const ProductsSection = () => {
             </div>
          </div>
          </div>
-      </section>
+      </Element>
    )
 }
 
