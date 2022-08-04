@@ -13,18 +13,18 @@ const ActivityCard = ({info}:IProps) => {
 
    return (
       <CardWrapper 
-         className="my-5 mx-2 relative cursor-pointer"
+         className="my-5 mx-0 relative cursor-pointer"
          onMouseEnter={() => setOnHover(true)}
          onMouseLeave={() => setOnHover(false)}
          onHover={onHover}
       >
-         <div className="flex items-center">
+         <div className="flex items-center mr-5">
             <div className="overflow-hidden rounded-full mr-2">
                <ImageArrow filterState={onHover}/>
             </div>
             <h2 className={onHover ? "text-[18px] md:text-[20px] xl:text-[34px] font-normal text-[#FF6661] duration-200 ease-in-out" :"text-[18px] md:text-[20px] xl:text-[34px] font-normal text-[#555555] duration-200 ease-in-out"}>/ {info.name}</h2>
          </div>
-         <p className="max-w-[500px] 3xl:max-w-[400px] text-[#555555] leading-[17px] font-normal ml-12 text-[14px] xl:text-base">
+         <p className="w-[634px] text-[#555555] leading-[17px] font-normal ml-12 text-[14px] xl:text-base pr-40">
             {info.text}
          </p>
       </CardWrapper>

@@ -164,7 +164,7 @@ const Footer = () => {
 
                     <Div className='md:flex md:justify-between'>
                         <div>
-                            <SecondText className='text-footerText3 w-48'> Reach out to us <a href="mailto:info @papayas.com"></a>info@papayas.com</SecondText>
+                            <SecondText className='text-footerText3 w-48'> Reach out to us <a href="mailto:info@web3d.media"></a>info@web3d.media</SecondText>
                         </div>
 
                         <div className='flex justify-between pr-10 md:block md:pr-12 xl:pr-32'>

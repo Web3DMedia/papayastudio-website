@@ -44,28 +44,28 @@ const HeroSection = () => {
                   {/*Large screen*/}
                   {
                      textNumber === 1 && (
-                        <Span className="hidden sm:block sm:text-[35px] md:text-[40px] lg:text-[60px] xl:text-[65px] 4xl:text-[80px] duration-500 ease-in font-bold">
+                        <Span className="hidden xl:pl-16 3xl:pl-0  sm:block sm:text-[35px] md:text-[40px] lg:text-[60px] xl:text-[65px] 4xl:text-[80px] duration-500 ease-in font-bold">
                            We are a <TextSpan width="100%">forward</TextSpan> <TextSpan width="85%">thinking</TextSpan> 
                         </Span>
                      )
                   }
                   {
                       textNumber === 2 && (
-                        <SpanTwo className="hidden sm:block sm:text-[35px] md:text-[40px] lg:text-[60px] xl:text-[65px] 4xl:text-[80px] duration-500 ease-in font-bold">
+                        <SpanTwo className="hidden xl:pl-16 3xl:pl-0 sm:block sm:text-[35px] md:text-[40px] lg:text-[60px] xl:text-[65px] 4xl:text-[80px] duration-500 ease-in font-bold">
                            We are an <TextSpan width="100%">intuitive</TextSpan> <TextSpan width="85%">design</TextSpan> 
                         </SpanTwo>
                      )
                   }
                   {
                      textNumber === 3 && (
-                        <SpanThree className="hidden sm:block sm:text-[35px] md:text-[40px] lg:text-[60px] xl:text-[65px] 4xl:text-[80px] duration-500 ease-in font-bold">
+                        <SpanThree className="hidden xl:pl-16 3xl:pl-0 sm:block sm:text-[35px] md:text-[40px] lg:text-[60px] xl:text-[65px] 4xl:text-[80px] duration-500 ease-in font-bold">
                            We curate <TextSpan width="100%">creative</TextSpan> <TextSpan width="85%">web3</TextSpan>  
                         </SpanThree>
                      )
                   }
                   {
                      textNumber === 4 && (
-                        <SpanFour className="hidden sm:block sm:text-[35px] md:text-[40px] lg:text-[60px] xl:text-[65px] 4xl:text-[80px] duration-500 ease-in font-bold">
+                        <SpanFour className="hidden xl:pl-16 3xl:pl-0 sm:block sm:text-[35px] md:text-[40px] lg:text-[60px] xl:text-[65px] 4xl:text-[80px] duration-500 ease-in font-bold">
                            We create <TextSpan width="100%">stylized</TextSpan> <TextSpan width="85%">animations</TextSpan>  
                         </SpanFour>
                      )
@@ -137,7 +137,7 @@ const HeroSection = () => {
                   }
                </span>
                <span className='flex items-center'>
-                  <Span className="relative ml-20 mr-2 sm:ml-0 sm:mr-2 md:mr-4 w-[30px] h-[30px] sm:w-[50px] sm:h-[50px] md:h-[60px] lg:w-[60px] lg:h-[80px]">
+                  <Span className="relative ml-20 mr-2 sm:ml-0 sm:mr-2 md:mr-4 xl:ml-16 3xl:ml-0 w-[30px] h-[30px] sm:w-[50px] sm:h-[50px] md:h-[60px] lg:w-[60px] lg:h-[80px]">
                      <Image src='/assets/star-vector.svg' layout='fill' alt="image" />
                   </Span>
                   {/*Mobile*/}
@@ -201,16 +201,16 @@ const HeroSection = () => {
                   }
                </span>
                <div className="pt-10 pl-4 sm:pt-0 sm:pl-0 lg:pl-32 4xl:pl-40 md:mt-[20px] sm:mt-[18px] xl:mt-[40px]">
-                  <p className="lg:max-w-[600px] xl:max-w-[700px] 4xl:max-w-[780px] text-[16px] sm:text-[18px] lg:text-[20px] xl:text-[24px] font-normal text-backboneText leading-[30px] px-2">
+                  <p className="lg:max-w-[600px] xl:pl-16 3xl:pl-0 xl:max-w-[700px] 4xl:max-w-[780px] text-[16px] sm:text-[18px] lg:text-[20px] xl:text-[24px] font-normal text-backboneText leading-[30px] px-2">
                      At Papayas studios we are at the forefront of decentralized content creation, helping to simplify the complexities of Blockchain and emerging technologies  
                   </p>
-                  <BtnLink to="productsSection" spy={true} smooth={true} offset={50} duration={500} className="pb-[175px] pt-[18px] sm:pb-0 flex items-center text-base xl:text-lg font-bold sm:mt-3 lg:mt-3 xl:mt-5 cursor-pointer ml-2">
+                  <BtnLink to="productsSection" spy={true} smooth={true} offset={50} duration={500} className="pb-[175px] pt-[18px] sm:pb-0 xl:pl-14 3xl:pl-0 flex items-center text-base xl:text-lg font-bold sm:mt-3 lg:mt-3 xl:mt-5 cursor-pointer ml-2 w-[205px]">
                      Our Products <BtnSpan><MdKeyboardArrowRight/></BtnSpan>
                   </BtnLink>
                </div>
             </div>
             <div 
-            className="relative top-2 right-2 sm:-right-14 md:absolute bg-transparent md:-top-20 lg:-top-28 md:-right-[230px] lg:-right-[410px] xl:-top-36 xl:-right-28 4xl:-right-96 w-[400px] h-[400px] sm:h-[500px] sm:w-[500px] lg:h-[850px] lg:w-[800px] 4xl:w-[900px] 4xl:h-[1000px]">
+            className="relative top-2 right-2 sm:-right-14 md:absolute bg-transparent md:-top-20 lg:-top-28 md:-right-[230px] lg:-right-[410px] xl:-top-36 xl:-right-40 4xl:-right-96 w-[400px] h-[400px] sm:h-[500px] sm:w-[500px] lg:h-[850px] lg:w-[800px] 4xl:w-[900px] 4xl:h-[1000px]">
                <Image
                   src='/assets/papayas1.png'
                   layout='fill'
