@@ -28,18 +28,19 @@ const CreateSection = () => {
       },
    ]
    return (
-      <section className="relative w-full min-h-screen py-28 md:py-32  xl:py-48 4xl:pt-36" id="WhatWeDo">
+      <section className="relative w-full py-28 md:py-32  xl:py-48 4xl:pt-36" id="WhatWeDo">
          <div className="bgTransformationOne">
             <div className="bgTransformationOneLeft"/>
             <div className="bgTransformationOneRight"/>
          </div>
          <div className="absolute top-20 left-7 w-[2px] hidden lg:block h-40 bg-[#FCD1CA]"/>
-         <div className="pt-[74px] sm:pt-0 relative w-full h-full mx-auto md:px-0 lg:px-20 xl:px-40 4xl:py-20">
-            <p className="absolute left-5 -top-[20px] sm:-top-[60px] md:left-20 xl:left-[80px] md:-top-[70px] xl:-top-[115px] 4xl:-top-[110px] 4xl:left-20 font-normal text-xs uppercase">
+         <div className="2xl:w-[1440px] m-auto">
+            <div className="pt-[74px] sm:pt-0 relative w-full h-full mx-auto md:px-0 lg:px-20 xl:px-40 4xl:py-20">
+            <p className="absolute left-5 -top-[20px] sm:-top-[60px] md:left-20 xl:left-[80px] md:-top-[70px] xl:-top-[115px] 4xl:-top-20 4xl:left-20 font-normal text-xs uppercase">
                What We <br/> Do
             </p>
             <div className="h-full w-full ">
-               <h2 className="text-[24px] leading-tight md:text-[32px] lg:text-[36px] xl:text-[48px] font-bold pl-5 md:pl-[80px] lg:pl-0">We create blockchain 
+               <h2 className="text-[24px] leading-tight md:text-[32px] lg:text-[36px] xl:text-[48px] font-bold pl-5 md:pl-[80px] lg:pl-0">We create blockchain <br/>
 and web3 focused</h2>
                <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-4 mt-5 px-5 md:pl-[65px] lg:px-0">
                   {
@@ -49,6 +50,7 @@ and web3 focused</h2>
                   }
                </div>
             </div>
+         </div>
          </div>
       </section>
    )

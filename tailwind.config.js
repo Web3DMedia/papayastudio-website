@@ -37,6 +37,8 @@ module.exports = {
         footerText: "#9CA3AF",
         footerText2: "#C4C4C4",
         footerText3: "#FFFFFF",
+        messageSent: "002F31",
+        messageSentTwo: "4A5567",
       },
     },
   },

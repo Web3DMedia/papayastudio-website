@@ -57,20 +57,6 @@ const LegalContainer = () => {
                      </div>
                   </a>
                </Link>
-               <Link href="/discalaimer">
-                  <a>
-                     <div className="my-5 md:m-0 md:w-[250px] md:h-[150px] bg-[#FCD1CA1F] border-[0.5px] border-[#FF9D8D] rounded-2xl px-[18px] py-[25px] flex flex-row items-center md:items-start md:flex-col md:justify-between ">
-                        <div className="w-[45px] h-[45px] relative mr-5">
-                           <Image
-                              src="/assets/discalaimer.png"
-                              layout='fill'
-                              alt="Notice icon"
-                           />
-                        </div>
-                        <h2 className="font-normal leading-8 text-xl">Disclaimer notice</h2>
-                     </div>
-                  </a>
-               </Link>
             </div>
          </div>
       </div>

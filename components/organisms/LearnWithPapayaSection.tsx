@@ -339,7 +339,8 @@ const LearnWithPapayaSection = () => {
   return (
     <LearnWithPapayaContainer className='font-heading relative'>
         <div className="absolute top-24 left-7 w-[2px] hidden lg:block h-40 bg-[#FCD1CA]"/>
-        <FirstText className='pt-24 pl-6 md:pl-20 pb-12 text-primary3'>LEARN <br/>  WITH PAPAYAS</FirstText>
+        <div className='2xl:w-[1440px] m-auto'>
+            <FirstText className='pt-24 pl-6 md:pl-20 pb-12 text-primary3'>LEARN <br/>  WITH PAPAYAS</FirstText>
 
         <SecondText className='pl-6 md:pl-20 xl:pl-40 text-learnpapayatext'>Join Our Learning Academy</SecondText>
 
@@ -376,6 +377,7 @@ const LearnWithPapayaSection = () => {
             <Vector>
                 <Image src="/assets/footer-vector.png" width={511} height={569} objectFit="contain" alt="Vector" />
             </Vector>
+        </div>
     </LearnWithPapayaContainer>
   )
 }

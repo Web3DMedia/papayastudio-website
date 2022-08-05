@@ -155,7 +155,7 @@ const Footer = () => {
         <div className='relative'>
             <FooterContainer className='px-6 xl:pl-24 xl:px-0 relative'>
 
-                <div className='pt-16 xl:pt-28'>
+                <div className='pt-16 xl:pt-28 2xl:w-[1440px] m-auto'>
                     <Image src="/assets/footer-logos.png" width={150} height={35} alt="papaya" objectFit='cover' />
 
                     <FirstText className='text-footerText'>
@@ -164,7 +164,7 @@ const Footer = () => {
 
                     <Div className='md:flex md:justify-between'>
                         <div>
-                            <SecondText className='text-footerText3 w-48'> Reach out to us <a href="mailto:info @papayas.com"></a>info@papayas.com</SecondText>
+                            <SecondText className='text-footerText3 w-48'> Reach out to us <a href="mailto:info@web3d.media"></a>info@web3d.media</SecondText>
                         </div>
 
                         <div className='flex justify-between pr-10 md:block md:pr-12 xl:pr-32'>
@@ -220,8 +220,6 @@ const Footer = () => {
                     </Aya>
 
                 </div>
-
-
 
                 <Pap>
                     <Image src="/assets/papaya-text.png" width={307} height={148} alt="papaya" />
