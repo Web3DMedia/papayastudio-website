@@ -7,6 +7,7 @@ import {useState, useEffect} from 'react'
 
 const HeroSection = () => {
    const [textNumber, setTextNumber] = useState(1)
+   const [mascot, setMascot] = useState(1)
 
    useEffect(() => {
       if(textNumber <= 4){
@@ -18,6 +19,16 @@ const HeroSection = () => {
          setTextNumber(1)
       }
    },[textNumber])
+
+      useEffect(() => {
+          const interval = setInterval(() => {
+              setMascot(mascot => Number(mascot) + Number(1) > 2 ? 1 : Number(mascot) + Number(1))
+      }, 5000)
+      return () => {
+        clearInterval(interval)
+      }
+}, [])
+
    return (
       <section id="WhoAreWe" className="relative w-full py-10 md:py-32 xl:py-28 4xl:pt-36 ">
          <div className="bgTransformationOne">
@@ -212,7 +223,7 @@ const HeroSection = () => {
             <div 
             className="relative top-2 right-2 sm:-right-14 md:absolute bg-transparent md:-top-20 lg:-top-28 md:-right-[230px] lg:-right-[410px] xl:-top-36 xl:-right-56 2xl:-right-40 4xl:-right-96 w-[400px] h-[400px] sm:h-[500px] sm:w-[500px] lg:h-[850px] lg:w-[800px] 4xl:w-[900px] 4xl:h-[1000px]">
                <Image
-                  src='/assets/papaya1.png'
+                  src={`/assets/mascots${mascot}.png`}
                   layout='fill'
                   alt="mascot image"
                   objectFit='contain'
