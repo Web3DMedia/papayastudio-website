@@ -1,7 +1,13 @@
 import Image from 'next/image'
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
 import {VscArrowRight} from 'react-icons/vsc'
 import Link from 'next/link'
+
+
+const slider = keyframes`
+  0% { left: 0; }
+  100% { left: -100%; }
+`
 
 const CardDiv = styled.div`
    cursor: pointer;
@@ -12,12 +18,18 @@ const CardDiv = styled.div`
    &:last-child {
       margin-right: 0px;
    }
+   animation: ${slider} 1s linear infinite;
+&:hover {
+   animation-play-state: paused;
+}
 `
+
 
 const ProductCard = ({info}) => {
    return (
       <CardDiv className="cursor-pointer ml-10">
-         <div className="relative w-[300px] h-[300px] max-w-[300px] 4xl:w-[350px] 4xl:max-w-[350px] overflow-hidden rounded-[24px]">
+        <div>
+          <div className="relative w-[300px] h-[300px] max-w-[300px] 4xl:w-[350px] 4xl:max-w-[350px] overflow-hidden rounded-[24px]">
             <Image src={info.cardImage} layout="fill" objectFit='cover' alt="image"/>
          </div>
          <div className="mt-[15px] ">
@@ -31,6 +43,7 @@ const ProductCard = ({info}) => {
                </a>
             </Link>
          </div>
+        </div>
       </CardDiv>
    )
 }

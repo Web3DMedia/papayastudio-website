@@ -26,7 +26,7 @@ display: block;
 top: 18%;
 width: 200%;
 position: absolute;
-animation: ${slider} 17s linear infinite;
+animation: ${slider} 12s linear infinite;
 &:hover {
    animation-play-state: paused;
 }
@@ -65,22 +65,22 @@ const Slider = () => {
       <SlideImageOne>
 
       <SlideImageContainer>
-        <Img src='/assets/polygon.png' alt="gumi" ></Img>
+        <Img src='/assets/polygon.png' alt="polygon" ></Img>
       </SlideImageContainer>
       <SlideImageContainer>
-        <Img src='/assets/polygon-studios.png' alt="gumi" ></Img>
+        <Img src='/assets/polygon-studios.png' alt="polygon studios" ></Img>
       </SlideImageContainer>
       <SlideImageContainer>
-        <Img src='/assets/polygon.png' alt="gumi" ></Img>
+        <Img src='/assets/polygon.png' alt="polygon" ></Img>
       </SlideImageContainer>
       <SlideImageContainer>
-        <Img src='/assets/polygon-studios.png' alt="gumi" ></Img>
+        <Img src='/assets/polygon-studios.png' alt="polygon studios" ></Img>
       </SlideImageContainer>
       <SlideImageContainer>
-        <Img src='/assets/polygon.png' alt="gumi" ></Img>
+        <Img src='/assets/polygon.png' alt="polygon" ></Img>
       </SlideImageContainer>
       <SlideImageContainer>
-        <Img src='/assets/polygon-studios.png' alt="gumi" ></Img>
+        <Img src='/assets/polygon-studios.png' alt="polygon studios" ></Img>
       </SlideImageContainer>
       
     </SlideImageOne>
@@ -89,22 +89,22 @@ const Slider = () => {
     <SlideImageOne>
 
       <SlideImageContainer>
-        <Img src='/assets/polygon.png' alt="gumi" ></Img>
+        <Img src='/assets/polygon.png' alt="polygon" ></Img>
       </SlideImageContainer>
       <SlideImageContainer>
-        <Img src='/assets/polygon-studios.png' alt="gumi" ></Img>
+        <Img src='/assets/polygon-studios.png' alt="polygon studios" ></Img>
       </SlideImageContainer>
       <SlideImageContainer>
-        <Img src='/assets/polygon.png' alt="gumi" ></Img>
+        <Img src='/assets/polygon.png' alt="polygon" ></Img>
       </SlideImageContainer>
       <SlideImageContainer>
-        <Img src='/assets/polygon-studios.png' alt="gumi" ></Img>
+        <Img src='/assets/polygon-studios.png' alt="polygon studios" ></Img>
       </SlideImageContainer>
       <SlideImageContainer>
-        <Img src='/assets/polygon.png' alt="gumi" ></Img>
+        <Img src='/assets/polygon.png' alt="polygon" ></Img>
       </SlideImageContainer>
       <SlideImageContainer>
-        <Img src='/assets/polygon-studios.png' alt="gumi" ></Img>
+        <Img src='/assets/polygon-studios.png' alt="polygon studios" ></Img>
       </SlideImageContainer>
     </SlideImageOne>
 

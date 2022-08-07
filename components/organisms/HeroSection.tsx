@@ -34,10 +34,10 @@ const HeroSection = () => {
          </div>
 
          <div className='2xl:w-[1440px] m-auto'>
-            <p className="absolute left-5 md:left-20 top-[380px] md:top-32 2xl:top-40 4xl:left-[630px] 4xl:top-40 font-normal text-xs uppercase">
+            <p className="relative left-5 md:left-20 top-96 md:top-12 2xl:top-12 4xl:top-4 font-normal text-xs uppercase">
             Who We <br/> Are
          </p>
-         <div className="relative w-full h-full max-w-[1440px] 4xl:max-w-[2000px] mx-auto sm:px-20 4xl:px-10 4xl:py-20 flex flex-col-reverse md:flex-row">
+         <div className="relative w-full h-full max-w-[1440px] 4xl:max-w-[2000px] mx-auto sm:px-20 4xl:px-10 4xl:py-0 flex flex-col-reverse md:flex-row">
             <div className="relative z-10 w-full sm:pt-6 md:pt-24 lg:pt-28 4xl:pt-36 4xl:pl-24">
                
                <span className='flex items-center'>

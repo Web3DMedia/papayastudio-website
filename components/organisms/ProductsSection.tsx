@@ -69,14 +69,14 @@ const ProductsSection = () => {
             <Image src="/assets/papayas2.png" layout='fill' alt="Product" />
          </div>
          <div className="relative w-full h-full mx-auto Tmd:px-20 xl:pl-40 4xl:py-20">
-            <p className="absolute left-5 -top-[60px] md:left-20 xl:left-[80px] md:-top-[70px] xl:-top-[115px] 4xl:-top-20 4xl:left-20 font-normal text-xs uppercase">
+            <p className="absolute left-5 -top-[60px] md:left-20 xl:left-[80px] md:-top-[50px] xl:-top-[115px] 4xl:-top-16 4xl:left-20 font-normal text-xs uppercase">
                Our <br/> Products
             </p>
             <div className="w-full h-full">
                <h2 className="text-[24px] leading-tight md:text-[32px] lg:text-[36px] xl:text-[48px] font-bold pl-5 md:pl-20 xl:pl-0">What we’ve created</h2>
                {/*@ts-ignore */}
                <div
-                  className="productCards overflow-x-scroll flex mt-10 px-5 sm:pl-[60px] xl:pl-0 cursor-pointer z-0"
+                  className="productCards overflow-x-scroll flex mt-10 px-5 sm:pl-[60px] md:pl-[85px] xl:pl-0 cursor-pointer z-0"
                >
                   {
                      products?.map((info, index) => (
