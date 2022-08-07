@@ -340,11 +340,11 @@ const LearnWithPapayaSection = () => {
     <LearnWithPapayaContainer className='font-heading relative'>
         <div className="absolute top-24 left-7 w-[2px] hidden lg:block h-40 bg-[#FCD1CA]"/>
         <div className='2xl:w-[1440px] m-auto'>
-            <FirstText className='pt-24 pl-6 md:pl-20 pb-12 text-primary3'>LEARN <br/>  WITH PAPAYAS</FirstText>
+            <FirstText className='pt-24 pl-5 md:pl-14 lg:pl-20 pb-12 text-primary3'>LEARN <br/>  WITH PAPAYAS</FirstText>
 
-        <SecondText className='pl-6 md:pl-20 xl:pl-40 text-learnpapayatext'>Join Our Learning Academy</SecondText>
+        <SecondText className='pl-5 md:pl-14 lg:pl-20 xl:pl-40 text-learnpapayatext'>Join Our Learning Academy</SecondText>
 
-        <div className='pl-6 md:pl-20 xl:pl-56 pt-11'>
+        <div className='pl-5 md:pl-14 lg:pl-20 xl:pl-56 pt-11'>
             <ThirdText className=' text-learnpapayatext2'>Learn from professionals across the animation and tech industry and build expert skills. We help creative talent build expert skills by training, hiring, and empowering them.</ThirdText>
 
          <Link href="/contact">

@@ -7,7 +7,7 @@ line-height: 130%;
 `
 const SectionHeader = ({children}) => {
    return ( 
-        <FirstText className='pt-24 pl-6 md:pl-20 pb-12 text-backboneText'>
+        <FirstText className='pt-24 pl-5 md:pl-14 lg:pl-20 pb-12 text-backboneText'>
           <div>{children}</div>
         </FirstText>
    )
