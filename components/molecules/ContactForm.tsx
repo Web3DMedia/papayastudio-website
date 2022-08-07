@@ -5,12 +5,13 @@ import MessageConfirmation from "./MessageConfirmation";
 
 const ContactForm = () => {
      const options = [
-    { name: "2D Animation" },
-    { name: "Video Production" },
+    { name: "2D Design/Animation" },
     { name: "3D Animation" },
-    { name: "Redering Farm" },
-    { name: "Content Developement" },
     { name: "Motion Graphics Design" },
+    { name: "Video Production" },
+    { name: "Training" },
+    { name: "Rendering Farm" },
+    { name: "Content Development" },
     { name: "Other" },
   ];
   const [userMail, setUserMail] = useState<string>("");
