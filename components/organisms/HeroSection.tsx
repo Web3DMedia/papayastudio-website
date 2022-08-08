@@ -7,6 +7,7 @@ import {useState, useEffect} from 'react'
 
 const HeroSection = () => {
    const [textNumber, setTextNumber] = useState(1)
+   const [mascot, setMascot] = useState(1)
 
    useEffect(() => {
       if(textNumber <= 4){
@@ -18,6 +19,16 @@ const HeroSection = () => {
          setTextNumber(1)
       }
    },[textNumber])
+
+      useEffect(() => {
+          const interval = setInterval(() => {
+              setMascot(mascot => Number(mascot) + Number(1) > 2 ? 1 : Number(mascot) + Number(1))
+      }, 5000)
+      return () => {
+        clearInterval(interval)
+      }
+}, [])
+
    return (
       <section id="WhoAreWe" className="relative w-full py-10 md:py-32 xl:py-28 4xl:pt-36 ">
          <div className="bgTransformationOne">
@@ -34,11 +45,11 @@ const HeroSection = () => {
          </div>
 
          <div className='2xl:w-[1440px] m-auto'>
-            <p className="absolute left-5 md:left-20 top-[380px] md:top-32 2xl:top-40 4xl:left-[630px] 4xl:top-40 font-normal text-xs uppercase">
+            <p className="relative left-5 md:left-14 lg:left-20 top-96 sm:top-[450px] md:top-12 2xl:top-12 4xl:top-4 font-normal text-xs uppercase">
             Who We <br/> Are
          </p>
-         <div className="relative w-full h-full max-w-[1440px] 4xl:max-w-[2000px] mx-auto sm:px-20 4xl:px-10 4xl:py-20 flex flex-col-reverse md:flex-row">
-            <div className="relative z-10 w-full sm:pt-6 md:pt-24 lg:pt-28 4xl:pt-36 4xl:pl-24">
+         <div className="relative w-full h-full max-w-[1440px] 4xl:max-w-[2000px] mx-auto md:px-14 lg:px-20 4xl:px-10 4xl:py-0 flex flex-col-reverse md:flex-row">
+            <div className="relative z-10 w-full sm:pt-6 pl-0 sm:pl-5 md:pt-24 4xl:pt-36 4xl:pl-24">
                
                <span className='flex items-center'>
                   {/*Large screen*/}
@@ -200,8 +211,8 @@ const HeroSection = () => {
                      )
                   }
                </span>
-               <div className="pt-10 pl-4 sm:pt-0 sm:pl-0 lg:pl-32 4xl:pl-40 md:mt-[20px] sm:mt-[18px] xl:mt-[40px]">
-                  <p className="lg:max-w-[600px] xl:pl-16 3xl:pl-0 xl:max-w-[700px] 4xl:max-w-[780px] text-[16px] sm:text-[18px] lg:text-[20px] xl:text-[24px] font-normal text-backboneText leading-[30px] px-2">
+               <div className="pt-10 pl-5 md:pl-14 lg:pl-20 xl:pl-32 4xl:pl-40 md:mt-[20px] sm:mt-[18px] xl:mt-[40px]">
+                  <p className="md:w-11/12 lg:max-w-[600px] xl:pl-16 3xl:pl-0 xl:max-w-[700px] 4xl:max-w-[780px] text-[16px] sm:text-[18px] lg:text-[20px] xl:text-[24px] font-normal text-backboneText leading-[30px] px-2">
                      At Papayas studios we are at the forefront of decentralized content creation, helping to simplify the complexities of Blockchain and emerging technologies  
                   </p>
                   <BtnLink to="productsSection" spy={true} smooth={true} offset={50} duration={500} className="pb-[175px] pt-[18px] sm:pb-0 xl:pl-14 3xl:pl-0 flex items-center text-base xl:text-lg font-bold sm:mt-3 lg:mt-3 xl:mt-5 cursor-pointer ml-2 w-[205px]">
@@ -210,9 +221,9 @@ const HeroSection = () => {
                </div>
             </div>
             <div 
-            className="relative top-2 right-2 sm:-right-14 md:absolute bg-transparent md:-top-20 lg:-top-28 md:-right-[230px] lg:-right-[410px] xl:-top-36 xl:-right-40 4xl:-right-96 w-[400px] h-[400px] sm:h-[500px] sm:w-[500px] lg:h-[850px] lg:w-[800px] 4xl:w-[900px] 4xl:h-[1000px]">
+            className="relative top-2 right-2 sm:-right-14 md:absolute bg-transparent md:-top-20 lg:-top-28 md:-right-[230px] lg:-right-[410px] xl:-top-36 xl:-right-56 2xl:-right-40 4xl:-right-96 w-[400px] h-[400px] sm:h-[500px] sm:w-[500px] lg:h-[850px] lg:w-[800px] 4xl:w-[900px] 4xl:h-[1000px]">
                <Image
-                  src='/assets/papaya1.png'
+                  src={`/assets/mascots${mascot}.png`}
                   layout='fill'
                   alt="mascot image"
                   objectFit='contain'

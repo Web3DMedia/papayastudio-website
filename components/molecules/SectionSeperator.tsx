@@ -16,6 +16,9 @@ border-top: 0.8px solid #FF9D8D;
 padding:1px;
 height:1px;
 width:400px;
+@media (max-width:1200px) {
+   width:350px;
+}
 `
 
 const SectionSeperator = () => {

@@ -3,21 +3,15 @@ import styled from 'styled-components'
 import {VscArrowRight} from 'react-icons/vsc'
 import Link from 'next/link'
 
-const CardDiv = styled.div`
-   cursor: pointer;
-   &:first-child {
-      margin-left: 0px;
-   }
 
-   &:last-child {
-      margin-right: 0px;
-   }
+const CardDiv = styled.div`
 `
+
 
 const ProductCard = ({info}) => {
    return (
-      <CardDiv className="cursor-pointer ml-10">
-         <div className="relative w-[300px] h-[300px] max-w-[300px] 4xl:w-[350px] 4xl:max-w-[350px] overflow-hidden rounded-[24px]">
+      <CardDiv className="cursor-pointer ml-7">
+          <div className="relative w-[300px] h-[300px] max-w-[300px] 4xl:w-[350px] 4xl:max-w-[350px] overflow-hidden rounded-[24px]">
             <Image src={info.cardImage} layout="fill" objectFit='cover' alt="image"/>
          </div>
          <div className="mt-[15px] ">

@@ -160,11 +160,11 @@ const Footer = () => {
 
                     <FirstText className='text-footerText'>
                         Have an Idea?
-                    </FirstText>
+                    </FirstText>+
 
                     <Div className='md:flex md:justify-between'>
                         <div>
-                            <SecondText className='text-footerText3 w-48'> Reach out to us <a href="mailto:info@web3d.media"></a>info@web3d.media</SecondText>
+                            <SecondText className='text-footerText3 w-48'> Reach out to us <a href="mailto:hello@web3d.media"></a>hello@web3d.media</SecondText>
                         </div>
 
                         <div className='flex justify-between pr-10 md:block md:pr-12 xl:pr-32'>
@@ -185,7 +185,7 @@ const Footer = () => {
                                     </Link>
                                 </Socials>
                                 <Socials>
-                                    <Link href='https://wwww.linkedin.com/showcase/papayasstudio/about/'>
+                                    <Link href='https://www.linkedin.com/showcase/papayasstudio/about/'>
                                         <a target='_blank'>Linkedin</a>
                                     </Link>
                                 </Socials>
