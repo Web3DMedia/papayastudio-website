@@ -71,6 +71,7 @@ const DropdownMenu = ({ setUserDropdown, userDropdown, options }) => {
                 width={10}
                 height={5}
                 objectFit="contain"
+                className={optionSelect ? "rotate-0"  : "rotate-180"}
               />
             </div>
           </div>

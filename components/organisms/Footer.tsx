@@ -208,7 +208,7 @@ const Footer = () => {
                         <div className='hidden sm:flex sm:items-center' >
                             <Circle></Circle>
                             <Link href="/legal">
-                                <a>
+                                <a className='cursor-pointer'>
                                     <ThirdText className='text-footerText3 z-10'>Legal</ThirdText>
                                 </a>
                             </Link>
