@@ -2,6 +2,8 @@ import React, {useState, useEffect} from 'react'
 import styled from 'styled-components'
 import Image from 'next/image'
 import Link from 'next/link'
+import AOS from "aos";
+
 
 interface Props {
   imgs: String,
@@ -337,22 +339,22 @@ const LearnWithPapayaSection = () => {
       }
 }, [])
   return (
-    <LearnWithPapayaContainer className='font-heading relative'>
+    <LearnWithPapayaContainer className='font-heading relative reveal'>
         <div className="absolute top-24 left-7 w-[2px] hidden lg:block h-40 bg-[#FCD1CA]"/>
         <div className='2xl:w-[1440px] m-auto'>
-            <FirstText className='pt-24 pl-5 md:pl-14 lg:pl-20 pb-12 text-primary3'>LEARN <br/>  WITH PAPAYAS</FirstText>
+            <FirstText className='pt-24 pl-5 md:pl-14 lg:pl-20 pb-12 text-primary3' data-aos="fade-up">LEARN <br/>  WITH PAPAYAS</FirstText>
 
-        <SecondText className='pl-5 md:pl-14 lg:pl-20 xl:pl-40 text-learnpapayatext'>Join Our Learning Academy</SecondText>
+        <SecondText className='pl-5 md:pl-14 lg:pl-20 xl:pl-40 text-learnpapayatext' data-aos="fade-up">Join Our Learning Academy</SecondText>
 
         <div className='pl-5 md:pl-14 lg:pl-20 xl:pl-56 pt-11'>
-            <ThirdText className=' text-learnpapayatext2'>Learn from professionals across the animation and tech industry and build expert skills. We help creative talent build expert skills by training, hiring, and empowering them.</ThirdText>
+            <ThirdText className=' text-learnpapayatext2 reveal fade-left' data-aos="fade-up">Learn from professionals across the animation and tech industry and build expert skills. We help creative talent build expert skills by training, hiring, and empowering them.</ThirdText>
 
          <Link href="/contact">
-                <FourthText className='flex items-center text-learnpapayatext pt-6 cursor-pointer'> Contact Us <Img src='/assets/component-btn.png' alt='right arrow button' className='ml-2 w-6 h-6'/>  </FourthText>
+                <FourthText className='flex items-center text-learnpapayatext pt-6 cursor-pointer reveal fade-left' data-aos="fade-up"> Contact Us <Img src='/assets/component-btn.png' alt='right arrow button' className='ml-2 w-6 h-6'/>  </FourthText>
          </Link>
         </div>
 
-        <Im>
+        <Im data-aos="fade-up">
             <div className='flex items-end'>
                 <Span imgs={`/assets/Learn${bg}.jpeg`}></Span>            
                 <Span imgs={`/assets/Learn${bg}.jpeg`}></Span>            

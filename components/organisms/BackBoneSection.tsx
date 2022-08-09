@@ -91,11 +91,11 @@ const BackBoneSection = () => {
         <div className="absolute top-24 left-7 w-[2px] hidden lg:block h-40 bg-[#FCD1CA]"/>
 
         <div className='2xl:w-[1440px] m-auto'>
-          <SectionHeader>THE <br/>BACKBONE</SectionHeader>
+          <SectionHeader data-aos="fade-up">THE <br/>BACKBONE</SectionHeader>
 
-        <SecondText className='pl-6 md:pl-20 xl:pl-40 text-backboneText'>Meet The Super Heroes Shaping The Web3 &amp; Blockchain ecosystem</SecondText>
+        <SecondText className='pl-6 md:pl-20 xl:pl-40 text-backboneText' data-aos="fade-up">Meet The Super Heroes Shaping The Web3 &amp; Blockchain ecosystem</SecondText>
 
-        <Person className='flex pt-12 xl:pt-20 pl-5 md:pl-14 lg:pl-20 xl:pl-40 overflow-x-scroll pb-24'>
+        <Person className='flex pt-12 xl:pt-20 pl-5 md:pl-14 lg:pl-20 xl:pl-40 overflow-x-scroll pb-24' data-aos="fade-up">
           {data.map(person => {
             return (
               <div key={person.id} className='mr-6'>
@@ -128,7 +128,7 @@ const BackBoneSection = () => {
 
         <SectionSeperator></SectionSeperator>
         
-        <div className='text-center pt-9 pb-32 text-backboneText'>
+        <div className='text-center pt-9 pb-32 text-backboneText' data-aos="fade-up">
           <h1 className='pb-9'>OUR PARTNERS</h1>
 
             <PartnerContainer className='hidden sm:flex items-center md:justify-center overflow-x-scroll px-4 md:px-0'>
