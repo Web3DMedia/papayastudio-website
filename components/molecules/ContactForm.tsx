@@ -2,6 +2,7 @@ import { useState } from "react";
 import styled from "styled-components";
 import DropdownMenu from "../atoms/DropdownMenu";
 import MessageConfirmation from "./MessageConfirmation";
+import axios from "axios"
 
 const ContactForm = () => {
      const options = [
@@ -15,28 +16,50 @@ const ContactForm = () => {
     { name: "Other" },
   ];
   const [userMail, setUserMail] = useState<string>("");
-  const [userDropdown, setUserDropdown] = useState<any>(0);
-  const [userMeassage, setUserMeassage] = useState<string>("");
+  const [userDropdown, setUserDropdown] = useState<any>("2D Design/Animation");
+  const [userMessage, setUserMessage] = useState<string>("");
   const [error, setError] = useState<string>("");
   const [messageIsSent, setmessageIsSent] = useState<boolean>(false);
+  const [loading, setLoading] = useState<boolean>(false);
 
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+const addToWaitlist = async (e: { preventDefault: () => void }) => {
     e.preventDefault();
-    if (
-      userMail.length === 0 ||
-      userMeassage.length === 0 ||
-      userDropdown.length === 0
-    ) {
+    setError("");
+
+    if (userMail.trim() === "") {
       setError("Please fill all the fields");
-    } else {
-      `
-         setError("")`;
-      console.log(userMail, options[userDropdown].name, userMeassage);
-      console.log("Submitted");
-      setmessageIsSent(true);
-      window.scrollTo(0, 0);
+      return true;
+    } 
+    if (userDropdown.trim() === "") {
+      return true;
     }
+  if (userMessage.trim() === "") {
+      setError("Please fill all the fields");
+      return true;
+  }
+    setLoading(true);
+    axios
+      .post("/api/mail", { email: userMail, message: userMessage, service: userDropdown })
+      .then((res) => {
+        setUserMail("");
+        setUserDropdown("");
+        setUserMessage("");
+        setmessageIsSent(true);
+      })
+      .catch((err) => {
+        if (err?.message === "Request failed with status code 500") {
+          setmessageIsSent(true);
+          return;
+        }
+
+        setError(
+          err.response.data?.message ?? "Something went wrong! try again later"
+        );
+      })
+      .finally(() => {
+        setLoading(false);
+      });
   };
 
   return (
@@ -51,7 +74,7 @@ const ContactForm = () => {
               Send us a message
             </p>
           </div>
-          <form className="mt-[33px]" onSubmit={handleSubmit}>
+          <form className="mt-[33px]" onSubmit={addToWaitlist}>
             <div className="form-group flex flex-col">
               <label
                 htmlFor="userMail"
@@ -95,8 +118,8 @@ const ContactForm = () => {
               <MessageArea
                 className="h-[220px] md:h-[209px] mb-2 text-[14px]  md:text-[16px]"
                 name="userMessage"
-                value={userMeassage}
-                onChange={(e) => setUserMeassage(e.target.value)}
+                value={userMessage}
+                onChange={(e) => setUserMessage(e.target.value)}
                 placeholder="Type your message here..."
               ></MessageArea>
             </div>
