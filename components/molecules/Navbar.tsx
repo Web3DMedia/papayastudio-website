@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import {FiMenu} from "react-icons/fi"
+import styled from 'styled-components'
 import { TrackerInner, TrackerOutter, HeaderBar } from '../../styles/NavbarStyles'
 import {Dispatch,SetStateAction} from 'react'
 import {Link as ScrollLink} from 'react-scroll'
@@ -11,8 +12,18 @@ interface IProps {
    setIsMenuOpen: Dispatch<SetStateAction<boolean>>
 }
 
+
+const NavLinks = styled.div`
+&:hover .logo {
+   opacity: 1;
+}
+`
+
 const Navbar = ({ setIsMenuOpen }: IProps) => {
    const [textNumber, setTextNumber] = useState(1)
+   const [isOne, setIsOne] = useState(true)
+   const [isTwo, setIsTwo] = useState(false)
+   const [isThree, setIsThree] = useState(false)
 
    useEffect(() => {
       if(textNumber <= 4){
@@ -44,25 +55,40 @@ const Navbar = ({ setIsMenuOpen }: IProps) => {
          </Link>
          <div className="hidden lg:flex items-center">
             <Link href="/#WhoAreWe">
-                  <div className="flex items-center font-bold cursor-pointer xl:text-lg">
+                  <NavLinks className="flex items-center font-bold cursor-pointer xl:text-lg" onClick={() => {setIsOne(true) ,setIsTwo(false), setIsThree(false) }}>
                      <Image 
                         src='/assets/orange-logo.svg' 
                         width={25} 
                         height={25} 
-                        alt="orange logo" 
+                        alt="orange logo"
+                        className={  isOne === true ? "logo opacity-1" : "logo opacity-0"} 
                      />
                      <h2 className="ml-1">who</h2>
-                  </div>
+                  </NavLinks>
             </Link>
             <Link href="/#WhatWeDo">
-                  <div className="flex items-center mx-12 cursor-pointer font-bold xl:text-lg">
+                  <NavLinks className="flex items-center mx-12 cursor-pointer font-bold xl:text-lg" onClick={() => {setIsOne(false) ,setIsTwo(true), setIsThree(false) } }>
+                     <Image 
+                        src='/assets/orange-logo.svg' 
+                        width={25} 
+                        height={25} 
+                        alt="orange logo"
+                        className={ isTwo === true ? "logo opacity-1" : "logo opacity-0"} 
+                     />
                      what
-                  </div>
+                  </NavLinks>
             </Link>
             <Link href="/#OurProuducts">
-                  <div className="flex items-center font-bold cursor-pointer xl:text-lg">
+                  <NavLinks className="flex items-center font-bold cursor-pointer xl:text-lg" onClick={() => {setIsOne(false) ,setIsTwo(false), setIsThree(false) } }>
+                     <Image 
+                        src='/assets/orange-logo.svg' 
+                        width={25} 
+                        height={25} 
+                        alt="orange logo"
+                        className={ isThree === true ? "logo opacity-1" : "logo opacity-0"} 
+                     />
                      products
-                  </div>
+                  </NavLinks>
             </Link>
          </div>
          <Link href="/contact">

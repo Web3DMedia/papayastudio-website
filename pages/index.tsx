@@ -19,6 +19,7 @@ const Home = () => {
       <Head>
         <title>Papayas studio</title>
         <link rel="icon" href="/assets/logo.svg" />
+          <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
       </Head>
 
       <main className="w-full relative h-full overflow-hidden">

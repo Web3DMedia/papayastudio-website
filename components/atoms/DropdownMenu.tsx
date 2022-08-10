@@ -63,7 +63,7 @@ const DropdownMenu = ({ setUserDropdown, userDropdown, options }) => {
       <div className="relative">
         {options.map((option: any, index: any) => (
           <div onClick={() => setOptionSelect(!optionSelect)} key={index}>
-            {userDropdown === index && 
+            {userDropdown === option.name && 
             <Select className="text-[14px]">{option.name}</Select>}
             <div className="absolute top-1/4 right-[21px]">
               <Image
@@ -71,6 +71,7 @@ const DropdownMenu = ({ setUserDropdown, userDropdown, options }) => {
                 width={10}
                 height={5}
                 objectFit="contain"
+                className={optionSelect ? "rotate-0"  : "rotate-180"}
               />
             </div>
           </div>
@@ -79,7 +80,7 @@ const DropdownMenu = ({ setUserDropdown, userDropdown, options }) => {
       {
         optionSelect && <OptionContainer className="absolute z-10 bg-white w-full">
         {options.map((option:any, index:any) => (
-          <Option className="flex justify-between pr-[16px]" onClick={() => SelectOption(index)} key={index}>
+          <Option className="flex justify-between pr-[16px]" onClick={() => SelectOption(option.name)} key={index}>
             <h1>{option.name}</h1>
             <Image
               src="/assets/dropdown-select.png"
