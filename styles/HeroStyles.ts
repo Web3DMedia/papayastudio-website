@@ -26,15 +26,16 @@ export const TextDiv = styled.div`
    }
 `
 
-export const BtnSpan  = styled.div`
-   background:  #FF6661;
-   height: 20px;
-   width: 20px;
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   border-radius: 100%;
-   margin-left: 12px;
+export const BtnSpan  = styled.button`
+   background: #FF6661;
+   border-radius:12px;
+   color: white;
+   height: 56px;
+   width: 152px;
+   border: 1px solid #FCD1CA;
+   font-weight: 700;
+font-size: 16px;
+line-height: 16px;
 `
 
 

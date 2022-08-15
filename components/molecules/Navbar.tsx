@@ -79,7 +79,7 @@ const Navbar = ({ setIsMenuOpen }: IProps) => {
                   </NavLinks>
             </Link>
             <Link href="/#OurProuducts">
-                  <NavLinks className="flex items-center font-bold cursor-pointer xl:text-lg" onClick={() => {setIsOne(false) ,setIsTwo(false), setIsThree(false) } }>
+                  <NavLinks className="flex items-center font-bold cursor-pointer xl:text-lg" onClick={() => {setIsOne(false) ,setIsTwo(false), setIsThree(true) } }>
                      <Image 
                         src='/assets/orange-logo.svg' 
                         width={25} 
@@ -87,12 +87,12 @@ const Navbar = ({ setIsMenuOpen }: IProps) => {
                         alt="orange logo"
                         className={ isThree === true ? "logo opacity-1" : "logo opacity-0"} 
                      />
-                     products
+                     our works
                   </NavLinks>
             </Link>
          </div>
          <Link href="/contact">
-            <a className=" border border-primary hidden lg:block lg:px-[25px] lg:py-[10px] xl:px-[30px] xl:py-[15px] font-bold text-[18px] text-black rounded-xl cursor-pointer">
+            <a className=" border border-primary hidden lg:block lg:px-[25px] lg:py-[10px] xl:px-[30px] xl:py-[15px] font-bold text-[18px] text-black rounded-xl cursor-pointer" onClick={() => setIsOne(false)}>
                Get in touch
             </a>
          </Link>

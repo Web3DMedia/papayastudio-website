@@ -1,0 +1,160 @@
+import Image from 'next/image';
+import React, { useState,  SetStateAction, Dispatch } from 'react'
+import styled from 'styled-components';
+import MessageConfirmation from '../molecules/MessageConfirmation';
+import DropdownMenu from './DropdownMenu';
+
+interface IProps {
+   setIsModal: Dispatch<SetStateAction<boolean>>
+}
+
+const Modal = ({ setIsModal }: IProps) => {
+    const options = [
+        { name: "2D Design/Animation" },
+        { name: "3D Animation" },
+        { name: "Motion Graphics Design" },
+        { name: "Video Production" },
+        { name: "Training" },
+        { name: "Rendering Farm" },
+        { name: "Content Development" },
+        { name: "Other" },
+    ];
+    const [userMail, setUserMail] = useState<string>("");
+    const [userDropdown, setUserDropdown] = useState<any>("2D Design/Animation");
+    const [userName, setUserName] = useState<string>("");
+    const [error, setError] = useState<string>("");
+    const [messageIsSent, setmessageIsSent] = useState<boolean>(false);
+    
+      const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    if (
+      userMail.length === 0 ||
+      userName.length === 0 ||
+      userDropdown.length === 0
+    ) {
+      setError("Please fill all the fields");
+    } else {
+      `
+         setError("")`;
+      console.log(userMail, userDropdown, userName);
+      console.log("Submitted");     
+      setmessageIsSent(true);
+    }
+}
+    return (
+        <FormContainer>
+            <div className="bg-white w-[330px] sm:w-[664px] px-4 sm:px-16 py-10 rounded-[32px] z-20 fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                {messageIsSent === false && (
+                <div>
+                    <div className="text-left">
+                        <div className='flex justify-end pt-[10px] cursor-pointer'>
+                            <Image src="/assets/close-button.png" width={15} height={15} onClick={() => setIsModal(false)}/>
+                        </div>
+                        <h2 className="text-[#002F31] text-[40px] font-bold leading-[46px]">
+                            Join our Waitlist
+                        </h2>
+                        <p className="text-[#4A5567] text-[16px] font-normal leading-[16px] pt-5 w-10/12">
+                           Be on our waitlist to get to be the first to enroll when we start 
+                            the academy, only limited slots available
+                        </p>
+                    </div>
+                    <form className="mt-[33px]" onSubmit={handleSubmit}>
+                          <div className="form-group flex flex-col">
+                            <label
+                                htmlFor="userName"
+                                className="mb-2 text-[#4A5567] text-[14px] font-bold"
+                            >
+                                Full name
+                            </label>
+                            <Input
+                                className="h-[50px] sm:h-[56px] text-[14px] md:text-[16px]"
+                                name="userName"
+                                type="text"
+                                value={userName}
+                                onChange={(e) => setUserName(e.target.value)}
+                                placeholder="Enter your name"
+                            />
+                            
+                        </div>
+                        <div className="form-group flex flex-col my-5">
+                            <label
+                                htmlFor="userMail"
+                                className="mb-2 text-[#4A5567] text-[14px] font-bold"
+                            >
+                                Email address
+                            </label>
+                            <Input
+                                className="h-[50px] sm:h-[56px] text-[14px] md:text-[16px]"
+                                name="userMail"
+                                value={userMail}
+                                onChange={(e) => setUserMail(e.target.value)}
+                                placeholder="Enter your email"
+                            />
+                        </div>
+
+                        <div className="form-group flex flex-col">
+                            <label
+                                htmlFor="userDropdown"
+                                className="mb-2 text-[#4A5567] text-[14px] font-bold"
+                            >
+                                Area of Interest
+                            </label>
+                            <DropdownMenu
+                                setUserDropdown={setUserDropdown}
+                                userDropdown={userDropdown}
+                                options={options}
+                            ></DropdownMenu>
+                        </div>
+
+                        {error && <h2 className="text-red-700 pt-2">{error}</h2>}
+                        <button
+                            type="submit"
+                            className="mt-[24px] bg-[#FF6661] w-full md:w-[204px] cursor-pointer py-3 md:py-5 text-[#FFFFFF] font-bold text-[16px] rounded-xl"
+                        >
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            )}
+
+            {messageIsSent === true && <MessageConfirmation setmessageIsSent={setmessageIsSent} ></MessageConfirmation>}
+            </div>
+        </FormContainer>
+    );
+};
+
+const FormContainer = styled.div`
+position: fixed;
+overflow:scroll;
+background: rgba(0, 0, 0, 0.16);
+backdrop-filter: blur(8px);
+width:100%;
+height:100%;
+z-index: 15;
+&::-webkit-scrollbar {
+  width: 0;
+`;
+
+const Input = styled.input`
+  border: 1px solid #e3e8ef;
+  padding-left: 10px;
+  outline: none;
+  border-radius: 12px;
+  font-size: 18px;
+
+  &:hover,
+  &:focus {
+    box-shadow: 0px 0px 0px 4px #e1e1fe;
+    transition: all 0.1s ease-out;
+  }
+
+  &::placeholder {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color: var(--LearnPapayaText2);
+  }
+`;
+
+
+export default Modal

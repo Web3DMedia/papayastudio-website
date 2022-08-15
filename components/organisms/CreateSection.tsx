@@ -5,35 +5,37 @@ import { useEffect } from "react";
 const CreateSection = () => {
   useEffect(() => {
     AOS.init({
-    offset: 150,
-    delay: 0,
-    duration:1500,
+      offset: 150,
+      delay: 0,
+      duration: 1500,
     });
   });
   const activityData = [
     {
-      name: "2D Animation (Animes)",
+      name: "2D Animation(Animes)",
       text: "We create 2D animations that are forging the future of community-driven edutainment for the new web.",
     },
     {
-      name: "Rendering Farm",
-      text: "Our render farm technology offers high-quality renders that are 10X faster than the average speed. web3 creators can now render their large project files at our studio.",
+      name: "3D Animations",
+      text: "We create 3D animations that are forging the future of community-driven edutainment for the new web.",
+    },
+
+    {
+      name: "Motion Graphics Design",
+      text: "We create stunning motion graphics spots on web3 content.",
     },
     {
       name: "Video Production",
       text: "We produce live-action videos in our in-house studio with great stories woven around web3, blockchain, and emerging technologies.",
     },
     {
+      name: "Rendering Farm",
+      text: "Our render farm technology offers high-quality renders that are 10X faster than the average speed. web3 creators can now render their large project files at our studio.",
+    },
+
+    {
       name: "Content Development",
       text: "We tell relatable and edutaining stories that are carefully crafted to drive community engagement in the web3 media space.",
-    },
-    {
-      name: "3D Animations",
-      text: "We create 3D animations that are forging the future of community-driven edutainment for the new web.",
-    },
-    {
-      name: "Motion Graphics Design",
-      text: "We create stunning motion graphics spots on web3 content.",
     },
   ];
   return (
@@ -51,7 +53,6 @@ const CreateSection = () => {
           <p
             className=" absolute left-5 md:left-14 -top-[20px] sm:-top-[60px] lg:left-20 xl:left-[80px] md:-top-[50px] xl:-top-[115px] 4xl:-top-16 4xl:left-20 font-normal text-xs uppercase"
             data-aos="fade-up"
-
           >
             What We <br /> Do
           </p>

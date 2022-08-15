@@ -216,7 +216,7 @@ const HeroSection = () => {
                      At Papayas studios we are at the forefront of decentralized content creation, helping to simplify the complexities of Blockchain and emerging technologies  
                   </p>
                   <BtnLink to="productsSection" spy={true} smooth={true} offset={50} duration={500} className="pb-[175px] pt-[18px] sm:pb-0 xl:pl-14 3xl:pl-0 flex items-center text-base xl:text-lg font-bold sm:mt-3 lg:mt-3 xl:mt-5 cursor-pointer ml-2 w-[205px]" data-aos="fade-up">
-                     Our Products <BtnSpan><MdKeyboardArrowRight/></BtnSpan>
+                     <BtnSpan>Our Works</BtnSpan>
                   </BtnLink>
                </div>
             </div>

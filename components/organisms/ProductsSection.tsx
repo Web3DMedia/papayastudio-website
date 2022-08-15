@@ -31,7 +31,7 @@ const ProductsSection = () => {
       Links: "https://blocasset.com/",
     },
     {
-      cardH2: "DesignBants Show",
+      cardH2: "DesignBant Show",
       cardP:
         "Highly interactive and engaging videos produced in-house for Papayas YouTube Channel",
       btnTxt: "View Product",

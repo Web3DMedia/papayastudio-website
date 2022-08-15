@@ -10,10 +10,12 @@ import CreateSection from "../components/organisms/CreateSection";
 import ProductsSection from "../components/organisms/ProductsSection";
 import SectionSeperator from "../components/molecules/SectionSeperator";
 import PageIndicator from "../components/molecules/PageIndicator";
+import Modal from "../components/atoms/Modal";
 
 /** eslint-ignore react/react-in-jsx-scope */
 const Home = () => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false)
+  const [isModal, setIsModal] = useState<boolean>(false)
   return (
     <div className="font-body">
       <Head>
@@ -23,16 +25,17 @@ const Home = () => {
       </Head>
 
       <main className="w-full relative h-full overflow-hidden">
-        <Navbar setIsMenuOpen={setIsMenuOpen}/>
+        { isModal ? "" : <Navbar  setIsMenuOpen={setIsMenuOpen}/>}
         <Menubar isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen}/>
         
+        { isModal && <Modal setIsModal={setIsModal}></Modal>}
         <HeroSection/>
         <SectionSeperator/>
         <PageIndicator/>
         <CreateSection/>
         <SectionSeperator/>
         <ProductsSection/>
-        <LearnWithPapayaSection/>
+        <LearnWithPapayaSection setIsModal={setIsModal}/>
         <BackBoneSection/>
         <Footer/>
       </main> 
