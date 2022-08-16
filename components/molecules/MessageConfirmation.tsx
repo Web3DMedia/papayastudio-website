@@ -1,5 +1,5 @@
 import Image from "next/image";
-import React, { SetStateAction, Dispatch} from "react";
+import React, { SetStateAction, Dispatch } from "react";
 import Link from "next/link";
 import styled from "styled-components";
 
@@ -24,31 +24,36 @@ const TextParagraph = styled.p`
 import MessageSent from "../../public/assets/message-sent.png";
 
 interface IProps {
-   setmessageIsSent: Dispatch<SetStateAction<boolean>>
+  setmessageIsSent: Dispatch<SetStateAction<boolean>>;
 }
 
 const MessageConfirmation = ({ setmessageIsSent }: IProps) => {
   return (
-    <div className="text-center">
-      <div className='flex justify-end cursor-pointer pt-[65px] pb-[15px]' onClick={() => setmessageIsSent(false)}>
-      <Image src="/assets/close-button.png" width={15} height={15}/>
-          </div>
-      <Image
-        src={MessageSent}
-        width={120}
-        height={120}
-        objectFit="contain"
-      ></Image>
-      <TextHeader>Message sent</TextHeader>
-      <TextParagraph>
-        We’ve recieved your message and will be intouch, in the meantime,
-        checkout our design assets market place,{" "}
-        <Link href="https://blocasset.com/">
-          <a target="_blank" className="text-primary1">
-            Blocasset
-          </a>
-        </Link>
-      </TextParagraph>
+    <div className="bg-white w-[330px] sm:w-[664px] px-4 sm:px-16 py-10 rounded-[32px] z-20 fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+      <div className="text-center">
+        <div
+          className="flex justify-end cursor-pointer pt-[65px] pb-[15px]"
+          onClick={() => setmessageIsSent(false)}
+        >
+          <Image src="/assets/close-button.png" width={15} height={15} />
+        </div>
+        <Image
+          src={MessageSent}
+          width={120}
+          height={120}
+          objectFit="contain"
+        ></Image>
+        <TextHeader>Message sent</TextHeader>
+        <TextParagraph>
+          We’ve recieved your message and will be intouch, in the meantime,
+          checkout our design assets market place,{" "}
+          <Link href="https://blocasset.com/">
+            <a target="_blank" className="text-primary1">
+              Blocasset
+            </a>
+          </Link>
+        </TextParagraph>
+      </div>
     </div>
   );
 };

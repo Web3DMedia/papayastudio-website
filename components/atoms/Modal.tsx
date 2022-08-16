@@ -6,6 +6,7 @@ import DropdownMenu from './DropdownMenu';
 
 interface IProps {
    setIsModal: Dispatch<SetStateAction<boolean>>
+   
 }
 
 const Modal = ({ setIsModal }: IProps) => {
@@ -39,21 +40,21 @@ const Modal = ({ setIsModal }: IProps) => {
       console.log(userMail, userDropdown, userName);
       console.log("Submitted");     
       setmessageIsSent(true);
+      
     }
 }
     return (
         <FormContainer>
-            <div className="bg-white w-[330px] sm:w-[664px] px-4 sm:px-16 py-10 rounded-[32px] z-20 fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                {messageIsSent === false && (
+            <div className="bg-white w-[330px] sm:w-[664px] px-8 sm:px-16 py-10 rounded-[16px] md:rounded-[32px] z-20 fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
                 <div>
                     <div className="text-left">
-                        <div className='flex justify-end pt-[10px] cursor-pointer'>
+                        <div className='flex justify-end pb-[10px] cursor-pointer'>
                             <Image src="/assets/close-button.png" width={15} height={15} onClick={() => setIsModal(false)}/>
                         </div>
-                        <h2 className="text-[#002F31] text-[40px] font-bold leading-[46px]">
+                        <h2 className="text-[#002F31] text-[30px] md:text-[40px] font-bold leading-[46px]">
                             Join our Waitlist
                         </h2>
-                        <p className="text-[#4A5567] text-[16px] font-normal leading-[16px] pt-5 w-10/12">
+                        <p className="text-[#4A5567] text-[16px] font-normal leading-[16px] pt-5 w-full md:w-10/12">
                            Be on our waitlist to get to be the first to enroll when we start 
                             the academy, only limited slots available
                         </p>
@@ -115,10 +116,9 @@ const Modal = ({ setIsModal }: IProps) => {
                         </button>
                     </form>
                 </div>
-            )}
-
-            {messageIsSent === true && <MessageConfirmation setmessageIsSent={setmessageIsSent} ></MessageConfirmation>}
+            
             </div>
+            {messageIsSent === true && <MessageConfirmation setmessageIsSent={setmessageIsSent} ></MessageConfirmation>}
         </FormContainer>
     );
 };
