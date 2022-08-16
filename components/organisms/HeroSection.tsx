@@ -5,7 +5,11 @@ import {Element,Link as BtnLink} from 'react-scroll'
 import styled, { keyframes} from 'styled-components'
 import {useState, useEffect} from 'react'
 
-const HeroSection = () => {
+interface IProps {
+   myRefOne: any
+}
+
+const HeroSection = ({ myRefOne }: IProps) => {
    const [textNumber, setTextNumber] = useState(1)
    const [mascot, setMascot] = useState(1)
 
@@ -30,7 +34,7 @@ const HeroSection = () => {
 }, [])
 
    return (
-      <section id="WhoAreWe" className="relative w-full py-10 md:py-32 xl:py-28 4xl:pt-36 ">
+      <section id="WhoAreWe" className="relative w-full py-10 md:py-32 xl:py-28 4xl:pt-36 " ref={myRefOne}>
          <div className="bgTransformationOne">
             <div className="bgTransformationOneLeft"/>
             <div className="bgTransformationOneRight"/>
