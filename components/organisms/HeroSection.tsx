@@ -225,9 +225,9 @@ const HeroSection = ({ myRefOne }: IProps) => {
                </div>
             </div>
             <div 
-            className="relative top-2 right-2 sm:-right-14 md:absolute bg-transparent md:-top-20 lg:-top-28 md:-right-[230px] lg:-right-[410px] xl:-top-32 xl:-right-56 2xl:-right-48 4xl:-right-96 w-[400px] h-[400px] sm:h-[500px] sm:w-[500px] lg:h-[850px] lg:w-[800px] 4xl:w-[900px] 4xl:h-[1000px]">
+            className="relative top-2 -right-4 sm:-right-14 md:absolute bg-transparent md:-top-20 lg:-top-2 md:-right-[270px] lg:-right-[250px] xl:-top-4 xl:-right-20 2xl:-right-36 4xl:-right-64 w-[400px] h-[400px] sm:h-[500px] sm:w-[500px] lg:h-[500px] lg:w-[500px] 4xl:w-[600px] 4xl:h-[600px]">
                <Image
-                  src={`/assets/mascots${mascot}.png`}
+                  src={`/assets/mascotsp${mascot}.png`}
                   layout='fill'
                   alt="mascot image"
                   objectFit='contain'
