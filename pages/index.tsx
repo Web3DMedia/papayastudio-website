@@ -57,6 +57,8 @@ useEffect(() => {
 
     observer.observe(myRefThree.current)
   })
+
+
   return (
     <div className="font-body">
       <Head>
@@ -66,10 +68,10 @@ useEffect(() => {
       </Head>
 
       <main className="w-full relative h-full overflow-hidden">
-        { isModal ? "" : <Navbar  setIsMenuOpen={setIsMenuOpen} isOne={isOne} setIsOne={setIsOne} isTwo={isTwo} setIsTwo={setIsTwo} isThree={isThree} setIsThree={setIsThree} />}
+        { isModal ? "" : <Navbar setIsMenuOpen={setIsMenuOpen} isOne={isOne} setIsOne={setIsOne} isTwo={isTwo} setIsTwo={setIsTwo} isThree={isThree} setIsThree={setIsThree} />}
         <Menubar isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen}/>
         
-        { isModal && <Modal setIsModal={setIsModal}></Modal>}
+        { isModal && <Modal isModal={isModal} setIsModal={setIsModal}></Modal>}
         <HeroSection myRefOne={myRefOne}/>
         <SectionSeperator/>
         <PageIndicator/>

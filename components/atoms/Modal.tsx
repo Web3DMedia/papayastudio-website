@@ -6,10 +6,11 @@ import DropdownMenu from './DropdownMenu';
 
 interface IProps {
    setIsModal: Dispatch<SetStateAction<boolean>>
+   isModal: boolean
    
 }
 
-const Modal = ({ setIsModal }: IProps) => {
+const Modal = ({ setIsModal, isModal }: IProps) => {
     const options = [
         { name: "2D Design/Animation" },
         { name: "3D Animation" },
@@ -40,12 +41,12 @@ const Modal = ({ setIsModal }: IProps) => {
       console.log(userMail, userDropdown, userName);
       console.log("Submitted");     
       setmessageIsSent(true);
-      
     }
 }
     return (
         <FormContainer>
-            <div className="bg-white w-[330px] sm:w-[664px] px-8 sm:px-16 py-10 rounded-[16px] md:rounded-[32px] z-20 fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+           {messageIsSent === false && (
+             <div className="bg-white w-[330px] sm:w-[664px] px-8 sm:px-16 py-10 rounded-[16px] md:rounded-[32px] z-20 fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
                 <div>
                     <div className="text-left">
                         <div className='flex justify-end pb-[10px] cursor-pointer'>
@@ -116,9 +117,9 @@ const Modal = ({ setIsModal }: IProps) => {
                         </button>
                     </form>
                 </div>
-            
             </div>
-            {messageIsSent === true && <MessageConfirmation setmessageIsSent={setmessageIsSent} ></MessageConfirmation>}
+           )}
+            {messageIsSent === true && <MessageConfirmation setmessageIsSent={setmessageIsSent} isModal={isModal}></MessageConfirmation>}
         </FormContainer>
     );
 };

@@ -25,11 +25,12 @@ import MessageSent from "../../public/assets/message-sent.png";
 
 interface IProps {
   setmessageIsSent: Dispatch<SetStateAction<boolean>>;
+  isModal: boolean;
 }
 
-const MessageConfirmation = ({ setmessageIsSent }: IProps) => {
+const MessageConfirmation = ({ setmessageIsSent, isModal }: IProps) => {
   return (
-    <div className="bg-white w-[330px] sm:w-[664px] px-4 sm:px-16 py-10 rounded-[32px] z-20 fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+    <div className={isModal ? "bg-white w-[330px] sm:w-[664px] px-4 sm:px-16 py-10 rounded-[32px] z-20 fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" : "bg-white w-[330px] sm:w-[664px] px-4 sm:px-16 py-10 rounded-[32px] z-20"}>
       <div className="text-center">
         <div
           className="flex justify-end cursor-pointer pt-[65px] pb-[15px]"

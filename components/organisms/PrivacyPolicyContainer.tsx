@@ -35,6 +35,7 @@ const PrivacyPolicyContainer = () => {
          <h3 className="text-[#002F31] font-normal text-xs uppercase my-5">Legal</h3>
          <div className="bg-white my-7 rounded-t-[32px]  md:px-10">
             <TextWrapper className="customInfoWrapper h-full md:w-[650px] lg:h-[680px] max-h-[680px] pb-10 px-10 xl:px-[60px] overflow-y-scroll">
+               <h1 className='pt-[40px] text-[#002F3199] cursor-pointer font-normal text-[18px] leading-6' onClick={() => history.back()}>&#8592; Back</h1>
                <h3 className="font-bold text-[30px] lg:text-[36px] xl:text-[40px] text-[#002F31] mt-10">Privacy Policy</h3>
                <p className="font-medium my-4 text-base text-[#4A5567]">
                   Last updated: May, 2022
