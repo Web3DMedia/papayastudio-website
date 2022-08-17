@@ -134,7 +134,7 @@ const addToWaitlist = async (e: { preventDefault: () => void }) => {
           </form>
         </div>
       )}
-
+      {/*@ts-ignore */}
       {messageIsSent === true && <MessageConfirmation  setmessageIsSent={setmessageIsSent}></MessageConfirmation>}
     </FormContainer>
   );
