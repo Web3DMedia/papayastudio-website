@@ -29,8 +29,6 @@ useEffect(() => {
     const observer = new IntersectionObserver((entries, observer) =>{
       const entry = entries[0];
       setIsOne(entry.isIntersecting)
-      console.log("entry1", entry)
-      console.log("entry.isIntersecting1", entry.isIntersecting)
     })
 
     observer.observe(myRefOne.current)
@@ -40,8 +38,6 @@ useEffect(() => {
     const observer = new IntersectionObserver((entries, observer) =>{
       const entry = entries[0];
       setIsTwo(entry.isIntersecting)
-      console.log("entry2", entry)
-      console.log("entry.isIntersecting2", entry.isIntersecting)
     })
 
     observer.observe(myRefTwo.current)
@@ -51,8 +47,6 @@ useEffect(() => {
     const observer = new IntersectionObserver((entries, observer) =>{
       const entry = entries[0];
       setIsThree(entry.isIntersecting)
-      console.log("entry3", entry)
-      console.log("entry.isIntersectin3", entry.isIntersecting)
     })
 
     observer.observe(myRefThree.current)

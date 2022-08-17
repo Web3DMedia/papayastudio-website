@@ -2,7 +2,7 @@ import Image from 'next/image';
 import React, { useState,  SetStateAction, Dispatch } from 'react'
 import styled from 'styled-components';
 import MessageConfirmation from '../molecules/MessageConfirmation';
-import DropdownMenu from './DropdownMenu';
+import ReCAPTCHA from "react-google-recaptcha";
 
 interface IProps {
    setIsModal: Dispatch<SetStateAction<boolean>>
@@ -11,18 +11,7 @@ interface IProps {
 }
 
 const Modal = ({ setIsModal, isModal }: IProps) => {
-    const options = [
-        { name: "2D Design/Animation" },
-        { name: "3D Animation" },
-        { name: "Motion Graphics Design" },
-        { name: "Video Production" },
-        { name: "Training" },
-        { name: "Rendering Farm" },
-        { name: "Content Development" },
-        { name: "Other" },
-    ];
     const [userMail, setUserMail] = useState<string>("");
-    const [userDropdown, setUserDropdown] = useState<any>("2D Design/Animation");
     const [userName, setUserName] = useState<string>("");
     const [error, setError] = useState<string>("");
     const [messageIsSent, setmessageIsSent] = useState<boolean>(false);
@@ -31,18 +20,20 @@ const Modal = ({ setIsModal, isModal }: IProps) => {
     e.preventDefault();
     if (
       userMail.length === 0 ||
-      userName.length === 0 ||
-      userDropdown.length === 0
+      userName.length === 0 
     ) {
       setError("Please fill all the fields");
     } else {
       `
          setError("")`;
-      console.log(userMail, userDropdown, userName);
+      console.log(userMail, userName);
       console.log("Submitted");     
       setmessageIsSent(true);
     }
 }
+  const recaptchaRef = React.createRef();
+  const TEST_SITE_KEY = "6LcsiIMhAAAAAFc9EBIHi7WfbTNYgHqvn7mnOu25";
+  
     return (
         <FormContainer>
            {messageIsSent === false && (
@@ -93,20 +84,8 @@ const Modal = ({ setIsModal, isModal }: IProps) => {
                                 placeholder="Enter your email"
                             />
                         </div>
-
-                        <div className="form-group flex flex-col">
-                            <label
-                                htmlFor="userDropdown"
-                                className="mb-2 text-[#4A5567] text-[14px] font-bold"
-                            >
-                                Area of Interest
-                            </label>
-                            <DropdownMenu
-                                setUserDropdown={setUserDropdown}
-                                userDropdown={userDropdown}
-                                options={options}
-                            ></DropdownMenu>
-                        </div>
+                        {/*@ts-ignore */}
+                        <ReCAPTCHA  sitekey={TEST_SITE_KEY} ref={recaptchaRef}/>
 
                         {error && <h2 className="text-red-700 pt-2">{error}</h2>}
                         <button
