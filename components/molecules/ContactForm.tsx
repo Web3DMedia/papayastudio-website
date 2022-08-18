@@ -46,6 +46,7 @@ const addToWaitlist = async (e: { preventDefault: () => void }) => {
         setUserDropdown("");
         setUserMessage("");
         setmessageIsSent(true);
+        window.scrollTo(0, 0);
       })
       .catch((err) => {
         if (err?.message === "Request failed with status code 500") {
@@ -133,8 +134,8 @@ const addToWaitlist = async (e: { preventDefault: () => void }) => {
           </form>
         </div>
       )}
-
-      {messageIsSent === true && <MessageConfirmation></MessageConfirmation>}
+      {/*@ts-ignore */}
+      {messageIsSent === true && <MessageConfirmation  setmessageIsSent={setmessageIsSent}></MessageConfirmation>}
     </FormContainer>
   );
 };

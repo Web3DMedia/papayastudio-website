@@ -15,6 +15,7 @@ const Legal = () => {
             <link rel="icon" href="/assets/logo.svg" />
          </Head>
          <main className="w-full relative overflow-hidden">
+            {/*@ts-ignore */}
             <Navbar setIsMenuOpen={setIsMenuOpen}/>
             <Menubar isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen}/>
             <div className="pt-20">

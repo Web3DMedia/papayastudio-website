@@ -5,7 +5,11 @@ import {Element,Link as BtnLink} from 'react-scroll'
 import styled, { keyframes} from 'styled-components'
 import {useState, useEffect} from 'react'
 
-const HeroSection = () => {
+interface IProps {
+   myRefOne: any
+}
+
+const HeroSection = ({ myRefOne }: IProps) => {
    const [textNumber, setTextNumber] = useState(1)
    const [mascot, setMascot] = useState(1)
 
@@ -30,7 +34,7 @@ const HeroSection = () => {
 }, [])
 
    return (
-      <section id="WhoAreWe" className="relative w-full py-10 md:py-32 xl:py-28 4xl:pt-36 ">
+      <section id="WhoAreWe" className="relative w-full py-10 md:py-32 xl:py-28 4xl:pt-36 " ref={myRefOne}>
          <div className="bgTransformationOne">
             <div className="bgTransformationOneLeft"/>
             <div className="bgTransformationOneRight"/>
@@ -216,14 +220,14 @@ const HeroSection = () => {
                      At Papayas studios we are at the forefront of decentralized content creation, helping to simplify the complexities of Blockchain and emerging technologies  
                   </p>
                   <BtnLink to="productsSection" spy={true} smooth={true} offset={50} duration={500} className="pb-[175px] pt-[18px] sm:pb-0 xl:pl-14 3xl:pl-0 flex items-center text-base xl:text-lg font-bold sm:mt-3 lg:mt-3 xl:mt-5 cursor-pointer ml-2 w-[205px]" data-aos="fade-up">
-                     Our Products <BtnSpan><MdKeyboardArrowRight/></BtnSpan>
+                     <BtnSpan>Our Works</BtnSpan>
                   </BtnLink>
                </div>
             </div>
             <div 
-            className="relative top-2 right-2 sm:-right-14 md:absolute bg-transparent md:-top-20 lg:-top-28 md:-right-[230px] lg:-right-[410px] xl:-top-32 xl:-right-56 2xl:-right-48 4xl:-right-96 w-[400px] h-[400px] sm:h-[500px] sm:w-[500px] lg:h-[850px] lg:w-[800px] 4xl:w-[900px] 4xl:h-[1000px]">
+            className="relative top-2 -right-4 sm:-right-14 md:absolute bg-transparent md:-top-20 lg:-top-2 md:-right-[270px] lg:-right-[250px] xl:-top-4 xl:-right-20 2xl:-right-36 4xl:-right-64 w-[400px] h-[400px] sm:h-[500px] sm:w-[500px] lg:h-[500px] lg:w-[500px] 4xl:w-[600px] 4xl:h-[600px]">
                <Image
-                  src={`/assets/mascots${mascot}.png`}
+                  src={`/assets/mascotsp${mascot}.png`}
                   layout='fill'
                   alt="mascot image"
                   objectFit='contain'

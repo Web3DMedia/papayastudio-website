@@ -1,8 +1,9 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState, useEffect, SetStateAction, Dispatch} from 'react'
 import styled from 'styled-components'
 import Image from 'next/image'
 import Link from 'next/link'
 import AOS from "aos";
+import Modal from '../atoms/Modal';
 
 
 interface Props {
@@ -54,14 +55,18 @@ font-size: 18px;
 width:90%;
 }
 `
-const FourthText = styled.h4`
-font-weight: 400;
-font-size: 18px;
-line-height: 30px;
-width:120px;
+const FourthText = styled.button`
+margin-top:24px;
+font-weight: 700;
+font-size: 14px;
+width: 152px;
+height: 44px;
+line-height: 16px;
+background:#FF6661;
+border: 0.5px solid #FF9D8D;
+border-radius: 10px;
 @media (max-width: 1024px) {
-font-size: 16px;
-margin-bottom:20px;
+
 }`
 const Img = styled.img`
 `
@@ -327,7 +332,11 @@ background-position-x: -130px;
 background-position-y: -105px;
 }
 `
-const LearnWithPapayaSection = () => {
+interface IProps {
+   setIsModal: Dispatch<SetStateAction<boolean>>
+}
+
+const LearnWithPapayaSection = ({ setIsModal }: IProps)  => {
     const [bg, setBg] = useState<Number>(1)
     
       useEffect(() => {
@@ -339,19 +348,21 @@ const LearnWithPapayaSection = () => {
       }
 }, [])
   return (
-    <LearnWithPapayaContainer className='font-heading relative reveal'>
-        <div className="absolute top-24 left-7 w-[2px] hidden lg:block h-40 bg-[#FCD1CA]"/>
+    <LearnWithPapayaContainer>
+        
+        <div className='font-heading relative'>
+            <div className="absolute top-24 left-7 w-[2px] hidden lg:block h-40 bg-[#FCD1CA]"/>
         <div className='2xl:w-[1440px] m-auto'>
             <FirstText className='pt-24 pl-5 md:pl-14 lg:pl-20 pb-12 text-primary3' data-aos="fade-up">LEARN <br/>  WITH PAPAYAS</FirstText>
 
         <SecondText className='pl-5 md:pl-14 lg:pl-20 xl:pl-40 text-learnpapayatext' data-aos="fade-up">Join Our Learning Academy</SecondText>
 
         <div className='pl-5 md:pl-14 lg:pl-20 xl:pl-56 pt-11'>
-            <ThirdText className=' text-learnpapayatext2 reveal fade-left' data-aos="fade-up">Learn from professionals across the animation and tech industry and build expert skills. We help creative talent build expert skills by training, hiring, and empowering them.</ThirdText>
+            <ThirdText className=' text-learnpapayatext2 ' data-aos="fade-up">Learn from professionals across the animation and tech industry and build expert skills. We help creative talent build expert skills by training, hiring, and empowering them.</ThirdText>
 
-         <Link href="/contact">
-                <FourthText className='flex items-center text-learnpapayatext pt-6 cursor-pointer reveal fade-left' data-aos="fade-up"> Contact Us <Img src='/assets/component-btn.png' alt='right arrow button' className='ml-2 w-6 h-6'/>  </FourthText>
-         </Link>
+   
+                <FourthText className=' text-learnpapayatext cursor-pointer mb-4 ' data-aos="fade-up" onClick={() => setIsModal(true)}>Join waitlist </FourthText>
+         
         </div>
 
         <Im data-aos="fade-up">
@@ -370,8 +381,6 @@ const LearnWithPapayaSection = () => {
                 <Image src="/assets/aya.png" width={307} height={148} alt="papaya" />
             </Aya>
 
-
-
             <Pap>
                 <Image src="/assets/papaya-text.png" width={307} height={148} alt="papaya" />
             </Pap>
@@ -379,6 +388,9 @@ const LearnWithPapayaSection = () => {
             <Vector>
                 <Image src="/assets/footer-vector.png" width={511} height={569} objectFit="contain" alt="Vector" />
             </Vector>
+
+         
+        </div>
         </div>
     </LearnWithPapayaContainer>
   )

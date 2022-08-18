@@ -5,7 +5,12 @@ import { Element } from "react-scroll";
 import Carousel from "nuka-carousel";
 import AOS from "aos";
 
-const ProductsSection = () => {
+interface IProps {
+   myRefThree: any
+}
+
+
+const ProductsSection = ({ myRefThree }: IProps) => {
   const [img, setImg] = useState<Number>(1);
 
   useEffect(() => {
@@ -31,7 +36,7 @@ const ProductsSection = () => {
       Links: "https://blocasset.com/",
     },
     {
-      cardH2: "DesignBants Show",
+      cardH2: "DesignBant Show",
       cardP:
         "Highly interactive and engaging videos produced in-house for Papayas YouTube Channel",
       btnTxt: "View Product",
@@ -73,7 +78,7 @@ const ProductsSection = () => {
         <div className="bgTransformationOneRight" />
       </div>
       <div className="absolute top-20 left-7 w-[2px] hidden lg:block h-40 bg-[#FCD1CA]" />
-      <div className="2xl:w-[1440px] m-auto">
+      <div className="2xl:w-[1440px] m-auto" ref={myRefThree}>
         <div
           className="absolute -top-12 sm:-top-16 w-[250px] h-[250px] lg:-top-24 xl:-top-40 -right-10 sm:right-0 md:w-[300px] md:h-[300px] lg:w-[340px] lg:h-[340px] xl:w-[500px] xl:h-[500px]"
           data-aos="fade-up"
