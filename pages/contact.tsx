@@ -15,7 +15,6 @@ const Contact = () => {
         <link rel="icon" href="/assets/logo.svg" />
       </Head>
       <main className="w-full relative overflow-hidden">
-        {/*@ts-ignore */}
         <Navbar setIsMenuOpen={setIsMenuOpen} />
         {/*@ts-ignore */}
         <Menubar isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />

@@ -10,7 +10,7 @@ const CardDiv = styled.div`
 
 const ProductCard = ({ info }) => {
    return (
-      <CardDiv className="cursor-pointer ml-7 sm:ml-14 lg:ml-7 h-[475px]">
+      <CardDiv className="cursor-pointer ml-7 md:ml-14 lg:ml-7 h-[475px]">
          <div className="relative w-[300px] h-[300px] max-w-[300px] 4xl:w-[350px] 4xl:max-w-[350px] overflow-hidden rounded-[24px]">
             <Image src={info.cardImage} layout="fill" objectFit='cover' alt="image" />
          </div>

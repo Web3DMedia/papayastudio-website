@@ -28,13 +28,19 @@ const ProductsSection = ({ myRefThree, isThree }: IProps) => {
     AOS.init();
   });
 
-  const [isWidth, setIsWidth] = useState<number>(3.5)
+  const [isWidth, setIsWidth] = useState<number>()
   const myRefWidth: any = useRef()
 
   useEffect(() => {
     const observer = new IntersectionObserver((entries, observer) => {
       const entry = entries[0];
-      entry.boundingClientRect.width > 1304 ? setIsWidth(3.5) : setIsWidth(1)
+      if(entry.boundingClientRect.width > 1144)
+      setIsWidth(3.5)
+      else
+      setIsWidth(3)
+
+
+      console.log(entry.boundingClientRect.width)
     })
 
     observer.observe(myRefWidth.current)
@@ -133,7 +139,6 @@ const ProductsSection = ({ myRefThree, isThree }: IProps) => {
                 pauseOnHover={true}
                 withoutControls={true}
                 slidesToShow={isWidth}
-
                 className="productCards flex mt-10 px-5 md:pl-04 lg:pl-[85px] xl:pl-0 cursor-pointer"
               >
                 {products?.map((info, index) => (

@@ -11,11 +11,11 @@ import { getEventListeners } from 'events'
 
 interface IProps {
    setIsMenuOpen: Dispatch<SetStateAction<boolean>>
-   isOne: boolean
-   isTwo: boolean
-   isThree: boolean
-   isFour: boolean
-   isFive: boolean
+   isOne?: boolean
+   isTwo?: boolean
+   isThree?: boolean
+   isFour?: boolean
+   isFive?: boolean
 }
 
 
