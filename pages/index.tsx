@@ -84,7 +84,7 @@ const Home = () => {
       </Head>
 
       <main className="w-full relative h-full overflow-hidden">
-        {isModal ? "" : <Navbar setIsMenuOpen={setIsMenuOpen} isOne={isOne} isTwo={isTwo} isThree={isThree} />}
+        {isModal ? "" : <Navbar setIsMenuOpen={setIsMenuOpen} isOne={isOne} isTwo={isTwo} isThree={isThree} isFour={isFour} isFive={isFive} />}
         <Menubar isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} isOne={isOne} isTwo={isTwo} isThree={isThree} />
 
         {isModal && <Modal isModal={isModal} setIsModal={setIsModal}></Modal>}
