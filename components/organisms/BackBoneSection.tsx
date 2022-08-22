@@ -92,7 +92,10 @@ const BackBoneSection = ({ myRefFive, isFive }: IProps) => {
             <div className="bgTransformationOneLeft"/>
             <div className="bgTransformationOneRight"/>
         </div>
-      <div className={isFive ? "absolute top-20 left-7 hidden lg:block h-40 w-[5px] rounded-[8px] bg-[#FF6661]" : "absolute top-20 left-7 w-[2px] hidden lg:block h-40 bg-[#FCD1CA]" } />
+      <div className="mx-1 h-[150px] absolute top-24 left-7 hidden lg:block ">
+           <TrackerOutter isFive={isFive}/>
+            <TrackerInner/>
+      </div>
 
         <div className='2xl:w-[1440px] m-auto' ref={myRefFive}>
           <SectionHeader data-aos="fade-up">THE <br/>BACKBONE</SectionHeader>
@@ -159,5 +162,27 @@ const BackBoneSection = ({ myRefFive, isFive }: IProps) => {
     </Div>
   )
 }
+
+const TrackerOutter = styled.div<{isFive: boolean}>`
+   width: 5px;
+   height: ${({isFive}) => isFive ? '100%' : '0%'};
+   background: #FF6661;
+   border-radius: 8px;
+   z-index: 2;
+   position: absolute;
+   top: 0;
+   left: -1px;
+   transition: .8s ease-in height;
+`
+const TrackerInner = styled.div`
+   width: 1.5px;
+   height: 95%;
+   background: #FCD1CA;
+   border-radius: 8px;
+   position: relative;
+   z-index: 1;
+   margin-top: 2px;
+   margin-left: .8px;
+`
 
 export default BackBoneSection

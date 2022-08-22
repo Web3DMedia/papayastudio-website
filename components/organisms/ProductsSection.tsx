@@ -4,6 +4,7 @@ import Image from "next/image";
 import { Element } from "react-scroll";
 import Carousel from "nuka-carousel";
 import AOS from "aos";
+import styled from "styled-components";
 
 interface IProps {
   myRefThree: any
@@ -91,7 +92,10 @@ const ProductsSection = ({ myRefThree, isThree }: IProps) => {
         <div className="bgTransformationOneLeft" />
         <div className="bgTransformationOneRight" />
       </div>
-      <div className={isThree ? "absolute top-20 left-7 hidden lg:block h-40 w-[5px] rounded-[8px] bg-[#FF6661]" : "absolute top-20 left-7 w-[2px] hidden lg:block h-40 bg-[#FCD1CA]"} />
+      <div className="mx-1 h-[150px] absolute top-20 left-7 hidden lg:block ">
+           <TrackerOutter isThree={isThree}/>
+            <TrackerInner/>
+      </div>
       <div className="2xl:w-[1440px] m-auto" ref={myRefThree}>
         <div
           className="absolute -top-12 sm:-top-16 w-[250px] h-[250px] lg:-top-24 xl:-top-40 -right-10 sm:right-0 md:w-[300px] md:h-[300px] lg:w-[340px] lg:h-[340px] xl:w-[500px] xl:h-[500px]"
@@ -143,5 +147,27 @@ const ProductsSection = ({ myRefThree, isThree }: IProps) => {
     </Element>
   );
 };
+
+const TrackerOutter = styled.div<{isThree: boolean}>`
+   width: 5px;
+   height: ${({isThree}) => isThree ? '100%' : '0%'};
+   background: #FF6661;
+   border-radius: 8px;
+   z-index: 2;
+   position: absolute;
+   top: 0;
+   left: -1px;
+   transition: .8s ease-in height;
+`
+const TrackerInner = styled.div`
+   width: 1.5px;
+   height: 95%;
+   background: #FCD1CA;
+   border-radius: 8px;
+   position: relative;
+   z-index: 1;
+   margin-top: 2px;
+   margin-left: .8px;
+`
 
 export default ProductsSection;
