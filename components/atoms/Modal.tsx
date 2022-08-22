@@ -20,19 +20,21 @@ const Modal = ({ setIsModal, isModal }: IProps) => {
     e.preventDefault();
     if (
       userMail.length === 0 ||
-      userName.length === 0 
+      userName.length === 0 ||
+      recaptchaRef === null
     ) {
       setError("Please fill all the fields");
     } else {
-      `
-         setError("")`;
+      setError("");
+      setUserMail("");
+      setUserName("");
+      console.log(recaptchaRef)
       console.log(userMail, userName);
       console.log("Submitted");     
       setmessageIsSent(true);
     }
 }
   const recaptchaRef = React.createRef();
-  const TEST_SITE_KEY = "6LcsiIMhAAAAAFc9EBIHi7WfbTNYgHqvn7mnOu25";
   
     return (
         <FormContainer>
@@ -85,7 +87,7 @@ const Modal = ({ setIsModal, isModal }: IProps) => {
                             />
                         </div>
                         {/*@ts-ignore */}
-                        <ReCAPTCHA  sitekey={TEST_SITE_KEY} ref={recaptchaRef}/>
+                        <ReCAPTCHA  sitekey={`${process.env.TEST_SITE_KEY}`} ref={recaptchaRef}/>
 
                         {error && <h2 className="text-red-700 pt-2">{error}</h2>}
                         <button

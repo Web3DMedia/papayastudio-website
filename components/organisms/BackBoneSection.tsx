@@ -81,16 +81,20 @@ margin-left: 28px;
 @media (max-width: 1024px) {
 }
 `
-const BackBoneSection = () => {
+interface IProps {
+   myRefFive: any
+   isFive: boolean
+}
+const BackBoneSection = ({ myRefFive, isFive }: IProps) => {
   return (
     <Div className='relative'>
         <div className="bgTransformationOne">
             <div className="bgTransformationOneLeft"/>
             <div className="bgTransformationOneRight"/>
         </div>
-        <div className="absolute top-24 left-7 w-[2px] hidden lg:block h-40 bg-[#FCD1CA]"/>
+      <div className={isFive ? "absolute top-20 left-7 hidden lg:block h-40 w-[5px] rounded-[8px] bg-[#FF6661]" : "absolute top-20 left-7 w-[2px] hidden lg:block h-40 bg-[#FCD1CA]" } />
 
-        <div className='2xl:w-[1440px] m-auto'>
+        <div className='2xl:w-[1440px] m-auto' ref={myRefFive}>
           <SectionHeader data-aos="fade-up">THE <br/>BACKBONE</SectionHeader>
 
         <SecondText className='pl-6 md:pl-20 xl:pl-40 text-backboneText' data-aos="fade-up">Meet The Super Heroes Shaping The Web3 &amp; Blockchain ecosystem</SecondText>

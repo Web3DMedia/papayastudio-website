@@ -7,10 +7,11 @@ import AOS from "aos";
 
 interface IProps {
    myRefThree: any
+   isThree: boolean
 }
 
 
-const ProductsSection = ({ myRefThree }: IProps) => {
+const ProductsSection = ({ myRefThree, isThree }: IProps) => {
   const [img, setImg] = useState<Number>(1);
 
   useEffect(() => {
@@ -31,29 +32,29 @@ const ProductsSection = ({ myRefThree }: IProps) => {
       cardH2: "Assets for Blocasset",
       cardP:
         "Hundreds of digital asset and designs created for Web3 designers and digital creators. ",
-      btnTxt: "View Product",
-      cardImage: `/assets/bloccassets.png`,
+      btnTxt: "View Work",
+      cardImage: `/assets/bloccassets-asset.png`,
       Links: "https://blocasset.com/",
     },
     {
       cardH2: "DesignBant Show",
       cardP:
         "Highly interactive and engaging videos produced in-house for Papayas YouTube Channel",
-      btnTxt: "View Product",
+      btnTxt: "View Work",
       cardImage: "/assets/crypto-bundle.png",
       Links: "/",
     },
     {
       cardH2: "Papito and Papina Mascot",
       cardP: "Our signature brand mascot for Papayas studio",
-      btnTxt: "View Product",
+      btnTxt: "View Work",
       cardImage: "/assets/papitoandpapina.png",
       Links: "/",
     },
     {
       cardH2: "Avatars",
       cardP: "Stunning custom-made avatars for days!",
-      btnTxt: "View Product",
+      btnTxt: "View Work",
       cardImage: `/assets/backbone${img}1.jpeg`,
       Links: "/",
     },
@@ -61,7 +62,7 @@ const ProductsSection = ({ myRefThree }: IProps) => {
       cardH2: "Blocasset Contributor Launch Video",
       cardP:
         "Super engaging explainer video created for Blocasset contributors launch",
-      btnTxt: "View Product",
+      btnTxt: "View Work",
       cardImage: "/assets/fish-nft.png",
       Links: "/",
     },
@@ -77,7 +78,7 @@ const ProductsSection = ({ myRefThree }: IProps) => {
         <div className="bgTransformationOneLeft" />
         <div className="bgTransformationOneRight" />
       </div>
-      <div className="absolute top-20 left-7 w-[2px] hidden lg:block h-40 bg-[#FCD1CA]" />
+            <div className={isThree ? "absolute top-20 left-7 hidden lg:block h-40 w-[5px] rounded-[8px] bg-[#FF6661]" : "absolute top-20 left-7 w-[2px] hidden lg:block h-40 bg-[#FCD1CA]" } />
       <div className="2xl:w-[1440px] m-auto" ref={myRefThree}>
         <div
           className="absolute -top-12 sm:-top-16 w-[250px] h-[250px] lg:-top-24 xl:-top-40 -right-10 sm:right-0 md:w-[300px] md:h-[300px] lg:w-[340px] lg:h-[340px] xl:w-[500px] xl:h-[500px]"
