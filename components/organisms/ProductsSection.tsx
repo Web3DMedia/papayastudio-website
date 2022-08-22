@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import ProductCard from "../molecules/ProductCard";
 import Image from "next/image";
 import { Element } from "react-scroll";
@@ -6,8 +6,8 @@ import Carousel from "nuka-carousel";
 import AOS from "aos";
 
 interface IProps {
-   myRefThree: any
-   isThree: boolean
+  myRefThree: any
+  isThree: boolean
 }
 
 
@@ -27,6 +27,19 @@ const ProductsSection = ({ myRefThree, isThree }: IProps) => {
     AOS.init();
   });
 
+  const [isWidth, setIsWidth] = useState<number>(3.5)
+  const myRefWidth: any = useRef()
+
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries, observer) => {
+      const entry = entries[0];
+      entry.boundingClientRect.width > 1304 ? setIsWidth(3.5) : setIsWidth(1)
+    })
+
+    observer.observe(myRefWidth.current)
+  })
+
+
   const products = [
     {
       cardH2: "Assets for Blocasset",
@@ -41,30 +54,30 @@ const ProductsSection = ({ myRefThree, isThree }: IProps) => {
       cardP:
         "Highly interactive and engaging videos produced in-house for Papayas YouTube Channel",
       btnTxt: "View Work",
-      cardImage: "/assets/crypto-bundle.png",
-      Links: "/",
+      cardImage: "/assets/design-bant.jpeg",
+      Links: "https://www.youtube.com/channel/UCKcRE2nLh_iN2yrfygPr_SA",
     },
     {
       cardH2: "Papito and Papina Mascot",
       cardP: "Our signature brand mascot for Papayas studio",
       btnTxt: "View Work",
-      cardImage: "/assets/papitoandpapina.png",
-      Links: "/",
+      cardImage: "/assets/papito-and-papina-new.jpeg",
+      Links: "",
     },
     {
       cardH2: "Avatars",
       cardP: "Stunning custom-made avatars for days!",
       btnTxt: "View Work",
       cardImage: `/assets/backbone${img}1.jpeg`,
-      Links: "/",
+      Links: "",
     },
     {
       cardH2: "Blocasset Contributor Launch Video",
       cardP:
         "Super engaging explainer video created for Blocasset contributors launch",
       btnTxt: "View Work",
-      cardImage: "/assets/fish-nft.png",
-      Links: "/",
+      cardImage: "/assets/bloccassets-contributors.jpeg",
+      Links: "",
     },
   ];
 
@@ -78,7 +91,7 @@ const ProductsSection = ({ myRefThree, isThree }: IProps) => {
         <div className="bgTransformationOneLeft" />
         <div className="bgTransformationOneRight" />
       </div>
-            <div className={isThree ? "absolute top-20 left-7 hidden lg:block h-40 w-[5px] rounded-[8px] bg-[#FF6661]" : "absolute top-20 left-7 w-[2px] hidden lg:block h-40 bg-[#FCD1CA]" } />
+      <div className={isThree ? "absolute top-20 left-7 hidden lg:block h-40 w-[5px] rounded-[8px] bg-[#FF6661]" : "absolute top-20 left-7 w-[2px] hidden lg:block h-40 bg-[#FCD1CA]"} />
       <div className="2xl:w-[1440px] m-auto" ref={myRefThree}>
         <div
           className="absolute -top-12 sm:-top-16 w-[250px] h-[250px] lg:-top-24 xl:-top-40 -right-10 sm:right-0 md:w-[300px] md:h-[300px] lg:w-[340px] lg:h-[340px] xl:w-[500px] xl:h-[500px]"
@@ -92,7 +105,7 @@ const ProductsSection = ({ myRefThree, isThree }: IProps) => {
             className="absolute left-5 md:left-14 -top-[60px] lg:left-20 xl:left-[80px] md:-top-[50px] xl:-top-[115px] 4xl:-top-16 4xl:left-20 font-normal text-xs uppercase"
             data-aos="fade-up"
           >
-            Our <br /> Products
+            Our <br /> Works
           </p>
           <div className="w-full h-full">
             <h2
@@ -104,6 +117,7 @@ const ProductsSection = ({ myRefThree, isThree }: IProps) => {
             <div
               className=" -ml-6 overflow-x-hidden"
               data-aos="fade-up"
+              ref={myRefWidth}
             >
               {/*@ts-ignore */}
               <Carousel
@@ -114,7 +128,9 @@ const ProductsSection = ({ myRefThree, isThree }: IProps) => {
                 easing="easeCubicInOut"
                 pauseOnHover={true}
                 withoutControls={true}
-                className="productCards flex mt-10 px-5 md:pl-04 lg:pl-[85px] xl:pl-0 cursor-pointer z-0"
+                slidesToShow={isWidth}
+
+                className="productCards flex mt-10 px-5 md:pl-04 lg:pl-[85px] xl:pl-0 cursor-pointer"
               >
                 {products?.map((info, index) => (
                   <ProductCard key={index} info={info} />
