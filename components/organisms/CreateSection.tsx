@@ -5,10 +5,11 @@ import { useEffect } from "react";
 
 interface IProps {
    myRefTwo: any
+   isTwo: boolean
 }
 
 
-const CreateSection = ({myRefTwo }: IProps) => {
+const CreateSection = ({myRefTwo, isTwo }: IProps) => {
   
   useEffect(() => {
     AOS.init({
@@ -56,7 +57,7 @@ const CreateSection = ({myRefTwo }: IProps) => {
         <div className="bgTransformationOneLeft" />
         <div className="bgTransformationOneRight" />
       </div>
-      <div className="absolute top-20 left-7 w-[2px] hidden lg:block h-40 bg-[#FCD1CA]" />
+      <div className={isTwo ? "absolute top-20 left-7 hidden lg:block h-40 w-[5px] rounded-[8px] bg-[#FF6661]" : "absolute top-20 left-7 w-[2px] hidden lg:block h-40 bg-[#FCD1CA]" } />
       <div className="2xl:w-[1440px] m-auto" ref={myRefTwo}>
         <div className="pt-[74px] sm:pt-0 relative w-full h-full mx-auto md:px-0 lg:px-20 xl:px-40 4xl:py-20">
           <p

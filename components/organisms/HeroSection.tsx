@@ -114,9 +114,6 @@ const HeroSection = ({ myRefOne }: IProps) => {
                         </SpanFour>
                      )
                   }
-                  <Span className="relative ml-2 sm:ml-4 xl:ml-4 4xl:ml-5 lg:pt-3 w-[20px] h-[25px] sm:w-[25px] sm:h-[30px] md:h-[40px] lg:w-[25px] lg:h-[80px]">
-                     <Image src='/assets/wave-vector.svg' layout='fill' alt="image" />
-                  </Span>
                </span>
                <span className="block sm:hidden">
                   {
@@ -215,11 +212,11 @@ const HeroSection = ({ myRefOne }: IProps) => {
                      )
                   }
                </span>
-               <div className="pt-10 pl-5 md:pl-14 lg:pl-20 xl:pl-32 4xl:pl-40 md:mt-[20px] sm:mt-[18px] xl:mt-[40px]">
+               <div className="pl-5 md:pl-14 lg:pl-20 xl:pl-32 4xl:pl-40 md:mt-[18px] sm:mt-[16px] xl:mt-[20px]">
                   <p className="md:w-11/12 lg:max-w-[600px] xl:pl-16 3xl:pl-0 xl:max-w-[700px] 4xl:max-w-[780px] text-[16px] sm:text-[18px] lg:text-[20px] xl:text-[24px] font-normal text-backboneText leading-[30px] px-2" data-aos="fade-up">
                      At Papayas studios we are at the forefront of decentralized content creation, helping to simplify the complexities of Blockchain and emerging technologies  
                   </p>
-                  <BtnLink to="productsSection" spy={true} smooth={true} offset={50} duration={500} className="pb-[175px] pt-[18px] sm:pb-0 xl:pl-14 3xl:pl-0 flex items-center text-base xl:text-lg font-bold sm:mt-3 lg:mt-3 xl:mt-5 cursor-pointer ml-2 w-[205px]" data-aos="fade-up">
+                  <BtnLink to="productsSection" spy={true} smooth={true} offset={50} duration={500} className="pb-[175px] pt-[18px] sm:pb-0 xl:pl-14 3xl:pl-0 flex items-center text-base xl:text-lg font-bold mt-2 cursor-pointer ml-2 w-[205px]" data-aos="fade-up">
                      <BtnSpan>Our Works</BtnSpan>
                   </BtnLink>
                </div>

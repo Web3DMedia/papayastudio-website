@@ -20,10 +20,14 @@ const Home = () => {
   const [isOne, setIsOne] = useState<boolean>(false)
   const [isTwo, setIsTwo] = useState<boolean>(false)
   const [isThree, setIsThree] = useState<boolean>(false)
+  const [isFour, setIsFour] = useState<boolean>(false)
+  const [isFive, setIsFive] = useState<boolean>(false)
 
    const myRefOne: any = useRef()
    const myRefTwo: any = useRef()
-   const myRefThree = useRef()
+   const myRefThree: any = useRef()
+   const myRefFour: any = useRef()
+   const myRefFive: any = useRef()
 
 useEffect(() => {
     const observer = new IntersectionObserver((entries, observer) =>{
@@ -52,6 +56,24 @@ useEffect(() => {
     observer.observe(myRefThree.current)
   })
 
+    useEffect(() => {
+    const observer = new IntersectionObserver((entries, observer) =>{
+      const entry = entries[0];
+      setIsFour(entry.isIntersecting)
+    })
+
+    observer.observe(myRefFour.current)
+  })
+
+      useEffect(() => {
+    const observer = new IntersectionObserver((entries, observer) =>{
+      const entry = entries[0];
+      setIsFive(entry.isIntersecting)
+    })
+
+    observer.observe(myRefFive.current)
+  })
+
 
   return (
     <div className="font-body">
@@ -69,11 +91,11 @@ useEffect(() => {
         <HeroSection myRefOne={myRefOne}/>
         <SectionSeperator/>
         <PageIndicator/>
-        <CreateSection myRefTwo={myRefTwo}/>
+        <CreateSection isTwo={isTwo} myRefTwo={myRefTwo}/>
         <SectionSeperator/>
-        <ProductsSection myRefThree={myRefThree}/>
-        <LearnWithPapayaSection setIsModal={setIsModal}/>
-        <BackBoneSection/>
+        <ProductsSection isThree={isThree} myRefThree={myRefThree}/>
+        <LearnWithPapayaSection setIsModal={setIsModal} isFour={isFour} myRefFour={myRefFour}/> 
+        <BackBoneSection isFive={isFive} myRefFive={myRefFive}/>
         <Footer/>
       </main> 
     </div>

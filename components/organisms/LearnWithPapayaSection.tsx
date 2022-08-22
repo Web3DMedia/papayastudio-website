@@ -334,9 +334,11 @@ background-position-y: -105px;
 `
 interface IProps {
    setIsModal: Dispatch<SetStateAction<boolean>>
+   myRefFour: any
+   isFour: boolean
 }
 
-const LearnWithPapayaSection = ({ setIsModal }: IProps)  => {
+const LearnWithPapayaSection = ({ setIsModal, myRefFour, isFour }: IProps)  => {
     const [bg, setBg] = useState<Number>(1)
     
       useEffect(() => {
@@ -351,8 +353,8 @@ const LearnWithPapayaSection = ({ setIsModal }: IProps)  => {
     <LearnWithPapayaContainer>
         
         <div className='font-heading relative'>
-            <div className="absolute top-24 left-7 w-[2px] hidden lg:block h-40 bg-[#FCD1CA]"/>
-        <div className='2xl:w-[1440px] m-auto'>
+        <div className={isFour ? "absolute top-20 left-7 hidden lg:block h-40 w-[5px] rounded-[8px] bg-[#FF6661]" : "absolute top-20 left-7 w-[2px] hidden lg:block h-40 bg-[#FCD1CA]" } />
+        <div className='2xl:w-[1440px] m-auto' ref={myRefFour}>
             <FirstText className='pt-24 pl-5 md:pl-14 lg:pl-20 pb-12 text-primary3' data-aos="fade-up">LEARN <br/>  WITH PAPAYAS</FirstText>
 
         <SecondText className='pl-5 md:pl-14 lg:pl-20 xl:pl-40 text-learnpapayatext' data-aos="fade-up">Join Our Learning Academy</SecondText>
