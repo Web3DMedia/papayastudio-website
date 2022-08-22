@@ -35,6 +35,7 @@ const Modal = ({ setIsModal, isModal }: IProps) => {
     }
 }
   const recaptchaRef = React.createRef();
+  const TEST_SITE_KEY = "6LcsiIMhAAAAAFc9EBIHi7WfbTNYgHqvn7mnOu25"
   
     return (
         <FormContainer>
@@ -87,7 +88,7 @@ const Modal = ({ setIsModal, isModal }: IProps) => {
                             />
                         </div>
                         {/*@ts-ignore */}
-                        <ReCAPTCHA  sitekey={`${process.env.TEST_SITE_KEY}`} ref={recaptchaRef}/>
+                        <ReCAPTCHA  sitekey={TEST_SITE_KEY} ref={recaptchaRef}/>
 
                         {error && <h2 className="text-red-700 pt-2">{error}</h2>}
                         <button

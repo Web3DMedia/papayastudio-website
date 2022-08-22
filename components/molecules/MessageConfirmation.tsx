@@ -1,5 +1,6 @@
 import Image from "next/image";
 import React, { SetStateAction, Dispatch } from "react";
+import { Player, Controls } from '@lottiefiles/react-lottie-player';
 import Link from "next/link";
 import styled from "styled-components";
 
@@ -38,12 +39,8 @@ const MessageConfirmation = ({ setmessageIsSent, isModal }: IProps) => {
         >
           <Image src="/assets/close-button.png" width={15} height={15} />
         </div>
-        <Image
-          src={MessageSent}
-          width={120}
-          height={120}
-          objectFit="contain"
-        ></Image>
+        <Player src="https://lottie.host/f9a7858e-9d21-41e8-9d00-af45ad5fad2a/0FMcL1tRa2.json" background="transparent" style={{ width: "120px", height: "120px" }} autoplay speed={1}></Player>
+
         <TextHeader>Message sent</TextHeader>
         <TextParagraph>
           We’ve recieved your message and will be intouch, in the meantime,
