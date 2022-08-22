@@ -1,17 +1,20 @@
-import {MdClose} from 'react-icons/md'
+import { MdClose } from 'react-icons/md'
 import Image from 'next/image'
 import Link from 'next/link'
-import {MenuDiv} from '../../styles/MenubarStyles'
-import {Dispatch,SetStateAction} from 'react'
-import {Link as ScrollLink} from 'react-scroll'
+import { MenuDiv } from '../../styles/MenubarStyles'
+import { Dispatch, SetStateAction } from 'react'
+import { Link as ScrollLink } from 'react-scroll'
 
 interface IProps {
    isMenuOpen: boolean
    setIsMenuOpen: Dispatch<SetStateAction<boolean>>
+   isOne: boolean
+   isTwo: boolean
+   isThree: boolean
 }
 
 
-const Menubar = ({isMenuOpen, setIsMenuOpen}: IProps) => {
+const Menubar = ({ isMenuOpen, setIsMenuOpen, isOne, isTwo, isThree }: IProps) => {
    const closeMenuBar = () => {
       setIsMenuOpen(false)
    }
@@ -22,40 +25,55 @@ const Menubar = ({isMenuOpen, setIsMenuOpen}: IProps) => {
                <button
                   onClick={closeMenuBar}
                   className="bg-[#FF6661] p-2 rounded-full cursor-pointer flex items-center justify-center lg:hidden outline-none absolute right-[10px] md:right-[20px] lg:right-[50px] top-3">
-                  <MdClose fontSize={20} color="#fff"/>
+                  <MdClose fontSize={20} color="#fff" />
                </button>
             </div>
             <div className="relative flex flex-col items-center justify-center mt-[70px] bg-transparent z-10">
                <Link href="/">
-                     <ScrollLink to="whoSection" spy={true} smooth={true} offset={50} duration={500}  onClick={closeMenuBar}>
-                        <a className="flex items-center font-bold xl:text-lg text-[#FFFFFF] mb-10">
-                           <Image 
-                              src='/assets/orange-logo.svg' 
-                              width={25} 
-                              height={25} 
-                              alt="orange logo" 
-                           />
-                           <h2 className="ml-1">who</h2>
-                        </a>
-                     </ScrollLink>
+                  <ScrollLink to="whoSection" spy={true} smooth={true} offset={50} duration={500} onClick={closeMenuBar}>
+                     <a className="flex items-center font-bold xl:text-lg text-[#FFFFFF] mb-10">
+                        <Image
+                           src='/assets/orange-logo.svg'
+                           width={25}
+                           height={25}
+                           alt="orange logo"
+                           className={isOne ? "logo opacity-1 -ml-2" : "logo opacity-0"}
+                        />
+                        <h2 className="">who</h2>
+                     </a>
+                  </ScrollLink>
 
                </Link>
                <Link href="/">
                   <ScrollLink to="whatSection" spy={true} smooth={true} offset={50} duration={500} onClick={closeMenuBar}>
-                     <a className="flex items-center font-bold xl:text-lg text-[#FFFFFF] mb-10">
+                     <a className="flex items-center font-bold xl:text-lg text-[#FFFFFF] mb-0">
+                        <Image
+                           src='/assets/orange-logo.svg'
+                           width={25}
+                           height={25}
+                           alt="orange logo"
+                           className={isTwo ? "logo opacity-1" : "logo opacity-0"}
+                        />
                         what
                      </a>
                   </ScrollLink>
                </Link>
                <Link href="/">
-                     <ScrollLink to="productsSection" spy={true} smooth={true} offset={50} duration={500}  onClick={closeMenuBar}>
-                        <a className="flex items-center font-bold xl:text-lg text-[#FFFFFF] mb-10">
-                           products
-                        </a>
-                     </ScrollLink>
+                  <ScrollLink to="productsSection" spy={true} smooth={true} offset={50} duration={500} onClick={closeMenuBar}>
+                     <a className="flex items-center font-bold xl:text-lg text-[#FFFFFF] mb-10">
+                        <Image
+                           src='/assets/orange-logo.svg'
+                           width={25}
+                           height={25}
+                           alt="orange logo"
+                           className={isThree ? "logo opacity-1" : "logo opacity-0"}
+                        />
+                        our works
+                     </a>
+                  </ScrollLink>
                </Link>
                <Link href="/contact">
-                  <a onClick={closeMenuBar}  className="border-2 border-[#FCD1CA] px-[20px] py-[10px] font-bold text-[18px] text-white rounded-xl cursor-pointer">
+                  <a onClick={closeMenuBar} className="border-2 border-[#FCD1CA] px-[20px] py-[10px] font-bold text-[18px] text-white rounded-xl cursor-pointer">
                      Get in touch
                   </a>
                </Link>

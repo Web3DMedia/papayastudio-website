@@ -1,22 +1,19 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import {FiMenu} from "react-icons/fi"
+import { FiMenu } from "react-icons/fi"
 import styled from 'styled-components'
 import { TrackerInner, TrackerOutter, HeaderBar } from '../../styles/NavbarStyles'
-import {Dispatch,SetStateAction} from 'react'
-import {Link as ScrollLink} from 'react-scroll'
-import {useState, useEffect} from 'react'
+import { Dispatch, SetStateAction } from 'react'
+import { Link as ScrollLink } from 'react-scroll'
+import { useState, useEffect } from 'react'
 
 import { getEventListeners } from 'events'
 
 interface IProps {
    setIsMenuOpen: Dispatch<SetStateAction<boolean>>
    isOne: boolean
-   setIsOne: Dispatch<SetStateAction<boolean>>
    isTwo: boolean
-   setIsTwo: Dispatch<SetStateAction<boolean>>
    isThree: boolean
-   setIsThree: Dispatch<SetStateAction<boolean>>
 }
 
 
@@ -26,11 +23,11 @@ const NavLinks = styled.div`
 }
 `
 
-const Navbar = ({ setIsMenuOpen, setIsOne, setIsTwo, setIsThree, isOne, isTwo, isThree }: IProps) => {
+const Navbar = ({ setIsMenuOpen, isOne, isTwo, isThree }: IProps) => {
    const [textNumber, setTextNumber] = useState(1)
 
    useEffect(() => {
-      if(textNumber <= 4){
+      if (textNumber <= 4) {
          const interval = setInterval(() => {
             setTextNumber(textNumber + 1)
          }, 5000)
@@ -38,7 +35,7 @@ const Navbar = ({ setIsMenuOpen, setIsOne, setIsTwo, setIsThree, isOne, isTwo, i
       } else {
          setTextNumber(1)
       }
-   },[textNumber])
+   }, [textNumber])
 
    const openMenuBar = () => {
       setIsMenuOpen(true)
@@ -46,53 +43,53 @@ const Navbar = ({ setIsMenuOpen, setIsOne, setIsTwo, setIsThree, isOne, isTwo, i
    return (
       <HeaderBar className="fixed top-0 left-0 w-full h-[80px] flex items-center justify-between 3xl:justify-around  px-[10px] sm:px-[50px] lg:px-[100px] xl:px-[150px] 3xl:px-[200px] 4xl:pl-[425px] 4xl:pr-[400px] z-40">
          <Link href="/">
-               <ScrollLink to="whoSection" spy={true} smooth={true} offset={50} duration={500} className="flex items-center cursor-pointer">
-                  <span className="relative w-[30px] h-[30px] md:w-[40px] md:h-[40px] xl:w-[30px] xl:h-[30px]">
-                     <Image
-                        src="/assets/logo.svg"
-                        layout="fill"
-                        alt="logo"
-                     />
-                  </span>
-                  <h2 className=" text-[18px] sm:text-[22px] md:text-[25px] xl:text-[35px] font-bold sm:ml-2">Papayas</h2>
-               </ScrollLink>
+            <ScrollLink to="whoSection" spy={true} smooth={true} offset={50} duration={500} className="flex items-center cursor-pointer">
+               <span className="relative w-[30px] h-[30px] md:w-[40px] md:h-[40px] xl:w-[30px] xl:h-[30px]">
+                  <Image
+                     src="/assets/logo.svg"
+                     layout="fill"
+                     alt="logo"
+                  />
+               </span>
+               <h2 className=" text-[18px] sm:text-[22px] md:text-[25px] xl:text-[35px] font-bold sm:ml-2">Papayas</h2>
+            </ScrollLink>
          </Link>
          <div className="hidden lg:flex items-center">
             <Link href="/#WhoAreWe">
-                  <NavLinks className="flex items-center font-bold cursor-pointer xl:text-lg" >
-                     <Image 
-                        src='/assets/orange-logo.svg' 
-                        width={25} 
-                        height={25} 
-                        alt="orange logo"
-                        className={  isOne ? "logo opacity-1" : "logo opacity-0"} 
-                     />
-                     <h2 className="ml-1">who</h2>
-                  </NavLinks>
+               <NavLinks className="flex items-center font-bold cursor-pointer xl:text-lg" >
+                  <Image
+                     src='/assets/orange-logo.svg'
+                     width={25}
+                     height={25}
+                     alt="orange logo"
+                     className={isOne ? "logo opacity-1" : "logo opacity-0"}
+                  />
+                  <h2 className="ml-1">who</h2>
+               </NavLinks>
             </Link>
             <Link href="/#WhatWeDo">
-                  <NavLinks className="flex items-center mx-12 cursor-pointer font-bold xl:text-lg">
-                     <Image 
-                        src='/assets/orange-logo.svg' 
-                        width={25} 
-                        height={25} 
-                        alt="orange logo"
-                        className={ isTwo ? "logo opacity-1" : "logo opacity-0"} 
-                     />
-                     what
-                  </NavLinks>
+               <NavLinks className="flex items-center mx-12 cursor-pointer font-bold xl:text-lg">
+                  <Image
+                     src='/assets/orange-logo.svg'
+                     width={25}
+                     height={25}
+                     alt="orange logo"
+                     className={isTwo ? "logo opacity-1" : "logo opacity-0"}
+                  />
+                  what
+               </NavLinks>
             </Link>
             <Link href="/#OurProuducts">
-                  <NavLinks className="flex items-center font-bold cursor-pointer xl:text-lg" >
-                     <Image 
-                        src='/assets/orange-logo.svg' 
-                        width={25} 
-                        height={25} 
-                        alt="orange logo"
-                        className={ isThree  ? "logo opacity-1" : "logo opacity-0"} 
-                     />
-                     our works
-                  </NavLinks>
+               <NavLinks className="flex items-center font-bold cursor-pointer xl:text-lg" >
+                  <Image
+                     src='/assets/orange-logo.svg'
+                     width={25}
+                     height={25}
+                     alt="orange logo"
+                     className={isThree ? "logo opacity-1" : "logo opacity-0"}
+                  />
+                  our works
+               </NavLinks>
             </Link>
          </div>
          <Link href="/contact">
@@ -103,15 +100,15 @@ const Navbar = ({ setIsMenuOpen, setIsOne, setIsTwo, setIsThree, isOne, isTwo, i
          <div className="flex w-[150px] items-center justify-center lg:hidden">
             <h4 className="text-xs">01</h4>
             <div className="relative mx-1">
-               <TrackerOutter textNumber={textNumber}/>
-               <TrackerInner/>
+               <TrackerOutter textNumber={textNumber} />
+               <TrackerInner />
             </div>
             <h4 className="text-xs">04</h4>
          </div>
-         <button 
+         <button
             onClick={openMenuBar}
             className="text-white bg-[#FF6661] p-2 rounded-full cursor-pointer flex items-center justify-center lg:hidden outline-none">
-            <FiMenu fontSize={20}/>
+            <FiMenu fontSize={20} />
          </button>
       </HeaderBar>
    )
