@@ -28,7 +28,7 @@ const ProductsSection = ({ myRefThree, isThree }: IProps) => {
     AOS.init();
   });
 
-  const [isWidth, setIsWidth] = useState<number>()
+  const [isWidth, setIsWidth] = useState<number>(0)
   const myRefWidth: any = useRef()
 
   useEffect(() => {
