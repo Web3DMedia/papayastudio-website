@@ -37,7 +37,7 @@ const ProductsSection = ({ myRefThree, isThree }: IProps) => {
       if(entry.boundingClientRect.width > 1144)
       setIsWidth(3.5)
       else
-      setIsWidth(3)
+      setIsWidth(1)
 
 
       console.log(entry.boundingClientRect.width)
