@@ -68,7 +68,7 @@ const ProductsSection = ({ myRefThree, isThree }: IProps) => {
       cardH2: "Papito and Papina Mascot",
       cardP: "Our signature brand mascot for Papayas studio",
       btnTxt: "View Work",
-      cardImage: "/assets/papito-and-papina-new.jpeg",
+      cardImage: "/assets/papito-and-papina-new-two.jpeg",
       Links: "",
     },
     {
@@ -83,7 +83,7 @@ const ProductsSection = ({ myRefThree, isThree }: IProps) => {
       cardP:
         "Super engaging explainer video created for Blocasset contributors launch",
       btnTxt: "View Work",
-      cardImage: "/assets/bloccassets-contributors.jpeg",
+      cardImage: "/assets/bloccasset-contributors.jpeg",
       Links: "",
     },
   ];

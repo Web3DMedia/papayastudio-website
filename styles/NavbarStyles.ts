@@ -8,7 +8,7 @@ export const HeaderBar = styled.div`
 `
 
 export const TrackerOutter = styled.div<{ isOne: boolean, isTwo: boolean, isThree: boolean, isFour: boolean, isFive: boolean }>`
-   width: ${({ isOne, isTwo, isThree, isFour, isFive }) => isOne ? '20%' : isTwo ? '40%' : isThree ? '60%' : isFour ? '80%' : isFive ? '100%' : '20%'};;
+   width: ${({ isOne, isTwo, isThree, isFour, isFive }) => isOne ? '20%' : isTwo ? '40%' : isThree ? '60%' : isFour ? '80%' : isFive ? '100%' : '100%'};;
    height: 5px;
    background:  #FF6661;
    border-radius: 8px;
