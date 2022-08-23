@@ -28,7 +28,7 @@ const ProductsSection = ({ myRefThree, isThree }: IProps) => {
     AOS.init();
   });
 
-  const [isWidth, setIsWidth] = useState<number>()
+  const [isWidth, setIsWidth] = useState<number>(0)
   const myRefWidth: any = useRef()
 
   useEffect(() => {
@@ -37,7 +37,7 @@ const ProductsSection = ({ myRefThree, isThree }: IProps) => {
       if(entry.boundingClientRect.width > 1144)
       setIsWidth(3.5)
       else
-      setIsWidth(3)
+      setIsWidth(1)
 
 
       console.log(entry.boundingClientRect.width)
@@ -125,7 +125,7 @@ const ProductsSection = ({ myRefThree, isThree }: IProps) => {
               What we’ve created
             </h2>
             <div
-              className=" -ml-6 overflow-x-hidden"
+              className=" -ml-6 overflow-x-hidden w-[1700px]"
               data-aos="fade-up"
               ref={myRefWidth}
             >
