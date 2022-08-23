@@ -28,19 +28,16 @@ const ProductsSection = ({ myRefThree, isThree }: IProps) => {
     AOS.init();
   });
 
-  const [isWidth, setIsWidth] = useState<number>(0)
+  const [isWidth, setIsWidth] = useState<number>(1)
   const myRefWidth: any = useRef()
 
   useEffect(() => {
     const observer = new IntersectionObserver((entries, observer) => {
       const entry = entries[0];
-      if(entry.boundingClientRect.width > 1144)
-      setIsWidth(3.5)
-      else
-      setIsWidth(3)
-
-
-      console.log(entry.boundingClientRect.width)
+      if(entry.boundingClientRect.width > 1144) {
+      setIsWidth(3.5) }
+      else {
+      setIsWidth(3) }
     })
 
     observer.observe(myRefWidth.current)
