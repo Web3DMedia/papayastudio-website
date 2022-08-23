@@ -44,7 +44,7 @@ const Navbar = ({ setIsMenuOpen, isOne, isTwo, isThree, isFour, isFive }: IProps
    }
    return (
       <HeaderBar className="fixed top-0 left-0 w-full h-[80px] flex items-center justify-between 3xl:justify-around  px-[10px] sm:px-[50px] lg:px-[100px] xl:px-[150px] 3xl:px-[200px] 4xl:pl-[425px] 4xl:pr-[400px] z-40">
-         <Link href="/">
+         <Link href="/" passHref>
             <ScrollLink to="whoSection" spy={true} smooth={true} offset={50} duration={500} className="flex items-center cursor-pointer">
                <span className="relative w-[30px] h-[30px] md:w-[40px] md:h-[40px] xl:w-[30px] xl:h-[30px]">
                   <Image
@@ -57,7 +57,7 @@ const Navbar = ({ setIsMenuOpen, isOne, isTwo, isThree, isFour, isFive }: IProps
             </ScrollLink>
          </Link>
          <div className="hidden lg:flex items-center">
-            <Link href="/#WhoAreWe">
+            <Link href="/#WhoAreWe" passHref>
                <NavLinks className="flex items-center font-bold cursor-pointer xl:text-lg" >
                   <Image
                      src='/assets/orange-logo.svg'
@@ -69,7 +69,7 @@ const Navbar = ({ setIsMenuOpen, isOne, isTwo, isThree, isFour, isFive }: IProps
                   <h2 className="ml-1">who</h2>
                </NavLinks>
             </Link>
-            <Link href="/#WhatWeDo">
+            <Link href="/#WhatWeDo" passHref>
                <NavLinks className="flex items-center mx-12 cursor-pointer font-bold xl:text-lg">
                   <Image
                      src='/assets/orange-logo.svg'
@@ -81,7 +81,7 @@ const Navbar = ({ setIsMenuOpen, isOne, isTwo, isThree, isFour, isFive }: IProps
                   what
                </NavLinks>
             </Link>
-            <Link href="/#OurProuducts">
+            <Link href="/#OurProuducts" passHref>
                <NavLinks className="flex items-center font-bold cursor-pointer xl:text-lg" >
                   <Image
                      src='/assets/orange-logo.svg'
@@ -94,7 +94,7 @@ const Navbar = ({ setIsMenuOpen, isOne, isTwo, isThree, isFour, isFive }: IProps
                </NavLinks>
             </Link>
          </div>
-         <Link href="/contact">
+         <Link href="/contact" passHref>
             <a className=" border border-primary hidden lg:block lg:px-[25px] lg:py-[10px] xl:px-[30px] xl:py-[15px] font-bold text-[18px] text-black rounded-xl cursor-pointer">
                Get in touch
             </a>

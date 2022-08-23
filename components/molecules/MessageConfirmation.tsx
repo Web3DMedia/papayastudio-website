@@ -37,7 +37,7 @@ const MessageConfirmation = ({ setmessageIsSent, isModal }: IProps) => {
           className="flex justify-end cursor-pointer pt-[65px] pb-[15px]"
           onClick={() => setmessageIsSent(false)}
         >
-          <Image src="/assets/close-button.png" width={15} height={15} />
+          <Image src="/assets/close-button.png" width={15} height={15} alt="close-button" />
         </div>
         <Player src="https://lottie.host/f9a7858e-9d21-41e8-9d00-af45ad5fad2a/0FMcL1tRa2.json" background="transparent" style={{ width: "120px", height: "120px" }} autoplay speed={1}></Player>
 

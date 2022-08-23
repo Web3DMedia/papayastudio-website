@@ -29,7 +29,7 @@ const Menubar = ({ isMenuOpen, setIsMenuOpen, isOne, isTwo, isThree }: IProps) =
                </button>
             </div>
             <div className="relative flex flex-col items-center justify-center mt-[70px] bg-transparent z-10">
-               <Link href="/">
+               <Link href="/#WhoAreWe" passHref>
                   <ScrollLink to="whoSection" spy={true} smooth={true} offset={50} duration={500} onClick={closeMenuBar}>
                      <a className="flex items-center font-bold xl:text-lg text-[#FFFFFF] mb-10">
                         <Image
@@ -44,9 +44,9 @@ const Menubar = ({ isMenuOpen, setIsMenuOpen, isOne, isTwo, isThree }: IProps) =
                   </ScrollLink>
 
                </Link>
-               <Link href="/">
+               <Link href="/#WhatWeDo" passHref>
                   <ScrollLink to="whatSection" spy={true} smooth={true} offset={50} duration={500} onClick={closeMenuBar}>
-                     <a className="flex items-center font-bold xl:text-lg text-[#FFFFFF] mb-0">
+                     <a className="flex items-center font-bold xl:text-lg text-[#FFFFFF] mb-10">
                         <Image
                            src='/assets/orange-logo.svg'
                            width={25}
@@ -58,7 +58,7 @@ const Menubar = ({ isMenuOpen, setIsMenuOpen, isOne, isTwo, isThree }: IProps) =
                      </a>
                   </ScrollLink>
                </Link>
-               <Link href="/">
+               <Link href="/#OurProuducts" passHref>
                   <ScrollLink to="productsSection" spy={true} smooth={true} offset={50} duration={500} onClick={closeMenuBar}>
                      <a className="flex items-center font-bold xl:text-lg text-[#FFFFFF] mb-10">
                         <Image
@@ -72,7 +72,7 @@ const Menubar = ({ isMenuOpen, setIsMenuOpen, isOne, isTwo, isThree }: IProps) =
                      </a>
                   </ScrollLink>
                </Link>
-               <Link href="/contact">
+               <Link href="/contact" passHref>
                   <a onClick={closeMenuBar} className="border-2 border-[#FCD1CA] px-[20px] py-[10px] font-bold text-[18px] text-white rounded-xl cursor-pointer">
                      Get in touch
                   </a>
