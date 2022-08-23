@@ -28,7 +28,7 @@ const ProductsSection = ({ myRefThree, isThree }: IProps) => {
     AOS.init();
   });
 
-  const [isWidth, setIsWidth] = useState<number>(0)
+  const [isWidth, setIsWidth] = useState<number>(1)
   const myRefWidth: any = useRef()
 
   useEffect(() => {
@@ -37,7 +37,7 @@ const ProductsSection = ({ myRefThree, isThree }: IProps) => {
       if(entry.boundingClientRect.width > 1144)
       setIsWidth(3.5)
       else
-      setIsWidth(1)
+      setIsWidth(3)
 
 
       console.log(entry.boundingClientRect.width)
