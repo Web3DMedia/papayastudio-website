@@ -349,6 +349,11 @@ const LearnWithPapayaSection = ({ setIsModal, myRefFour, isFour }: IProps)  => {
         clearInterval(interval)
       }
 }, [])
+
+const Modal = () => {
+    document.body.style.overflow = "hidden";
+    setIsModal(true)
+}
   return (
     <LearnWithPapayaContainer>
         
@@ -366,7 +371,7 @@ const LearnWithPapayaSection = ({ setIsModal, myRefFour, isFour }: IProps)  => {
             <ThirdText className=' text-learnpapayatext2 ' data-aos="fade-up">Learn from professionals across the animation and tech industry and build expert skills. We help creative talent build expert skills by training, hiring, and empowering them.</ThirdText>
 
    
-                <FourthText className=' text-learnpapayatext cursor-pointer mb-4 ' data-aos="fade-up" onClick={() => setIsModal(true)}>Join waitlist </FourthText>
+                <FourthText className=' text-learnpapayatext cursor-pointer mb-4 ' data-aos="fade-up" onClick={() => Modal()}>Join waitlist </FourthText>
          
         </div>
 
