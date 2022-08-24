@@ -1,25 +1,26 @@
 import ActivityCard from "../molecules/ActivityCard";
 import AOS from "aos";
 import { useEffect } from "react";
+import styled from "styled-components";
 
 
 interface IProps {
-   myRefTwo: any
-   isTwo: boolean
+  myRefTwo: any
+  isTwo: boolean
 }
 
 
-const CreateSection = ({myRefTwo, isTwo }: IProps) => {
-  
+const CreateSection = ({ myRefTwo, isTwo }: IProps) => {
+
   useEffect(() => {
     AOS.init({
-      offset: 150,
+      offset: 120,
       delay: 0,
       duration: 1500,
     });
   });
 
-  
+
   const activityData = [
     {
       name: "2D Animation(Animes)",
@@ -57,7 +58,10 @@ const CreateSection = ({myRefTwo, isTwo }: IProps) => {
         <div className="bgTransformationOneLeft" />
         <div className="bgTransformationOneRight" />
       </div>
-      <div className={isTwo ? "absolute top-20 left-7 hidden lg:block h-40 w-[5px] rounded-[8px] bg-[#FF6661]" : "absolute top-20 left-7 w-[2px] hidden lg:block h-40 bg-[#FCD1CA]" } />
+      <div className="mx-1 h-[150px] absolute top-20 left-7 hidden lg:block ">
+           <TrackerOutter isTwo={isTwo}/>
+            <TrackerInner/>
+      </div>
       <div className="2xl:w-[1440px] m-auto" ref={myRefTwo}>
         <div className="pt-[74px] sm:pt-0 relative w-full h-full mx-auto md:px-0 lg:px-20 xl:px-40 4xl:py-20">
           <p
@@ -89,4 +93,26 @@ const CreateSection = ({myRefTwo, isTwo }: IProps) => {
   );
 };
 
+
+const TrackerOutter = styled.div<{isTwo: boolean}>`
+   width: 5px;
+   height: ${({isTwo}) => isTwo ? '100%' : '0%'};
+   background: #FF6661;
+   border-radius: 8px;
+   z-index: 2;
+   position: absolute;
+   top: 0;
+   left: -1px;
+   transition: .8s ease-in height;
+`
+const TrackerInner = styled.div`
+   width: 1.5px;
+   height: 95%;
+   background: #FCD1CA;
+   border-radius: 8px;
+   position: relative;
+   z-index: 1;
+   margin-top: 2px;
+   margin-left: .8px;
+`
 export default CreateSection;

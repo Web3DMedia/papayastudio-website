@@ -1,5 +1,5 @@
 import Head from "next/head";
-import {useState} from "react";
+import { useState } from "react";
 import Navbar from "../components/molecules/Navbar";
 import Menubar from "../components/molecules/Menubar";
 import SectionSeperator from "../components/molecules/SectionSeperator";
@@ -17,13 +17,14 @@ const Terms = () => {
          </Head>
          <main className="w-full relative overflow-hidden">
             {/*@ts-ignore */}
-            <Navbar setIsMenuOpen={setIsMenuOpen}/>
-            <Menubar isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen}/>
+            <Navbar setIsMenuOpen={setIsMenuOpen} />
+            {/*@ts-ignore */}
+            <Menubar isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
             <div className="pt-20">
-               <SectionSeperator/>
-               <TermsContainer/>
+               <SectionSeperator />
+               <TermsContainer />
             </div>
-            <Footer/>
+            <Footer />
          </main>
       </div>
    )

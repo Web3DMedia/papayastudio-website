@@ -1,5 +1,5 @@
 import Head from "next/head";
-import {useState} from "react";
+import { useState } from "react";
 import Navbar from "../components/molecules/Navbar";
 import Menubar from "../components/molecules/Menubar";
 import SectionSeperator from "../components/molecules/SectionSeperator";
@@ -7,7 +7,7 @@ import Footer from "../components/organisms/Footer";
 import CookiePolicyContiner from "../components/organisms/CookiePolicyContainer";
 
 const Cookie = () => {
-const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false)
+   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false)
    return (
       <div>
          <Head>
@@ -16,13 +16,14 @@ const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false)
          </Head>
          <main className="w-full relative overflow-hidden">
             {/*@ts-ignore */}
-            <Navbar setIsMenuOpen={setIsMenuOpen}/>
-            <Menubar isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen}/>
+            <Navbar setIsMenuOpen={setIsMenuOpen} />
+            {/*@ts-ignore */}
+            <Menubar isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
             <div className="pt-20">
-               <SectionSeperator/>
-               <CookiePolicyContiner/>
+               <SectionSeperator />
+               <CookiePolicyContiner />
             </div>
-            <Footer/>
+            <Footer />
          </main>
       </div>
    )
