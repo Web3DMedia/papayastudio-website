@@ -49,11 +49,11 @@ const HeroSection = ({ myRefOne }: IProps) => {
          </div>
 
          <div className='2xl:w-[1440px] m-auto'>
-            <p className="relative left-5 md:left-14 lg:left-20 top-96 sm:top-[450px] md:top-12 2xl:top-12 4xl:top-4 font-normal text-xs uppercase" data-aos="fade-up">
+            <p className="relative left-5 md:left-14 lg:left-20 top-96 sm:top-[450px] md:top-12 2xl:top-12 4xl:top-4 font-normal text-xs uppercase" >
                Who We <br /> Are
             </p>
             <div className="relative w-full h-full max-w-[1440px] 4xl:max-w-[2000px] mx-auto md:px-14 lg:px-20 4xl:px-10 4xl:py-0 flex flex-col-reverse md:flex-row">
-               <div className="relative z-10 w-full sm:pt-6 pl-0 sm:pl-5 md:pt-24 4xl:pt-36 4xl:pl-24" data-aos="fade-up">
+               <div className="relative z-10 w-full sm:pt-6 pl-0 sm:pl-5 md:pt-24 4xl:pt-36 4xl:pl-24">
 
                   <span className='flex items-center'>
                      {/*Large screen*/}
@@ -213,10 +213,10 @@ const HeroSection = ({ myRefOne }: IProps) => {
                      }
                   </span>
                   <div className="pl-5 md:pl-14 lg:pl-20 xl:pl-32 4xl:pl-40 md:mt-[18px] sm:mt-[16px] xl:mt-[20px]">
-                     <p className="md:w-11/12 lg:max-w-[600px] xl:pl-16 3xl:pl-0 xl:max-w-[700px] 4xl:max-w-[780px] text-[16px] sm:text-[18px] lg:text-[20px] xl:text-[24px] font-normal text-backboneText leading-[30px] px-2" data-aos="fade-up">
+                     <p className="md:w-11/12 lg:max-w-[600px] xl:pl-16 3xl:pl-0 xl:max-w-[700px] 4xl:max-w-[780px] text-[16px] sm:text-[18px] lg:text-[20px] xl:text-[24px] font-normal text-backboneText leading-[30px] px-2 pt-9 sm:pt-0">
                         At Papayas studios we are at the forefront of decentralized content creation, helping to simplify the complexities of Blockchain and emerging technologies
                      </p>
-                     <BtnLink to="productsSection" spy={true} smooth={true} offset={50} duration={500} className="pb-[175px] pt-[18px] sm:pb-0 xl:pl-14 3xl:pl-0 flex items-center text-base xl:text-lg font-bold mt-2 cursor-pointer ml-2 w-[205px]" data-aos="fade-up">
+                     <BtnLink to="productsSection" spy={true} smooth={true} offset={50} duration={500} className="pb-[175px] pt-[15px] sm:pb-0 xl:pl-14 3xl:pl-0 flex items-center text-base xl:text-lg font-bold mt-2 cursor-pointer ml-2 w-[205px]" >
                         <BtnSpan>Our Works</BtnSpan>
                      </BtnLink>
                   </div>
@@ -230,7 +230,6 @@ const HeroSection = ({ myRefOne }: IProps) => {
                      alt="mascot image"
                      objectFit='contain'
                      objectPosition="top"
-                     data-aos="zoom-in"
                   />
                </div>
             </div>
