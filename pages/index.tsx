@@ -12,6 +12,7 @@ import SectionSeperator from "../components/molecules/SectionSeperator";
 import PageIndicator from "../components/molecules/PageIndicator";
 import Modal from "../components/atoms/Modal";
 import { useRef } from 'react'
+import MetaTag from "../components/atoms/MetaTag";
 
 /** eslint-ignore react/react-in-jsx-scope */
 const Home = () => {
@@ -77,9 +78,8 @@ const Home = () => {
 
   return (
     <div className="font-body">
+      <MetaTag tagName='Home' />
       <Head>
-        <title>Papayas studio</title>
-        <link rel="icon" href="/assets/logo.svg" />
         <link rel="preconnect" href="https://unpkg.com/aos@next/dist/aos.css" />
       </Head>
 
