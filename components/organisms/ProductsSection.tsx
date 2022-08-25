@@ -34,13 +34,10 @@ const ProductsSection = ({ myRefThree, isThree }: IProps) => {
   useEffect(() => {
     const observer = new IntersectionObserver((entries, observer) => {
       const entry = entries[0];
-      if(entry.boundingClientRect.width > 1144)
-      setIsWidth(3.5)
+      if (entry.boundingClientRect.width > 1144)
+        setIsWidth(3.5)
       else
-      setIsWidth(1)
-
-
-      console.log(entry.boundingClientRect.width)
+        setIsWidth(1)
     })
 
     observer.observe(myRefWidth.current)
@@ -99,15 +96,15 @@ const ProductsSection = ({ myRefThree, isThree }: IProps) => {
         <div className="bgTransformationOneRight" />
       </div>
       <div className="mx-1 h-[150px] absolute top-20 left-7 hidden lg:block ">
-           <TrackerOutter isThree={isThree}/>
-            <TrackerInner/>
+        <TrackerOutter isThree={isThree} />
+        <TrackerInner />
       </div>
       <div className="2xl:w-[1440px] m-auto" ref={myRefThree}>
         <div
           className="absolute -top-12 sm:-top-16 w-[250px] h-[250px] lg:-top-24 xl:-top-40 -right-10 sm:right-0 md:w-[300px] md:h-[300px] lg:w-[340px] lg:h-[340px] xl:w-[500px] xl:h-[500px]"
           data-aos="fade-up"
         >
-          <Image src="/assets/papayas2.png" layout="fill" alt="Product" />
+          <Image src="/assets/papayas2.png" layout="fill" alt="Product" loading="lazy" />
         </div>
 
         <div className="relative w-full h-full mx-auto Tmd:px-20 xl:pl-40 4xl:py-20">
@@ -153,9 +150,9 @@ const ProductsSection = ({ myRefThree, isThree }: IProps) => {
   );
 };
 
-const TrackerOutter = styled.div<{isThree: boolean}>`
+const TrackerOutter = styled.div<{ isThree: boolean }>`
    width: 5px;
-   height: ${({isThree}) => isThree ? '100%' : '0%'};
+   height: ${({ isThree }) => isThree ? '100%' : '0%'};
    background: #FF6661;
    border-radius: 8px;
    z-index: 2;

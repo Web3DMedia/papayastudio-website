@@ -1,8 +1,9 @@
 /* eslint-disable @next/next/no-img-element */
 
+import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
-import styled, { keyframes} from 'styled-components'
+import styled, { keyframes } from 'styled-components'
 
 
 import SectionHeader from '../atoms/SectionHeader'
@@ -82,23 +83,23 @@ margin-left: 28px;
 }
 `
 interface IProps {
-   myRefFive: any
-   isFive: boolean
+  myRefFive: any
+  isFive: boolean
 }
 const BackBoneSection = ({ myRefFive, isFive }: IProps) => {
   return (
     <Div className='relative'>
-        <div className="bgTransformationOne">
-            <div className="bgTransformationOneLeft"/>
-            <div className="bgTransformationOneRight"/>
-        </div>
+      <div className="bgTransformationOne">
+        <div className="bgTransformationOneLeft" />
+        <div className="bgTransformationOneRight" />
+      </div>
       <div className="mx-1 h-[150px] absolute top-24 left-7 hidden lg:block ">
-           <TrackerOutter isFive={isFive}/>
-            <TrackerInner/>
+        <TrackerOutter isFive={isFive} />
+        <TrackerInner />
       </div>
 
-        <div className='2xl:w-[1440px] m-auto' ref={myRefFive}>
-          <SectionHeader data-aos="fade-up">THE <br/>BACKBONE</SectionHeader>
+      <div className='2xl:w-[1440px] m-auto' ref={myRefFive}>
+        <SectionHeader data-aos="fade-up">THE <br />BACKBONE</SectionHeader>
 
         <SecondText className='pl-6 md:pl-20 xl:pl-40 text-backboneText' data-aos="fade-up">Meet The Super Heroes Shaping The Web3 &amp; Blockchain ecosystem</SecondText>
 
@@ -106,66 +107,66 @@ const BackBoneSection = ({ myRefFive, isFive }: IProps) => {
           {data.map(person => {
             return (
               <div key={person.id} className='mr-6'>
-                
+
                 <ImageContainer>
-                  <img src={person.image} alt={person.name} className="rounded-2xl" draggable="false" />
+                  <Image src={person.image} alt={person.name} width={270} height={270} className="rounded-2xl" draggable="false" loading="lazy" />
                 </ImageContainer>
 
-                
-                <ThirdText className='text-black pt-3'>{person.name}</ThirdText> 
 
-                <FourthText className='text-backboneText1'>{person.title}</FourthText> 
+                <ThirdText className='text-black pt-3'>{person.name}</ThirdText>
 
-              {
-                person.id === 3 ? (
-                      <FifthText className='text-backboneText flex items-center pt-1 opacity-30'> <img src='/assets/linkedln.png' alt='Linkedln' className='mr-2 w-4 h-4'/>  Linkedin <span className='ml-2'>&#8594;</span> </FifthText>   
-                    
-                ) : (                <Link href={person.linkedin}>
+                <FourthText className='text-backboneText1'>{person.title}</FourthText>
+
+                {
+                  person.id === 3 ? (
+                    <FifthText className='text-backboneText flex items-center pt-1 opacity-30'> <img src='/assets/linkedln.png' alt='Linkedln' className='mr-2 w-4 h-4' />  Linkedin <span className='ml-2'>&#8594;</span> </FifthText>
+
+                  ) : (<Link href={person.linkedin}>
                     <a target="_blank">
-                      <FifthText className='text-backboneText flex items-center pt-1'> <img src='/assets/linkedln.png' alt='Linkedln' className='mr-2 w-4 h-4'/>  Linkedin <span className='ml-2'>&#8594;</span> </FifthText>   
+                      <FifthText className='text-backboneText flex items-center pt-1'> <img src='/assets/linkedln.png' alt='Linkedln' className='mr-2 w-4 h-4' loading="lazy" />  Linkedin <span className='ml-2'>&#8594;</span> </FifthText>
                     </a>
-                </Link>)
-              }
+                  </Link>)
+                }
               </div>
             )
           })}
         </Person>
-        </div>
-        
-
-        <SectionSeperator></SectionSeperator>
-        
-        <div className='text-center pt-9 pb-32 text-backboneText' data-aos="fade-up">
-          <h1 className='pb-9'>OUR PARTNERS</h1>
-
-            <PartnerContainer className='hidden sm:flex items-center md:justify-center overflow-x-scroll px-4 md:px-0'>
-                <Img src='/assets/polygon.png' alt="polygon"  />
-              
-                <Img src='/assets/polygon-studios.png' alt="polygon"  />
-
-                <Img src='/assets/polygon.png' alt="polygon"  />
+      </div>
 
 
-                <Img src='/assets/polygon-studios.png' alt="polygon"  />
+      <SectionSeperator></SectionSeperator>
+
+      <div className='text-center pt-9 pb-32 text-backboneText' data-aos="fade-up">
+        <h1 className='pb-9'>OUR PARTNERS</h1>
+
+        <PartnerContainer className='hidden sm:flex items-center md:justify-center overflow-x-scroll px-4 md:px-0'>
+          <Img loading="lazy" src='/assets/polygon.png' alt="polygon" />
+
+          <Img loading="lazy" src='/assets/polygon-studios.png' alt="polygon" />
+
+          <Img loading="lazy" src='/assets/polygon.png' alt="polygon" />
 
 
-                <Img src='/assets/polygon.png' alt="polygon"  />
+          <Img loading="lazy" src='/assets/polygon-studios.png' alt="polygon" />
 
 
-                <Img src='/assets/polygon-studios.png' alt="polygon"  />
+          <Img loading="lazy" src='/assets/polygon.png' alt="polygon" />
 
-              
-            </PartnerContainer>
 
-            <Slider></Slider>
-        </div>
+          <Img loading="lazy" src='/assets/polygon-studios.png' alt="polygon" />
+
+
+        </PartnerContainer>
+
+        <Slider></Slider>
+      </div>
     </Div>
   )
 }
 
-const TrackerOutter = styled.div<{isFive: boolean}>`
+const TrackerOutter = styled.div<{ isFive: boolean }>`
    width: 5px;
-   height: ${({isFive}) => isFive ? '100%' : '0%'};
+   height: ${({ isFive }) => isFive ? '100%' : '0%'};
    background: #FF6661;
    border-radius: 8px;
    z-index: 2;
