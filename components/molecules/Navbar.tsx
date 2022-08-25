@@ -46,7 +46,7 @@ const Navbar = ({ setIsMenuOpen, isOne, isTwo, isThree, isFour, isFive }: IProps
       <HeaderBar className="fixed top-0 left-0 w-full h-[80px] flex items-center justify-between 3xl:justify-around  px-[10px] sm:px-[50px] lg:px-[100px] xl:px-[150px] 3xl:px-[200px] 4xl:pl-[425px] 4xl:pr-[400px] z-40">
          <Link href="/" passHref>
             <ScrollLink to="whoSection" spy={true} smooth={true} offset={50} duration={500} className="flex items-center cursor-pointer">
-               <span className="relative w-[30px] h-[30px] md:w-[40px] md:h-[40px] xl:w-[30px] xl:h-[30px]">
+               <span className="relative w-[30px] h-[25px] md:w-[40px] md:h-[30px] xl:w-[30px] xl:h-[30px]">
                   <Image
                      src="/assets/logo.svg"
                      layout="fill"

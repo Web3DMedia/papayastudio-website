@@ -6,6 +6,7 @@
     url("casper_b-webfont.woff") format("woff");
   font-weight: bold;
   font-style: normal;
+  font-display: swap;
 }
 
 /* @font-face {
@@ -13,7 +14,9 @@
   src: url("casper_b-webfont.woff2") format("woff2"),
     url("casper_b-webfont.woff") format("woff");
   font-weight: normal;
+  font-display: swap;
   font-style: normal;
+  font-display: swap;
 } */
 
 @font-face {
@@ -29,6 +32,7 @@
   src: url("casper_it-webfont.woff2") format("woff2"),
     url("casper_it-webfont.woff") format("woff");
   font-weight: normal;
+  font-display: swap;
   font-style: italic;
 }
 
@@ -37,7 +41,9 @@
   src: url("casper_r-webfont.woff2") format("woff2"),
     url("casper_r-webfont.woff") format("woff");
   font-weight: normal;
+  font-display: swap;
   font-style: normal;
+  font-display: swap;
 }
 
 /* @font-face {
@@ -45,5 +51,6 @@
   src: url("casper_r-webfont.woff2") format("woff2"),
     url("casper_r-webfont.woff") format("woff");
   font-weight: normal;
+  font-display: swap;
   font-style: normal;
 } */

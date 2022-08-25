@@ -5,15 +5,13 @@ import Menubar from "../components/molecules/Menubar";
 import SectionSeperator from "../components/molecules/SectionSeperator";
 import Footer from "../components/organisms/Footer";
 import PrivacyPolicyContainer from "../components/organisms/PrivacyPolicyContainer";
+import MetaTag from "../components/atoms/MetaTag";
 
 const Privacy = () => {
    const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false)
    return (
       <div>
-         <Head>
-            <title>Papayas studio | Privacy Policy</title>
-            <link rel="icon" href="/assets/logo.svg" />
-         </Head>
+         <MetaTag tagName='Privacy Policy' />
          <main className="w-full relative overflow-hidden">
             {/*@ts-ignore */}
             <Navbar setIsMenuOpen={setIsMenuOpen} />

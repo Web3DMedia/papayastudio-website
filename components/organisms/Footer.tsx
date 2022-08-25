@@ -13,7 +13,7 @@ const FirstText = styled.h1`
   font-weight: 700;
   font-size: 48px;
   line-height: 52px;
-  padding: 43px 0 32px;
+  padding: 43px 0 16px;
   position: relative;
   z-index: 2;
   @media (max-width: 1024px) {
@@ -25,14 +25,11 @@ const SecondText = styled.div`
   font-weight: 400;
   font-size: 18px;
   line-height: 160%;
-  padding: 0 0 92px;
+  padding: 0 0 25px;
   position: relative;
   z-index: 2;
   @media (max-width: 1024px) {
     font-size: 16px;
-  }
-  @media (max-width: 1024px) {
-    padding: 0 0 48px;
   }
 `;
 const ThirdText = styled.a`
@@ -40,16 +37,30 @@ const ThirdText = styled.a`
   font-size: 18px;
   line-height: 20px;
   z-index: 2;
-    :hover {
-    color: var(--PrimaryOne)
+  :hover {
+    color: var(--PrimaryOne);
   }
   @media (max-width: 1024px) {
     font-size: 16px;
   }
 `;
+const FourthText = styled.button`
+  margin: 0px 0 79px;
+  font-weight: 700;
+  font-size: 16px;
+  width: 152px;
+  color: white;
+  height: 46px;
+  line-height: 16px;
+  background: #ff6661;
+  border: 0.5px solid #ff9d8d;
+  border-radius: 10px;
+  cursor: pointer;
+`;
 const Aya = styled.div`
   position: absolute;
   left: 0;
+  opacity: 0.9;
   bottom: 0;
 
   @media (max-width: 600px) {
@@ -131,7 +142,7 @@ const Socials = styled.div`
     margin-left: -20px;
   }
   :hover {
-    color: var(--PrimaryOne)
+    color: var(--PrimaryOne);
   }
   @media (max-width: 1024px) {
     margin-left: 70px;
@@ -169,11 +180,13 @@ const Footer = () => {
           <FirstText className="text-footerText">Have an Idea?</FirstText>
           <Div className="md:flex md:justify-between">
             <div>
-              <SecondText className="text-footerText3 w-48">
-                {" "}
-                Reach out to us <a href="mailto:hello@web3d.media"></a>
-                hello@web3d.media
+              <SecondText className="text-footerText3 w-full">
+                Send us a message via the button below
               </SecondText>
+
+              <Link href="/contact" passHref>
+                <FourthText>Contact Us</FourthText>
+              </Link>
             </div>
 
             <div className="flex justify-between pr-10 md:block md:pr-12 xl:pr-32">

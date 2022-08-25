@@ -5,15 +5,14 @@ import Menubar from "../components/molecules/Menubar";
 import SectionSeperator from "../components/molecules/SectionSeperator";
 import Footer from "../components/organisms/Footer";
 import CookiePolicyContiner from "../components/organisms/CookiePolicyContainer";
+import MetaTag from "../components/atoms/MetaTag";
 
 const Cookie = () => {
    const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false)
    return (
       <div>
-         <Head>
-            <title>Papayas studio | Cookie Policy</title>
-            <link rel="icon" href="/assets/logo.svg" />
-         </Head>
+
+         <MetaTag tagName='Cookie Policy' />
          <main className="w-full relative overflow-hidden">
             {/*@ts-ignore */}
             <Navbar setIsMenuOpen={setIsMenuOpen} />

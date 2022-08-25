@@ -5,15 +5,14 @@ import Menubar from "../components/molecules/Menubar";
 import SectionSeperator from "../components/molecules/SectionSeperator";
 import Footer from "../components/organisms/Footer";
 import LegalContainer from "../components/organisms/LegalContainer";
+import MetaTag from "../components/atoms/MetaTag";
 
 const Legal = () => {
    const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false)
    return (
       <div>
-         <Head>
-            <title>Papayas studio | Legal</title>
-            <link rel="icon" href="/assets/logo.svg" />
-         </Head>
+
+         <MetaTag tagName='Legal' />
          <main className="w-full relative overflow-hidden">
             {/*@ts-ignore */}
             <Navbar setIsMenuOpen={setIsMenuOpen} />

@@ -6,15 +6,13 @@ import SectionSeperator from "../components/molecules/SectionSeperator";
 import Footer from "../components/organisms/Footer";
 import LegalContainer from "../components/organisms/LegalContainer";
 import TermsContainer from "../components/organisms/TermsContainer";
+import MetaTag from "../components/atoms/MetaTag";
 
 const Terms = () => {
    const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false)
    return (
       <div>
-         <Head>
-            <title>Papayas studio | Terms & Condition</title>
-            <link rel="icon" href="/assets/logo.svg" />
-         </Head>
+         <MetaTag tagName='Terms & Condition' />
          <main className="w-full relative overflow-hidden">
             {/*@ts-ignore */}
             <Navbar setIsMenuOpen={setIsMenuOpen} />

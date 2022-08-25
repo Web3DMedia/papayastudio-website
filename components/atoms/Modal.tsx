@@ -34,6 +34,11 @@ const Modal = ({ setIsModal, isModal }: IProps) => {
       setmessageIsSent(true);
     }
   }
+
+  const RemoveModal = () => {
+    document.body.style.overflow = "visible";
+    setIsModal(false)
+  }
   const recaptchaRef = React.createRef();
   const TEST_SITE_KEY = "6LcsiIMhAAAAAFc9EBIHi7WfbTNYgHqvn7mnOu25"
 
@@ -44,7 +49,7 @@ const Modal = ({ setIsModal, isModal }: IProps) => {
           <div>
             <div className="text-left">
               <div className='flex justify-end pb-[10px] cursor-pointer'>
-                <Image src="/assets/close-button.png" width={15} height={15} onClick={() => setIsModal(false)} alt="close-button" />
+                <Image src="/assets/close-button.png" width={15} height={15} onClick={() => RemoveModal()} alt="close-button" />
               </div>
               <h2 className="text-[#002F31] text-[30px] md:text-[40px] font-bold leading-[46px]">
                 Join our Waitlist
