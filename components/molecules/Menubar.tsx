@@ -46,13 +46,13 @@ const Menubar = ({ isMenuOpen, setIsMenuOpen, isOne, isTwo, isThree }: IProps) =
                </Link>
                <Link href="/#WhatWeDo" passHref>
                   <ScrollLink to="whatSection" spy={true} smooth={true} offset={50} duration={500} onClick={closeMenuBar}>
-                     <a className="flex items-center font-bold xl:text-lg text-[#FFFFFF] mb-10">
+                     <a className="flex items-center font-bold xl:text-lg text-[#FFFFFF] mb-0 lg:mb-10">
                         <Image
                            src='/assets/orange-logo.svg'
                            width={25}
                            height={25}
                            alt="orange logo"
-                           className={isTwo ? "logo opacity-1" : "logo opacity-0"}
+                           className={isTwo ? "logo opacity-1 -ml-2" : "logo opacity-0"}
                         />
                         what
                      </a>
@@ -66,14 +66,14 @@ const Menubar = ({ isMenuOpen, setIsMenuOpen, isOne, isTwo, isThree }: IProps) =
                            width={25}
                            height={25}
                            alt="orange logo"
-                           className={isThree ? "logo opacity-1" : "logo opacity-0"}
+                           className={isThree ? "logo opacity-1 -ml-2" : "logo opacity-0"}
                         />
                         our works
                      </a>
                   </ScrollLink>
                </Link>
                <Link href="/contact" passHref>
-                  <a onClick={closeMenuBar} className="border-2 border-[#FCD1CA] px-[20px] py-[10px] font-bold text-[18px] text-white rounded-xl cursor-pointer">
+                  <a onClick={closeMenuBar} className="ml-4 border-2 border-[#FCD1CA] px-[20px] py-[10px] font-bold text-[18px] text-white rounded-xl cursor-pointer">
                      Get in touch
                   </a>
                </Link>
