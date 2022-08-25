@@ -31,9 +31,6 @@ const SecondText = styled.div`
   @media (max-width: 1024px) {
     font-size: 16px;
   }
-  @media (max-width: 1024px) {
-    padding: 0 0 48px;
-  }
 `;
 const ThirdText = styled.a`
   font-weight: 400;
@@ -188,7 +185,7 @@ const Footer = () => {
               </SecondText>
 
               <Link href="/contact" passHref>
-                 <FourthText>Contact Us</FourthText>
+                <FourthText>Contact Us</FourthText>
               </Link>
             </div>
 
