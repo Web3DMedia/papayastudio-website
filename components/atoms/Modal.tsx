@@ -1,8 +1,9 @@
 import Image from 'next/image';
-import React, { useState, SetStateAction, Dispatch } from 'react'
+import React, { useState, SetStateAction, Dispatch, useRef } from 'react'
 import styled from 'styled-components';
 import MessageConfirmation from '../molecules/MessageConfirmation';
 import ReCAPTCHA from "react-google-recaptcha";
+import Reaptcha from 'reaptcha';
 
 interface IProps {
   setIsModal: Dispatch<SetStateAction<boolean>>
@@ -21,16 +22,18 @@ const Modal = ({ setIsModal, isModal }: IProps) => {
     if (
       userMail.length === 0 ||
       userName.length === 0 ||
-      recaptchaRef === null
+      captchaRef === null
     ) {
       setError("Please fill all the fields");
     } else {
       setError("");
       setUserMail("");
       setUserName("");
-      console.log(recaptchaRef)
+      console.log(captchaRef)
       console.log(userMail, userName);
       console.log("Submitted");
+      const token = captchaRef.current.getValue();
+      captchaRef.current.reset();
       setmessageIsSent(true);
     }
   }
@@ -38,10 +41,17 @@ const Modal = ({ setIsModal, isModal }: IProps) => {
   const RemoveModal = () => {
     document.body.style.overflow = "visible";
     setIsModal(false)
-}
+  }
   const recaptchaRef = React.createRef();
+  const captchaRef = useRef(null)
   const TEST_SITE_KEY = "6LcsiIMhAAAAAFc9EBIHi7WfbTNYgHqvn7mnOu25"
+  // const [captchaToken, setCaptchaToken] = useState(null);
+  // const verify = () => {
+  //   captchaRef.current.getResponse().then(res => {
+  //     setCaptchaToken(res)
+  //   })
 
+  // }
   return (
     <FormContainer>
       {messageIsSent === false && (
@@ -93,14 +103,21 @@ const Modal = ({ setIsModal, isModal }: IProps) => {
                 />
               </div>
               {/*@ts-ignore */}
-              <ReCAPTCHA sitekey={TEST_SITE_KEY} ref={recaptchaRef} />
+              <ReCAPTCHA sitekey={TEST_SITE_KEY} ref={captchaRef} />
 
+
+              {/*@ts-ignore }
+              <Reaptcha
+                sitekey={TEST_SITE_KEY}
+                ref={captchaRef}
+                onVerify={verify}
+              /> */}
               {error && <h2 className="text-red-700 pt-2">{error}</h2>}
               <button
                 type="submit"
                 className="mt-[24px] bg-[#FF6661] w-full md:w-[204px] cursor-pointer py-3 md:py-5 text-[#FFFFFF] font-bold text-[16px] rounded-xl"
               >
-                Send Message
+                Join Waitlist
               </button>
             </form>
           </div>
