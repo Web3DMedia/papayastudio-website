@@ -24,6 +24,7 @@ export default class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
+          <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
           {/* eslint-disable-next-line @next/next/no-css-tags */}
           <link href="/fonts/stylesheet.css" rel="stylesheet" />
           {/* @ts-ignore */}
