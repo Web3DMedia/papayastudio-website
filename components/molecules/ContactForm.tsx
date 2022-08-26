@@ -5,7 +5,7 @@ import MessageConfirmation from "./MessageConfirmation";
 import axios from "axios"
 
 const ContactForm = () => {
-     const options = [
+  const options = [
     { name: "2D Design/Animation" },
     { name: "3D Animation" },
     { name: "Motion Graphics Design" },
@@ -23,21 +23,21 @@ const ContactForm = () => {
   const [loading, setLoading] = useState<boolean>(false);
 
 
-const addToWaitlist = async (e: { preventDefault: () => void }) => {
+  const addToWaitlist = async (e: { preventDefault: () => void }) => {
     e.preventDefault();
     setError("");
 
     if (userMail.trim() === "") {
       setError("Please fill all the fields");
       return true;
-    } 
+    }
     if (userDropdown.trim() === "") {
       return true;
     }
-  if (userMessage.trim() === "") {
+    if (userMessage.trim() === "") {
       setError("Please fill all the fields");
       return true;
-  }
+    }
     setLoading(true);
     axios
       .post("/api/mail", { email: userMail, message: userMessage, service: userDropdown })
@@ -135,7 +135,7 @@ const addToWaitlist = async (e: { preventDefault: () => void }) => {
         </div>
       )}
       {/*@ts-ignore */}
-      {messageIsSent === true && <MessageConfirmation  setmessageIsSent={setmessageIsSent}></MessageConfirmation>}
+      {messageIsSent === true && <MessageConfirmation setmessageIsSent={setmessageIsSent}></MessageConfirmation>}
     </FormContainer>
   );
 };
