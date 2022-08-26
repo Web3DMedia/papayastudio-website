@@ -56,6 +56,8 @@ const FourthText = styled.button`
   border: 0.5px solid #ff9d8d;
   border-radius: 10px;
   cursor: pointer;
+  position:relative;
+  z-index:14;
 `;
 const Aya = styled.div`
   position: absolute;
