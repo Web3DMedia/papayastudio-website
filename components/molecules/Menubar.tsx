@@ -31,7 +31,7 @@ const Menubar = ({ isMenuOpen, setIsMenuOpen, isOne, isTwo, isThree }: IProps) =
             <div className="relative flex flex-col items-center justify-center mt-[70px] bg-transparent z-10">
                <Link href="/#WhoAreWe" passHref>
                   <ScrollLink to="whoSection" spy={true} smooth={true} offset={50} duration={500} onClick={closeMenuBar}>
-                     <a className="flex items-center font-bold xl:text-lg text-[#FFFFFF] mb-10">
+                     <a className="flex items-center font-bold xl:text-lg text-[#FFFFFF]">
                         <Image
                            src='/assets/orange-logo.svg'
                            width={25}
@@ -46,7 +46,7 @@ const Menubar = ({ isMenuOpen, setIsMenuOpen, isOne, isTwo, isThree }: IProps) =
                </Link>
                <Link href="/#WhatWeDo" passHref>
                   <ScrollLink to="whatSection" spy={true} smooth={true} offset={50} duration={500} onClick={closeMenuBar}>
-                     <a className="flex items-center font-bold xl:text-lg text-[#FFFFFF] mb-0 lg:mb-10">
+                     <a className="flex items-center font-bold xl:text-lg text-[#FFFFFF] my-10">
                         <Image
                            src='/assets/orange-logo.svg'
                            width={25}

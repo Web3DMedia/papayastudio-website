@@ -14,7 +14,7 @@ const LegalContainer = () => {
             <p className="max-w-[476px] mt-[16px] text-[14px] font-normal leading-[20px] text-[#4A5567]">
                Papayas Studios takes your privacy seriously and is committed to ensuring a smooth experience. The documents below are details of how Papayas Studios manages your data
             </p>
-            <div className="mt-[38px] md:grid ml-11 -translate-x-11 md:gap-y-5 xl:gap-y-5 xl:gap-x-14 md:grid-cols-2 text-[#23262E]">
+            <div className="mt-[38px] w-full xl:w-auto md:grid ml-11 -translate-x-11 md:gap-y-5 xl:gap-y-5 xl:gap-x-14 md:grid-cols-2 text-[#23262E]">
                <Link href="/privacy">
                   <a>
                      <div className="md:w-[250px] md:h-[150px] bg-[#FCD1CA1F] border-[0.5px] border-[#FF9D8D] rounded-2xl px-[18px] py-[25px] flex flex-row items-center md:items-start md:flex-col md:justify-between ">

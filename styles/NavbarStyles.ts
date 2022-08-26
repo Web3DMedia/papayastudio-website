@@ -8,14 +8,14 @@ export const HeaderBar = styled.div`
 `
 
 export const TrackerOutter = styled.div<{ isOne: boolean, isTwo: boolean, isThree: boolean, isFour: boolean, isFive: boolean }>`
-   width: ${({ isOne, isTwo, isThree, isFour, isFive }) => isOne ? '20%' : isTwo ? '40%' : isThree ? '60%' : isFour ? '80%' : isFive ? '100%' : '100%'};;
+   width: ${({ isOne, isTwo, isThree, isFour, isFive }) => isOne ? '20%' : isTwo ? '40%' : isThree ? '60%' : isFour ? '80%' : isFive ? '100%' : '0%'};;
    height: 5px;
    background:  #FF6661;
    border-radius: 8px;
    z-index: 2;
    position: absolute;
    top: 0;
-   transition: .8s ease-in width;
+   transition: .6s ease-in width;
 `
 
 export const TrackerInner = styled.div`
