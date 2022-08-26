@@ -79,9 +79,6 @@ const Home = () => {
   return (
     <div className="font-body">
       <MetaTag tagName='Home' />
-      <Head>
-        <link rel="preconnect" href="https://unpkg.com/aos@next/dist/aos.css" />
-      </Head>
 
       <main className="w-full relative h-full overflow-hidden">
         {isModal ? "" : <Navbar setIsMenuOpen={setIsMenuOpen} isOne={isOne} isTwo={isTwo} isThree={isThree} isFour={isFour} isFive={isFive} />}

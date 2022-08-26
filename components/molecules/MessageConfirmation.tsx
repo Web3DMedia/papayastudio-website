@@ -9,6 +9,7 @@ const TextHeader = styled.h1`
   font-weight: 700;
   font-size: 24px;
   line-height: 46px;
+  padding: 24px 0;
   mix-blend-mode: normal;
   color: var(--MessageSent);
 `;
@@ -20,7 +21,7 @@ const TextParagraph = styled.p`
   color: var(--MessageSentTwo);
   width: 80%;
   margin: auto;
-  padding: 9px 0 117px 0;
+  padding: 0px 0 90px 0;
 `;
 
 import MessageSent from "../../public/assets/tick.png";
@@ -28,33 +29,41 @@ import MessageSent from "../../public/assets/tick.png";
 interface IProps {
   setmessageIsSent: Dispatch<SetStateAction<boolean>>;
   isModal: boolean;
+  setIsModal: Dispatch<SetStateAction<boolean>>;
 }
 
-const MessageConfirmation = ({ setmessageIsSent, isModal }: IProps) => {
+const MessageConfirmation = ({ setmessageIsSent, isModal, setIsModal }: IProps) => {
   const [hide, setHide] = useState<boolean>(false)
 
-  useEffect(() =>{
-    setTimeout(() =>{
+  useEffect(() => {
+    setTimeout(() => {
       setHide(true)
     }, 2000)
   })
+
+  const CloseModal = () => {
+    document.body.style.overflow = "visible";
+    setmessageIsSent(false)
+    setIsModal(false)
+  }
   return (
     <div className={isModal ? "bg-white w-[340px] sm:w-[664px] px-4 sm:px-16 py-10 rounded-[32px] z-20 fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" : "bg-white w-[330px] sm:w-[664px] px-4 sm:px-16 py-10 rounded-[32px] z-20"}>
       <div className="text-center">
         <div
-          className="flex justify-end cursor-pointer pt-[45px] lg:pt-[65px] pb-[35px] md:pt-[20px] pr-[35px] sm:pr-[0px]"
-          onClick={() => setmessageIsSent(false)}
+          className="flex justify-end cursor-pointer pt-[20px] lg:pt-[25px] pb-[35px] md:pt-[20px] pr-[15px] sm:pr-[0px]"
+          onClick={() => CloseModal()}
         >
           <Image src="/assets/close-button.png" width={15} height={15} alt="close-button" />
         </div>
-        {hide === true &&  <Image
-          src={MessageSent}
-          width={120}
-          height={120}
-          objectFit="contain"
-        ></Image>}
+        {hide === true && <div className="-mb-2">
+          <Image
+            src={MessageSent}
+            width={120}
+            height={120}
+            objectFit="contain"
+          ></Image></div>}
         {/*@ts-ignore */}
-        {hide === false &&  <Player src="https://lottie.host/f9a7858e-9d21-41e8-9d00-af45ad5fad2a/0FMcL1tRa2.json" background="transparent" style={{ width: "120px", height: "120px" }} autoplay speed={1} keepLastFrame></Player>}
+        {hide === false && <Player src="https://lottie.host/f9a7858e-9d21-41e8-9d00-af45ad5fad2a/0FMcL1tRa2.json" background="transparent" style={{ width: "120px", height: "120px" }} autoplay speed={1} keepLastFrame></Player>}
 
         <TextHeader>Message sent</TextHeader>
         <TextParagraph>

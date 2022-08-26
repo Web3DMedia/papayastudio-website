@@ -1,4 +1,4 @@
-import React, {useState, useEffect, SetStateAction, Dispatch} from 'react'
+import React, { useState, useEffect, SetStateAction, Dispatch } from 'react'
 import styled from 'styled-components'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -7,7 +7,7 @@ import Modal from '../atoms/Modal';
 
 
 interface Props {
-  imgs: String,
+    imgs: String,
 }
 
 const LearnWithPapayaContainer = styled.div`
@@ -119,7 +119,7 @@ margin-left:110px;
 }
 `
 const Span = styled.div<Props>`
-background: url(${({imgs}) => imgs ? `${imgs}` : ''});
+background: url(${({ imgs }) => imgs ? `${imgs}` : ''});
 background-size: cover;
 margin-left: 34px;
 transition: background 0.2s;
@@ -240,7 +240,7 @@ background-position-y: -27px;
 }
 `
 const SpanTwo = styled.div<Props>`
-background: url(${({imgs}) => imgs ? `${imgs}` : ''});
+background: url(${({ imgs }) => imgs ? `${imgs}` : ''});
 background-size: cover;  
 margin-left: 34px;
 transition: background 0.2s;
@@ -333,82 +333,82 @@ background-position-y: -105px;
 }
 `
 interface IProps {
-   setIsModal: Dispatch<SetStateAction<boolean>>
-   myRefFour: any
-   isFour: boolean
+    setIsModal: Dispatch<SetStateAction<boolean>>
+    myRefFour: any
+    isFour: boolean
 }
 
-const LearnWithPapayaSection = ({ setIsModal, myRefFour, isFour }: IProps)  => {
+const LearnWithPapayaSection = ({ setIsModal, myRefFour, isFour }: IProps) => {
     const [bg, setBg] = useState<Number>(1)
-    
-      useEffect(() => {
-          const interval = setInterval(() => {
-              setBg(bg => Number(bg) + Number(1) > 3 ? 1 : Number(bg) + Number(1))
-      }, 5000)
-      return () => {
-        clearInterval(interval)
-      }
-}, [])
 
-const Modal = () => {
-    document.body.style.overflow = "hidden";
-    setIsModal(true)
-}
-  return (
-    <LearnWithPapayaContainer>
-        
-        <div className='font-heading relative'>
-          <div className="mx-1 h-[150px] absolute top-24 left-7 hidden lg:block ">
-           <TrackerOutter isFour={isFour}/>
-            <TrackerInner/>
-      </div>
-        <div className='2xl:w-[1440px] m-auto' ref={myRefFour}>
-        <FirstText className='pt-24 pl-5 md:pl-14 lg:pl-20 pb-12 text-primary3' data-aos="fade-up">LEARN <br/>  WITH PAPAYAS</FirstText>
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setBg(bg => Number(bg) + Number(1) > 3 ? 1 : Number(bg) + Number(1))
+        }, 5000)
+        return () => {
+            clearInterval(interval)
+        }
+    }, [])
 
-        <SecondText className='pl-5 md:pl-14 lg:pl-20 xl:pl-40 text-learnpapayatext' data-aos="fade-up">Join Our Learning Academy</SecondText>
+    const Modal = () => {
+        document.body.style.overflow = "hidden";
+        setIsModal(true)
+    }
+    return (
+        <LearnWithPapayaContainer>
 
-        <div className='pl-5 md:pl-14 lg:pl-20 xl:pl-56 pt-11'>
-            <ThirdText className=' text-learnpapayatext2 ' data-aos="fade-up">Learn from professionals across the animation and tech industry and build expert skills. We help creative talent build expert skills by training, hiring, and empowering them.</ThirdText>
+            <div className='font-heading relative'>
+                <div className="mx-1 h-[150px] absolute top-24 left-7 hidden lg:block ">
+                    <TrackerOutter isFour={isFour} />
+                    <TrackerInner />
+                </div>
+                <div className='2xl:w-[1440px] m-auto' ref={myRefFour} data-aos="fade-right">
+                    <FirstText className='pt-24 pl-5 md:pl-14 lg:pl-20 pb-12 text-primary3' >LEARN <br />  WITH PAPAYAS</FirstText>
 
-   
-                <FourthText className=' text-learnpapayatext cursor-pointer mb-4 ' data-aos="fade-up" onClick={() => Modal()}>Join waitlist </FourthText>
-         
-        </div>
+                    <SecondText className='pl-5 md:pl-14 lg:pl-20 xl:pl-40 text-learnpapayatext'>Join Our Learning Academy</SecondText>
 
-        <Im data-aos="fade-up">
-            <div className='flex items-end'>
-                <Span imgs={`/assets/Learn${bg}.jpeg`}></Span>            
-                <Span imgs={`/assets/Learn${bg}.jpeg`}></Span>            
-                <Span imgs={`/assets/Learn${bg}.jpeg`}></Span>            
+                    <div className='pl-5 md:pl-14 lg:pl-20 xl:pl-56 pt-11'>
+                        <ThirdText className=' text-learnpapayatext2'>Learn from professionals across the animation and tech industry and build expert skills. We help creative talent build expert skills by training, hiring, and empowering them.</ThirdText>
+
+
+                        <FourthText className=' text-learnpapayatext cursor-pointer mb-4' onClick={() => Modal()}>Join waitlist </FourthText>
+
+                    </div>
+
+                    <Im data-aos="fade-up">
+                        <div className='flex items-end'>
+                            <Span imgs={`/assets/Learn${bg}.jpeg`}></Span>
+                            <Span imgs={`/assets/Learn${bg}.jpeg`}></Span>
+                            <Span imgs={`/assets/Learn${bg}.jpeg`}></Span>
+                        </div>
+                        <div className='flex pt-[13px] md:pt-[20px] xl:pt-[34px]'>
+                            <SpanTwo imgs={`/assets/Learn${bg}.jpeg`}></SpanTwo>
+                            <SpanTwo imgs={`/assets/Learn${bg}.jpeg`}></SpanTwo>
+                        </div>
+                    </Im>
+
+                    <Aya>
+                        <Image src="/assets/aya.png" width={307} height={148} alt="papaya" />
+                    </Aya>
+
+                    <Pap>
+                        <Image src="/assets/papaya-text.png" width={307} height={148} alt="papaya" />
+                    </Pap>
+
+                    <Vector>
+                        <Image src="/assets/footer-vector.png" width={511} height={569} objectFit="contain" alt="Vector" />
+                    </Vector>
+
+
+                </div>
             </div>
-            <div className='flex pt-[13px] md:pt-[20px] xl:pt-[34px]'>
-                <SpanTwo imgs={`/assets/Learn${bg}.jpeg`}></SpanTwo>            
-                <SpanTwo imgs={`/assets/Learn${bg}.jpeg`}></SpanTwo>
-            </div>            
-        </Im>
-
-            <Aya>
-                <Image src="/assets/aya.png" width={307} height={148} alt="papaya" />
-            </Aya>
-
-            <Pap>
-                <Image src="/assets/papaya-text.png" width={307} height={148} alt="papaya" />
-            </Pap>
-
-            <Vector>
-                <Image src="/assets/footer-vector.png" width={511} height={569} objectFit="contain" alt="Vector" />
-            </Vector>
-
-         
-        </div>
-        </div>
-    </LearnWithPapayaContainer>
-  )
+        </LearnWithPapayaContainer>
+    )
 }
 
-const TrackerOutter = styled.div<{isFour: boolean}>`
+const TrackerOutter = styled.div<{ isFour: boolean }>`
    width: 5px;
-   height: ${({isFour}) => isFour ? '100%' : '0%'};
+   height: ${({ isFour }) => isFour ? '100%' : '0%'};
    background: #FF6661;
    border-radius: 8px;
    z-index: 2;

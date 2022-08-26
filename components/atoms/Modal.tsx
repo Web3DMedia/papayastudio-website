@@ -106,7 +106,8 @@ const Modal = ({ setIsModal, isModal }: IProps) => {
           </div>
         </div>
       )}
-      {messageIsSent === true && <MessageConfirmation setmessageIsSent={setmessageIsSent} isModal={isModal}></MessageConfirmation>}
+      {/*@ts-ignore */}
+      {messageIsSent === true && <MessageConfirmation setmessageIsSent={setmessageIsSent} isModal={isModal} setIsModal={setIsModal}></MessageConfirmation>}
     </FormContainer>
   );
 };

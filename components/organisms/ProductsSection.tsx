@@ -18,7 +18,7 @@ const ProductsSection = ({ myRefThree, isThree }: IProps) => {
   useEffect(() => {
     const interval = setInterval(() => {
       setImg((bg) => (Number(bg) + Number(1) > 3 ? 1 : Number(bg) + Number(1)));
-    }, 2000);
+    }, 1000);
     return () => {
       clearInterval(interval);
     };

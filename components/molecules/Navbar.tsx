@@ -99,7 +99,7 @@ const Navbar = ({ setIsMenuOpen, isOne, isTwo, isThree, isFour, isFive }: IProps
                Get in touch
             </a>
          </Link>
-         <div className="flex w-[150px] items-center justify-center lg:hidden">
+         <div className="flex w-[150px] items-center justify-center lg:hidden -translate-x-5 sm:-translate-x-12">
             <h4 className="text-xs">01</h4>
             <div className="relative mx-1">
                <TrackerOutter isOne={isOne} isTwo={isTwo} isThree={isThree} isFour={isFour} isFive={isFive} />

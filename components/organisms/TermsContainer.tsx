@@ -32,18 +32,23 @@ const TextWrapper = styled.div`
    }
 `
 
+const BackContainer = styled.div`
+box-shadow: 0px 1px 3px rgba(16, 24, 40, 0.1), 0px 1px 2px -1px rgba(16, 24, 40, 0.1);
+`
 
 const TermsContainer = () => {
    return (
       <div className=" min-h-[60vh] mb-5 flex flex-col items-center justify-center">
          <div className="bgTransformationOne">
-            <div className="bgTransformationOneLeft"/>
-            <div className="bgTransformationOneRight"/>
+            <div className="bgTransformationOneLeft" />
+            <div className="bgTransformationOneRight" />
          </div>
          <h3 className="text-[#002F31] font-normal text-xs uppercase my-5">Legal</h3>
          <div className="bg-white my-7 rounded-t-[32px]  md:px-10">
-            <TextWrapper className="customInfoWrapper h-full md:w-[650px] lg:h-[680px] max-h-[680px] pb-10 px-10 xl:px-[60px] overflow-y-scroll">
-                              <h1 className='pt-[40px] text-[#002F3199] cursor-pointer font-normal text-[18px] leading-6' onClick={() => history.back()}>&#8592; Back</h1>
+            <BackContainer className='absolute bg-white w-[770px] z-10 md:-ml-10 rounded-t-[32px] bg-white w-[729px] py-5'>
+               <h1 className='pt-[40px] ml-10 text-[#002F3199] cursor-pointer font-normal text-[18px] leading-6' onClick={() => history.back()}>&#8592; Back</h1>
+            </BackContainer>
+            <TextWrapper className="customInfoWrapper h-full md:w-[650px] lg:h-[680px] max-h-[680px] pb-10 mx-5 pl-2 pr-12 pb-10 md:px-5 md:mx-0 xl:px-[60px] relative overflow-y-scroll overflow-x-hidden mt-28">
                <h3 className="font-bold text-[30px] lg:text-[36px] xl:text-[40px] text-[#002F31] mt-10">Terms and Condition</h3>
                <p className="font-medium my-4 text-base text-[#4A5567]">
                   This website is operated by Web3D Media Incorporated, a Delaware-based corporation with a registered address at 651 N Broad St, New Castle, Delaware United States. (“Company”).
@@ -86,7 +91,7 @@ const TermsContainer = () => {
                   The User agrees not to use the Services negligently, for fraudulent purposes or in an unlawful manner. Likewise, the User agrees not to partake in any conduct or action that could damage the image, interests or rights of the Website or third parties, particularly, the owners of the Contributor Content, the Third Party Content or the Sponsored Content.
                </p>
                <p className="font-medium my-4 text-base text-[#4A5567]">
-                  The User will not interfere with the functioning of the Website or in the Services, in particular, he/she/it will not impersonate another user or person. The User agrees not to carry out any action that may damage, make unavailable, overload, deteriorate or impede the normal use of the Website or the Services, which may impact the security of the Website or the Services, or which may in any way interfere with the Services offered by the Company. 
+                  The User will not interfere with the functioning of the Website or in the Services, in particular, he/she/it will not impersonate another user or person. The User agrees not to carry out any action that may damage, make unavailable, overload, deteriorate or impede the normal use of the Website or the Services, which may impact the security of the Website or the Services, or which may in any way interfere with the Services offered by the Company.
                </p>
                <p className="font-medium my-4 text-base text-[#4A5567]">
                   The use of robots, spiders or any other mechanism, mobile application, program or tool to access, copy or control any part of the Website or the Services in any way which is contrary to the ordinary use of the Website or which infringes the Company’s interests (without its express prior authorization) is strictly prohibited. Likewise, obtaining or attempting to obtain the contents of the Website using any method or system not expressly authorized by the Company or which is not the ordinary method of accessing the Website is also strictly prohibited.
@@ -219,7 +224,7 @@ const TermsContainer = () => {
                   In accordance with Section 4 above regarding Third Party Content and Sponsored Content, the Company acts exclusively as a provider of a search service as requested by the User, without assuming any responsibility for search results.
                </p>
                <p className="font-medium my-4 text-base text-[#4A5567]">
-                  The insertion of links in the Services does not imply any relationship, recommendation or supervision by the Company of the linked website and, accordingly, the Company does not accept any liability in relation to the content of any linked website except in the specific circumstances provided by the applicable law. In accordance with Section 4 above regarding the Contributor Contents, the Company acts exclusively as the provider of the intermediation service between the offer of ContributoContent and the Users interested in downloading them, without any liability in relation to such contents, except for those cases expressly stated by the applicable law. The Company will make reasonable commercial efforts in order to ensure the accuracy of keywords and descriptions, as well as the identification of content as exclusively for editorial use or any equivalent expression. 
+                  The insertion of links in the Services does not imply any relationship, recommendation or supervision by the Company of the linked website and, accordingly, the Company does not accept any liability in relation to the content of any linked website except in the specific circumstances provided by the applicable law. In accordance with Section 4 above regarding the Contributor Contents, the Company acts exclusively as the provider of the intermediation service between the offer of ContributoContent and the Users interested in downloading them, without any liability in relation to such contents, except for those cases expressly stated by the applicable law. The Company will make reasonable commercial efforts in order to ensure the accuracy of keywords and descriptions, as well as the identification of content as exclusively for editorial use or any equivalent expression.
                </p>
                <p className="font-medium my-4 text-base text-[#4A5567]">
                   However, THE COMPANY NEITHER WARRANTS NOR MAKES ANY REPRESENTATION REGARDING ANY KEYWORD, TITLE OR DESCRIPTION; OR THE IDENTIFICATION OR LACK OF IDENTIFICATION OF ANY VISUAL CONTENT AS EXCLUSIVELY FOR EDITORIAL USE. For this reason and notwithstanding any other liability limitation that may be applicable in accordance with these Terms, the Company shall neither indemnify nor assume any liability in connection with any claim resulting from inaccurate keywords, titles or descriptions, or from the use of the visual content identified as exclusively for editorial use.
@@ -250,22 +255,22 @@ const TermsContainer = () => {
                   The User may use the content in the Papayas Studio Content provided that it:
                </p>
                <NumberedList>
-                  <li  className="font-medium my-1 text-base text-[#4A5567]">
+                  <li className="font-medium my-1 text-base text-[#4A5567]">
                      Does not involve collective use;
                   </li>
-                  <li  className="font-medium my-1 text-base text-[#4A5567]">
+                  <li className="font-medium my-1 text-base text-[#4A5567]">
                      The content in the Papayas Studio Content is not used in a manner that suggests an association or endorsement by the Company or the Website;
                   </li>
-                  <li  className="font-medium my-1 text-base text-[#4A5567]">
+                  <li className="font-medium my-1 text-base text-[#4A5567]">
                      The content in the Papayas Studio Content or any derivative work is not used or included (in whole or in part) in a database, archive or in any other media/stock product, collection, set of clips, or library, for distribution or resale or used in any other way that could prevent or limit future visits ordownloads from the Website;
                   </li>
-                  <li  className="font-medium my-1 text-base text-[#4A5567]">
+                  <li className="font-medium my-1 text-base text-[#4A5567]">
                      Does not resell, assign, transfer or sublicense the content in the Papayas Studio Content or any derived work from a content in the Papayas Studio Content;
                   </li>
-                  <li  className="font-medium my-1 text-base text-[#4A5567]">
+                  <li className="font-medium my-1 text-base text-[#4A5567]">
                      Does not use the content in the Papayas Studio Content in printed or electronic items (e.g. t-shirts, cups, postcards, birthday or greeting cards, invitations, calendars, web models or electronic devices, apps, videogames, advertising spots, audiovisual animations) aimed to be resold, in which the content in the Papayas Studio Content is the main element (because of size, relevance or any other cause, in case of doubt about whether the content is main element, it shall be deemed that the content is main element);
                   </li>
-                  <li  className="font-medium my-1 text-base text-[#4A5567]">
+                  <li className="font-medium my-1 text-base text-[#4A5567]">
                      Does not use the content in the Papayas Studio Content (totally or partially) in any trademark, logo or part of the same, which may be used by any other means to guarantee or to imply a guaranty of any product and or service, unless the content in the Papayas Studio Content used in such cases is modified in such a way as to be a new and different content not confusingly similar with the original content in the Papayas Studio Content or implies a use of the content in the Papayas Studio Content as atemplate or test, and not as a final item or material;
                   </li>
                   <li className="font-medium my-1 text-base text-[#4A5567]">
@@ -335,13 +340,13 @@ const TermsContainer = () => {
                   After the purchase of the Subscription, the User may benefit from the following:
                </p>
                <UnorderedList>
-                  <li className="font-medium my-1 text-base text-[#4A5567]"> 
+                  <li className="font-medium my-1 text-base text-[#4A5567]">
                      The Service consisting in using the content in the Papayas Studio Content without crediting the Company/Website. The rest of conditions stated or referred to inSections 7 and 8 shall still be applicable.
                   </li>
-                  <li className="font-medium my-1 text-base text-[#4A5567]"> 
+                  <li className="font-medium my-1 text-base text-[#4A5567]">
                      Access all contents available in the Website.
                   </li>
-                  <li className="font-medium my-1 text-base text-[#4A5567]"> 
+                  <li className="font-medium my-1 text-base text-[#4A5567]">
                      Use the Website without advertisement displaying.
                   </li>
                   <li className="font-medium my-1 text-base text-[#4A5567]">
@@ -618,7 +623,7 @@ const TermsContainer = () => {
                   Here you will find all relevant details and pricing information for the subscriptions that are currently available on our website (including, without limitation, restrictions to the number of downloads each day). When it comes to offering new services (to which these Subscription Terms apply unless otherwise stated), the Company has the right to alter the subscriptions it offers at any time. Papayas Studio Content may not be used by anyone other than the subscribed User, and subscriptions may not be transferred or assigned to anyone else (including as third parties, for these purposes, affiliates or entities part of the same group of companies). If applicable, Value Added Tax (VAT) is included in the Subscription price on the Website.
                </p>
                <p className="font-medium my-4 text-base text-[#4A5567]">
-                  There is no temporal limit on how often the Company can alter the price of any Subscription. The Company will apply the pricing listed on the Website at the time of the {`User's`} Subscription order submission to the subscription fee. As indicated on the Website, the User must pay the subscription fee in advance using any authorised payment service or a credit/debit card. The User must follow the instructions on the Website to purchase and pay for the subscription. Third-party sites handle the processing of payment information and data via the authorised payment service or credit/debit card. 
+                  There is no temporal limit on how often the Company can alter the price of any Subscription. The Company will apply the pricing listed on the Website at the time of the {`User's`} Subscription order submission to the subscription fee. As indicated on the Website, the User must pay the subscription fee in advance using any authorised payment service or a credit/debit card. The User must follow the instructions on the Website to purchase and pay for the subscription. Third-party sites handle the processing of payment information and data via the authorised payment service or credit/debit card.
                </p>
                <p className="font-medium my-4 text-base text-[#4A5567]">
                   The User agrees to allow the Company to collect the subscription fee via the payment method of their choice when they purchase a subscription. Payment must be received by the Company or permitted by the applicable funding entity before the Subscription can be activated. After that, the Subscription shall be in force for the term purchased by the User. If the user does not cancel the renewal of the subscription prior to its expiration, the subscriptions will be automatically and sequentially renewed unless otherwise indicated in these Subscription Terms. Terms of Service. The initial payment method will be used to charge the same price.
