@@ -5,6 +5,8 @@ import { Player } from '@lottiefiles/react-lottie-player';
 import Link from "next/link";
 import styled from "styled-components";
 
+import MessageConfirmed from "../../public/assets/lottie/message-confirm.json"
+
 const TextHeader = styled.h1`
   font-weight: 700;
   font-size: 24px;
@@ -63,7 +65,7 @@ const MessageConfirmation = ({ setmessageIsSent, isModal, setIsModal }: IProps) 
             objectFit="contain"
           ></Image></div>}
         {/*@ts-ignore */}
-        {hide === false && <Player src="https://lottie.host/f9a7858e-9d21-41e8-9d00-af45ad5fad2a/0FMcL1tRa2.json" background="transparent" style={{ width: "120px", height: "120px" }} autoplay speed={1} keepLastFrame></Player>}
+        {hide === false && <Player src={MessageConfirmed} background="transparent" style={{ width: "120px", height: "120px" }} autoplay speed={1} keepLastFrame></Player>}
 
         <TextHeader>Message sent</TextHeader>
         <TextParagraph>
