@@ -73,9 +73,9 @@ const Menubar = ({ isMenuOpen, setIsMenuOpen, isOne, isTwo, isThree }: IProps) =
                   </ScrollLink>
                </Link>
                <Link href="/contact" passHref>
-                  <a onClick={closeMenuBar} className="ml-4 border-2 border-[#FCD1CA] px-[20px] py-[10px] font-bold text-[18px] text-white rounded-xl cursor-pointer">
+                  <button onClick={closeMenuBar} className="ml-4 border-2 border-[#FCD1CA] px-[20px] py-[10px] font-bold text-[18px] text-white rounded-xl cursor-pointer">
                      Get in touch
-                  </a>
+                  </button>
                </Link>
             </div>
             <div className="absolute top-80 left-3 w-[150px] h-[150px] z-0 rounded-full border border-dashed border-[#FCD1CA] opacity-30 bg-transparent">
