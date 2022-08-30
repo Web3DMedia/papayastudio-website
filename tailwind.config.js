@@ -7,7 +7,7 @@ module.exports = {
   ],
   theme: {
     fontFamily: {
-      body: ["Casper", "sans-serif"],
+      body: ["DM Sans", "sans-serif"],
     },
 
     extend: {
