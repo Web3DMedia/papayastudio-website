@@ -13,15 +13,15 @@ const HeroSection = ({ myRefOne }: IProps) => {
   const [textNumber, setTextNumber] = useState(2);
   const [mascot, setMascot] = useState(1);
 
-    useEffect(() => {
-      if (textNumber <= 4) {
-       const interval = setInterval(() => {
-          setTextNumber(textNumber + 1);
-        }, 5000);
-        return () => clearInterval(interval);
-      } else {
-        setTextNumber(1);
-      }
+  useEffect(() => {
+    if (textNumber <= 4) {
+      const interval = setInterval(() => {
+        setTextNumber(textNumber + 1);
+      }, 5000);
+      return () => clearInterval(interval);
+    } else {
+      setTextNumber(1);
+    }
   }, [textNumber]);
 
   useEffect(() => {
@@ -36,7 +36,7 @@ const HeroSection = ({ myRefOne }: IProps) => {
   }, []);
 
   const papayamascots = [
-        {
+    {
       name: "Papito",
       image: `/assets/mascotspapaya2.png`,
       width: 570,
@@ -73,7 +73,7 @@ const HeroSection = ({ myRefOne }: IProps) => {
         <p className="relative left-5 md:left-14 lg:left-20 top-96 sm:top-[450px] md:top-12 2xl:top-12 4xl:top-4 font-normal text-xs uppercase">
           Who We <br /> Are
         </p>
-        <div className="relative w-full h-full max-w-[1440px] 4xl:max-w-[2000px] mx-auto md:px-14 lg:px-20 4xl:px-10 4xl:py-0 flex flex-col-reverse md:flex-row">
+        <div className="relative w-full h-full max-w-[1440px] 4xl:max-w-[2000px] -ml-5 mx-auto md:px-14 lg:px-20 4xl:px-10 4xl:py-0 flex flex-col-reverse md:flex-row">
           <div className="relative z-10 w-full sm:pt-6 pl-0 sm:pl-5 md:pt-24 4xl:pt-36 4xl:pl-24">
             <span className="flex items-center">
               {/*Large screen*/}
@@ -164,7 +164,7 @@ const HeroSection = ({ myRefOne }: IProps) => {
               )}
               {textNumber === 2 && (
                 <SpanTwo className="block sm:hidden leading-9 text-[32px] font-bold">
-                   brands &amp; creators
+                  brands &amp; creators
                 </SpanTwo>
               )}
               {textNumber === 3 && (
@@ -201,8 +201,8 @@ const HeroSection = ({ myRefOne }: IProps) => {
               )}
             </span>
             <div className="pl-5 md:pl-14 lg:pl-20 xl:pl-32 4xl:pl-40 md:mt-[18px] sm:mt-[16px] xl:mt-[20px]">
-              <p className="md:w-11/12 lg:max-w-[600px] xl:pl-16 3xl:pl-0 xl:max-w-[800px] 4xl:max-w-[780px] text-[16px] sm:text-[18px] lg:text-[20px] xl:text-[24px] font-normal text-backboneText leading-[30px] px-2 pt-9 sm:pt-0">
-             At Papayas studios we are at the forefront of digital content creation creating stories and experiences for every aspect of web2 and web3 designs
+              <p className="md:w-11/12 lg:max-w-[550px] xl:pl-16 3xl:pl-0 xl:max-w-[600px] 4xl:max-w-[780px] text-[16px] sm:text-[18px] lg:text-[20px] xl:text-[24px] font-normal text-backboneText leading-[30px] px-2 pt-9 sm:pt-0">
+                At Papayas studios we are at the forefront of digital content creation creating stories and experiences for every aspect of web2 and web3 designs
               </p>
               {/*@ts-ignore */}
               <BtnLink
@@ -217,11 +217,11 @@ const HeroSection = ({ myRefOne }: IProps) => {
               </BtnLink>
             </div>
           </div>
-          
-              {papayamascots.map((papayamascot, index) => {
-                return (index + 1) == mascot &&
-                <div className="relative top-2 -right-4 sm:-right-14 md:absolute bg-transparent md:-top-20 lg:-top-2 md:-right-[270px] lg:-right-[250px] xl:-top-4 xl:-right-20 2xl:-right-48 4xl:-right-72 w-[400px] h-[400px] sm:h-[500px] sm:w-[500px] lg:h-[700px] lg:w-[600px] 4xl:w-[600px] 4xl:h-[700px]">
-                  <div className={index + 1 === 2 ? "xl:mt-10" : ""}>
+
+          {papayamascots.map((papayamascot, index) => {
+            return (index + 1) == mascot &&
+              <div className="relative top-2 -right-4 sm:-right-14 md:absolute bg-transparent md:-top-20 lg:-top-2 md:-right-[270px] lg:-right-96 xl:-top-4 xl:-right-36 2xl:-right-48 4xl:-right-80 w-[400px] h-[400px] sm:h-[500px] sm:w-[500px] lg:h-[700px] lg:w-[600px] 4xl:w-[600px] 4xl:h-[700px]">
+                <div className={index + 1 === 2 ? "xl:mt-10" : ""}>
                   <Image
                     key={index}
                     src={papayamascot.image}
@@ -232,10 +232,10 @@ const HeroSection = ({ myRefOne }: IProps) => {
                     objectFit="contain"
                     objectPosition="top"
                   />
-                  </div>
-               </div>
-              })}
-            
+                </div>
+              </div>
+          })}
+
         </div>
       </div>
     </section>

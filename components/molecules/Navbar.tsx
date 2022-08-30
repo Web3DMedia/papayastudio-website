@@ -14,6 +14,7 @@ interface IProps {
    isOne?: boolean
    isTwo?: boolean
    isThree?: boolean
+   change?: boolean
 }
 
 
@@ -23,7 +24,7 @@ const NavLinks = styled.div`
 }
 `
 
-const Navbar = ({ setIsMenuOpen, isOne, isTwo, isThree}: IProps) => {
+const Navbar = ({ setIsMenuOpen, isOne, isTwo, isThree, change}: IProps) => {
    const [textNumber, setTextNumber] = useState(1)
 
    useEffect(() => {
@@ -98,14 +99,16 @@ const Navbar = ({ setIsMenuOpen, isOne, isTwo, isThree}: IProps) => {
                Get in touch
             </a>
          </Link>
-         <div className="flex w-[150px] items-center justify-center lg:hidden -translate-x-5 sm:-translate-x-12">
+         {
+            change && <div className="flex w-[150px] items-center justify-center lg:hidden -translate-x-5 sm:-translate-x-12">
             <h4 className="text-xs">01</h4>
             <div className="relative mx-1">
                           <TrackerOutter textNumber={textNumber} />
                <TrackerInner />
             </div>
             <h4 className="text-xs">04</h4>
-         </div>
+         </div>  
+         }
          <button
             onClick={openMenuBar}
             className="text-white bg-[#FF6661] p-2 rounded-full cursor-light flex items-center justify-center lg:hidden outline-none">

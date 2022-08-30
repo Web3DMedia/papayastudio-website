@@ -23,6 +23,7 @@ const Home = () => {
   const [isThree, setIsThree] = useState<boolean>(false)
   const [isFour, setIsFour] = useState<boolean>(false)
   const [isFive, setIsFive] = useState<boolean>(false)
+  const [change, setChange] = useState<boolean>(true)
 
   const myRefOne: any = useRef()
   const myRefTwo: any = useRef()
@@ -81,7 +82,7 @@ const Home = () => {
       <MetaTag tagName='Home' />
 
       <main className="w-full relative h-full overflow-hidden">
-        {isModal ? "" : <Navbar setIsMenuOpen={setIsMenuOpen} isOne={isOne} isTwo={isTwo} isThree={isThree} isFour={isFour} isFive={isFive} />}
+        {isModal ? "" : <Navbar setIsMenuOpen={setIsMenuOpen} isOne={isOne} isTwo={isTwo} isThree={isThree} change={change}/>}
         <Menubar isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} isOne={isOne} isTwo={isTwo} isThree={isThree} />
 
         {isModal && <Modal isModal={isModal} setIsModal={setIsModal}></Modal>}
