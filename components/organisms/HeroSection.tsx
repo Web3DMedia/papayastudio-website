@@ -10,18 +10,18 @@ interface IProps {
 }
 
 const HeroSection = ({ myRefOne }: IProps) => {
-  const [textNumber, setTextNumber] = useState(1);
+  const [textNumber, setTextNumber] = useState(2);
   const [mascot, setMascot] = useState(1);
 
-  useEffect(() => {
-    if (textNumber <= 4) {
-      const interval = setInterval(() => {
-        setTextNumber(textNumber + 1);
-      }, 5000);
-      return () => clearInterval(interval);
-    } else {
-      setTextNumber(1);
-    }
+    useEffect(() => {
+      if (textNumber <= 4) {
+       const interval = setInterval(() => {
+          setTextNumber(textNumber + 1);
+        }, 5000);
+        return () => clearInterval(interval);
+      } else {
+        setTextNumber(1);
+      }
   }, [textNumber]);
 
   useEffect(() => {
@@ -36,18 +36,19 @@ const HeroSection = ({ myRefOne }: IProps) => {
   }, []);
 
   const papayamascots = [
+        {
+      name: "Papito",
+      image: `/assets/mascotspapaya2.png`,
+      width: 570,
+      height: 570
+    },
     {
       name: "Papina",
       image: `/assets/mascotspapaya1.png`,
       width: 475,
       height: 475
     },
-    {
-      name: "Papito",
-      image: `/assets/mascotspapaya2.png`,
-      width: 550,
-      height: 550
-    },
+
   ];
   return (
     <section
@@ -90,14 +91,14 @@ const HeroSection = ({ myRefOne }: IProps) => {
               )}
               {textNumber === 3 && (
                 <SpanThree className="hidden xl:pl-16 3xl:pl-0 sm:block sm:text-[35px] md:text-[40px] lg:text-[60px] xl:text-[65px] 4xl:text-[80px] duration-500 ease-in font-bold">
-                  We curate <TextSpan width="100%">creative</TextSpan>{" "}
-                  <TextSpan width="85%">web3</TextSpan>
+                  We curate <TextSpan width="100%">content</TextSpan>{" "}
+                  <TextSpan width="85%">about</TextSpan>
                 </SpanThree>
               )}
               {textNumber === 4 && (
                 <SpanFour className="hidden xl:pl-16 3xl:pl-0 sm:block sm:text-[35px] md:text-[40px] lg:text-[60px] xl:text-[65px] 4xl:text-[80px] duration-500 ease-in font-bold">
-                  We create <TextSpan width="100%">stylized</TextSpan>{" "}
-                  <TextSpan width="85%">animations</TextSpan>
+                  We create <TextSpan width="100%">animations</TextSpan>{" "}
+                  <TextSpan width="85%">and</TextSpan>
                 </SpanFour>
               )}
               {/*Mobile view*/}
@@ -113,19 +114,19 @@ const HeroSection = ({ myRefOne }: IProps) => {
               )}
               {textNumber === 3 && (
                 <SpanThree className="block sm:hidden leading-9 text-[32px] font-bold ml-4">
-                  We curate <TextSpan width="100%">creative</TextSpan>
+                  We curate <TextSpan width="100%">content</TextSpan>
                 </SpanThree>
               )}
               {textNumber === 4 && (
                 <SpanFour className="block sm:hidden leading-9 text-[32px] font-bold ml-4">
-                  We create <TextSpan width="100%">stylized</TextSpan>
+                  We create <TextSpan width="100%">animations</TextSpan>
                 </SpanFour>
               )}
             </span>
             <span className="block sm:hidden">
               {textNumber === 1 && (
                 <Span className="block sm:hidden text-[32px] font-bold ml-4">
-                  <TextSpan width="85%">thinking</TextSpan> web3 design
+                  <TextSpan width="85%">thinking</TextSpan> design
                 </Span>
               )}
               <SpanTwo>
@@ -137,17 +138,17 @@ const HeroSection = ({ myRefOne }: IProps) => {
               </SpanTwo>
               {textNumber === 3 && (
                 <SpanThree className="block sm:hidden text-[32px] font-bold ml-4">
-                  <TextSpan width="85%">web3</TextSpan> and blockchain
+                  <TextSpan width="85%">about</TextSpan> design and
                 </SpanThree>
               )}
               {textNumber === 4 && (
                 <SpanFour className="block sm:hidden text-[32px] font-bold ml-4">
-                  <TextSpan width="85%">animations</TextSpan> &amp; live action
+                  <TextSpan width="85%">and</TextSpan> live action
                 </SpanFour>
               )}
             </span>
             <span className="flex items-center">
-              <Span className="relative ml-20 mr-2 sm:ml-0 sm:mr-2 md:mr-4 xl:ml-16 3xl:ml-0 w-[30px] h-[30px] sm:w-[50px] sm:h-[50px] md:h-[60px] lg:w-[60px] lg:h-[80px]">
+              <Span className="relative ml-12 mr-2 sm:ml-0 sm:mr-2 md:mr-4 xl:ml-16 3xl:ml-0 w-[30px] h-[30px] sm:w-[50px] sm:h-[50px] md:h-[60px] lg:w-[60px] lg:h-[80px]">
                 <Image
                   src="/assets/star-vector.svg"
                   layout="fill"
@@ -163,12 +164,12 @@ const HeroSection = ({ myRefOne }: IProps) => {
               )}
               {textNumber === 2 && (
                 <SpanTwo className="block sm:hidden leading-9 text-[32px] font-bold">
-                  Web3D content
+                   brands &amp; creators
                 </SpanTwo>
               )}
               {textNumber === 3 && (
                 <SpanThree className="block sm:hidden leading-9 text-[32px] font-bold">
-                  content
+                  technologies
                 </SpanThree>
               )}
               {textNumber === 4 && (
@@ -185,25 +186,23 @@ const HeroSection = ({ myRefOne }: IProps) => {
               )}
               {textNumber === 2 && (
                 <SpanTwo className="hidden sm:block sm:text-[35px] md:text-[40px] lg:text-[60px] xl:text-[65px] 4xl:text-[80px] duration-500 ease-in font-bold">
-                  studio for Web3D content
+                  studio for brands &amp; creators
                 </SpanTwo>
               )}
               {textNumber === 3 && (
                 <SpanThree className="hidden sm:block sm:text-[35px] md:text-[40px] lg:text-[60px] xl:text-[65px] 4xl:text-[80px] duration-500 ease-in font-bold">
-                  and blockchain content
+                  design and technologies
                 </SpanThree>
               )}
               {textNumber === 4 && (
                 <SpanFour className="hidden sm:block sm:text-[35px] md:text-[40px] lg:text-[60px] xl:text-[65px] 4xl:text-[80px] duration-500 ease-in font-bold">
-                  &amp; live action video content
+                  live-action video for creators
                 </SpanFour>
               )}
             </span>
             <div className="pl-5 md:pl-14 lg:pl-20 xl:pl-32 4xl:pl-40 md:mt-[18px] sm:mt-[16px] xl:mt-[20px]">
-              <p className="md:w-11/12 lg:max-w-[600px] xl:pl-16 3xl:pl-0 xl:max-w-[700px] 4xl:max-w-[780px] text-[16px] sm:text-[18px] lg:text-[20px] xl:text-[24px] font-normal text-backboneText leading-[30px] px-2 pt-9 sm:pt-0">
-                At Papayas studios we are at the forefront of decentralized
-                content creation, helping to simplify the complexities of
-                Blockchain and emerging technologies
+              <p className="md:w-11/12 lg:max-w-[600px] xl:pl-16 3xl:pl-0 xl:max-w-[800px] 4xl:max-w-[780px] text-[16px] sm:text-[18px] lg:text-[20px] xl:text-[24px] font-normal text-backboneText leading-[30px] px-2 pt-9 sm:pt-0">
+             At Papayas studios we are at the forefront of digital content creation creating stories and experiences for every aspect of web2 and web3 designs
               </p>
               {/*@ts-ignore */}
               <BtnLink
@@ -218,14 +217,14 @@ const HeroSection = ({ myRefOne }: IProps) => {
               </BtnLink>
             </div>
           </div>
-          <div className="relative top-2 -right-4 sm:-right-14 md:absolute bg-transparent md:-top-20 lg:-top-2 md:-right-[270px] lg:-right-[250px] xl:-top-4 xl:-right-20 2xl:-right-32 4xl:-right-72 w-[400px] h-[400px] sm:h-[500px] sm:w-[500px] lg:h-[700px] lg:w-[600px] 4xl:w-[600px] 4xl:h-[700px]">
-            <div>
+          
               {papayamascots.map((papayamascot, index) => {
                 return (index + 1) == mascot &&
+                <div className="relative top-2 -right-4 sm:-right-14 md:absolute bg-transparent md:-top-20 lg:-top-2 md:-right-[270px] lg:-right-[250px] xl:-top-4 xl:-right-20 2xl:-right-48 4xl:-right-72 w-[400px] h-[400px] sm:h-[500px] sm:w-[500px] lg:h-[700px] lg:w-[600px] 4xl:w-[600px] 4xl:h-[700px]">
+                  <div className={index + 1 === 2 ? "xl:mt-10" : ""}>
                   <Image
                     key={index}
                     src={papayamascot.image}
-
                     width={papayamascot.width}
                     height={papayamascot.height}
                     loading="lazy"
@@ -233,9 +232,10 @@ const HeroSection = ({ myRefOne }: IProps) => {
                     objectFit="contain"
                     objectPosition="top"
                   />
+                  </div>
+               </div>
               })}
-            </div>
-          </div>
+            
         </div>
       </div>
     </section>
