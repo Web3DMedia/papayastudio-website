@@ -371,7 +371,7 @@ const LearnWithPapayaSection = ({ setIsModal, myRefFour, isFour }: IProps) => {
                         <ThirdText className=' text-learnpapayatext2'>Learn from professionals across the animation and tech industry and build expert skills. We help creative talent build expert skills by training, hiring, and empowering them.</ThirdText>
 
 
-                        <FourthText className=' text-learnpapayatext cursor-pointer mb-4' onClick={() => Modal()}>Join waitlist </FourthText>
+                        <FourthText className=' text-learnpapayatext cursor-dark mb-4' onClick={() => Modal()}>Join waitlist </FourthText>
 
                     </div>
 

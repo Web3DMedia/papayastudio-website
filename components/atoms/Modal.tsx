@@ -48,7 +48,7 @@ const Modal = ({ setIsModal, isModal }: IProps) => {
         <div className="bg-white w-[330px] sm:w-[664px] px-8 sm:px-16 py-10 rounded-[16px] md:rounded-[32px] z-20 fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
           <div>
             <div className="text-left">
-              <div className='flex justify-end pb-[10px] cursor-pointer'>
+              <div className='flex justify-end pb-[10px]'>
                 <Image src="/assets/close-button.png" width={15} height={15} onClick={() => RemoveModal()} alt="close-button" />
               </div>
               <h2 className="text-[#002F31] text-[30px] md:text-[40px] font-bold leading-[46px]">
@@ -98,7 +98,7 @@ const Modal = ({ setIsModal, isModal }: IProps) => {
               {error && <h2 className="text-red-700 pt-2">{error}</h2>}
               <button
                 type="submit"
-                className="mt-[24px] bg-[#FF6661] w-full md:w-[204px] cursor-pointer py-3 md:py-5 text-[#FFFFFF] font-bold text-[16px] rounded-xl"
+                className="mt-[24px] bg-[#FF6661] w-full md:w-[204px] cursor-dark py-3 md:py-5 text-[#FFFFFF] font-bold text-[16px] rounded-xl"
               >
                 Send Message
               </button>

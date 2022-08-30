@@ -205,15 +205,16 @@ const HeroSection = ({ myRefOne }: IProps) => {
                 content creation, helping to simplify the complexities of
                 Blockchain and emerging technologies
               </p>
+              {/*@ts-ignore */}
               <BtnLink
                 to="productsSection"
                 spy={true}
                 smooth={true}
                 offset={50}
                 duration={500}
-                className="pb-[175px] pt-[15px] sm:pb-0 xl:pl-14 3xl:pl-0 flex items-center text-base xl:text-lg font-bold mt-2 cursor-pointer ml-2 w-[205px]"
+                className="pb-[175px] pt-[15px] sm:pb-0 xl:pl-14 3xl:pl-0 flex items-center text-base xl:text-lg font-bold mt-2   ml-2 w-[205px]"
               >
-                <BtnSpan>Our Works</BtnSpan>
+                <BtnSpan className="cursor-dark">Our Works</BtnSpan>
               </BtnLink>
             </div>
           </div>

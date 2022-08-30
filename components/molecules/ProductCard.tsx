@@ -10,7 +10,7 @@ const CardDiv = styled.div`
 
 const ProductCard = ({ info }) => {
    return (
-      <CardDiv className="cursor-pointer ml-7 md:ml-14 lg:ml-7 h-[475px]">
+      <CardDiv className="ml-7 md:ml-14 lg:ml-7 h-[475px] cursor-default">
          <div className="relative w-[300px] h-[300px] max-w-[300px] 4xl:w-[350px] 4xl:max-w-[350px] overflow-hidden rounded-[24px]">
             <Image src={info.cardImage} layout="fill" objectFit='cover' alt="image" />
          </div>
@@ -20,7 +20,7 @@ const ProductCard = ({ info }) => {
             {
                info.Links.length !== 0 && <Link href={info.Links}>
                   <a target="_blank" className="absolute bottom-0">
-                     <Button className="flex items-center text-backboneText">
+                     <Button className="flex items-center text-backboneText cursor-light">
                         {info.btnTxt}<span className='ml-4'><VscArrowRight /></span>
                      </Button>
                   </a>

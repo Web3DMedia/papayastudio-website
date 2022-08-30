@@ -40,6 +40,13 @@ module.exports = {
         messageSent: "002F31",
         messageSentTwo: "4A5567",
       },
+      cursor: {
+        default: 'url(/assets/cursors/default-cursor.svg) 15 15, auto',
+        dark: 'url(/assets/cursors/dark-cursor.svg) 20 20, auto',
+        light: 'url(/assets/cursors/light-cursor.svg) 20 20, auto',
+        scroll: 'url(/assets/cursors/slider-cursor.svg) 15 15, auto',
+
+      }
     },
   },
   variants: {},

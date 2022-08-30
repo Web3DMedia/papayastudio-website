@@ -86,67 +86,70 @@ const ProductsSection = ({ myRefThree, isThree }: IProps) => {
   ];
 
   return (
-    <Element
-      id="OurProuducts"
-      name="productsSection"
-      className="relative w-full py-28 md:py-32 xl:py-48 4xl:pt-36"
-    >
-      <div className="bgTransformationOne">
-        <div className="bgTransformationOneLeft" />
-        <div className="bgTransformationOneRight" />
-      </div>
-      <div className="mx-1 h-[150px] absolute top-20 left-7 hidden lg:block ">
-        <TrackerOutter isThree={isThree} />
-        <TrackerInner />
-      </div>
-      <div className="2xl:w-[1440px] m-auto" ref={myRefThree}>
-        <div
-          className="absolute -top-12 sm:-top-16 w-[250px] h-[250px] lg:-top-24 xl:-top-40 -right-10 sm:right-0 md:w-[300px] md:h-[300px] lg:w-[340px] lg:h-[340px] xl:w-[500px] xl:h-[500px]"
-          data-aos="fade-up"
-        >
-          <Image src="/assets/papayas2.png" layout="fill" alt="Product" loading="lazy" />
+    <section>
+      {/*@ts-ignore */}
+      <Element
+        id="OurProuducts"
+        name="productsSection"
+        className="relative w-full py-28 md:py-32 xl:py-48 4xl:pt-36"
+      >
+        <div className="bgTransformationOne">
+          <div className="bgTransformationOneLeft" />
+          <div className="bgTransformationOneRight" />
         </div>
-
-        <div className="relative w-full h-full mx-auto Tmd:px-20 xl:pl-40 4xl:py-20">
-          <p
-            className="absolute left-5 md:left-14 -top-[60px] lg:left-20 xl:left-[80px] md:-top-[50px] xl:-top-[115px] 4xl:-top-16 4xl:left-20 font-normal text-xs uppercase"
+        <div className="mx-1 h-[150px] absolute top-20 left-7 hidden lg:block ">
+          <TrackerOutter isThree={isThree} />
+          <TrackerInner />
+        </div>
+        <div className="2xl:w-[1440px] m-auto" ref={myRefThree}>
+          <div
+            className="absolute -top-12 sm:-top-16 w-[250px] h-[250px] lg:-top-24 xl:-top-40 -right-10 sm:right-0 md:w-[300px] md:h-[300px] lg:w-[340px] lg:h-[340px] xl:w-[500px] xl:h-[500px]"
             data-aos="fade-up"
           >
-            Our <br /> Works
-          </p>
-          <div className="w-full h-full">
-            <h2
-              className="text-[24px] leading-tight md:text-[32px] lg:text-[36px] xl:text-[48px] font-bold pl-5 md:pl-14 lg:pl-20 xl:pl-0"
+            <Image src="/assets/papayas2.png" layout="fill" alt="Product" loading="lazy" />
+          </div>
+
+          <div className="relative w-full h-full mx-auto Tmd:px-20 xl:pl-40 4xl:py-20">
+            <p
+              className="absolute left-5 md:left-14 -top-[60px] lg:left-20 xl:left-[80px] md:-top-[50px] xl:-top-[115px] 4xl:-top-16 4xl:left-20 font-normal text-xs uppercase"
               data-aos="fade-up"
             >
-              What we’ve created
-            </h2>
-            <div
-              className=" -ml-6 overflow-x-hidden w-[1700px]"
-              data-aos="fade-up"
-              ref={myRefWidth}
-            >
-              {/*@ts-ignore */}
-              <Carousel
-                autoplay={true}
-                autoplayInterval={2000}
-                wrapAround={true}
-                cellSpacing={0}
-                easing="easeCubicInOut"
-                pauseOnHover={true}
-                withoutControls={true}
-                slidesToShow={isWidth}
-                className="productCards flex mt-10 px-5 md:pl-04 lg:pl-[85px] xl:pl-0 cursor-pointer"
+              Our <br /> Works
+            </p>
+            <div className="w-full h-full">
+              <h2
+                className="text-[24px] leading-tight md:text-[32px] lg:text-[36px] xl:text-[48px] font-bold pl-5 md:pl-14 lg:pl-20 xl:pl-0"
+                data-aos="fade-up"
               >
-                {products?.map((info, index) => (
-                  <ProductCard key={index} info={info} />
-                ))}
-              </Carousel>
+                What we’ve created
+              </h2>
+              <div
+                className=" -ml-6 overflow-x-hidden w-[1700px]"
+                data-aos="fade-up"
+                ref={myRefWidth}
+              >
+                {/*@ts-ignore */}
+                <Carousel
+                  autoplay={true}
+                  autoplayInterval={2000}
+                  wrapAround={true}
+                  cellSpacing={0}
+                  easing="easeCubicInOut"
+                  pauseOnHover={true}
+                  withoutControls={true}
+                  slidesToShow={isWidth}
+                  className="productCards flex mt-10 px-5 md:pl-04 lg:pl-[85px] xl:pl-0 cursor-scroll"
+                >
+                  {products?.map((info, index) => (
+                    <ProductCard key={index} info={info} />
+                  ))}
+                </Carousel>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </Element>
+      </Element>
+    </section>
   );
 };
 

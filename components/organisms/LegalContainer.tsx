@@ -17,7 +17,7 @@ const LegalContainer = () => {
             <div className="mt-[38px] w-full xl:w-auto md:grid ml-11 -translate-x-11 md:gap-y-5 xl:gap-y-5 xl:gap-x-14 md:grid-cols-2 text-[#23262E]">
                <Link href="/privacy">
                   <a>
-                     <div className="md:w-[250px] md:h-[150px] bg-[#FCD1CA1F] border-[0.5px] border-[#FF9D8D] rounded-2xl px-[18px] py-[25px] flex flex-row items-center md:items-start md:flex-col md:justify-between ">
+                     <div className="md:w-[250px] md:h-[150px] bg-[#FCD1CA1F] cursor-light border-[0.5px] border-[#FF9D8D] rounded-2xl px-[18px] py-[25px] flex flex-row items-center md:items-start md:flex-col md:justify-between ">
                         <div className="w-[38px] h-[45px] relative mr-5">
                            <Image
                               src="/assets/privacy.png"
@@ -31,7 +31,7 @@ const LegalContainer = () => {
                </Link>
                <Link href="/terms">
                   <a>
-                     <div className="my-[18px] md:my-0 md:w-[250px] md:h-[150px] bg-[#FCD1CA1F] border-[0.5px] border-[#FF9D8D] rounded-2xl px-[18px] py-[25px] flex flex-row items-center md:items-start md:flex-col md:justify-between ">
+                     <div className="my-[18px] md:my-0 md:w-[250px] md:h-[150px] bg-[#FCD1CA1F] cursor-light border-[0.5px] border-[#FF9D8D] rounded-2xl px-[18px] py-[25px] flex flex-row items-center md:items-start md:flex-col md:justify-between ">
                         <div className="w-[38px] h-[45px] relative mr-5">
                            <Image
                               src="/assets/terms.png"
@@ -45,7 +45,7 @@ const LegalContainer = () => {
                </Link>
                <Link href="/cookies">
                   <a>
-                     <div className="md:w-[250px] md:h-[150px] bg-[#FCD1CA1F] border-[0.5px] border-[#FF9D8D] rounded-2xl px-[18px] py-[25px] flex flex-row items-center md:items-start md:flex-col md:justify-between ">
+                     <div className="md:w-[250px] md:h-[150px] bg-[#FCD1CA1F] cursor-light border-[0.5px] border-[#FF9D8D] rounded-2xl px-[18px] py-[25px] flex flex-row items-center md:items-start md:flex-col md:justify-between ">
                         <div className="w-[40px] h-[45px] relative mr-5">
                            <Image
                               src="/assets/cookie.png"

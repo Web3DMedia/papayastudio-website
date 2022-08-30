@@ -13,7 +13,7 @@ const ActivityCard = ({ info }: IProps) => {
 
    return (
       <CardWrapper
-         className="my-5 mx-0 relative"
+         className="my-5 mx-0 relative cursor-light"
          onMouseEnter={() => setOnHover(true)}
          onMouseLeave={() => setOnHover(false)}
          onHover={onHover}
