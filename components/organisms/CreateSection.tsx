@@ -37,7 +37,7 @@ const CreateSection = ({ myRefTwo, isTwo }: IProps) => {
     },
     {
       name: "Video Production",
-      text: "We produce live-action videos in our in-house studio with great stories woven around web3, blockchain, and emerging technologies.",
+      text: "We produce live-action videos in our in-house studio with great stories woven around design and emerging technologies.",
     },
     {
       name: "Rendering Farm",
@@ -58,8 +58,8 @@ const CreateSection = ({ myRefTwo, isTwo }: IProps) => {
         <div className="bgTransformationOneRight" />
       </div>
       <div className="mx-1 h-[150px] absolute top-20 left-7 hidden lg:block ">
-           <TrackerOutter isTwo={isTwo}/>
-            <TrackerInner/>
+        <TrackerOutter isTwo={isTwo} />
+        <TrackerInner />
       </div>
       <div className="2xl:w-[1440px] m-auto" ref={myRefTwo}>
         <div className="pt-[74px] sm:pt-0 relative w-full h-full mx-auto md:px-0 lg:px-20 xl:px-40 4xl:py-20">
@@ -74,7 +74,7 @@ const CreateSection = ({ myRefTwo, isTwo }: IProps) => {
               className=" text-[24px] leading-tight md:text-[32px] lg:text-[36px] xl:text-[48px] font-bold pl-5 md:pl-14 lg:pl-0 md:pt-12 xl:pt-0"
               data-aos="fade-up"
             >
-              We create <br/> content focused:
+              We create <br /> content focused:
             </h2>
             <div
               className=" w-full grid grid-cols-1 lg:grid-cols-2 gap-4 mt-5 px-5 md:pl-14 lg:pl-[0px] lg:px-0"
@@ -92,9 +92,9 @@ const CreateSection = ({ myRefTwo, isTwo }: IProps) => {
 };
 
 
-const TrackerOutter = styled.div<{isTwo: boolean}>`
+const TrackerOutter = styled.div<{ isTwo: boolean }>`
    width: 5px;
-   height: ${({isTwo}) => isTwo ? '100%' : '0%'};
+   height: ${({ isTwo }) => isTwo ? '100%' : '0%'};
    background: #FF6661;
    border-radius: 8px;
    z-index: 2;
