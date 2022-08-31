@@ -1,13 +1,11 @@
 import Link from 'next/link'
 import Image from 'next/image'
+import BgTransfromation from '../atoms/BgTransfromation'
 
 const LegalContainer = () => {
    return (
       <div className=" min-h-[60vh] mb-5 flex flex-col items-center justify-center">
-         <div className="bgTransformationOne">
-            <div className="bgTransformationOneLeft" />
-            <div className="bgTransformationOneRight" />
-         </div>
+         <BgTransfromation></BgTransfromation>
          <h3 className="text-[#002F31] font-normal text-xs uppercase my-5">Legal</h3>
          <div className="md:w-[650px] md:h-[680px] bg-white my-7 rounded-t-[32px] py-10 px-8 xl:px-[60px]">
             <h3 className="font-bold leading-[36px] md:leading-[46px] text-[30px] md:text-[36px] text-[#002F31]">Papayas Studios Legal</h3>
