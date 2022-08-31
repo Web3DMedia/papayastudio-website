@@ -28,8 +28,7 @@ export default class MyDocument extends Document {
           {/* eslint-disable-next-line @next/next/no-css-tags */}
           <link href="/fonts/stylesheet.css" rel="stylesheet" />
           {/* @ts-ignore */}
-          {this.props.styleTags
-          }
+          {this.props.styleTags}
         </Head>
         <body>
           <Main />

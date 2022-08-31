@@ -1,8 +1,10 @@
 import Image from 'next/image';
-import React, { useState, SetStateAction, Dispatch } from 'react'
+import React, { useState, SetStateAction, Dispatch, useCallback } from 'react'
 import styled from 'styled-components';
 import MessageConfirmation from '../molecules/MessageConfirmation';
-import ReCAPTCHA from "react-google-recaptcha";
+import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
+import Script from 'next/script';
+import axios from 'axios';
 
 interface IProps {
   setIsModal: Dispatch<SetStateAction<boolean>>
@@ -15,33 +17,89 @@ const Modal = ({ setIsModal, isModal }: IProps) => {
   const [userName, setUserName] = useState<string>("");
   const [error, setError] = useState<string>("");
   const [messageIsSent, setmessageIsSent] = useState<boolean>(false);
+  const { executeRecaptcha } = useGoogleReCaptcha();
+  const [notification, setNotification] = useState("");
+  const [loading, setLoading] = useState<boolean>(false);
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+
+  const submitEnquiryForm = (gReCaptchaToken: string) => {
+    fetch("/api/enquiry", {
+      method: "POST",
+      headers: {
+        Accept: "application/json, text/plain, */*",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        name: userName,
+        email: userMail,
+        gRecaptchaToken: gReCaptchaToken,
+      }),
+    })
+      .then((res) => res.json())
+      .then((res) => {
+        console.log(res, "response from backend");
+        if (res?.status === "success") {
+          setNotification(res?.message);
+        } else {
+          setNotification(res?.message);
+        }
+      });
+  };
+
+  const addToWaitlist = async (e: { preventDefault: () => void }) => {
     e.preventDefault();
-    if (
-      userMail.length === 0 ||
-      userName.length === 0 ||
-      recaptchaRef === null
-    ) {
+    setError("");
+
+    if (userMail.trim() === "") {
       setError("Please fill all the fields");
-    } else {
-      setError("");
-      setUserMail("");
-      setUserName("");
-      console.log(recaptchaRef)
-      console.log(userMail, userName);
-      console.log("Submitted");
-      setmessageIsSent(true);
+      return true;
     }
-  }
+    if (userName.trim() === "") {
+      return true;
+    }
+    setLoading(true);
+    axios
+      .post("/api/mail/", { email: userMail, name: userName })
+      .then((res) => {
+        setUserMail("");
+        setUserName("");
+        setmessageIsSent(true);
+        window.scrollTo(0, 0);
+      })
+      .catch((err) => {
+        if (err?.message === "Request failed with status code 500") {
+          setmessageIsSent(true);
+          return;
+        }
+
+        setError(
+          err.response.data?.message ?? "Something went wrong! try again later"
+        );
+      })
+      .finally(() => {
+        setLoading(false);
+      });
+  };
+
+  const handleSumitForm = useCallback(
+    (e) => {
+      e.preventDefault();
+      if (!executeRecaptcha) {
+        console.log("Execute recaptcha not yet available");
+        return;
+      }
+      executeRecaptcha("enquiryFormSubmit").then((gReCaptchaToken) => {
+        console.log(gReCaptchaToken, "response Google reCaptcha server");
+        submitEnquiryForm(gReCaptchaToken);
+      });
+    },
+    [executeRecaptcha]
+  );
 
   const RemoveModal = () => {
     document.body.style.overflow = "visible";
     setIsModal(false)
   }
-  const recaptchaRef = React.createRef();
-  const TEST_SITE_KEY = "6LcsiIMhAAAAAFc9EBIHi7WfbTNYgHqvn7mnOu25"
-
   return (
     <FormContainer>
       {messageIsSent === false && (
@@ -59,7 +117,7 @@ const Modal = ({ setIsModal, isModal }: IProps) => {
                 the academy, only limited slots available
               </p>
             </div>
-            <form className="mt-[33px]" onSubmit={handleSubmit}>
+            <form className="mt-[33px]" onSubmit={handleSumitForm}>
               <div className="form-group flex flex-col">
                 <label
                   htmlFor="userName"
@@ -92,10 +150,10 @@ const Modal = ({ setIsModal, isModal }: IProps) => {
                   placeholder="Enter your email"
                 />
               </div>
-              {/*@ts-ignore */}
-              <ReCAPTCHA sitekey={TEST_SITE_KEY} ref={recaptchaRef} />
+
 
               {error && <h2 className="text-red-700 pt-2">{error}</h2>}
+              {notification && <p className="text-red-700 pt-2">{notification}</p>}
               <button
                 type="submit"
                 className="mt-[24px] bg-[#FF6661] w-full md:w-[204px] cursor-dark py-3 md:py-5 text-[#FFFFFF] font-bold text-[16px] rounded-xl"
@@ -108,6 +166,9 @@ const Modal = ({ setIsModal, isModal }: IProps) => {
       )}
       {/*@ts-ignore */}
       {messageIsSent === true && <MessageConfirmation setmessageIsSent={setmessageIsSent} isModal={isModal} setIsModal={setIsModal}></MessageConfirmation>}
+      <Script
+        src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" strategy="beforeInteractive"
+      />
     </FormContainer>
   );
 };
@@ -147,3 +208,5 @@ const Input = styled.input`
 
 
 export default Modal
+
+
