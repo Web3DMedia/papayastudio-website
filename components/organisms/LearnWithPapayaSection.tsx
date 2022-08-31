@@ -22,7 +22,7 @@ font-size: 12px;
 line-height: 130%;
 `
 const SecondText = styled.h2`
-font-weight: 600;
+font-weight: 500;
 font-size: 48px;
 line-height: 111%;
 letter-spacing: -0.03em;
@@ -368,10 +368,10 @@ const LearnWithPapayaSection = ({ setIsModal, myRefFour, isFour }: IProps) => {
                     <SecondText className='pl-5 md:pl-14 lg:pl-20 xl:pl-40 text-learnpapayatext'>Join Our Learning Academy</SecondText>
 
                     <div className='pl-5 md:pl-14 lg:pl-20 xl:pl-56 pt-11'>
-                        <ThirdText className=' text-learnpapayatext2'>Learn from professionals across the animation and tech industry and build expert skills. We help creative talent build expert skills by training, hiring, and empowering them.</ThirdText>
+                        <ThirdText className=' text-learnpapayatext2 pb-5'>Learn from professionals across the animation and tech industry and build expert skills. We help creative talent build expert skills by training, hiring, and empowering them.</ThirdText>
 
-
-                        <FourthText className=' text-learnpapayatext cursor-pointer mb-4' onClick={() => Modal()}>Join waitlist </FourthText>
+                        <ThirdText className=' text-learnpapayatext2'>Ready to kickstart your career?</ThirdText>
+                        <FourthText className=' text-learnpapayatext cursor-dark mb-4' onClick={() => Modal()}>Join waitlist </FourthText>
 
                     </div>
 

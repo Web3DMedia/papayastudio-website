@@ -13,7 +13,7 @@ const ActivityCard = ({ info }: IProps) => {
 
    return (
       <CardWrapper
-         className="my-5 mx-0 relative"
+         className="my-5 mx-0 relative cursor-light"
          onMouseEnter={() => setOnHover(true)}
          onMouseLeave={() => setOnHover(false)}
          onHover={onHover}
@@ -22,7 +22,7 @@ const ActivityCard = ({ info }: IProps) => {
             <div className="overflow-hidden rounded-full mr-2">
                <ImageArrow filterState={onHover} />
             </div>
-            <h2 className={onHover ? "text-[18px] md:text-[20px] xl:text-[34px] font-normal text-[#FF6661] pb-[11px] leading-[160%] duration-200 ease-in-out" : "text-[18px] md:text-[20px] xl:text-[34px] font-normal text-[#555555] leading-[160%] pb-[11px]  duration-200 ease-in-out"}>/ {info.name}</h2>
+            <h2 className={onHover ? "text-[18px] md:text-[20px] xl:text-[34px] font-normal text-[#23262E] pb-[11px] leading-[160%] duration-200 ease-in-out" : "text-[18px] md:text-[20px] xl:text-[34px] font-normal text-[#23262E] leading-[160%] pb-[11px]  duration-200 ease-in-out"}>/ {info.name}</h2>
          </div>
          <p className="w-[400px] sm:w-full lg:w-[450px] xl:w-[634px] text-[#555555] leading-[20px] font-normal ml-12 text-[14px] xl:text-base pr-40">
             {info.text}

@@ -7,15 +7,15 @@ export const HeaderBar = styled.div`
    background-color: rgba(255, 255, 255, 0.3);
 `
 
-export const TrackerOutter = styled.div<{ isOne: boolean, isTwo: boolean, isThree: boolean, isFour: boolean, isFive: boolean }>`
-   width: ${({ isOne, isTwo, isThree, isFour, isFive }) => isOne ? '20%' : isTwo ? '40%' : isThree ? '60%' : isFour ? '80%' : isFive ? '100%' : '0%'};;
+export const TrackerOutter = styled.div<{textNumber: number}>`
+   width: ${({textNumber}) => textNumber === 1 ? '25%' : textNumber === 2 ? '50%' : textNumber === 3 ? '75%' : textNumber === 4 ? '100%' : '25%'};;
    height: 5px;
    background:  #FF6661;
    border-radius: 8px;
    z-index: 2;
    position: absolute;
    top: 0;
-   transition: .6s ease-in width;
+   transition: .8s ease-in width;
 `
 
 export const TrackerInner = styled.div`

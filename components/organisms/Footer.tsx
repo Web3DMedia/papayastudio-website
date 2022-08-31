@@ -37,9 +37,6 @@ const ThirdText = styled.a`
   font-size: 18px;
   line-height: 20px;
   z-index: 2;
-  :hover {
-    color: var(--PrimaryOne);
-  }
   @media (max-width: 1024px) {
     font-size: 16px;
   }
@@ -55,7 +52,6 @@ const FourthText = styled.button`
   background: #ff6661;
   border: 0.5px solid #ff9d8d;
   border-radius: 10px;
-  cursor: pointer;
   position:relative;
   z-index:14;
 `;
@@ -187,38 +183,38 @@ const Footer = () => {
               </SecondText>
 
               <Link href="/contact" passHref>
-                <FourthText>Contact Us</FourthText>
+                <FourthText className="cursor-dark">Contact Us</FourthText>
               </Link>
             </div>
 
             <div className="flex justify-between pr-10 md:block md:pr-12 xl:pr-32">
               <SocialContainer className="md:pb-5">
-                <Socials>
+                <Socials >
                   <Link href="https://www.youtube.com/channel/UCKcRE2nLh_iN2yrfygPr_SA">
-                    <a target="_blank">YouTube</a>
+                    <a target="_blank" className="cursor-light">YouTube</a>
                   </Link>
                 </Socials>
-                <Socials>
+                <Socials >
                   <Link href="https://www.instagram.com/studiopapayas/">
-                    <a target="_blank">Instagram</a>
+                    <a target="_blank" className="cursor-light">Instagram</a>
                   </Link>
                 </Socials>
               </SocialContainer>
               <SocialContainer>
-                <Socials>
+                <Socials >
                   <Link href="https://twitter.com/studiopapayas">
-                    <a target="_blank">Twitter</a>
+                    <a target="_blank" className="cursor-light">Twitter</a>
                   </Link>
                 </Socials>
-                <Socials>
+                <Socials >
                   <Link href="https://www.linkedin.com/showcase/papayasstudio/about/">
-                    <a target="_blank">Linkedin</a>
+                    <a target="_blank" className="cursor-light">Linkedin</a>
                   </Link>
                 </Socials>
                 <Socials className="sm:hidden flex items-center ml-0">
                   <Circle className="p-1"></Circle>
                   <Link href="/legal">
-                    <a className="cursor-pointer">Legal</a>
+                    <a className="cursor-light">Legal</a>
                   </Link>
                 </Socials>
               </SocialContainer>
@@ -231,7 +227,7 @@ const Footer = () => {
             <div className="hidden sm:flex sm:items-center">
               <Circle></Circle>
               <Link href="/legal">
-                <a className="cursor-pointer">
+                <a className="cursor-light">
                   <ThirdText className="text-footerText3 z-10">Legal</ThirdText>
                 </a>
               </Link>

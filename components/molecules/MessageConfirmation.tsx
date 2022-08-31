@@ -5,6 +5,8 @@ import { Player } from '@lottiefiles/react-lottie-player';
 import Link from "next/link";
 import styled from "styled-components";
 
+import MessageConfirmed from "../../public/assets/lottie/message-confirm.json"
+
 const TextHeader = styled.h1`
   font-weight: 700;
   font-size: 24px;
@@ -50,7 +52,7 @@ const MessageConfirmation = ({ setmessageIsSent, isModal, setIsModal }: IProps) 
     <div className={isModal ? "bg-white w-[340px] sm:w-[664px] px-4 sm:px-16 py-10 rounded-[32px] z-20 fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" : "bg-white w-[330px] sm:w-[664px] px-4 sm:px-16 py-10 rounded-[32px] z-20"}>
       <div className="text-center">
         <div
-          className="flex justify-end cursor-pointer pt-[20px] lg:pt-[25px] pb-[35px] md:pt-[20px] pr-[15px] sm:pr-[0px]"
+          className="flex justify-end pt-[20px] lg:pt-[25px] pb-[35px] md:pt-[20px] pr-[15px] sm:pr-[0px]"
           onClick={() => CloseModal()}
         >
           <Image src="/assets/close-button.png" width={15} height={15} alt="close-button" />
@@ -63,7 +65,7 @@ const MessageConfirmation = ({ setmessageIsSent, isModal, setIsModal }: IProps) 
             objectFit="contain"
           ></Image></div>}
         {/*@ts-ignore */}
-        {hide === false && <Player src="https://lottie.host/f9a7858e-9d21-41e8-9d00-af45ad5fad2a/0FMcL1tRa2.json" background="transparent" style={{ width: "120px", height: "120px" }} autoplay speed={1} keepLastFrame></Player>}
+        {hide === false && <Player src={MessageConfirmed} background="transparent" style={{ width: "120px", height: "120px" }} autoplay speed={1} keepLastFrame></Player>}
 
         <TextHeader>Message sent</TextHeader>
         <TextParagraph>

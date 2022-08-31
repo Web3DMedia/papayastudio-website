@@ -4,6 +4,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 import styled, { keyframes } from 'styled-components'
+import BgTransfromation from '../atoms/BgTransfromation'
 
 
 import SectionHeader from '../atoms/SectionHeader'
@@ -51,6 +52,12 @@ const FifthText = styled.h4`
 font-weight: 400;
 font-size: 16px;
 line-height: 160%;
+width:max-content;
+:hover {
+    color: var(--PrimaryOne);
+    transform:scale(1.1);
+    margin-left:5px;
+}
 @media (max-width: 1024px) {
 font-size: 14px;
 }`
@@ -62,11 +69,11 @@ const ImageContainer = styled.div`
 background: #FFF5F3;
 border: 0.5px solid #FCD1CA;
 border-radius: 18px;
-padding: 11px;
+padding: 11px 11px 4px 11px;
 width:270px;
 @media (max-width: 1024px) {
 width: 230px;
-padding: 10px;
+padding: 10px 10px 4px 10px ;
 }
 `
 const PartnerContainer = styled.div`
@@ -89,10 +96,7 @@ interface IProps {
 const BackBoneSection = ({ myRefFive, isFive }: IProps) => {
   return (
     <Div className='relative'>
-      <div className="bgTransformationOne">
-        <div className="bgTransformationOneLeft" />
-        <div className="bgTransformationOneRight" />
-      </div>
+      <BgTransfromation></BgTransfromation>
       <div className="mx-1 h-[150px] absolute top-24 left-7 hidden lg:block ">
         <TrackerOutter isFive={isFive} />
         <TrackerInner />
@@ -123,7 +127,7 @@ const BackBoneSection = ({ myRefFive, isFive }: IProps) => {
 
                   ) : (<Link href={person.linkedin}>
                     <a target="_blank">
-                      <FifthText className='text-backboneText flex items-center pt-1'> <img src='/assets/linkedln.png' alt='Linkedln' className='mr-2 w-4 h-4' loading="lazy" />  Linkedin <span className='ml-2'>&#8594;</span> </FifthText>
+                      <FifthText className='text-backboneText flex items-center pt-1 cursor-light'> <img src='/assets/linkedln.png' alt='Linkedln' className='mr-2 w-4 h-4' loading="lazy" />  Linkedin <span className='ml-2'>&#8594;</span> </FifthText>
                     </a>
                   </Link>)
                 }

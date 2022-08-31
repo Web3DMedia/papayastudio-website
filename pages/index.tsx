@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import Head from "next/head";
 import Navbar from "../components/molecules/Navbar";
 import HeroSection from "../components/organisms/HeroSection";
 import Menubar from "../components/molecules/Menubar";
@@ -23,6 +22,7 @@ const Home = () => {
   const [isThree, setIsThree] = useState<boolean>(false)
   const [isFour, setIsFour] = useState<boolean>(false)
   const [isFive, setIsFive] = useState<boolean>(false)
+  const [change, setChange] = useState<boolean>(true)
 
   const myRefOne: any = useRef()
   const myRefTwo: any = useRef()
@@ -75,13 +75,15 @@ const Home = () => {
     observer.observe(myRefFive.current)
   })
 
+  useEffect(() => {
+
+  })
 
   return (
     <div className="font-body">
       <MetaTag tagName='Home' />
-
       <main className="w-full relative h-full overflow-hidden">
-        {isModal ? "" : <Navbar setIsMenuOpen={setIsMenuOpen} isOne={isOne} isTwo={isTwo} isThree={isThree} isFour={isFour} isFive={isFive} />}
+        {isModal ? "" : <Navbar setIsMenuOpen={setIsMenuOpen} isOne={isOne} isTwo={isTwo} isThree={isThree} change={change} />}
         <Menubar isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} isOne={isOne} isTwo={isTwo} isThree={isThree} />
 
         {isModal && <Modal isModal={isModal} setIsModal={setIsModal}></Modal>}

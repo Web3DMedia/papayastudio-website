@@ -40,7 +40,7 @@ const ContactForm = () => {
     }
     setLoading(true);
     axios
-      .post("/api/mail", { email: userMail, message: userMessage, service: userDropdown })
+      .post("/api/mail/", { email: userMail, message: userMessage, service: userDropdown })
       .then((res) => {
         setUserMail("");
         setUserDropdown("");

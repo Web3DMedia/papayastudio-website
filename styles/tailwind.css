@@ -1,4 +1,4 @@
-@import '/public/fonts/stylesheet.css';
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
 @tailwind base;
 
 @tailwind components;
@@ -14,9 +14,9 @@
    --PrimaryTwo: #FF9D8D;
    --PrimaryThree: #FCD1CA;
    --LearnPapayaText: #F9FAFB;
-   --LearnPapayaText2:#9CA3AF;
-   --BackboneText:#23262E;
-   --BackboneText1:#555555;
+   --LearnPapayaText2: #9CA3AF;
+   --BackboneText: #23262E;
+   --BackboneText1: #555555;
    --FooterBg: #131313;
    --FooterText: #9CA3AF;
    --FooterText2: #C4C4C4;
@@ -24,109 +24,95 @@
    --MessageSent: #002F31;
    --MessageSentTwo: #4A5567;
 }
+
 html {
    scroll-behavior: smooth;
 }
+
+label,
+input,
+button {
+   @apply cursor-default;
+}
+
 body {
-   font-family: "Casper", sans-serif;
+   font-family: 'DM Sans', sans-serif;
+   @apply cursor-default;
 }
 
 @keyframes interChangeOne {
-   0%{
+   0% {
       transform: translateX(50%);
    }
-   25%{
+
+   25% {
       transform: translateX(100%)
    }
-   50%{
+
+   50% {
       transform: translateX(50%)
    }
-   75%{
+
+   75% {
       transform: translateX(0%);
    }
-   100%{
+
+   100% {
       transform: translateX(50%);
    }
 }
 
 @keyframes interChangeTwo {
-   0%{
+   0% {
       transform: translateX(-50%);
    }
-   25%{
+
+   25% {
       transform: translateX(-100%)
    }
-   50%{
+
+   50% {
       transform: translateX(-50%)
    }
-   75%{
+
+   75% {
       transform: translateX(0%);
    }
-   100%{
+
+   100% {
       transform: translateX(-50%);
    }
 }
 
-.bgTransformationOne{
-   width: 100%;
-   height: 100%;
-   z-index: -1;
-   position: absolute;
-   top: 0;
-   left: 0;
-   display: flex;
-}
-
-.bgTransformationOneLeft{
-   height: 100%;
-   width: 100%;
-   background-image: url('../public/assets/orang-hero-section-min.png');
-   background-position: left center;
-   background-repeat: no-repeat;
-   background-size: cover;
-   filter: blur(172px);
-   animation: interChangeOne 4s ease-in-out infinite;
-   border-radius: 70% 68% 48% 48% / 28% 28% 72% 72%;
-
-}
-
-.bgTransformationOneRight{
-   height: 100%;
-   width: 100%;
-   background-image: url('../public/assets/blue-hero-section-min.png');
-   background-position: right center;
-   background-repeat: no-repeat;
-   background-size: cover;
-   filter: blur(56px);
-   animation: interChangeTwo 4s ease-in-out infinite;
-
-}
-
-.cardsContainer::-webkit-scrollbar, .productCards::-webkit-scrollbar{
+.cardsContainer::-webkit-scrollbar,
+.productCards::-webkit-scrollbar {
    display: none;
 }
 
 
-.customInfoWrapper::-webkit-scrollbar{
-   width: 10px !important; 
-   
+.customInfoWrapper::-webkit-scrollbar {
+   width: 10px !important;
+
 }
 
-.customInfoWrapper::-webkit-scrollbar-button{
+.customInfoWrapper::-webkit-scrollbar-button {
    height: 100px !important;
    max-height: 100px !important;
    margin: auto;
 }
 
-.customInfoWrapper::-webkit-scrollbar-track{
+.customInfoWrapper::-webkit-scrollbar-track {
    background: #E5E7EB !important;
    border-radius: 50px !important;
 
 }
 
-.customInfoWrapper::-webkit-scrollbar-thumb{
+.customInfoWrapper::-webkit-scrollbar-thumb {
    background: #9BA8AF !important;
    border-radius: 50px !important;
 
 }
 
+.grecaptcha-badge {
+   visibility: hidden;
+}

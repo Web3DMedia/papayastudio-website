@@ -2,6 +2,7 @@ import ActivityCard from "../molecules/ActivityCard";
 import AOS from "aos";
 import { useEffect } from "react";
 import styled from "styled-components";
+import BgTransfromation from "../atoms/BgTransfromation";
 
 
 interface IProps {
@@ -24,29 +25,28 @@ const CreateSection = ({ myRefTwo, isTwo }: IProps) => {
   const activityData = [
     {
       name: "2D Animation(Animes)",
-      text: "We create 2D animations that are forging the future of community-driven edutainment for the new web.",
+      text: "We create 2D animations that are forging the future of community-driven edutainment.",
     },
     {
       name: "3D Animations",
-      text: "We create 3D animations that are forging the future of community-driven edutainment for the new web.",
+      text: "We create 3D animations that are forging the future of community-driven edutainment.",
     },
 
     {
       name: "Motion Graphics Design",
-      text: "We create stunning motion graphics spots on web3 content.",
+      text: "We create stunning motion graphics spots on creative contents.",
     },
     {
       name: "Video Production",
-      text: "We produce live-action videos in our in-house studio with great stories woven around web3, blockchain, and emerging technologies.",
+      text: "We produce live-action videos in our in-house studio with great stories woven around design and emerging technologies.",
     },
     {
       name: "Rendering Farm",
-      text: "Our render farm technology offers high-quality renders that are 10X faster than the average speed. web3 creators can now render their large project files at our studio.",
+      text: "Our render farm technology offers high-quality renders that are 10X faster than the average speed.  Creators can now render their large project files at our studio.",
     },
-
     {
       name: "Content Development",
-      text: "We tell relatable and edutaining stories that are carefully crafted to drive community engagement in the web3 media space.",
+      text: "We tell relatable and edutaining stories that are carefully crafted to drive community engagement in the media space.",
     },
   ];
   return (
@@ -54,13 +54,10 @@ const CreateSection = ({ myRefTwo, isTwo }: IProps) => {
       className="relative w-full py-28 md:py-32  xl:py-48 4xl:pt-36"
       id="WhatWeDo"
     >
-      <div className="bgTransformationOne">
-        <div className="bgTransformationOneLeft" />
-        <div className="bgTransformationOneRight" />
-      </div>
+      <BgTransfromation></BgTransfromation>
       <div className="mx-1 h-[150px] absolute top-20 left-7 hidden lg:block ">
-           <TrackerOutter isTwo={isTwo}/>
-            <TrackerInner/>
+        <TrackerOutter isTwo={isTwo} />
+        <TrackerInner />
       </div>
       <div className="2xl:w-[1440px] m-auto" ref={myRefTwo}>
         <div className="pt-[74px] sm:pt-0 relative w-full h-full mx-auto md:px-0 lg:px-20 xl:px-40 4xl:py-20">
@@ -72,11 +69,10 @@ const CreateSection = ({ myRefTwo, isTwo }: IProps) => {
           </p>
           <div className="h-full w-full ">
             <h2
-              className=" text-[24px] leading-tight md:text-[32px] lg:text-[36px] xl:text-[48px] font-bold pl-5 md:pl-14 lg:pl-0 md:pt-12 xl:pt-0"
+              className=" text-[24px] leading-tight md:text-[32px] lg:text-[36px] xl:text-[48px] font-[500] pl-5 md:pl-14 lg:pl-0 md:pt-12 xl:pt-0"
               data-aos="fade-up"
             >
-              We create blockchain <br />
-              and web3 focused:
+              We create <br /> content focused:
             </h2>
             <div
               className=" w-full grid grid-cols-1 lg:grid-cols-2 gap-4 mt-5 px-5 md:pl-14 lg:pl-[0px] lg:px-0"
@@ -94,9 +90,9 @@ const CreateSection = ({ myRefTwo, isTwo }: IProps) => {
 };
 
 
-const TrackerOutter = styled.div<{isTwo: boolean}>`
+const TrackerOutter = styled.div<{ isTwo: boolean }>`
    width: 5px;
-   height: ${({isTwo}) => isTwo ? '100%' : '0%'};
+   height: ${({ isTwo }) => isTwo ? '100%' : '0%'};
    background: #FF6661;
    border-radius: 8px;
    z-index: 2;

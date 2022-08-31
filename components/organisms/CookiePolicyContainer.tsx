@@ -37,7 +37,7 @@ const CookiePolicyContiner = () => {
          <h3 className="text-[#002F31] font-normal text-xs uppercase my-5">Legal</h3>
          <div className="bg-white my-7 rounded-t-[32px]  md:px-10">
             <BackContainer className='absolute bg-white w-[770px] z-10 md:-ml-10 rounded-t-[32px] bg-white w-[729px] py-5'>
-               <h1 className='pt-[40px] ml-10 text-[#002F3199] cursor-pointer font-normal text-[18px] leading-6' onClick={() => history.back()}>&#8592; Back</h1>
+               <h1 className='pt-[40px] ml-10 text-[#002F3199] cursor-light font-normal text-[18px] leading-6' onClick={() => history.back()}>&#8592; Back</h1>
             </BackContainer>
             <TextWrapper className="customInfoWrapper h-full md:w-[650px] lg:h-[680px] max-h-[680px] pb-10 mx-10 pl-2 pr-12 pb-10 md:px-5 md:mx-0 xl:px-[60px] relative overflow-y-scroll overflow-x-hidden mt-28">
                <h3 className="font-bold text-[30px] lg:text-[36px] xl:text-[40px] text-[#002F31]">Cookie Policy</h3>

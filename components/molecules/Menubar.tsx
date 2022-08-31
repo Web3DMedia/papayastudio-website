@@ -24,14 +24,15 @@ const Menubar = ({ isMenuOpen, setIsMenuOpen, isOne, isTwo, isThree }: IProps) =
             <div className="relative border-b border-dashed h-[60px] border-[#FCD1CA] z-10">
                <button
                   onClick={closeMenuBar}
-                  className="bg-[#FF6661] p-2 rounded-full cursor-pointer flex items-center justify-center lg:hidden outline-none absolute right-[10px] md:right-[20px] lg:right-[50px] top-3">
+                  className="bg-[#FF6661] p-2 rounded-full cursor-light flex items-center justify-center lg:hidden outline-none absolute right-[10px] md:right-[20px] lg:right-[50px] top-3">
                   <MdClose fontSize={20} color="#fff" />
                </button>
             </div>
             <div className="relative flex flex-col items-center justify-center mt-[70px] bg-transparent z-10">
                <Link href="/#WhoAreWe" passHref>
+                  {/*@ts-ignore */}
                   <ScrollLink to="whoSection" spy={true} smooth={true} offset={50} duration={500} onClick={closeMenuBar}>
-                     <a className="flex items-center font-bold xl:text-lg text-[#FFFFFF]">
+                     <a className="flex items-center cursor-light font-bold xl:text-lg text-[#FFFFFF]">
                         <Image
                            src='/assets/orange-logo.svg'
                            width={25}
@@ -45,8 +46,9 @@ const Menubar = ({ isMenuOpen, setIsMenuOpen, isOne, isTwo, isThree }: IProps) =
 
                </Link>
                <Link href="/#WhatWeDo" passHref>
+                  {/*@ts-ignore */}
                   <ScrollLink to="whatSection" spy={true} smooth={true} offset={50} duration={500} onClick={closeMenuBar}>
-                     <a className="flex items-center font-bold xl:text-lg text-[#FFFFFF] my-10">
+                     <a className="flex items-center font-bold xl:text-lg cursor-light text-[#FFFFFF] my-10">
                         <Image
                            src='/assets/orange-logo.svg'
                            width={25}
@@ -59,8 +61,9 @@ const Menubar = ({ isMenuOpen, setIsMenuOpen, isOne, isTwo, isThree }: IProps) =
                   </ScrollLink>
                </Link>
                <Link href="/#OurProuducts" passHref>
+                  {/*@ts-ignore */}
                   <ScrollLink to="productsSection" spy={true} smooth={true} offset={50} duration={500} onClick={closeMenuBar}>
-                     <a className="flex items-center font-bold xl:text-lg text-[#FFFFFF] mb-10">
+                     <a className="flex items-center font-bold xl:text-lg cursor-light text-[#FFFFFF] mb-10">
                         <Image
                            src='/assets/orange-logo.svg'
                            width={25}
@@ -73,9 +76,9 @@ const Menubar = ({ isMenuOpen, setIsMenuOpen, isOne, isTwo, isThree }: IProps) =
                   </ScrollLink>
                </Link>
                <Link href="/contact" passHref>
-                  <a onClick={closeMenuBar} className="ml-4 border-2 border-[#FCD1CA] px-[20px] py-[10px] font-bold text-[18px] text-white rounded-xl cursor-pointer">
+                  <button onClick={closeMenuBar} className="ml-4 border-2 border-[#FCD1CA] px-[20px] py-[10px] font-bold text-[18px] text-white rounded-xl cursor-light">
                      Get in touch
-                  </a>
+                  </button>
                </Link>
             </div>
             <div className="absolute top-80 left-3 w-[150px] h-[150px] z-0 rounded-full border border-dashed border-[#FCD1CA] opacity-30 bg-transparent">
