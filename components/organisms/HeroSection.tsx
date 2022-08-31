@@ -4,6 +4,7 @@ import { MdKeyboardArrowRight } from "react-icons/md";
 import { Element, Link as BtnLink } from "react-scroll";
 import styled, { keyframes } from "styled-components";
 import { useState, useEffect } from "react";
+import BgTransfromation from "../atoms/BgTransfromation";
 
 interface IProps {
   myRefOne: any;
@@ -56,10 +57,9 @@ const HeroSection = ({ myRefOne }: IProps) => {
       className="relative w-full py-10 md:py-32 xl:py-28 4xl:pt-36 "
       ref={myRefOne}
     >
-      <div className="bgTransformationOne">
-        <div className="bgTransformationOneLeft" />
-        <div className="bgTransformationOneRight" />
-      </div>
+
+      <BgTransfromation></BgTransfromation>
+
       <div className="absolute left-6 top-40 hidden lg:block flex-col items-center">
         <h4 className="text-xs font-normal">01</h4>
         <div className="relative mx-1 h-[150px] my-2">

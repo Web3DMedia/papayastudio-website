@@ -4,6 +4,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 import styled, { keyframes } from 'styled-components'
+import BgTransfromation from '../atoms/BgTransfromation'
 
 
 import SectionHeader from '../atoms/SectionHeader'
@@ -95,10 +96,7 @@ interface IProps {
 const BackBoneSection = ({ myRefFive, isFive }: IProps) => {
   return (
     <Div className='relative'>
-      <div className="bgTransformationOne">
-        <div className="bgTransformationOneLeft" />
-        <div className="bgTransformationOneRight" />
-      </div>
+      <BgTransfromation></BgTransfromation>
       <div className="mx-1 h-[150px] absolute top-24 left-7 hidden lg:block ">
         <TrackerOutter isFive={isFive} />
         <TrackerInner />

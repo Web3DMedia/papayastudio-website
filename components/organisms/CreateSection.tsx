@@ -2,6 +2,7 @@ import ActivityCard from "../molecules/ActivityCard";
 import AOS from "aos";
 import { useEffect } from "react";
 import styled from "styled-components";
+import BgTransfromation from "../atoms/BgTransfromation";
 
 
 interface IProps {
@@ -53,10 +54,7 @@ const CreateSection = ({ myRefTwo, isTwo }: IProps) => {
       className="relative w-full py-28 md:py-32  xl:py-48 4xl:pt-36"
       id="WhatWeDo"
     >
-      <div className="bgTransformationOne">
-        <div className="bgTransformationOneLeft" />
-        <div className="bgTransformationOneRight" />
-      </div>
+      <BgTransfromation></BgTransfromation>
       <div className="mx-1 h-[150px] absolute top-20 left-7 hidden lg:block ">
         <TrackerOutter isTwo={isTwo} />
         <TrackerInner />

@@ -5,6 +5,7 @@ import { Element } from "react-scroll";
 import Carousel from "nuka-carousel";
 import AOS from "aos";
 import styled from "styled-components";
+import BgTransfromation from "../atoms/BgTransfromation";
 
 interface IProps {
   myRefThree: any
@@ -93,10 +94,7 @@ const ProductsSection = ({ myRefThree, isThree }: IProps) => {
         name="productsSection"
         className="relative w-full py-28 md:py-32 xl:py-48 4xl:pt-36"
       >
-        <div className="bgTransformationOne">
-          <div className="bgTransformationOneLeft" />
-          <div className="bgTransformationOneRight" />
-        </div>
+        <BgTransfromation></BgTransfromation>
         <div className="mx-1 h-[150px] absolute top-20 left-7 hidden lg:block ">
           <TrackerOutter isThree={isThree} />
           <TrackerInner />
