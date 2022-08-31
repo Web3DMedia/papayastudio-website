@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import Head from "next/head";
 import Navbar from "../components/molecules/Navbar";
 import HeroSection from "../components/organisms/HeroSection";
 import Menubar from "../components/molecules/Menubar";
@@ -13,7 +12,6 @@ import PageIndicator from "../components/molecules/PageIndicator";
 import Modal from "../components/atoms/Modal";
 import { useRef } from 'react'
 import MetaTag from "../components/atoms/MetaTag";
-import Script from "next/script";
 
 /** eslint-ignore react/react-in-jsx-scope */
 const Home = () => {
@@ -77,6 +75,9 @@ const Home = () => {
     observer.observe(myRefFive.current)
   })
 
+  useEffect(() => {
+
+  })
 
   return (
     <div className="font-body">

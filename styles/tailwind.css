@@ -147,3 +147,7 @@ body {
    border-radius: 50px !important;
 
 }
+
+.grecaptcha-badge {
+   visibility: hidden;
+}

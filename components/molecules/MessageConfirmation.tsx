@@ -52,7 +52,7 @@ const MessageConfirmation = ({ setmessageIsSent, isModal, setIsModal }: IProps) 
     <div className={isModal ? "bg-white w-[340px] sm:w-[664px] px-4 sm:px-16 py-10 rounded-[32px] z-20 fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" : "bg-white w-[330px] sm:w-[664px] px-4 sm:px-16 py-10 rounded-[32px] z-20"}>
       <div className="text-center">
         <div
-          className="flex justify-end cursor-pointer pt-[20px] lg:pt-[25px] pb-[35px] md:pt-[20px] pr-[15px] sm:pr-[0px]"
+          className="flex justify-end pt-[20px] lg:pt-[25px] pb-[35px] md:pt-[20px] pr-[15px] sm:pr-[0px]"
           onClick={() => CloseModal()}
         >
           <Image src="/assets/close-button.png" width={15} height={15} alt="close-button" />
