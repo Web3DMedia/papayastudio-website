@@ -15,8 +15,8 @@ const ProductCard = ({ info }) => {
             <Image src={info.cardImage} layout="fill" objectFit='cover' alt="image" />
          </div>
          <div className="mt-[15px] ">
-            <h2 className="font-bold text-backboneText text-lg xl:text-2xl mb-[10px] leading-[160%]">{info.cardH2}</h2>
-            <p className="break-words leading-[17px] font-normal text-backboneText1 4xl:text-[16px] max-w-[300px] 4xl:max-w-[310px] mb-[10px]">{info.cardP}</p>
+            <h2 className="font-[500] text-backboneText text-lg xl:text-2xl mb-[10px] leading-[160%]">{info.cardH2}</h2>
+            <p className="break-words leading-[20px] font-normal text-backboneText1 4xl:text-[16px] max-w-[300px] 4xl:max-w-[310px] mb-[10px]">{info.cardP}</p>
             {
                info.Links.length !== 0 && <Link href={info.Links}>
                   <a target="_blank" className="absolute bottom-0">

@@ -118,7 +118,7 @@ const ProductsSection = ({ myRefThree, isThree }: IProps) => {
             </p>
             <div className="w-full h-full">
               <h2
-                className="text-[24px] leading-tight md:text-[32px] lg:text-[36px] xl:text-[48px] font-bold pl-5 md:pl-14 lg:pl-20 xl:pl-0"
+                className="text-[24px] leading-tight md:text-[32px] lg:text-[36px] xl:text-[48px] font-[500] pl-5 md:pl-14 lg:pl-20 xl:pl-0"
                 data-aos="fade-up"
               >
                 What we’ve created

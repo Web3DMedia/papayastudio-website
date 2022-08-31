@@ -13,6 +13,7 @@ import PageIndicator from "../components/molecules/PageIndicator";
 import Modal from "../components/atoms/Modal";
 import { useRef } from 'react'
 import MetaTag from "../components/atoms/MetaTag";
+import Script from "next/script";
 
 /** eslint-ignore react/react-in-jsx-scope */
 const Home = () => {
@@ -80,9 +81,8 @@ const Home = () => {
   return (
     <div className="font-body">
       <MetaTag tagName='Home' />
-
       <main className="w-full relative h-full overflow-hidden">
-        {isModal ? "" : <Navbar setIsMenuOpen={setIsMenuOpen} isOne={isOne} isTwo={isTwo} isThree={isThree} change={change}/>}
+        {isModal ? "" : <Navbar setIsMenuOpen={setIsMenuOpen} isOne={isOne} isTwo={isTwo} isThree={isThree} change={change} />}
         <Menubar isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} isOne={isOne} isTwo={isTwo} isThree={isThree} />
 
         {isModal && <Modal isModal={isModal} setIsModal={setIsModal}></Modal>}

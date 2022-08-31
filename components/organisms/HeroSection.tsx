@@ -78,71 +78,71 @@ const HeroSection = ({ myRefOne }: IProps) => {
             <span className="flex items-center">
               {/*Large screen*/}
               {textNumber === 1 && (
-                <Span className="hidden xl:pl-16 3xl:pl-0  sm:block sm:text-[35px] md:text-[40px] lg:text-[60px] xl:text-[65px] 4xl:text-[80px] duration-500 ease-in font-bold">
+                <Span className="hidden xl:pl-16 3xl:pl-0  sm:block sm:text-[35px] md:text-[40px] lg:text-[60px] xl:text-[65px] 4xl:text-[80px] duration-500 ease-in font-[500]">
                   We are a <TextSpan width="100%">forward</TextSpan>{" "}
                   <TextSpan width="85%">thinking</TextSpan>
                 </Span>
               )}
               {textNumber === 2 && (
-                <SpanTwo className="hidden xl:pl-16 3xl:pl-0 sm:block sm:text-[35px] md:text-[40px] lg:text-[60px] xl:text-[65px] 4xl:text-[80px] duration-500 ease-in font-bold">
+                <SpanTwo className="hidden xl:pl-16 3xl:pl-0 sm:block sm:text-[35px] md:text-[40px] lg:text-[60px] xl:text-[65px] 4xl:text-[80px] duration-500 ease-in font-[500]">
                   We are an <TextSpan width="100%">intuitive</TextSpan>{" "}
                   <TextSpan width="85%">design</TextSpan>
                 </SpanTwo>
               )}
               {textNumber === 3 && (
-                <SpanThree className="hidden xl:pl-16 3xl:pl-0 sm:block sm:text-[35px] md:text-[40px] lg:text-[60px] xl:text-[65px] 4xl:text-[80px] duration-500 ease-in font-bold">
+                <SpanThree className="hidden xl:pl-16 3xl:pl-0 sm:block sm:text-[35px] md:text-[40px] lg:text-[60px] xl:text-[65px] 4xl:text-[80px] duration-500 ease-in font-[500]">
                   We curate <TextSpan width="100%">content</TextSpan>{" "}
                   <TextSpan width="85%">about</TextSpan>
                 </SpanThree>
               )}
               {textNumber === 4 && (
-                <SpanFour className="hidden xl:pl-16 3xl:pl-0 sm:block sm:text-[35px] md:text-[40px] lg:text-[60px] xl:text-[65px] 4xl:text-[80px] duration-500 ease-in font-bold">
+                <SpanFour className="hidden xl:pl-16 3xl:pl-0 sm:block sm:text-[35px] md:text-[40px] lg:text-[60px] xl:text-[65px] 4xl:text-[80px] duration-500 ease-in font-[500]">
                   We create <TextSpan width="100%">animations</TextSpan>{" "}
                   <TextSpan width="85%">and</TextSpan>
                 </SpanFour>
               )}
               {/*Mobile view*/}
               {textNumber === 1 && (
-                <Span className="block sm:hidden leading-9  text-[32px] font-bold ml-4">
+                <Span className="block sm:hidden leading-9  text-[32px] font-[500] ml-4">
                   We are a <TextSpan width="100%">forward</TextSpan>
                 </Span>
               )}
               {textNumber === 2 && (
-                <SpanTwo className="block sm:hidden leading-9 text-[32px] font-bold ml-4">
+                <SpanTwo className="block sm:hidden leading-9 text-[32px] font-[500] ml-4">
                   We are an <TextSpan width="100%">intuitive</TextSpan>
                 </SpanTwo>
               )}
               {textNumber === 3 && (
-                <SpanThree className="block sm:hidden leading-9 text-[32px] font-bold ml-4">
+                <SpanThree className="block sm:hidden leading-9 text-[32px] font-[500] ml-4">
                   We curate <TextSpan width="100%">content</TextSpan>
                 </SpanThree>
               )}
               {textNumber === 4 && (
-                <SpanFour className="block sm:hidden leading-9 text-[32px] font-bold ml-4">
+                <SpanFour className="block sm:hidden leading-9 text-[32px] font-[500] ml-4">
                   We create <TextSpan width="100%">animations</TextSpan>
                 </SpanFour>
               )}
             </span>
             <span className="block sm:hidden">
               {textNumber === 1 && (
-                <Span className="block sm:hidden text-[32px] font-bold ml-4">
+                <Span className="block sm:hidden text-[32px] font-[500] ml-4">
                   <TextSpan width="85%">thinking</TextSpan> design
                 </Span>
               )}
               <SpanTwo>
                 {textNumber === 2 && (
-                  <SpanTwo className="block sm:hidden text-[32px] font-bold ml-4">
+                  <SpanTwo className="block sm:hidden text-[32px] font-[500] ml-4">
                     <TextSpan width="85%">design</TextSpan> studio for
                   </SpanTwo>
                 )}
               </SpanTwo>
               {textNumber === 3 && (
-                <SpanThree className="block sm:hidden text-[32px] font-bold ml-4">
+                <SpanThree className="block sm:hidden text-[32px] font-[500] ml-4">
                   <TextSpan width="85%">about</TextSpan> design and
                 </SpanThree>
               )}
               {textNumber === 4 && (
-                <SpanFour className="block sm:hidden text-[32px] font-bold ml-4">
+                <SpanFour className="block sm:hidden text-[32px] font-[500] ml-4">
                   <TextSpan width="85%">and</TextSpan> live action
                 </SpanFour>
               )}
@@ -158,44 +158,44 @@ const HeroSection = ({ myRefOne }: IProps) => {
               </Span>
               {/*Mobile*/}
               {textNumber === 1 && (
-                <Span className="block sm:hidden leading-9 text-[32px] font-bold">
+                <Span className="block sm:hidden leading-9 text-[32px] font-[500]">
                   studio
                 </Span>
               )}
               {textNumber === 2 && (
-                <SpanTwo className="block sm:hidden leading-9 text-[32px] font-bold">
+                <SpanTwo className="block sm:hidden leading-9 text-[32px] font-[500]">
                   brands &amp; creators
                 </SpanTwo>
               )}
               {textNumber === 3 && (
-                <SpanThree className="block sm:hidden leading-9 text-[32px] font-bold">
+                <SpanThree className="block sm:hidden leading-9 text-[32px] font-[500]">
                   technologies
                 </SpanThree>
               )}
               {textNumber === 4 && (
-                <SpanFour className="block sm:hidden leading-9 text-[32px] font-bold">
+                <SpanFour className="block sm:hidden leading-9 text-[32px] font-[500]">
                   video content
                 </SpanFour>
               )}
 
               {/*Large screen*/}
               {textNumber === 1 && (
-                <Span className="hidden sm:block sm:text-[35px] md:text-[40px] lg:text-[60px] xl:text-[65px] 4xl:text-[80px] duration-500 ease-in font-bold">
+                <Span className="hidden sm:block sm:text-[35px] md:text-[40px] lg:text-[60px] xl:text-[65px] 4xl:text-[80px] duration-500 ease-in font-[500]">
                   design studio
                 </Span>
               )}
               {textNumber === 2 && (
-                <SpanTwo className="hidden sm:block sm:text-[35px] md:text-[40px] lg:text-[60px] xl:text-[65px] 4xl:text-[80px] duration-500 ease-in font-bold">
+                <SpanTwo className="hidden sm:block sm:text-[35px] md:text-[40px] lg:text-[60px] xl:text-[65px] 4xl:text-[80px] duration-500 ease-in font-[500]">
                   studio for brands &amp; creators
                 </SpanTwo>
               )}
               {textNumber === 3 && (
-                <SpanThree className="hidden sm:block sm:text-[35px] md:text-[40px] lg:text-[60px] xl:text-[65px] 4xl:text-[80px] duration-500 ease-in font-bold">
+                <SpanThree className="hidden sm:block sm:text-[35px] md:text-[40px] lg:text-[60px] xl:text-[65px] 4xl:text-[80px] duration-500 ease-in font-[500]">
                   design and technologies
                 </SpanThree>
               )}
               {textNumber === 4 && (
-                <SpanFour className="hidden sm:block sm:text-[35px] md:text-[40px] lg:text-[60px] xl:text-[65px] 4xl:text-[80px] duration-500 ease-in font-bold">
+                <SpanFour className="hidden sm:block sm:text-[35px] md:text-[40px] lg:text-[60px] xl:text-[65px] 4xl:text-[80px] duration-500 ease-in font-[500]">
                   live-action video for creators
                 </SpanFour>
               )}
@@ -211,7 +211,7 @@ const HeroSection = ({ myRefOne }: IProps) => {
                 smooth={true}
                 offset={50}
                 duration={500}
-                className="pb-[175px] pt-[15px] sm:pb-0 xl:pl-14 3xl:pl-0 flex items-center text-base xl:text-lg font-bold mt-2   ml-2 w-[205px]"
+                className="pb-[175px] pt-[15px] sm:pb-0 xl:pl-14 3xl:pl-0 flex items-center text-base xl:text-lg font-[500] mt-2   ml-2 w-[205px]"
               >
                 <BtnSpan className="cursor-dark">Our Works</BtnSpan>
               </BtnLink>

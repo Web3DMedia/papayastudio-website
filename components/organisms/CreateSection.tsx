@@ -71,7 +71,7 @@ const CreateSection = ({ myRefTwo, isTwo }: IProps) => {
           </p>
           <div className="h-full w-full ">
             <h2
-              className=" text-[24px] leading-tight md:text-[32px] lg:text-[36px] xl:text-[48px] font-bold pl-5 md:pl-14 lg:pl-0 md:pt-12 xl:pt-0"
+              className=" text-[24px] leading-tight md:text-[32px] lg:text-[36px] xl:text-[48px] font-[500] pl-5 md:pl-14 lg:pl-0 md:pt-12 xl:pt-0"
               data-aos="fade-up"
             >
               We create <br /> content focused:

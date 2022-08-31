@@ -24,7 +24,7 @@ const NavLinks = styled.div`
 }
 `
 
-const Navbar = ({ setIsMenuOpen, isOne, isTwo, isThree, change}: IProps) => {
+const Navbar = ({ setIsMenuOpen, isOne, isTwo, isThree, change }: IProps) => {
    const [textNumber, setTextNumber] = useState(1)
 
    useEffect(() => {
@@ -58,7 +58,7 @@ const Navbar = ({ setIsMenuOpen, isOne, isTwo, isThree, change}: IProps) => {
          </Link>
          <div className="hidden lg:flex items-center">
             <Link href="/#WhoAreWe" passHref>
-               <NavLinks className="flex items-center font-bold cursor-light xl:text-lg" >
+               <NavLinks className="flex items-center font-[500] cursor-light xl:text-lg" >
                   <Image
                      src='/assets/orange-logo.svg'
                      width={25}
@@ -70,7 +70,7 @@ const Navbar = ({ setIsMenuOpen, isOne, isTwo, isThree, change}: IProps) => {
                </NavLinks>
             </Link>
             <Link href="/#WhatWeDo" passHref>
-               <NavLinks className="flex items-center mx-12 cursor-light font-bold xl:text-lg">
+               <NavLinks className="flex items-center mx-12 cursor-light font-[500] xl:text-lg">
                   <Image
                      src='/assets/orange-logo.svg'
                      width={25}
@@ -82,7 +82,7 @@ const Navbar = ({ setIsMenuOpen, isOne, isTwo, isThree, change}: IProps) => {
                </NavLinks>
             </Link>
             <Link href="/#OurProuducts" passHref>
-               <NavLinks className="flex items-center font-bold cursor-light xl:text-lg" >
+               <NavLinks className="flex items-center font-[500] cursor-light xl:text-lg" >
                   <Image
                      src='/assets/orange-logo.svg'
                      width={25}
@@ -101,13 +101,13 @@ const Navbar = ({ setIsMenuOpen, isOne, isTwo, isThree, change}: IProps) => {
          </Link>
          {
             change && <div className="flex w-[150px] items-center justify-center lg:hidden -translate-x-5 sm:-translate-x-12">
-            <h4 className="text-xs">01</h4>
-            <div className="relative mx-1">
-                          <TrackerOutter textNumber={textNumber} />
-               <TrackerInner />
+               <h4 className="text-xs">01</h4>
+               <div className="relative mx-1">
+                  <TrackerOutter textNumber={textNumber} />
+                  <TrackerInner />
+               </div>
+               <h4 className="text-xs">04</h4>
             </div>
-            <h4 className="text-xs">04</h4>
-         </div>  
          }
          <button
             onClick={openMenuBar}
