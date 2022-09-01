@@ -59,12 +59,11 @@ const Modal = ({ setIsModal, isModal }: IProps) => {
     }
     setLoading(true);
     axios
-      .post("/api/mail/", { email: userMail, name: userName })
+      .post("/api/waitlist/", { email: userMail, name: userName })
       .then((res) => {
         setUserMail("");
         setUserName("");
         setmessageIsSent(true);
-        window.scrollTo(0, 0);
       })
       .catch((err) => {
         if (err?.message === "Request failed with status code 500") {
