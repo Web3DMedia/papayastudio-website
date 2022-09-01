@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "../styles/tailwind.css";
 import Theme from "../styles/Theme";
 // @ts-ignore
@@ -12,15 +12,21 @@ import LoadingScreen from "../components/molecules/LoadingScreen";
 export default function MyApp({ Component, pageProps }) {
   const router = useRouter();
   const [pageLoading, setPageLoading] = React.useState<boolean>(false);
-  React.useEffect(() => {
-    const handleStart = () => { setPageLoading(true); };
-    const handleComplete = () => { setPageLoading(false); };
+  // React.useEffect(() => {
+  //   const handleStart = () => { setPageLoading(false); };
+  //   const handleComplete = () => { setPageLoading(false); };
 
-    router.events.on('routeChangeStart', handleStart);
-    router.events.on('routeChangeComplete', handleComplete);
-    router.events.on('routeChangeError', handleComplete);
-  }, [router]);
+  //   router.events.on('routeChangeStart', handleStart);
+  //   router.events.on('routeChangeComplete', handleComplete);
+  //   router.events.on('routeChangeError', handleComplete);
+  // }, [router]);
+  useEffect(() => {
+    setPageLoading(true);
 
+    setTimeout(() => {
+      setPageLoading(false);
+    }, 5500);
+  }, []);
   return (
     <>
       <Head>
