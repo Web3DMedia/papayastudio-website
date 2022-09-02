@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import BgTransfromation from '../atoms/BgTransfromation'
 
 const UnorderedList = styled.ul`
    list-style-type: disc !important;
@@ -31,10 +32,7 @@ box-shadow: 0px 1px 3px rgba(16, 24, 40, 0.1), 0px 1px 2px -1px rgba(16, 24, 40,
 const PrivacyPolicyContainer = () => {
    return (
       <div className=" min-h-[60vh] mb-5 flex flex-col items-center justify-center">
-         <div className="bgTransformationOne">
-            <div className="bgTransformationOneLeft" />
-            <div className="bgTransformationOneRight" />
-         </div>
+         <BgTransfromation></BgTransfromation>
          <h3 className="text-[#002F31] font-normal text-xs uppercase my-5">Legal</h3>
          <div className="bg-white my-7 rounded-t-[32px]  md:px-10">
             <BackContainer className='absolute bg-white w-[770px] z-10 md:-ml-10 rounded-t-[32px] bg-white w-[729px] py-5'>

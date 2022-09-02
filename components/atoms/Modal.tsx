@@ -22,29 +22,29 @@ const Modal = ({ setIsModal, isModal }: IProps) => {
   const [loading, setLoading] = useState<boolean>(false);
 
 
-  const submitEnquiryForm = (gReCaptchaToken: string) => {
-    fetch("/api/enquiry", {
-      method: "POST",
-      headers: {
-        Accept: "application/json, text/plain, */*",
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        name: userName,
-        email: userMail,
-        gRecaptchaToken: gReCaptchaToken,
-      }),
-    })
-      .then((res) => res.json())
-      .then((res) => {
-        console.log(res, "response from backend");
-        if (res?.status === "success") {
-          setNotification(res?.message);
-        } else {
-          setNotification(res?.message);
-        }
-      });
-  };
+  // const submitEnquiryForm = (gReCaptchaToken: string) => {
+  //   fetch("/api/enquiry", {
+  //     method: "POST",
+  //     headers: {
+  //       Accept: "application/json, text/plain, */*",
+  //       "Content-Type": "application/json",
+  //     },
+  //     body: JSON.stringify({
+  //       name: userName,
+  //       email: userMail,
+  //       gRecaptchaToken: gReCaptchaToken,
+  //     }),
+  //   })
+  //     .then((res) => res.json())
+  //     .then((res) => {
+  //       console.log(res, "response from backend");
+  //       if (res?.status === "success") {
+  //         setNotification(res?.message);
+  //       } else {
+  //         setNotification(res?.message);
+  //       }
+  //     });
+  // };
 
   const addToWaitlist = async (e: { preventDefault: () => void }) => {
     e.preventDefault();
@@ -59,12 +59,11 @@ const Modal = ({ setIsModal, isModal }: IProps) => {
     }
     setLoading(true);
     axios
-      .post("/api/mail/", { email: userMail, name: userName })
+      .post("/api/waitlist/", { email: userMail, name: userName })
       .then((res) => {
         setUserMail("");
         setUserName("");
         setmessageIsSent(true);
-        window.scrollTo(0, 0);
       })
       .catch((err) => {
         if (err?.message === "Request failed with status code 500") {
@@ -81,20 +80,20 @@ const Modal = ({ setIsModal, isModal }: IProps) => {
       });
   };
 
-  const handleSumitForm = useCallback(
-    (e) => {
-      e.preventDefault();
-      if (!executeRecaptcha) {
-        console.log("Execute recaptcha not yet available");
-        return;
-      }
-      executeRecaptcha("enquiryFormSubmit").then((gReCaptchaToken) => {
-        console.log(gReCaptchaToken, "response Google reCaptcha server");
-        submitEnquiryForm(gReCaptchaToken);
-      });
-    },
-    [executeRecaptcha]
-  );
+  // const handleSumitForm = useCallback(
+  //   (e) => {
+  //     e.preventDefault();
+  //     if (!executeRecaptcha) {
+  //       console.log("Execute recaptcha not yet available");
+  //       return;
+  //     }
+  //     executeRecaptcha("enquiryFormSubmit").then((gReCaptchaToken) => {
+  //       console.log(gReCaptchaToken, "response Google reCaptcha server");
+  //       submitEnquiryForm(gReCaptchaToken);
+  //     });
+  //   },
+  //   [executeRecaptcha]
+  // );
 
   const RemoveModal = () => {
     document.body.style.overflow = "visible";
@@ -117,7 +116,7 @@ const Modal = ({ setIsModal, isModal }: IProps) => {
                 the academy, only limited slots available
               </p>
             </div>
-            <form className="mt-[33px]" onSubmit={handleSumitForm}>
+            <form className="mt-[33px]" onSubmit={addToWaitlist}>
               <div className="form-group flex flex-col">
                 <label
                   htmlFor="userName"
