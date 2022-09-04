@@ -1,6 +1,4 @@
-import Aos from "aos";
 import Image from "next/image";
-import { useEffect } from "react";
 import styled from "styled-components";
 
 const Imgs = styled.div`
@@ -24,9 +22,6 @@ const Line = styled.div`
 `;
 
 const SectionSeperator = () => {
-  useEffect(() => {
-    Aos.init();
-  });
   return (
     <div
       className="flex justify-center items-center reveal fade-bottom"

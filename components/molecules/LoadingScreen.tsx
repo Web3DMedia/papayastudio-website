@@ -55,75 +55,77 @@ const LoadingScreen = () => {
         }
     }, [textNumber])
     return (
-        <LoadingContainer className='flex items-center justify-center'>
-            <div className="flex items-center cursor-light absolute top-8 left-8 xl:left-16">
-                <span className="relative w-[30px] h-[25px] md:w-[40px] md:h-[30px] xl:w-[30px] xl:h-[30px]">
-                    <Image
-                        src="/assets/logo.svg"
-                        layout="fill"
-                        alt="logo"
-                    />
-                </span>
-                <h2 className=" text-[18px] sm:text-[22px] md:text-[25px] xl:text-[35px] font-[500] sm:ml-2">Papayas</h2>
-            </div>
+        <div>
+            <LoadingContainer className='flex items-center justify-center'>
+                <div className="flex items-center cursor-light absolute top-8 left-8 xl:left-16">
+                    <span className="relative w-[30px] h-[25px] md:w-[40px] md:h-[30px] xl:w-[30px] xl:h-[30px]">
+                        <Image
+                            src="/assets/logo.svg"
+                            layout="fill"
+                            alt="logo"
+                        />
+                    </span>
+                    <h2 className=" text-[18px] sm:text-[22px] md:text-[25px] xl:text-[35px] font-[500] sm:ml-2">Papayas</h2>
+                </div>
 
-            <BgTransfromation></BgTransfromation>
-            <div className='flex justify-between items-center relative'>
-                <div className='mt-2 xl:-mt-0 hidden lg:block' >
-                    <Image
-                        src="/assets/Papina-svg.svg"
-                        width={274}
-                        height={274}
-                        alt="paptio"
-                        objectFit="contain"
-                        objectPosition="top"
-                    />
-                </div>
-                <div
-                    className='xl:-ml-44 -ml-36 xl:-mt-14 -mt-10'>
-                    <Image
-                        src="/assets/lazer-left.svg"
-                        width={450}
-                        height={79}
-                        alt="paptio"
-                        objectFit="contain"
-                        objectPosition="top"
-                    />
-                </div>
-                <Counter className='-mt-12 xl:-mx-56 -mx-48'>
-                    <div className="flex w-auto items-center justify-center py-[20px] md:py-[15px] xl:py-[25px]">
-                        <h4 className="text-[20px]">{textNumber === 1 ? '01' : textNumber === 2 ? '02' : textNumber === 3 ? '03' : textNumber === 4 ? '04' : textNumber === 5 ? '05' : '01'}</h4>
-                        <div className="relative mx-4">
-                            <TrackerOutter textNumber={textNumber} />
-                            <TrackerInner />
-                        </div>
-                        <h4 className="text-[20px]">05</h4>
+                <BgTransfromation></BgTransfromation>
+                <div className='flex justify-between items-center relative'>
+                    <div className='mt-2 xl:-mt-0 hidden lg:block' >
+                        <Image
+                            src="/assets/papina.png"
+                            width={274}
+                            height={274}
+                            alt="paptio"
+                            objectFit="contain"
+                            objectPosition="top"
+                        />
                     </div>
-                </Counter>
-                <div
-                    className='xl:-mr-44 -mr-36 xl:-mt-14 -mt-10'>
-                    <Image
-                        src="/assets/lazer-right.svg"
-                        width={450}
-                        height={79}
-                        alt="paptio"
-                        objectFit="contain"
-                        objectPosition="top"
-                    />
+                    <div
+                        className='xl:-ml-44 -ml-36 xl:-mt-14 -mt-10'>
+                        <Image
+                            src="/assets/lazer-left.svg"
+                            width={450}
+                            height={79}
+                            alt="paptio"
+                            objectFit="contain"
+                            objectPosition="top"
+                        />
+                    </div>
+                    <Counter className='-mt-12 xl:-mx-56 -mx-48'>
+                        <div className="flex w-auto items-center justify-center py-[20px] md:py-[15px] xl:py-[25px]">
+                            <h4 className="text-[20px]">{textNumber === 1 ? '01' : textNumber === 2 ? '02' : textNumber === 3 ? '03' : textNumber === 4 ? '04' : textNumber === 5 ? '05' : '01'}</h4>
+                            <div className="relative mx-4">
+                                <TrackerOutter textNumber={textNumber} />
+                                <TrackerInner />
+                            </div>
+                            <h4 className="text-[20px]">05</h4>
+                        </div>
+                    </Counter>
+                    <div
+                        className='xl:-mr-44 -mr-36 xl:-mt-14 -mt-10'>
+                        <Image
+                            src="/assets/lazer-right.svg"
+                            width={450}
+                            height={79}
+                            alt="paptio"
+                            objectFit="contain"
+                            objectPosition="top"
+                        />
+                    </div>
+                    <div className='mt-2 xl:-mt-0 hidden lg:block'>
+                        <Image
+                            src="/assets/papito.png"
+                            width={274}
+                            height={274}
+                            alt="paptio"
+                            objectFit="contain"
+                            objectPosition="top"
+                        />
+                    </div>
                 </div>
-                <div className='mt-2 xl:-mt-0 hidden lg:block'>
-                    <Image
-                        src="/assets/Papito-svg.svg"
-                        width={274}
-                        height={274}
-                        alt="paptio"
-                        objectFit="contain"
-                        objectPosition="top"
-                    />
-                </div>
-            </div>
 
-        </LoadingContainer>
+            </LoadingContainer>
+        </div>
     )
 }
 

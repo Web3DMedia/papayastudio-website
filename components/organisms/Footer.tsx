@@ -10,7 +10,7 @@ const FooterContainer = styled.div`
 `;
 const FirstText = styled.h1`
   font-style: normal;
-  font-weight: 700;
+  font-weight: 500;
   font-size: 48px;
   line-height: 52px;
   padding: 43px 0 16px;
@@ -168,13 +168,16 @@ const Footer = () => {
     <div className="relative">
       <FooterContainer className="px-6 xl:pl-24 xl:px-0 relative">
         <div className="pt-16 xl:pt-28 2xl:w-[1440px] m-auto">
-          <Image
-            src="/assets/footer-logos.png"
-            width={150}
-            height={35}
-            alt="papaya"
-            objectFit="cover"
-          />
+          <div className="flex items-centery">
+            <span className="relative w-[20px] h-[20px] md:w-[40px] md:h-[30px] xl:w-[30px] xl:h-[40px] mt-1">
+              <Image
+                src="/assets/footer-logo.svg"
+                layout="fill"
+                alt="logo"
+              />
+            </span>
+            <h2 className=" text-[18px] sm:text-[22px] md:text-[25px] xl:text-[35px] font-[500] text-white ml-2">Papayas</h2>
+          </div>
           <FirstText className="text-footerText">Have an Idea?</FirstText>
           <Div className="md:flex md:justify-between">
             <div>

@@ -1,6 +1,5 @@
 import Image from 'next/image'
 import styled from 'styled-components'
-import { VscArrowRight } from 'react-icons/vsc'
 import Link from 'next/link'
 
 
@@ -21,7 +20,7 @@ const ProductCard = ({ info }) => {
                info.Links.length !== 0 && <Link href={info.Links}>
                   <a target="_blank" className="absolute bottom-0">
                      <Button className="flex items-center text-backboneText cursor-light">
-                        {info.btnTxt}<span className='ml-4'><VscArrowRight /></span>
+                        {info.btnTxt}<span className='ml-4'>&#8594;</span>
                      </Button>
                   </a>
                </Link>

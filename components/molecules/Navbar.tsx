@@ -1,13 +1,11 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import { FiMenu } from "react-icons/fi"
 import styled from 'styled-components'
 import { TrackerInner, TrackerOutter, HeaderBar } from '../../styles/NavbarStyles'
 import { Dispatch, SetStateAction } from 'react'
 import { Link as ScrollLink } from 'react-scroll'
 import { useState, useEffect } from 'react'
 
-import { getEventListeners } from 'events'
 
 interface IProps {
    setIsMenuOpen: Dispatch<SetStateAction<boolean>>
@@ -53,7 +51,7 @@ const Navbar = ({ setIsMenuOpen, isOne, isTwo, isThree, change }: IProps) => {
                      alt="logo"
                   />
                </span>
-               <h2 className=" text-[18px] sm:text-[22px] md:text-[25px] xl:text-[35px] font-bold sm:ml-2">Papayas</h2>
+               <h2 className=" text-[18px] sm:text-[22px] md:text-[25px] xl:text-[35px] font-[600] sm:ml-2">Papayas</h2>
             </ScrollLink>
          </Link>
          <div className="hidden lg:flex items-center">
@@ -112,7 +110,12 @@ const Navbar = ({ setIsMenuOpen, isOne, isTwo, isThree, change }: IProps) => {
          <button
             onClick={openMenuBar}
             className="text-white bg-[#FF6661] p-2 rounded-full cursor-light flex items-center justify-center lg:hidden outline-none">
-            <FiMenu fontSize={20} />
+            <Image
+               src='/assets/menubar.svg'
+               width={25}
+               height={25}
+               alt="open menu"
+            />
          </button>
       </HeaderBar>
    )

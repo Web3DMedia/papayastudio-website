@@ -1,7 +1,6 @@
 import Image from "next/image";
-import React, { SetStateAction, Dispatch, useState, useEffect } from "react";
+import React, { SetStateAction, Dispatch } from "react";
 {/*@ts-ignore */ }
-import { Player } from '@lottiefiles/react-lottie-player';
 import Link from "next/link";
 import styled from "styled-components";
 
@@ -35,13 +34,6 @@ interface IProps {
 }
 
 const MessageConfirmation = ({ setmessageIsSent, isModal, setIsModal }: IProps) => {
-  const [hide, setHide] = useState<boolean>(false)
-
-  useEffect(() => {
-    setTimeout(() => {
-      setHide(true)
-    }, 2000)
-  })
 
   const CloseModal = () => {
     document.body.style.overflow = "visible";
@@ -57,7 +49,7 @@ const MessageConfirmation = ({ setmessageIsSent, isModal, setIsModal }: IProps) 
         >
           <Image src="/assets/close-button.png" width={15} height={15} alt="close-button" />
         </div>
-        {hide === true && <div className="-mb-2">
+        {<div className="-mb-2">
           <Image
             src={MessageSent}
             width={120}
@@ -65,7 +57,7 @@ const MessageConfirmation = ({ setmessageIsSent, isModal, setIsModal }: IProps) 
             objectFit="contain"
           ></Image></div>}
         {/*@ts-ignore */}
-        {hide === false && <Player src={MessageConfirmed} background="transparent" style={{ width: "120px", height: "120px" }} autoplay speed={1} keepLastFrame></Player>}
+        {/* {hide === false && <Player src={MessageConfirmed} background="transparent" style={{ width: "120px", height: "120px" }} autoplay speed={1} keepLastFrame></Player>} */}
 
         <TextHeader>Message sent</TextHeader>
         <TextParagraph>
