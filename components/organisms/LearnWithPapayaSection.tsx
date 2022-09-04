@@ -1,11 +1,6 @@
 import React, { useState, useEffect, SetStateAction, Dispatch } from 'react'
 import styled from 'styled-components'
 import Image from 'next/image'
-import Link from 'next/link'
-import AOS from "aos";
-import Modal from '../atoms/Modal';
-
-
 interface Props {
     imgs: String,
 }
@@ -68,8 +63,6 @@ border-radius: 10px;
 @media (max-width: 1024px) {
 
 }`
-const Img = styled.img`
-`
 const Aya = styled.div`
     position: absolute;
     left: 0;

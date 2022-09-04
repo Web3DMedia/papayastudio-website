@@ -1,4 +1,3 @@
-import { MdClose } from 'react-icons/md'
 import Image from 'next/image'
 import Link from 'next/link'
 import { MenuDiv } from '../../styles/MenubarStyles'
@@ -25,7 +24,12 @@ const Menubar = ({ isMenuOpen, setIsMenuOpen, isOne, isTwo, isThree }: IProps) =
                <button
                   onClick={closeMenuBar}
                   className="bg-[#FF6661] p-2 rounded-full cursor-light flex items-center justify-center lg:hidden outline-none absolute right-[10px] md:right-[20px] lg:right-[50px] top-3">
-                  <MdClose fontSize={20} color="#fff" />
+                  <Image
+                     src='/assets/closemenu.svg'
+                     width={25}
+                     height={25}
+                     alt="close menu"
+                  />
                </button>
             </div>
             <div className="relative flex flex-col items-center justify-center mt-[70px] bg-transparent z-10">

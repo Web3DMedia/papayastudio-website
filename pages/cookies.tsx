@@ -1,4 +1,3 @@
-import Head from "next/head";
 import { useState } from "react";
 import Navbar from "../components/molecules/Navbar";
 import Menubar from "../components/molecules/Menubar";

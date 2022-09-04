@@ -3,9 +3,9 @@ import ProductCard from "../molecules/ProductCard";
 import Image from "next/image";
 import { Element } from "react-scroll";
 import Carousel from "nuka-carousel";
-import AOS from "aos";
 import styled from "styled-components";
 import BgTransfromation from "../atoms/BgTransfromation";
+import { bg } from "date-fns/locale";
 
 interface IProps {
   myRefThree: any
@@ -23,11 +23,8 @@ const ProductsSection = ({ myRefThree, isThree }: IProps) => {
     return () => {
       clearInterval(interval);
     };
-  }, []);
+  }, [bg]);
 
-  useEffect(() => {
-    AOS.init();
-  });
 
   const [isWidth, setIsWidth] = useState<number>(1)
   const myRefWidth: any = useRef()

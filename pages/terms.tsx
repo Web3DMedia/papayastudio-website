@@ -1,10 +1,8 @@
-import Head from "next/head";
 import { useState } from "react";
 import Navbar from "../components/molecules/Navbar";
 import Menubar from "../components/molecules/Menubar";
 import SectionSeperator from "../components/molecules/SectionSeperator";
 import Footer from "../components/organisms/Footer";
-import LegalContainer from "../components/organisms/LegalContainer";
 import TermsContainer from "../components/organisms/TermsContainer";
 import MetaTag from "../components/atoms/MetaTag";
 

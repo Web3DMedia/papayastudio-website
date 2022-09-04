@@ -1,6 +1,4 @@
 import ActivityCard from "../molecules/ActivityCard";
-import AOS from "aos";
-import { useEffect } from "react";
 import styled from "styled-components";
 import BgTransfromation from "../atoms/BgTransfromation";
 
@@ -12,15 +10,6 @@ interface IProps {
 
 
 const CreateSection = ({ myRefTwo, isTwo }: IProps) => {
-
-  useEffect(() => {
-    AOS.init({
-      offset: 120,
-      delay: 0,
-      duration: 1500,
-    });
-  });
-
 
   const activityData = [
     {

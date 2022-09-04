@@ -113,6 +113,11 @@ body {
 
 }
 
-.grecaptcha-badge {
-   visibility: hidden;
+.container-snap {
+   overflow: hidden;
+}
+
+.container-snap {
+   -ms-overflow-style: none;
+   scrollbar-width: none;
 }

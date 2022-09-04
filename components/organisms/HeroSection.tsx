@@ -1,7 +1,6 @@
 import { BtnSpan, TextSpan } from "../../styles/HeroStyles";
 import Image from "next/image";
-import { MdKeyboardArrowRight } from "react-icons/md";
-import { Element, Link as BtnLink } from "react-scroll";
+import { Link as BtnLink } from "react-scroll";
 import styled, { keyframes } from "styled-components";
 import { useState, useEffect } from "react";
 import BgTransfromation from "../atoms/BgTransfromation";
@@ -34,7 +33,7 @@ const HeroSection = ({ myRefOne }: IProps) => {
     return () => {
       clearInterval(interval);
     };
-  }, []);
+  }, [mascot]);
 
   const papayamascots = [
     {
@@ -200,7 +199,7 @@ const HeroSection = ({ myRefOne }: IProps) => {
               )}
             </span>
             <div className="pl-5 md:pl-14 lg:pl-20 xl:pl-32 4xl:pl-40 md:mt-[18px] sm:mt-[16px] xl:mt-[20px]">
-              <p className="md:w-11/12 lg:max-w-[550px] xl:pl-16 3xl:pl-0 xl:max-w-[600px] 4xl:max-w-[780px] text-[16px] sm:text-[18px] lg:text-[20px] xl:text-[24px] font-normal text-backboneText leading-[30px] px-2 pt-9 sm:pt-0">
+              <p className="md:w-11/12 lg:max-w-[550px] xl:pl-16 3xl:pl-0 xl:max-w-[800px] 4xl:max-w-[780px] text-[16px] sm:text-[18px] lg:text-[20px] xl:text-[24px] font-normal text-backboneText leading-[30px] px-2 pt-9 sm:pt-0">
                 At Papayas studios we are at the forefront of digital content creation creating stories and experiences for every aspect of web2 and web3 designs.
               </p>
               {/*@ts-ignore */}
@@ -219,7 +218,7 @@ const HeroSection = ({ myRefOne }: IProps) => {
 
           {papayamascots.map((papayamascot, index) => {
             return (index + 1) == mascot &&
-              <div className="relative top-2 -right-4 sm:-right-14 md:absolute bg-transparent md:-top-20 lg:-top-2 md:-right-[270px] lg:-right-96 xl:-top-4 xl:-right-36 2xl:-right-48 4xl:-right-80 w-[400px] h-[400px] sm:h-[500px] sm:w-[500px] lg:h-[700px] lg:w-[600px] 4xl:w-[600px] 4xl:h-[700px]">
+              <div className="relative top-2 -right-4 sm:-right-14 md:absolute bg-transparent md:-top-20 lg:-top-2 md:-right-[270px] lg:-right-96 xl:-top-4 xl:-right-36 2xl:-right-48 4xl:-right-80 w-[400px] h-[400px] sm:h-[500px] sm:w-[500px] lg:h-[700px] lg:w-[600px] 4xl:w-[600px] 4xl:h-[700px]" key={index}>
                 <div className={index + 1 === 2 ? "xl:mt-10" : ""}>
                   <Image
                     key={index}
@@ -349,37 +348,5 @@ const interChangeTwo = keyframes`
   100% {
     transform: translateX(-50%);
   }
-`
-const BgTransformationOne = styled.div`
-   width: 100%;
-   height: 100%;
-   z-index: -1;
-   position: absolute;
-   top: 0;
-   left: 0;
-   display: flex;
-`
-
-const BgTransformationOneLeft = styled.div`
-     height: 100%;
-   width: 100%;
-   background-image: url('/assets/orang-hero-section-min.png');
-   background-position: left center;
-   background-repeat: no-repeat;
-   background-size: cover;
-   filter: blur(172px);
-   animation: ${interChangeOne} 4s ease-in-out infinite;
-   border-radius: 70% 68% 48% 48% / 28% 28% 72% 72%;
-`
-
-const BgTransformationOneRight = styled.div`
-    height: 100%;
-   width: 100%;
-   background-image: url('/assets/blue-hero-section-min.png');
-   background-position: right center;
-   background-repeat: no-repeat;
-   background-size: cover;
-   filter: blur(56px);
-   animation: ${interChangeTwo} 4s ease-in-out infinite;
 `
 export default HeroSection;

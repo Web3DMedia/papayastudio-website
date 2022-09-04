@@ -3,20 +3,22 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
-import styled, { keyframes } from 'styled-components'
+import styled from 'styled-components'
 import BgTransfromation from '../atoms/BgTransfromation'
 
-
-import SectionHeader from '../atoms/SectionHeader'
-import data from '../molecules/BackBone'
+import data from '../../data/BackBone'
 import SectionSeperator from '../molecules/SectionSeperator'
 import Slider from '../molecules/Slider'
 
 const Div = styled.div`
-
+`
+const FirstText = styled.h1`
+font-weight: 400;
+font-size: 12px;
+line-height: 130%;
 `
 const SecondText = styled.h2`
-font-weight: 600;
+font-weight: 500;
 font-size: 48px;
 line-height: 111%;
 letter-spacing: -0.03em;
@@ -103,7 +105,7 @@ const BackBoneSection = ({ myRefFive, isFive }: IProps) => {
       </div>
 
       <div className='2xl:w-[1440px] m-auto' ref={myRefFive}>
-        <SectionHeader data-aos="fade-up">THE <br />BACKBONE</SectionHeader>
+        <FirstText className='pt-24 pl-5 md:pl-14 lg:pl-20 pb-12 text-backboneText' > THE <br />  BACKBONE</FirstText>
 
         <SecondText className='pl-6 md:pl-20 xl:pl-40 text-backboneText' data-aos="fade-up">Meet The Super Heroes Shaping The Web3 &amp; Blockchain ecosystem</SecondText>
 
