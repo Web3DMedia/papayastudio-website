@@ -7,7 +7,7 @@ import BgTransfromation from '../atoms/BgTransfromation'
 const LoadingContainer = styled.div`
 height:100vh;
 width:100%;
-position:relative;
+position:fixed;
 z-index:400;
 background:white;
 overflow:hidden;

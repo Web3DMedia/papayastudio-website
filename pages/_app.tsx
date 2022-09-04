@@ -7,6 +7,7 @@ import "aos/dist/aos.css";
 // @ts-ignore
 import { ThemeProvider } from "@wigxel/react-components";
 import Head from "next/head";
+import LoadingScreen from "../components/molecules/LoadingScreen";
 
 // import { GoogleReCaptchaProvider } from "react-google-recaptcha-v3";
 // import { useRouter } from 'next/router';
@@ -15,7 +16,7 @@ import Head from "next/head";
 // This default export is required in a new `pages/_app.js` file.
 export default function MyApp({ Component, pageProps }) {
   // const router = useRouter();
-  // const [pageLoading, setPageLoading] = React.useState<boolean>(false);
+  const [pageLoading, setPageLoading] = React.useState<boolean>(false);
   // React.useEffect(() => {
   //   const handleStart = (url) => {
   //     url !== router.pathname ? setPageLoading(true) : setPageLoading(true)
@@ -28,13 +29,14 @@ export default function MyApp({ Component, pageProps }) {
   //   router.events.on('routeChangeComplete', handleComplete);
   //   router.events.on('routeChangeError', handleComplete);
   // }, [router]);
-  // // useEffect(() => {
-  // //   setPageLoading(true);
-
-  // //   setTimeout(() => {
-  // //     setPageLoading(false);
-  // //   }, 5500);
-  // // }, []);
+  useEffect(() => {
+    setPageLoading(true);
+    document.body.style.overflow = "hidden";
+    setTimeout(() => {
+      setPageLoading(false);
+      document.body.style.overflow = "visible";
+    }, 5500);
+  }, []);
 
   useEffect(() => {
     AOS.init({
@@ -68,6 +70,8 @@ export default function MyApp({ Component, pageProps }) {
         </GoogleReCaptchaProvider>
       // } */}
       <>
+        {pageLoading &&
+          <LoadingScreen></LoadingScreen>}
         <ThemeProvider theme={Theme}>
           <Component {...pageProps} />
         </ThemeProvider>
