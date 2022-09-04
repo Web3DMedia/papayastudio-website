@@ -48,7 +48,7 @@ const LoadingScreen = () => {
         if (textNumber <= 6) {
             const interval = setInterval(() => {
                 setTextNumber(textNumber + 1)
-            }, 1000)
+            }, 1500)
             return () => clearInterval(interval)
         } else {
             setTextNumber(1)

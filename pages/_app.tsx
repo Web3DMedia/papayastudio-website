@@ -35,7 +35,7 @@ export default function MyApp({ Component, pageProps }) {
     setTimeout(() => {
       setPageLoading(false);
       document.body.style.overflow = "visible";
-    }, 5500);
+    }, 7500);
   }, []);
 
   useEffect(() => {
