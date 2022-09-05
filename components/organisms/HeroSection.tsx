@@ -200,7 +200,7 @@ const HeroSection = ({ myRefOne }: IProps) => {
             </span>
             <div className="pl-5 md:pl-14 lg:pl-20 xl:pl-32 4xl:pl-40 md:mt-[18px] sm:mt-[16px] xl:mt-[20px]">
               <p className="md:w-11/12 lg:max-w-[550px] xl:pl-16 3xl:pl-0 xl:max-w-[800px] 4xl:max-w-[780px] text-[16px] sm:text-[18px] lg:text-[20px] xl:text-[24px] font-normal text-backboneText leading-[30px] px-2 pt-9 sm:pt-0">
-                At Papayas studios we are at the forefront of digital content creation creating stories and experiences for every aspect of web2 and web3 designs.
+                At Papayas studios we are at the forefront of digital content creation, creating stories and experiences for every aspect of web2 and web3 designs.
               </p>
               {/*@ts-ignore */}
               <BtnLink

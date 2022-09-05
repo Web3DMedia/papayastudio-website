@@ -34,7 +34,7 @@ const Home = () => {
     const observer = new IntersectionObserver((entries, observer) => {
       const entry = entries[0];
       setIsOne(entry.isIntersecting)
-    })
+    }, { threshold: 0.9 })
 
     observer.observe(myRefOne.current)
   })
@@ -43,16 +43,16 @@ const Home = () => {
     const observer = new IntersectionObserver((entries, observer) => {
       const entry = entries[0];
       setIsTwo(entry.isIntersecting)
-    })
+    }, { threshold: 0.7 })
 
-    observer.observe(myRefTwo.current)
-  })
+    observer.observe(myRefTwo.current) })
 
   useEffect(() => {
     const observer = new IntersectionObserver((entries, observer) => {
       const entry = entries[0];
       setIsThree(entry.isIntersecting)
-    })
+    }, { threshold: 0.7 }
+)
 
     observer.observe(myRefThree.current)
   })
@@ -61,7 +61,8 @@ const Home = () => {
     const observer = new IntersectionObserver((entries, observer) => {
       const entry = entries[0];
       setIsFour(entry.isIntersecting)
-    })
+    }
+)
 
     observer.observe(myRefFour.current)
   })
@@ -70,7 +71,8 @@ const Home = () => {
     const observer = new IntersectionObserver((entries, observer) => {
       const entry = entries[0];
       setIsFive(entry.isIntersecting)
-    })
+    }
+)
 
     observer.observe(myRefFive.current)
   })

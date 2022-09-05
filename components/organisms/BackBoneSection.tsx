@@ -97,17 +97,17 @@ interface IProps {
 }
 const BackBoneSection = ({ myRefFive, isFive }: IProps) => {
   return (
-    <Div className='relative'>
+    <Div className='relative' ref={myRefFive}>
       <BgTransfromation></BgTransfromation>
       <div className="mx-1 h-[150px] absolute top-24 left-7 hidden lg:block ">
         <TrackerOutter isFive={isFive} />
         <TrackerInner />
       </div>
 
-      <div className='2xl:w-[1440px] m-auto' ref={myRefFive}>
+      <div className='2xl:w-[1440px] m-auto'>
         <FirstText className='pt-24 pl-5 md:pl-14 lg:pl-20 pb-12 text-backboneText' > THE <br />  BACKBONE</FirstText>
 
-        <SecondText className='pl-6 md:pl-20 xl:pl-40 text-backboneText' data-aos="fade-up">Meet The Super Heroes Shaping The Web3 &amp; Blockchain ecosystem</SecondText>
+        <SecondText className='pl-6 md:pl-20 xl:pl-40 text-backboneText' data-aos="fade-up">Meet The Super Heroes</SecondText>
 
         <Person className='flex pt-12 xl:pt-20 pl-5 md:pl-14 lg:pl-20 xl:pl-40 overflow-x-scroll pb-24' data-aos="fade-up">
           {data.map(person => {
@@ -149,19 +149,6 @@ const BackBoneSection = ({ myRefFive, isFive }: IProps) => {
           <Img loading="lazy" src='/assets/polygon.png' alt="polygon" />
 
           <Img loading="lazy" src='/assets/polygon-studios.png' alt="polygon" />
-
-          <Img loading="lazy" src='/assets/polygon.png' alt="polygon" />
-
-
-          <Img loading="lazy" src='/assets/polygon-studios.png' alt="polygon" />
-
-
-          <Img loading="lazy" src='/assets/polygon.png' alt="polygon" />
-
-
-          <Img loading="lazy" src='/assets/polygon-studios.png' alt="polygon" />
-
-
         </PartnerContainer>
 
         <Slider></Slider>

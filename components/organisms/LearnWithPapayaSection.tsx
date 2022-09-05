@@ -348,14 +348,14 @@ const LearnWithPapayaSection = ({ setIsModal, myRefFour, isFour }: IProps) => {
         setIsModal(true)
     }
     return (
-        <LearnWithPapayaContainer>
+        <LearnWithPapayaContainer ref={myRefFour}>
 
             <div className='font-heading relative'>
                 <div className="mx-1 h-[150px] absolute top-24 left-7 hidden lg:block ">
                     <TrackerOutter isFour={isFour} />
                     <TrackerInner />
                 </div>
-                <div className='2xl:w-[1440px] m-auto' ref={myRefFour} data-aos="fade-right">
+                <div className='2xl:w-[1440px] m-auto' data-aos="fade-right">
                     <FirstText className='pt-24 pl-5 md:pl-14 lg:pl-20 pb-12 text-primary3' >LEARN <br />  WITH PAPAYAS</FirstText>
 
                     <SecondText className='pl-5 md:pl-14 lg:pl-20 xl:pl-40 text-learnpapayatext'>Join Our Learning Academy</SecondText>

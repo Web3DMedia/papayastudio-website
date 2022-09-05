@@ -18,7 +18,7 @@ const CreateSection = ({ myRefTwo, isTwo }: IProps) => {
     },
     {
       name: "3D Animations",
-      text: "We create 3D animations that are forging the future of community-driven edutainment.",
+      text: "We create 3D animations that drive education and entertainment in the design and media space.",
     },
 
     {
@@ -42,13 +42,14 @@ const CreateSection = ({ myRefTwo, isTwo }: IProps) => {
     <section
       className="relative w-full py-28 md:py-32  xl:py-48 4xl:pt-36"
       id="WhatWeDo"
+      ref={myRefTwo}
     >
       <BgTransfromation></BgTransfromation>
       <div className="mx-1 h-[150px] absolute top-20 left-7 hidden lg:block ">
         <TrackerOutter isTwo={isTwo} />
         <TrackerInner />
       </div>
-      <div className="2xl:w-[1440px] m-auto" ref={myRefTwo}>
+      <div className="2xl:w-[1440px] m-auto">
         <div className="pt-[74px] sm:pt-0 relative w-full h-full mx-auto md:px-0 lg:px-20 xl:px-40 4xl:py-20">
           <p
             className=" absolute left-5 md:left-14 -top-[20px] sm:-top-[60px] lg:left-20 xl:left-[80px] md:-top-[50px] xl:-top-[115px] 4xl:-top-16 4xl:left-20 font-normal text-xs uppercase"
