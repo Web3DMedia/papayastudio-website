@@ -64,7 +64,7 @@ const ContactForm = () => {
   };
 
   return (
-    <FormContainer className="bg-white md:w-[600px]  xl:w-[650px] mds:h-[680px] px-4 sm:px-10 py-5 rounded-t-[32px]">
+    <FormContainer className="bg-white md:w-[600px]  xl:w-[650px] px-4 sm:px-10 py-5 rounded-t-[32px]">
       {messageIsSent === false && (
         <div>
           <div className="text-left">

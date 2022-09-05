@@ -30,7 +30,7 @@ import MessageSent from "../../public/assets/tick.png";
 interface IProps {
   setmessageIsSent: Dispatch<SetStateAction<boolean>>;
   isModal: boolean;
-  setIsModal: Dispatch<SetStateAction<boolean>>;
+  setIsModal?: Dispatch<SetStateAction<boolean>>;
 }
 
 const MessageConfirmation = ({ setmessageIsSent, isModal, setIsModal }: IProps) => {
@@ -38,10 +38,10 @@ const MessageConfirmation = ({ setmessageIsSent, isModal, setIsModal }: IProps) 
   const CloseModal = () => {
     document.body.style.overflow = "visible";
     setmessageIsSent(false)
-    setIsModal(false)
+    isModal && setIsModal(false)
   }
   return (
-    <div className={isModal ? "bg-white w-[340px] sm:w-[664px] px-4 sm:px-16 py-10 rounded-[32px] z-20 fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" : "bg-white w-[330px] sm:w-[664px] px-4 sm:px-16 py-10 rounded-[32px] z-20"}>
+    <div className={isModal ? "bg-white w-[340px] sm:w-[664px] px-4 sm:px-16 py-10 rounded-[32px] z-20 fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" : "bg-white w-[330px] sm:w-[600px] px-4 sm:px-16 py-10 rounded-[32px] z-20 -mt-5"}>
       <div className="text-center">
         <div
           className="flex justify-end pt-[20px] lg:pt-[25px] pb-[35px] md:pt-[20px] pr-[15px] sm:pr-[0px]"
