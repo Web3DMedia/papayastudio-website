@@ -219,7 +219,7 @@ const HeroSection = ({ myRefOne }: IProps) => {
           {papayamascots.map((papayamascot, index) => {
             return (index + 1) == mascot &&
               <div className="relative top-2 -right-4 sm:-right-14 md:absolute bg-transparent md:-top-20 lg:-top-2 md:-right-[270px] lg:-right-96 xl:-top-4 xl:-right-36 2xl:-right-48 4xl:-right-80 w-[400px] h-[400px] sm:h-[500px] sm:w-[500px] lg:h-[700px] lg:w-[600px] 4xl:w-[600px] 4xl:h-[700px]" key={index}>
-                <div className={index + 1 === 2 ? "xl:mt-10" : ""}>
+                <div className={index + 1 === 2 ? "mt-0 w-[375px] sm:w-full xl:mt-10" : ""}>
                   <Image
                     key={index}
                     src={papayamascot.image}
@@ -306,47 +306,4 @@ const SpanFour = styled.span`
   animation-delay: 0s;
   animation-duration: 1s;
 `;
-const interChangeOne = keyframes`
-  0% {
-    transform: translateX(50%);
-  }
-
-  25% {
-    transform: translateX(100%);
-  }
-
-  50% {
-    transform: translateX(50%);
-  }
-
-  75% {
-    transform: translateX(0%);
-  }
-
-  100% {
-    transform: translateX(50%);
-  }
-`
-
-const interChangeTwo = keyframes`
-  0% {
-    transform: translateX(-50%);
-  }
-
-  25% {
-    transform: translateX(-100%);
-  }
-
-  50% {
-    transform: translateX(-50%);
-  }
-
-  75% {
-    transform: translateX(0%);
-  }
-
-  100% {
-    transform: translateX(-50%);
-  }
-`
 export default HeroSection;
