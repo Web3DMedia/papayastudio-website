@@ -87,7 +87,7 @@ const ProductsSection = ({ myRefThree, isThree }: IProps) => {
     <section>
       {/*@ts-ignore */}
       <Element
-        id="OurProuducts"
+        id="OurWorks"
         name="productsSection"
         className="relative w-full py-28 md:py-32 xl:py-48 4xl:pt-36"
       >
