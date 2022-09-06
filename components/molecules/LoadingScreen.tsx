@@ -70,7 +70,7 @@ const LoadingScreen = () => {
 
                 <BgTransfromation></BgTransfromation>
                 <div className='flex justify-between items-center relative'>
-                    <div className='mt-2 xl:-mt-0 hidden lg:block' >
+                    <div className='mt-6 xl:-mt-0 hidden sm:block' >
                         <Image
                             src="/assets/papina.png"
                             width={274}
@@ -81,18 +81,29 @@ const LoadingScreen = () => {
                         />
                     </div>
                     <div
-                        className='xl:-ml-44 -ml-36 xl:-mt-14 -mt-10'>
+                        className='xl:-ml-44 sm:-ml-48 -ml-64 xl:-mt-14 -mt-10 block xl:hidden'>
                         <Image
                             src="/assets/lazer-left.svg"
                             width={450}
+                            height={59}
+                            alt="paptio"
+                            objectFit="contain"
+                            objectPosition="top"
+                        />
+                    </div>
+                    <div
+                        className='xl:-ml-28 -ml-36 xl:-mt-12 -mt-10 hidden xl:block'>
+                        <Image
+                            src="/assets/left-large.svg"
+                            width={525}
                             height={79}
                             alt="paptio"
                             objectFit="contain"
                             objectPosition="top"
                         />
                     </div>
-                    <Counter className='-mt-12 xl:-mx-56 -mx-48'>
-                        <div className="flex w-auto items-center justify-center py-[20px] md:py-[15px] xl:py-[25px]">
+                    <Counter className='-mt-12 lg:-mx-56 sm:-mx-[210px] -mx-[229px]'>
+                        <div className="flex w-auto items-center justify-center  py-[15px] sm:py-[11px] md:py-[15px] xl:py-[22px]">
                             <h4 className="text-[20px]">{textNumber === 1 ? '01' : textNumber === 2 ? '02' : textNumber === 3 ? '03' : textNumber === 4 ? '04' : textNumber === 5 ? '05' : '01'}</h4>
                             <div className="relative mx-4">
                                 <TrackerOutter textNumber={textNumber} />
@@ -102,21 +113,32 @@ const LoadingScreen = () => {
                         </div>
                     </Counter>
                     <div
-                        className='xl:-mr-44 -mr-36 xl:-mt-14 -mt-10'>
+                        className='xl:-mr-28 xl:-mt-12 -mt-10 hidden xl:block'>
                         <Image
-                            src="/assets/lazer-right.svg"
-                            width={450}
+                            src="/assets/right-large.svg"
+                            width={525}
                             height={79}
                             alt="paptio"
                             objectFit="contain"
                             objectPosition="top"
                         />
                     </div>
-                    <div className='mt-2 xl:-mt-0 hidden lg:block'>
+                    <div
+                        className='xl:-mr-44 sm:-mr-48 -mr-64 xl:-mt-14 -mt-10  block xl:hidden'>
+                        <Image
+                            src="/assets/lazer-right.svg"
+                            width={450}
+                            height={59}
+                            alt="paptio"
+                            objectFit="contain"
+                            objectPosition="top"
+                        />
+                    </div>
+                    <div className='mt-6 xl:-mt-0 hidden sm:block'>
                         <Image
                             src="/assets/papito.png"
-                            width={274}
-                            height={274}
+                            width={254}
+                            height={254}
                             alt="paptio"
                             objectFit="contain"
                             objectPosition="top"
