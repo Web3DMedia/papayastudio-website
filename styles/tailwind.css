@@ -1,5 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
 @tailwind base;
 
 @tailwind components;
 
 @tailwind utilities;
+
+:root {
+   --Main: #FF6EFF;
+   --Secondary: #0AB7F6;
+   --GradientOne: linear-gradient(98.41deg, #23262E 0%, #FF706B 100%);
+   --GradientTwo: linear-gradient(98.41deg, #FF6661 0%, #FCD1CA 100%);
+   --PrimaryOne: #FF6661;
+   --PrimaryTwo: #FF9D8D;
+   --PrimaryThree: #FCD1CA;
+   --LearnPapayaText: #F9FAFB;
+   --LearnPapayaText2: #9CA3AF;
+   --BackboneText: #23262E;
+   --BackboneText1: #555555;
+   --FooterBg: #131313;
+   --FooterText: #9CA3AF;
+   --FooterText2: #C4C4C4;
+   --FooterText3: #FFFFFF;
+   --MessageSent: #002F31;
+   --MessageSentTwo: #4A5567;
+}
+
+html {
+   scroll-behavior: smooth;
+}
+
+label,
+input,
+button {
+   @apply cursor-default;
+}
+
+body {
+   font-family: 'DM Sans', sans-serif;
+   @apply cursor-default;
+}
+
+@keyframes interChangeOne {
+   0% {
+      transform: translateX(50%);
+   }
+
+   25% {
+      transform: translateX(100%)
+   }
+
+   50% {
+      transform: translateX(50%)
+   }
+
+   75% {
+      transform: translateX(0%);
+   }
+
+   100% {
+      transform: translateX(50%);
+   }
+}
+
+@keyframes interChangeTwo {
+   0% {
+      transform: translateX(-50%);
+   }
+
+   25% {
+      transform: translateX(-100%)
+   }
+
+   50% {
+      transform: translateX(-50%)
+   }
+
+   75% {
+      transform: translateX(0%);
+   }
+
+   100% {
+      transform: translateX(-50%);
+   }
+}
+
+.cardsContainer::-webkit-scrollbar,
+.productCards::-webkit-scrollbar {
+   display: none;
+}
+
+
+.customInfoWrapper::-webkit-scrollbar {
+   width: 10px !important;
+
+}
+
+.customInfoWrapper::-webkit-scrollbar-button {
+   height: 100px !important;
+   max-height: 100px !important;
+   margin: auto;
+}
+
+.customInfoWrapper::-webkit-scrollbar-track {
+   background: #E5E7EB !important;
+   border-radius: 50px !important;
+
+}
+
+.customInfoWrapper::-webkit-scrollbar-thumb {
+   background: #9BA8AF !important;
+   border-radius: 50px !important;
+
+}
+
+.container-snap {
+   overflow: hidden;
+}
+
+.container-snap {
+   -ms-overflow-style: none;
+   scrollbar-width: none;
+}
