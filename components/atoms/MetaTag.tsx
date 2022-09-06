@@ -7,7 +7,7 @@ const MetaTag = ({ tagName }: IProps) => {
     return (
         <>
             <Head>
-                <title>Papayas studio {tagName}</title>
+                <title>Papayas Studio {tagName}</title>
                 <meta
                     name="description"
                     content="At Papayas studios we are at the forefront of digital content creation creating stories and experiences for every aspect of web2 and web3 designs." />
