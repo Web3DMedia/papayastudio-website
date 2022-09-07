@@ -87,6 +87,7 @@ const ContactForm = () => {
                 className="h-[50px] sm:h-[56px] mb-2 text-[14px] md:text-[16px]"
                 name="userMail"
                 value={userMail}
+                type="email"
                 onChange={(e) => setUserMail(e.target.value)}
                 placeholder="Enter your email"
               />
