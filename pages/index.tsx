@@ -84,7 +84,7 @@ const Home = () => {
   return (
     <div className="font-body">
       <MetaTag tagName='Home' />
-      <main className="w-full relative h-full overflow-hidden">
+      <main className="w-full relative h-full overflow-hidden" onClick={() => isModal && setIsModal(false)}>
         {isModal ? "" : <Navbar setIsMenuOpen={setIsMenuOpen} isOne={isOne} isTwo={isTwo} isThree={isThree} change={change} />}
         <Menubar isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} isOne={isOne} isTwo={isTwo} isThree={isThree} />
 
