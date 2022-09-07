@@ -166,9 +166,9 @@ const Modal = ({ setIsModal, isModal }: IProps) => {
       )}
       {/*@ts-ignore */}
       {messageIsSent === true && <MessageConfirmationTwo setmessageIsSent={setmessageIsSent} isModal={isModal} setIsModal={setIsModal}></MessageConfirmationTwo>}
-      <Script
+      {/* <Script
         src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" strategy="beforeInteractive"
-      />
+      /> */}
     </FormContainer>
   );
 };
