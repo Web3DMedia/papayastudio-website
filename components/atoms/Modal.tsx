@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import React, { useState, SetStateAction, Dispatch, useCallback } from 'react'
 import styled from 'styled-components';
-import MessageConfirmation from '../molecules/MessageConfirmation';
+import MessageConfirmationTwo from '../molecules/MessageConfirmationTwo';
 import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
 import Script from 'next/script';
 import axios from 'axios';
@@ -111,7 +111,7 @@ const Modal = ({ setIsModal, isModal }: IProps) => {
               <h2 className="text-[#002F31] text-[30px] md:text-[40px] font-bold leading-[46px]">
                 Join our Waitlist
               </h2>
-              <p className="text-[#4A5567] text-[16px] font-normal leading-[16px] pt-5 w-full md:w-10/12">
+              <p className="text-[#4A5567] text-[16px] font-normal leading-[24px] pt-5 w-full md:w-10/12">
                 Be on our waitlist to get to be the first to enroll when we start
                 the academy, only limited slots available
               </p>
@@ -145,6 +145,7 @@ const Modal = ({ setIsModal, isModal }: IProps) => {
                   className="h-[50px] sm:h-[56px] text-[14px] md:text-[16px]"
                   name="userMail"
                   value={userMail}
+                  type="email"
                   onChange={(e) => setUserMail(e.target.value)}
                   placeholder="Enter your email"
                 />
@@ -157,17 +158,17 @@ const Modal = ({ setIsModal, isModal }: IProps) => {
                 type="submit"
                 className="mt-[24px] bg-[#FF6661] w-full md:w-[204px] cursor-dark py-3 md:py-5 text-[#FFFFFF] font-bold text-[16px] rounded-xl"
               >
-                Send Message
+              Join Waitlist
               </button>
             </form>
           </div>
         </div>
       )}
       {/*@ts-ignore */}
-      {messageIsSent === true && <MessageConfirmation setmessageIsSent={setmessageIsSent} isModal={isModal} setIsModal={setIsModal}></MessageConfirmation>}
-      <Script
+      {messageIsSent === true && <MessageConfirmationTwo setmessageIsSent={setmessageIsSent} isModal={isModal} setIsModal={setIsModal}></MessageConfirmationTwo>}
+      {/* <Script
         src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" strategy="beforeInteractive"
-      />
+      /> */}
     </FormContainer>
   );
 };
