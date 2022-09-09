@@ -59,7 +59,7 @@ const MessageConfirmationTwo = ({ setmessageIsSent, isModal, setIsModal }: IProp
         {/*@ts-ignore */}
         {/* {hide === false && <Player src={MessageConfirmed} background="transparent" style={{ width: "120px", height: "120px" }} autoplay speed={1} keepLastFrame></Player>} */}
         <TextParagraph className={isModal ? "pt-8" : ""}>
-<div>Thank you <br/> You have been added to waitlist</div>
+<div>Thank you <br/> You have been added to our waitlist</div>
           
         </TextParagraph>
       </div>
