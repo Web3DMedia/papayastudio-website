@@ -15,13 +15,6 @@ const data = [
         image: '/assets/backbone21.jpeg',
         linkedin: 'https://www.linkedin.com/in/okwu-kinikachi/'
     },
-    {
-        id: 3,
-        title: 'PM',
-        name: 'Ella Chikezie',
-        image: '/assets/backbone31.jpeg',
-        linkedin: 'https://www.linkedin.com/in/ella-chikezie-956b5bb6/'
-    },
 ]
 
 export default data
