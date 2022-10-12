@@ -51,13 +51,14 @@ const MessageConfirmation = ({ setmessageIsSent, isModal, setIsModal }: IProps) 
             width={100}
             height={100}
             objectFit="contain"
+            alt="tick"
           ></Image></div>}
         {/*@ts-ignore */}
         {/* {hide === false && <Player src={MessageConfirmed} background="transparent" style={{ width: "120px", height: "120px" }} autoplay speed={1} keepLastFrame></Player>} */}
 
         <TextHeader>Message sent</TextHeader>
         <TextParagraph>
-          We’ve recieved your message and will be intouch, in the meantime,
+          We’ve recieved your message and will be in touch, in the meantime,
           checkout our design assets market place,{" "}
           <Link href="https://blocasset.com/">
             <a target="_blank" className="text-primary1">

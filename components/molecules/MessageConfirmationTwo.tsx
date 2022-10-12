@@ -55,6 +55,7 @@ const MessageConfirmationTwo = ({ setmessageIsSent, isModal, setIsModal }: IProp
             width={100}
             height={100}
             objectFit="contain"
+            alt="tick"
           ></Image></div>}
         {/*@ts-ignore */}
         {/* {hide === false && <Player src={MessageConfirmed} background="transparent" style={{ width: "120px", height: "120px" }} autoplay speed={1} keepLastFrame></Player>} */}
