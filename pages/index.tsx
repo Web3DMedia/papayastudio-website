@@ -45,14 +45,15 @@ const Home = () => {
       setIsTwo(entry.isIntersecting)
     }, { threshold: 0.7 })
 
-    observer.observe(myRefTwo.current) })
+    observer.observe(myRefTwo.current)
+  })
 
   useEffect(() => {
     const observer = new IntersectionObserver((entries, observer) => {
       const entry = entries[0];
       setIsThree(entry.isIntersecting)
     }, { threshold: 0.7 }
-)
+    )
 
     observer.observe(myRefThree.current)
   })
@@ -62,7 +63,7 @@ const Home = () => {
       const entry = entries[0];
       setIsFour(entry.isIntersecting)
     }
-)
+    )
 
     observer.observe(myRefFour.current)
   })
@@ -72,7 +73,7 @@ const Home = () => {
       const entry = entries[0];
       setIsFive(entry.isIntersecting)
     }
-)
+    )
 
     observer.observe(myRefFive.current)
   })
@@ -83,7 +84,7 @@ const Home = () => {
 
   return (
     <div className="font-body">
-      <MetaTag tagName='Home' />
+      <MetaTag title='Home' />
       <main className="w-full relative h-full overflow-hidden">
         {isModal ? "" : <Navbar setIsMenuOpen={setIsMenuOpen} isOne={isOne} isTwo={isTwo} isThree={isThree} change={change} />}
         <Menubar isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} isOne={isOne} isTwo={isTwo} isThree={isThree} />

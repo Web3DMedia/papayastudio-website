@@ -27,6 +27,7 @@ export default class MyDocument extends Document {
           {/* eslint-disable-next-line @next/next/no-css-tags */}
           {/* @ts-ignore */}
           {this.props.styleTags}
+          <link rel="icon" href="/favicon.ico" />
         </Head>
         <body>
           <Main />

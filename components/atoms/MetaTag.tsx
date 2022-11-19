@@ -1,36 +1,72 @@
-import Head from 'next/head'
+import Head from "next/head";
+import React, { FC } from "react";
 
-interface IProps {
-    tagName: string
+interface MetaTagProps {
+    title?: string;
+    desc?: string;
+    image?: string;
 }
-const MetaTag = ({ tagName }: IProps) => {
+
+const MetaTag: FC<MetaTagProps> = ({ title, desc, image }) => {
     return (
         <>
             <Head>
-                <title>Papayas Studio {tagName}</title>
+                <title> {title ? `${title} - ` : ""} Papayas Studio </title>
+                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
                 <meta
                     name="description"
-                    content="At Papayas studios we are at the forefront of digital content creation creating stories and experiences for every aspect of web2 and web3 designs." />
-                <link rel="icon" href="https://staging.papayas.studio//assets/logo.svg" />
+                    content={
+                        desc ??
+                        "At Papayas studios we are at the forefront of digital content creation."
+                    }
+                />
+                {/*  */}
+                <meta property="og:type" content="website" />
+                <meta property="og:url" content="https://papayas.studio/" />
+                <meta
+                    property="og:title"
+                    content={`${title ? `${title} - ` : ""} Papayas Studio`}
+                />
+                <meta
+                    property="og:description"
+                    content={
+                        desc ??
+                        "At Papayas studios we are at the forefront of digital content creation."
+                    }
+                />
+                <meta
+                    property="og:image"
+                    content={
+                        image ??
+                        "https://res.cloudinary.com/dqew5naa7/image/upload/v1668876482/papayas-studio-logo_xov8jz.png"
+                    }
+                />
 
-                <meta name="title" content="At Papayas studios we are at the forefront of digital content creation."></meta>
-                <meta name="description" content="Creating stories and experiences for every aspect of web2 and web3 designs."></meta>
-
-                <meta property="og:type" content="website"></meta>
-                <meta property="og:url" content="https://staging.papayas.studio/"></meta>
-                <meta property="og:title" content="At Papayas studios we are at the forefront of digital content creation."></meta>
-                <meta property="og:description" content="Creating stories and experiences for every aspect of web2 and web3 designs."></meta>
-                <meta property="og:image" content="https://staging.papayas.studio//assets/papayas-studio-logo.png"></meta>
-
-
-                <meta property="twitter:card" content="summary_large_image"></meta>
-                <meta property="twitter:url" content="https://staging.papayas.studio/"></meta>
-                <meta property="twitter:title" content="At Papayas studios we are at the forefront of digital content creation."></meta>
-                <meta property="twitter:description" content="Creating stories and experiences for every aspect of web2 and web3 designs."></meta>
-                <meta property="twitter:image" content="https://staging.papayas.studio//assets/papayas-studio-logo.png"></meta>
+                <meta name="twitter:type" content="website" />
+                <meta name="twitter:site" content="@studiopapayas" />
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:url" content="https://papayas.studio/" />
+                <meta
+                    name="twitter:title"
+                    content={`${title ? `${title} - ` : ""} Papayas Studio`}
+                />
+                <meta
+                    name="twitter:description"
+                    content={
+                        desc ??
+                        "At Papayas studios we are at the forefront of digital content creation."
+                    }
+                />
+                <meta
+                    name="twitter:image"
+                    content={
+                        image ??
+                        "https://res.cloudinary.com/dqew5naa7/image/upload/v1668876482/papayas-studio-logo_xov8jz.png"
+                    }
+                ></meta>
             </Head>
         </>
-    )
-}
+    );
+};
 
-export default MetaTag
+export default MetaTag;
