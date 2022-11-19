@@ -10,7 +10,7 @@ const Terms = () => {
    const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false)
    return (
       <div>
-         <MetaTag tagName='Terms & Condition' />
+         <MetaTag title='Terms & Condition' />
          <main className="w-full relative overflow-hidden">
             {/*@ts-ignore */}
             <Navbar setIsMenuOpen={setIsMenuOpen} />

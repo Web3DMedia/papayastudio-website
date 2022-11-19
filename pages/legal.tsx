@@ -11,7 +11,7 @@ const Legal = () => {
    return (
       <div>
 
-         <MetaTag tagName='Legal' />
+         <MetaTag title='Legal' />
          <main className="w-full relative overflow-hidden">
             {/*@ts-ignore */}
             <Navbar setIsMenuOpen={setIsMenuOpen} />

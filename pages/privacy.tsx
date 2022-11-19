@@ -10,7 +10,7 @@ const Privacy = () => {
    const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false)
    return (
       <div>
-         <MetaTag tagName='Privacy Policy' />
+         <MetaTag title='Privacy Policy' />
          <main className="w-full relative overflow-hidden">
             {/*@ts-ignore */}
             <Navbar setIsMenuOpen={setIsMenuOpen} />
