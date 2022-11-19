@@ -11,7 +11,7 @@ const Cookie = () => {
    return (
       <div>
 
-         <MetaTag tagName='Cookie Policy' />
+         <MetaTag title='Cookie Policy' />
          <main className="w-full relative overflow-hidden">
             {/*@ts-ignore */}
             <Navbar setIsMenuOpen={setIsMenuOpen} />

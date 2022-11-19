@@ -11,7 +11,7 @@ const Contact = () => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false)
   return (
     <div>
-      <MetaTag tagName='Contact Us' />
+      <MetaTag title='Contact Us' />
       <main className="w-full relative overflow-hidden">
         <Navbar setIsMenuOpen={setIsMenuOpen} />
         {/*@ts-ignore */}
