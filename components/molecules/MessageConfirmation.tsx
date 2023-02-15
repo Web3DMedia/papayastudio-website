@@ -29,7 +29,7 @@ import MessageSent from "../../public/assets/tick.png";
 
 interface IProps {
   setmessageIsSent: Dispatch<SetStateAction<boolean>>;
-  isModal: boolean;
+  isModal?: boolean;
   setIsModal?: Dispatch<SetStateAction<boolean>>;
 }
 
