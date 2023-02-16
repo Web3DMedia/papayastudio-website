@@ -2,30 +2,36 @@ import { useState } from "react";
 import styled from "styled-components";
 import DropdownMenu from "../atoms/DropdownMenu";
 import MessageConfirmation from "./MessageConfirmation";
-import axios from "axios"
+import axios from "axios";
+import { ClipLoader } from "react-spinners";
 
 const ContactForm = () => {
   const options = [
-    { name: "2D Design/Animation" },
-    { name: "3D Animation" },
-    { name: "Motion Graphics Design" },
+    { name: "Studio Rentals" },
+    { name: "Event coverage" },
+    { name: "Animations" },
+    { name: "Motion Graphics" },
+    { name: "Branding" },
     { name: "Video Production" },
-    { name: "Training" },
-    { name: "Rendering Farm" },
-    { name: "Content Development" },
+    { name: "Video Podcast Production" },
     { name: "Other" },
   ];
+  const [userName, setUserName] = useState<string>("");
   const [userMail, setUserMail] = useState<string>("");
-  const [userDropdown, setUserDropdown] = useState<any>("2D Design/Animation");
+  const [userDropdown, setUserDropdown] = useState<string>("Studio Rentals");
   const [userMessage, setUserMessage] = useState<string>("");
   const [error, setError] = useState<string>("");
   const [messageIsSent, setmessageIsSent] = useState<boolean>(false);
   const [loading, setLoading] = useState<boolean>(false);
 
-
   const addToWaitlist = async (e: { preventDefault: () => void }) => {
     e.preventDefault();
     setError("");
+
+    if (userName.trim() === "") {
+      setError("Please fill all the fields");
+      return true;
+    }
 
     if (userMail.trim() === "") {
       setError("Please fill all the fields");
@@ -38,29 +44,33 @@ const ContactForm = () => {
       setError("Please fill all the fields");
       return true;
     }
-    setLoading(true);
-    axios
-      .post("/api/mail/", { email: userMail, message: userMessage, service: userDropdown })
-      .then((res) => {
-        setUserMail("");
-        setUserDropdown("");
-        setUserMessage("");
-        setmessageIsSent(true);
-        window.scrollTo(0, 0);
-      })
-      .catch((err) => {
-        if (err?.message === "Request failed with status code 500") {
-          setmessageIsSent(true);
-          return;
-        }
 
-        setError(
-          err.response.data?.message ?? "Something went wrong! try again later"
-        );
-      })
-      .finally(() => {
-        setLoading(false);
-      });
+    setLoading(true);
+    try {
+      const config = {
+        headers: {
+          "x-auth-key": `${process.env.NEXT_PUBLIC_X_AUTH_KEY}`,
+        },
+      };
+
+      const formData = {
+        name: userName,
+        email: userMail,
+        reason: userMessage,
+        description: userDropdown,
+      };
+
+      await axios.post(
+        `${process.env.NEXT_PUBLIC_AXIOS_BACKEND_BASE_URL}/papaya/create`,
+        formData,
+        config
+      );
+      setLoading(false);
+      setmessageIsSent(true);
+    } catch (error) {
+      console.log(error);
+      setLoading(false);
+    }
   };
 
   return (
@@ -71,11 +81,31 @@ const ContactForm = () => {
             <h2 className="text-[#002F31] text-[40px] font-bold leading-[46px] pt-10">
               Contact Us
             </h2>
-            <p className="text-[#4A5567] text-[16px] font-normal leading-[16px]">
-              Send us a message
+            <p className="text-[#4A5567] text-[16px] font-normal leading-[24px]">
+              Welcome to our Papayas studio! A Digital, Media and Design
+              production company. Interested in working with us? Please fill out
+              the form below, and we&apos;ll be in touch to discuss your
+              project. We can&apos;t wait to help bring your vision to life!
             </p>
           </div>
           <form className="mt-[33px]" onSubmit={addToWaitlist}>
+            <div className="form-group flex flex-col">
+              <label
+                htmlFor="userName"
+                className="mb-2 text-[#4A5567] text-[14px] font-bold"
+              >
+                Name
+              </label>
+              <Input
+                className="h-[50px] sm:h-[56px] mb-2 text-[14px] md:text-[16px]"
+                name="userName"
+                value={userName}
+                type="text"
+                onChange={(e) => setUserName(e.target.value)}
+                placeholder="Enter your name"
+              />
+            </div>
+
             <div className="form-group flex flex-col">
               <label
                 htmlFor="userMail"
@@ -101,7 +131,7 @@ const ContactForm = () => {
                 htmlFor="userDropdown"
                 className="mb-2 text-[#4A5567] text-[14px] font-bold"
               >
-                Reason for contacting us
+                Service Description
               </label>
               <DropdownMenu
                 setUserDropdown={setUserDropdown}
@@ -128,15 +158,19 @@ const ContactForm = () => {
             {error && <h2 className="text-red-700">{error}</h2>}
             <button
               type="submit"
-              className="mt-[24px] mb-[84px] bg-[#FF6661] w-full md:w-3/6 cursor-pointer py-3 md:py-5 text-[#FFFFFF] font-bold text-[16px] rounded-xl"
+              className="mt-[24px] mb-[84px] bg-[#FF6661] w-full md:w-3/6 cursor-pointer text-center py-3 md:py-5 text-[#FFFFFF] font-bold text-[16px] rounded-xl"
             >
-              Send Message
+              {loading ? <ClipLoader size={20} color="#FFF" /> : "Send Message"}
             </button>
           </form>
         </div>
       )}
       {/*@ts-ignore */}
-      {messageIsSent === true && <MessageConfirmation setmessageIsSent={setmessageIsSent}></MessageConfirmation>}
+      {messageIsSent === true && (
+        <MessageConfirmation
+          setmessageIsSent={setmessageIsSent}
+        ></MessageConfirmation>
+      )}
     </FormContainer>
   );
 };
