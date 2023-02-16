@@ -16,6 +16,7 @@ const ContactForm = () => {
     { name: "Video Podcast Production" },
     { name: "Other" },
   ];
+  const [userName, setUserName] = useState<string>("");
   const [userMail, setUserMail] = useState<string>("");
   const [userDropdown, setUserDropdown] = useState<string>("Studio Rentals");
   const [userMessage, setUserMessage] = useState<string>("");
@@ -26,6 +27,11 @@ const ContactForm = () => {
   const addToWaitlist = async (e: { preventDefault: () => void }) => {
     e.preventDefault();
     setError("");
+
+    if (userName.trim() === "") {
+      setError("Please fill all the fields");
+      return true;
+    }
 
     if (userMail.trim() === "") {
       setError("Please fill all the fields");
@@ -48,6 +54,7 @@ const ContactForm = () => {
       };
 
       const formData = {
+        name: userName,
         email: userMail,
         reason: userMessage,
         description: userDropdown,
@@ -82,6 +89,23 @@ const ContactForm = () => {
             </p>
           </div>
           <form className="mt-[33px]" onSubmit={addToWaitlist}>
+            <div className="form-group flex flex-col">
+              <label
+                htmlFor="userName"
+                className="mb-2 text-[#4A5567] text-[14px] font-bold"
+              >
+                Full Name
+              </label>
+              <Input
+                className="h-[50px] sm:h-[56px] mb-2 text-[14px] md:text-[16px]"
+                name="userName"
+                value={userName}
+                type="text"
+                onChange={(e) => setUserName(e.target.value)}
+                placeholder="Enter your full name"
+              />
+            </div>
+
             <div className="form-group flex flex-col">
               <label
                 htmlFor="userMail"
