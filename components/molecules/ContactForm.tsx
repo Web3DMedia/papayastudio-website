@@ -94,7 +94,7 @@ const ContactForm = () => {
                 htmlFor="userName"
                 className="mb-2 text-[#4A5567] text-[14px] font-bold"
               >
-                Full Name
+                Name
               </label>
               <Input
                 className="h-[50px] sm:h-[56px] mb-2 text-[14px] md:text-[16px]"
@@ -102,7 +102,7 @@ const ContactForm = () => {
                 value={userName}
                 type="text"
                 onChange={(e) => setUserName(e.target.value)}
-                placeholder="Enter your full name"
+                placeholder="Enter your name"
               />
             </div>
 
