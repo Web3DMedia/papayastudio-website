@@ -202,8 +202,18 @@ const Footer = () => {
                     <a target="_blank" className="cursor-light">Instagram</a>
                   </Link>
                 </Socials>
+                <Socials >
+                  <Link href="https://www.tiktok.com/@studiopapayas">
+                    <a target="_blank" className="cursor-light">Tiktok</a>
+                  </Link>
+                </Socials>
               </SocialContainer>
               <SocialContainer>
+                <Socials >
+                  <Link href="https://www.behance.net/papayas_studio">
+                    <a target="_blank" className="cursor-light">Behance</a>
+                  </Link>
+                </Socials>
                 <Socials >
                   <Link href="https://twitter.com/studiopapayas">
                     <a target="_blank" className="cursor-light">Twitter</a>

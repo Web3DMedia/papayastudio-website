@@ -10,19 +10,19 @@ interface IProps {
 }
 
 const HeroSection = ({ myRefOne }: IProps) => {
-  const [textNumber, setTextNumber] = useState(2);
+  const [textNumber, setTextNumber] = useState(4);
   const [mascot, setMascot] = useState(1);
 
-  useEffect(() => {
-    if (textNumber <= 4) {
-      const interval = setInterval(() => {
-        setTextNumber(textNumber + 1);
-      }, 5000);
-      return () => clearInterval(interval);
-    } else {
-      setTextNumber(1);
-    }
-  }, [textNumber]);
+  // useEffect(() => {
+  //   if (textNumber <= 4) {
+  //     const interval = setInterval(() => {
+  //       setTextNumber(textNumber + 1);
+  //     }, 5000);
+  //     return () => clearInterval(interval);
+  //   } else {
+  //     setTextNumber(1);
+  //   }
+  // }, [textNumber]);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -77,71 +77,71 @@ const HeroSection = ({ myRefOne }: IProps) => {
               {/*Large screen*/}
               {textNumber === 1 && (
                 <Span className="hidden xl:pl-16 3xl:pl-0  sm:block sm:text-[35px] md:text-[40px] lg:text-[60px] xl:text-[65px] 4xl:text-[80px] duration-500 ease-in font-[500]">
-                  We are a <TextSpan width="100%">forward</TextSpan>{" "}
-                  <TextSpan width="85%">thinking</TextSpan>
+                  Innovative{" "}<TextSpan width="100%">design</TextSpan>{" "}
+                  <TextSpan width="85%">studio</TextSpan>
                 </Span>
               )}
               {textNumber === 2 && (
                 <SpanTwo className="hidden xl:pl-16 3xl:pl-0 sm:block sm:text-[35px] md:text-[40px] lg:text-[60px] xl:text-[65px] 4xl:text-[80px] duration-500 ease-in font-[500]">
-                  We are an <TextSpan width="100%">intuitive</TextSpan>{" "}
-                  <TextSpan width="85%">design</TextSpan>
+                  Transform{" "}<TextSpan width="100%">digital</TextSpan>{" "}
+                  <TextSpan width="85%">experience</TextSpan>
                 </SpanTwo>
               )}
               {textNumber === 3 && (
                 <SpanThree className="hidden xl:pl-16 3xl:pl-0 sm:block sm:text-[35px] md:text-[40px] lg:text-[60px] xl:text-[65px] 4xl:text-[80px] duration-500 ease-in font-[500]">
-                  We curate <TextSpan width="100%">content</TextSpan>{" "}
-                  <TextSpan width="85%">about</TextSpan>
+                  Committed <TextSpan width="100%">to</TextSpan>{" "}
+                  <TextSpan width="85%">providing</TextSpan>
                 </SpanThree>
               )}
               {textNumber === 4 && (
                 <SpanFour className="hidden xl:pl-16 3xl:pl-0 sm:block sm:text-[35px] md:text-[40px] lg:text-[60px] xl:text-[65px] 4xl:text-[80px] duration-500 ease-in font-[500]">
-                  We create <TextSpan width="100%">animations</TextSpan>{" "}
-                  <TextSpan width="85%">and</TextSpan>
+                  Peak{" "}<TextSpan width="100%">Storytelling</TextSpan>{" "}
+                  <TextSpan width="85%">that</TextSpan>
                 </SpanFour>
               )}
               {/*Mobile view*/}
               {textNumber === 1 && (
-                <Span className="block sm:hidden leading-9  text-[32px] font-[500] ml-4">
-                  We are a <TextSpan width="100%">forward</TextSpan>
+                <Span className="block sm:hidden leading-9  text-[30px] font-[500] ml-4">
+                  Innovative{" "}<TextSpan width="100%">design</TextSpan>
                 </Span>
               )}
               {textNumber === 2 && (
-                <SpanTwo className="block sm:hidden leading-9 text-[32px] font-[500] ml-4">
-                  We are an <TextSpan width="100%">intuitive</TextSpan>
+                <SpanTwo className="block sm:hidden leading-9 text-[30px] font-[500] ml-4">
+                  Transform{" "}<TextSpan width="100%">digital</TextSpan>
                 </SpanTwo>
               )}
               {textNumber === 3 && (
-                <SpanThree className="block sm:hidden leading-9 text-[32px] font-[500] ml-4">
-                  We curate <TextSpan width="100%">content</TextSpan>
+                <SpanThree className="block sm:hidden leading-9 text-[30px] font-[500] ml-4">
+                  Committed{" "}<TextSpan width="100%">to</TextSpan>
                 </SpanThree>
               )}
               {textNumber === 4 && (
-                <SpanFour className="block sm:hidden leading-9 text-[32px] font-[500] ml-4">
-                  We create <TextSpan width="100%">animations</TextSpan>
+                <SpanFour className="block sm:hidden leading-9 text-[30px] font-[500] ml-4">
+                  Peak{" "}<TextSpan width="100%">storytelling</TextSpan>
                 </SpanFour>
               )}
             </span>
             <span className="block sm:hidden">
               {textNumber === 1 && (
-                <Span className="block sm:hidden text-[32px] font-[500] ml-4">
-                  <TextSpan width="85%">thinking</TextSpan> design
+                <Span className="block sm:hidden text-[30px] font-[500] ml-4">
+                  <TextSpan width="85%">studio</TextSpan>{" "}for brands
                 </Span>
               )}
               <SpanTwo>
                 {textNumber === 2 && (
-                  <SpanTwo className="block sm:hidden text-[32px] font-[500] ml-4">
-                    <TextSpan width="85%">design</TextSpan> studio for
+                  <SpanTwo className="block sm:hidden text-[30px] font-[500] ml-4">
+                    <TextSpan width="85%">presence</TextSpan>{" "}into a captivating
                   </SpanTwo>
                 )}
               </SpanTwo>
               {textNumber === 3 && (
-                <SpanThree className="block sm:hidden text-[32px] font-[500] ml-4">
-                  <TextSpan width="85%">about</TextSpan> design and
+                <SpanThree className="block sm:hidden text-[30px] font-[500] ml-4">
+                  <TextSpan width="85%">providing</TextSpan>{" "}exceptional
                 </SpanThree>
               )}
               {textNumber === 4 && (
-                <SpanFour className="block sm:hidden text-[32px] font-[500] ml-4">
-                  <TextSpan width="85%">and</TextSpan> live action
+                <SpanFour className="block sm:hidden text-[30px] font-[500] ml-4">
+                  <TextSpan width="85%">that</TextSpan>{" "}exceeds
                 </SpanFour>
               )}
             </span>
@@ -156,51 +156,51 @@ const HeroSection = ({ myRefOne }: IProps) => {
               </Span>
               {/*Mobile*/}
               {textNumber === 1 && (
-                <Span className="block sm:hidden leading-9 text-[32px] font-[500]">
-                  studio
+                <Span className="block sm:hidden leading-9 text-[30px] font-[500]">
+                  for brands & creators.
                 </Span>
               )}
               {textNumber === 2 && (
-                <SpanTwo className="block sm:hidden leading-9 text-[32px] font-[500]">
-                  brands &amp; creators
+                <SpanTwo className="block sm:hidden leading-9 text-[30px] font-[500]">
+                  experiences.
                 </SpanTwo>
               )}
               {textNumber === 3 && (
-                <SpanThree className="block sm:hidden leading-9 text-[32px] font-[500]">
-                  technologies
+                <SpanThree className="block sm:hidden leading-9 text-[30px] font-[500]">
+                  client services
                 </SpanThree>
               )}
               {textNumber === 4 && (
-                <SpanFour className="block sm:hidden leading-9 text-[32px] font-[500]">
-                  video content
+                <SpanFour className="block sm:hidden leading-9 text-[30px] font-[500]">
+                  expectations
                 </SpanFour>
               )}
 
               {/*Large screen*/}
               {textNumber === 1 && (
                 <Span className="hidden sm:block sm:text-[35px] md:text-[40px] lg:text-[60px] xl:text-[65px] 4xl:text-[80px] duration-500 ease-in font-[500]">
-                  design studio
+                  for brands & creators.
                 </Span>
               )}
               {textNumber === 2 && (
                 <SpanTwo className="hidden sm:block sm:text-[35px] md:text-[40px] lg:text-[60px] xl:text-[65px] 4xl:text-[80px] duration-500 ease-in font-[500]">
-                  studio for brands &amp; creators
+                  into a captivating experience
                 </SpanTwo>
               )}
               {textNumber === 3 && (
                 <SpanThree className="hidden sm:block sm:text-[35px] md:text-[40px] lg:text-[60px] xl:text-[65px] 4xl:text-[80px] duration-500 ease-in font-[500]">
-                  design and technologies
+                  client services
                 </SpanThree>
               )}
               {textNumber === 4 && (
                 <SpanFour className="hidden sm:block sm:text-[35px] md:text-[40px] lg:text-[60px] xl:text-[65px] 4xl:text-[80px] duration-500 ease-in font-[500]">
-                  live-action video for creators
+                  exceeds expectations
                 </SpanFour>
               )}
             </span>
             <div className="pl-5 md:pl-14 lg:pl-20 xl:pl-32 4xl:pl-40 md:mt-[18px] sm:mt-[16px] xl:mt-[20px]">
               <p className="md:w-11/12 lg:max-w-[550px] xl:pl-16 3xl:pl-0 xl:max-w-[800px] 4xl:max-w-[780px] text-[16px] sm:text-[18px] lg:text-[20px] xl:text-[24px] font-normal text-backboneText leading-[30px] px-2 pt-9 sm:pt-0">
-                At Papayas studios we are at the forefront of digital content creation, creating stories and experiences for every aspect of web2 and web3 designs.
+                Our passion for innovative design and cutting-edge technology sets us apart from other design studios. Let us help you create a lasting impact with our creative and effective digital solutions.
               </p>
               {/*@ts-ignore */}
               <BtnLink
