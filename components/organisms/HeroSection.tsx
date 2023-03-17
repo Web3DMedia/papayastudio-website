@@ -13,16 +13,16 @@ const HeroSection = ({ myRefOne }: IProps) => {
   const [textNumber, setTextNumber] = useState(4);
   const [mascot, setMascot] = useState(1);
 
-  // useEffect(() => {
-  //   if (textNumber <= 4) {
-  //     const interval = setInterval(() => {
-  //       setTextNumber(textNumber + 1);
-  //     }, 5000);
-  //     return () => clearInterval(interval);
-  //   } else {
-  //     setTextNumber(1);
-  //   }
-  // }, [textNumber]);
+  useEffect(() => {
+    if (textNumber <= 4) {
+      const interval = setInterval(() => {
+        setTextNumber(textNumber + 1);
+      }, 5000);
+      return () => clearInterval(interval);
+    } else {
+      setTextNumber(1);
+    }
+  }, [textNumber]);
 
   useEffect(() => {
     const interval = setInterval(() => {
