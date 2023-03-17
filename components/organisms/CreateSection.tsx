@@ -13,29 +13,29 @@ const CreateSection = ({ myRefTwo, isTwo }: IProps) => {
 
   const activityData = [
     {
-      name: "2D Animation(Animes)",
-      text: "We create 2D animations that are forging the future of community-driven edutainment.",
+      name: "Animations",
+      text: "Are you in need of a high-quality 2D or 3D design and animation service? Look no further! Our team of expert designers and animators will bring your ideas to life with stunning visuals and animations that will captivate your audience.",
     },
     {
-      name: "3D Animations",
-      text: "We create 3D animations that drive education and entertainment in the design and media space.",
+      name: "Studio Rentals",
+      text: "Our design studio facilities in Lagos provide rentals and creative production globally, and we are ready to take up your next big project mainstream. Trust us for effective media experiences.",
     },
 
     {
-      name: "Motion Graphics Design",
-      text: "We create stunning motion graphics spots on creative contents.",
+      name: "Motion Design",
+      text: "Are you looking to bring your brand to life and make a lasting impression on your audience? Look no further than our motion graphics service! Our team of talented designers specializes in creating dynamic and engaging visuals to make your message stand out.",
+    },
+    {
+      name: "Event Coverage",
+      text: "We are passionate about capturing the magic and excitement of every event we cover. Whether it's a corporate conference, a music festival, or a wedding, we have the skills and expertise to create stunning visuals that tell the story of your event and engage your audience.",
     },
     {
       name: "Video Production",
-      text: "We produce live-action videos in our in-house studio with great stories woven around design and emerging technologies.",
+      text: "We specialize in creating compelling visual content that captures your brand's essence and communicates your message effectively to your audience. Whether you need a promotional video, a product demo or a corporate training video, we have the expertise and experience to bring your vision to life.",
     },
     {
-      name: "Rendering Farm",
-      text: "Our render farm technology offers high-quality renders that are 10X faster than the average speed.  Creators can now render their large project files at our studio.",
-    },
-    {
-      name: "Content Development",
-      text: "We tell relatable and edutaining stories that are carefully crafted to drive community engagement in the media space.",
+      name: "Branding",
+      text: "Having a purposeful brand is a game-changer for your company, a brand that aligns with your values and attracts your dream clients. Our studio offers branding deals and we strive to make your brand stand out. Creative problem solution for brands and product.",
     },
   ];
   return (
@@ -62,7 +62,7 @@ const CreateSection = ({ myRefTwo, isTwo }: IProps) => {
               className=" text-[24px] leading-tight md:text-[32px] lg:text-[36px] xl:text-[48px] font-[500] pl-5 md:pl-14 lg:pl-0 md:pt-12 xl:pt-0"
               data-aos="fade-up"
             >
-              We create <br /> content focused:
+              We offer a wide range <br /> of digital services, including:
             </h2>
             <div
               className=" w-full grid grid-cols-1 lg:grid-cols-2 gap-4 mt-5 px-5 md:pl-14 lg:pl-[0px] lg:px-0"
