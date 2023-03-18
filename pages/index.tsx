@@ -19,6 +19,7 @@ const Home = () => {
   const [isModal, setIsModal] = useState<boolean>(false)
   const [isOne, setIsOne] = useState<boolean>(false)
   const [isTwo, setIsTwo] = useState<boolean>(false)
+  const [isTwos, setIsTwos] = useState<boolean>(false)
   const [isThree, setIsThree] = useState<boolean>(false)
   const [isFour, setIsFour] = useState<boolean>(false)
   const [isFive, setIsFive] = useState<boolean>(false)
@@ -26,6 +27,7 @@ const Home = () => {
 
   const myRefOne: any = useRef()
   const myRefTwo: any = useRef()
+  const myRefTwos: any = useRef()
   const myRefThree: any = useRef()
   const myRefFour: any = useRef()
   const myRefFive: any = useRef()
@@ -42,11 +44,20 @@ const Home = () => {
   useEffect(() => {
     const observer = new IntersectionObserver((entries, observer) => {
       const entry = entries[0];
-      setIsTwo(entry.isIntersecting)
+      setIsTwos(entry.isIntersecting)
     }, { threshold: 0.7 })
 
-    observer.observe(myRefTwo.current)
+    observer.observe(myRefTwos.current)
   })
+
+  // useEffect(() => {
+  //   const observer = new IntersectionObserver((entries, observer) => {
+  //     const entry = entries[0];
+  //     setIsTwo(entry.isIntersecting)
+  //   }, { threshold: 0.7 })
+
+  //   observer.observe(myRefTwo.current)
+  // })
 
   useEffect(() => {
     const observer = new IntersectionObserver((entries, observer) => {
@@ -86,14 +97,14 @@ const Home = () => {
     <div className="font-body">
       <MetaTag title='Home' />
       <main className="w-full relative h-full overflow-hidden">
-        {isModal ? "" : <Navbar setIsMenuOpen={setIsMenuOpen} isOne={isOne} isTwo={isTwo} isThree={isThree} change={change} />}
-        <Menubar isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} isOne={isOne} isTwo={isTwo} isThree={isThree} />
+        {isModal ? "" : <Navbar setIsMenuOpen={setIsMenuOpen} isOne={isOne} isTwo={isTwos} isThree={isThree} change={change} />}
+        <Menubar isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} isOne={isOne} isTwo={isTwos} isThree={isThree} />
 
         {isModal && <Modal isModal={isModal} setIsModal={setIsModal}></Modal>}
         <HeroSection myRefOne={myRefOne} />
         <SectionSeperator />
         <PageIndicator />
-        <CreateSection isTwo={isTwo} myRefTwo={myRefTwo} />
+        <CreateSection isTwo={isTwos} myRefTwo={myRefTwos} />
         <SectionSeperator />
         <ProductsSection isThree={isThree} myRefThree={myRefThree} />
         <LearnWithPapayaSection setIsModal={setIsModal} isFour={isFour} myRefFour={myRefFour} />
