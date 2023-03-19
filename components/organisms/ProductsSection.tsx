@@ -6,6 +6,7 @@ import Carousel from "nuka-carousel";
 import styled from "styled-components";
 import BgTransfromation from "../atoms/BgTransfromation";
 import { bg } from "date-fns/locale";
+import Link from "next/link";
 
 interface IProps {
   myRefThree: any
@@ -15,7 +16,8 @@ interface IProps {
 
 const ProductsSection = ({ myRefThree, isThree }: IProps) => {
   const [img, setImg] = useState<Number>(1);
-
+  console.log(myRefThree)
+  console.log(isThree)
   useEffect(() => {
     const interval = setInterval(() => {
       setImg((bg) => (Number(bg) + Number(1) > 3 ? 1 : Number(bg) + Number(1)));
@@ -106,10 +108,12 @@ const ProductsSection = ({ myRefThree, isThree }: IProps) => {
 
           <div className="relative w-full h-full mx-auto Tmd:px-20 xl:pl-40 4xl:py-20">
             <p
-              className="absolute left-5 md:left-14 -top-[60px] lg:left-20 xl:left-[80px] md:-top-[50px] xl:-top-[115px] 4xl:-top-16 4xl:left-20 font-normal text-xs uppercase"
+              className="absolute left-5 md:left-14 -top-[60px] lg:left-20 xl:left-[80px] md:-top-[50px] xl:-top-[115px] 4xl:-top-16 4xl:left-20 font-normal text-xs"
               data-aos="fade-up"
             >
-              Our <br /> Works
+              <Link href="/our-works" passHref>
+                <HeaderText className="uppercase text-left cursor-light"> Our <br /> Works <span className="ml-4 text-[20px]">&#8594;</span></HeaderText>
+              </Link>
             </p>
             <div className="w-full h-full">
               <h2
@@ -168,6 +172,12 @@ const TrackerInner = styled.div`
    z-index: 1;
    margin-top: 2px;
    margin-left: .8px;
+`
+const HeaderText = styled.button`
+  :hover {
+    color: var(--PrimaryOne);
+    transform:scale(1.1);
+  }
 `
 
 export default ProductsSection;

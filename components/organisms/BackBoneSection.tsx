@@ -122,17 +122,19 @@ const BackBoneSection = ({ myRefFive, isFive }: IProps) => {
                 <ThirdText className='text-black pt-3'>{person.name}</ThirdText>
 
                 <FourthText className='text-backboneText1'>{person.title}</FourthText>
+                <div className='w-[100px] xl:w-[110px]'>
 
-                {
-                  person.id === 3 ? (
-                    <FifthText className='text-backboneText flex items-center pt-1 opacity-30'> <img src='/assets/linkedln.png' alt='Linkedln' className='mr-2 w-4 h-4' />  Linkedin <span className='ml-2'>&#8594;</span> </FifthText>
+                  {
+                    person.id === 3 ? (
+                      <FifthText className='text-backboneText w-[30px] flex items-center pt-1 opacity-30'> <img src='/assets/linkedln.png' alt='Linkedln' className='mr-2 w-4 h-4' />  Linkedin <span className='ml-2'>&#8594;</span> </FifthText>
 
-                  ) : (<Link href={person.linkedin}>
-                    <a target="_blank">
-                      <FifthText className='text-backboneText flex items-center pt-1 cursor-light'> <img src='/assets/linkedln.png' alt='Linkedln' className='mr-2 w-4 h-4' loading="lazy" />  Linkedin <span className='ml-2'>&#8594;</span> </FifthText>
-                    </a>
-                  </Link>)
-                }
+                    ) : (<Link href={person.linkedin}>
+                      <a target="_blank" className='cursor-light'>
+                        <FifthText className='text-backboneText w-[30px] flex items-center pt-1'> <img src='/assets/linkedln.png' alt='Linkedln' className='mr-2 w-4 h-4' loading="lazy" />  Linkedin <span className='ml-2'>&#8594;</span> </FifthText>
+                      </a>
+                    </Link>)
+                  }
+                </div>
               </div>
             )
           })}
