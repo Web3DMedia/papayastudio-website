@@ -13,16 +13,16 @@ const HeroSection = ({ myRefOne }: IProps) => {
   const [textNumber, setTextNumber] = useState(4);
   const [mascot, setMascot] = useState(1);
 
-  // useEffect(() => {
-  //   if (textNumber <= 4) {
-  //     const interval = setInterval(() => {
-  //       setTextNumber(textNumber + 1);
-  //     }, 5000);
-  //     return () => clearInterval(interval);
-  //   } else {
-  //     setTextNumber(1);
-  //   }
-  // }, [textNumber]);
+  useEffect(() => {
+    if (textNumber <= 4) {
+      const interval = setInterval(() => {
+        setTextNumber(textNumber + 1);
+      }, 5000);
+      return () => clearInterval(interval);
+    } else {
+      setTextNumber(1);
+    }
+  }, [textNumber]);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -189,7 +189,7 @@ const HeroSection = ({ myRefOne }: IProps) => {
               )}
               {textNumber === 3 && (
                 <SpanThree className="hidden sm:block sm:text-[35px] md:text-[40px] lg:text-[60px] xl:text-[65px] 4xl:text-[80px] duration-500 ease-in font-[500]">
-                  client services
+                  exceptional client services
                 </SpanThree>
               )}
               {textNumber === 4 && (
