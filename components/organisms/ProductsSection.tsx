@@ -126,21 +126,13 @@ const ProductsSection = ({ myRefThree, isThree }: IProps) => {
                 ref={myRefWidth}
               >
                 {/*@ts-ignore */}
-                <Carousel
-                  autoplay={true}
-                  autoplayInterval={2000}
-                  wrapAround={true}
-                  cellSpacing={0}
-                  easing="easeCubicInOut"
-                  pauseOnHover={true}
-                  withoutControls={true}
-                  slidesToShow={isWidth}
+                <div
                   className="productCards flex mt-10 px-5 md:pl-04 lg:pl-[85px] xl:pl-0 cursor-scroll"
                 >
                   {products?.map((info, index) => (
-                    <ProductCard key={index} info={info} />
+                    index < 3 && <ProductCard key={index} info={info} />
                   ))}
-                </Carousel>
+                </div>
               </div>
               <Link href="/our-works" passHref>
                 <HeaderText className="px-5 md:pl-04 lg:pl-[85px] pt-[36px] text-[18px] leading-[30px] font-[700] cursor-light">View all works <span className="ml-[12px] bg-primary1 px-[7px] rounded-full">&gt;</span> </HeaderText>
