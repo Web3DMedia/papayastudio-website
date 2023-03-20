@@ -73,10 +73,10 @@ const OurWorks = () => {
                 <div className="pt-32 2xl:w-[1440px] m-auto">
                     <SectionSeperator />
                     <p className="text-center pt-[14px] pb-[64px]">OUR WORKS</p>
-                    <div className="w-[80%] grid sm:grid-cols-2 xl:grid-cols-3 m-auto gap-10">
+                    <div className="w-[80%] sm:w-[90%] lg:w-[80%] grid sm:grid-cols-2 xl:grid-cols-3 m-auto gap-10">
                         {products?.map((product, index) => (
                             <CardDiv className="h-[475px] cursor-default relative" key={index}>
-                                <div className="relative md:w-[300px] lg:w-[400px]  xl:w-[350px] h-[300px] max-w-[400px] 4xl:w-[350px] 4xl:max-w-[350px] overflow-hidden rounded-[24px]">
+                                <div className="relative md:w-[300px] lg:w-[400px]  xl:w-[325px] h-[300px] max-w-[400px] 4xl:w-[350px] 4xl:max-w-[350px] overflow-hidden rounded-[24px]">
                                     <Image src={product.cardImage} layout="fill" objectFit='cover' alt="image" />
                                 </div>
                                 <div className="mt-[15px] ">
