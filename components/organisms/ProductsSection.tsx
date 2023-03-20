@@ -135,7 +135,7 @@ const ProductsSection = ({ myRefThree, isThree }: IProps) => {
                 </div>
               </div>
               <Link href="/our-works" passHref>
-                <HeaderText className="px-5 md:pl-04 lg:pl-[85px] pt-[36px] text-[18px] leading-[30px] font-[700] cursor-light">View all works <span className="ml-[12px] bg-primary1 px-[7px] rounded-full">&gt;</span> </HeaderText>
+                <HeaderText className="px-5 md:pl-04 lg:pl-[85px] xl:pl-0  pt-[36px] text-[18px] leading-[30px] font-[700] cursor-light">View all works <span className="ml-[12px] bg-primary1 px-[7px] rounded-full">&gt;</span> </HeaderText>
               </Link>
             </div>
           </div>
