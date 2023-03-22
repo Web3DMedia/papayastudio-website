@@ -108,12 +108,10 @@ const ProductsSection = ({ myRefThree, isThree }: IProps) => {
 
           <div className="relative w-full h-full mx-auto Tmd:px-20 xl:pl-40 4xl:py-20">
             <p
-              className="absolute left-5 md:left-14 -top-[60px] lg:left-20 xl:left-[80px] md:-top-[50px] xl:-top-[115px] 4xl:-top-16 4xl:left-20 font-normal text-xs"
+              className="absolute left-5 md:left-14 -top-[60px] lg:left-20 xl:left-[80px] md:-top-[50px] xl:-top-[115px] 4xl:-top-16 4xl:left-20 font-normal text-xs uppercase"
               data-aos="fade-up"
             >
-              <Link href="/our-works" passHref>
-                <HeaderText className="uppercase text-left cursor-light"> Our <br /> Works <span className="ml-4 text-[20px]">&#8594;</span></HeaderText>
-              </Link>
+              Our <br /> Works
             </p>
             <div className="w-full h-full">
               <h2
@@ -128,22 +126,17 @@ const ProductsSection = ({ myRefThree, isThree }: IProps) => {
                 ref={myRefWidth}
               >
                 {/*@ts-ignore */}
-                <Carousel
-                  autoplay={true}
-                  autoplayInterval={2000}
-                  wrapAround={true}
-                  cellSpacing={0}
-                  easing="easeCubicInOut"
-                  pauseOnHover={true}
-                  withoutControls={true}
-                  slidesToShow={isWidth}
+                <div
                   className="productCards flex mt-10 px-5 md:pl-04 lg:pl-[85px] xl:pl-0 cursor-scroll"
                 >
                   {products?.map((info, index) => (
-                    <ProductCard key={index} info={info} />
+                    index < 3 && <ProductCard key={index} info={info} />
                   ))}
-                </Carousel>
+                </div>
               </div>
+              <Link href="/our-works" passHref>
+                <HeaderText className="px-5 md:pl-04 lg:pl-[85px] xl:pl-0  pt-[36px] text-[18px] leading-[30px] font-[700] cursor-light">View all works <span className="ml-[12px] bg-primary1 px-[7px] rounded-full">&gt;</span> </HeaderText>
+              </Link>
             </div>
           </div>
         </div>

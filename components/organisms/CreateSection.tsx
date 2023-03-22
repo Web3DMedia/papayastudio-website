@@ -23,11 +23,11 @@ const CreateSection = ({ myRefTwo, isTwo }: IProps) => {
 
     {
       name: "Motion Design",
-      text: "Are you looking to bring your brand to life and make a lasting impression on your audience? Look no further than our motion graphics service! Our team of talented designers specializes in creating dynamic and engaging visuals to make your message stand out.",
+      text: "We create captivating animations that bring your brand to life. From explainer videos to animated logos, our expert motion design services will help you stand out in a competitive market. Contact us to see how we can elevate your brand.",
     },
     {
       name: "Event Coverage",
-      text: "We are passionate about capturing the magic and excitement of every event we cover. Whether it's a corporate conference, a music festival, or a wedding, we have the skills and expertise to create stunning visuals that tell the story of your event and engage your audience.",
+      text: "Capture the essence of your event with our professional coverage services. Whether it's a corporate conference, a music festival or training, we provide high-quality coverage that captures the atmosphere and excitement of the occasion.",
     },
     {
       name: "Video Production",
@@ -62,7 +62,7 @@ const CreateSection = ({ myRefTwo, isTwo }: IProps) => {
               className=" text-[24px] leading-tight md:text-[32px] lg:text-[36px] xl:text-[48px] font-[500] pl-5 md:pl-14 lg:pl-0 md:pt-12 xl:pt-0"
               data-aos="fade-up"
             >
-              We offer a wide range <br /> of digital services, including:
+              Our <br /> services include:
             </h2>
             <div
               className=" w-full grid grid-cols-1 lg:grid-cols-2 gap-4 mt-5 px-5 md:pl-14 lg:pl-[0px] lg:px-0"
