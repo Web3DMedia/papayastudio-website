@@ -17,6 +17,7 @@ import MetaTag from "../components/atoms/MetaTag";
 
 /** eslint-ignore react/react-in-jsx-scope */
 const Home = ({ pets }) => {
+  console.log(pets)
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false)
   const [isModal, setIsModal] = useState<boolean>(false)
   const [isOne, setIsOne] = useState<boolean>(false)
@@ -107,7 +108,7 @@ const Home = ({ pets }) => {
         {pets.length > 0 && (
           <ul>
             {pets.map((pet) => (
-              <li key={pet._id}>{pet?.name}</li>
+              <li key={pet._id}>{pet.name}</li>
             ))}
           </ul>
         )}
@@ -134,6 +135,7 @@ const client = createClient({
 
 export async function getStaticProps() {
   const pets = await client.fetch(`*[_type == "pet"]`);
+  console.log(pets)
 
   return {
     props: {
