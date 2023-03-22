@@ -11,10 +11,11 @@ import SectionSeperator from "../components/molecules/SectionSeperator";
 import PageIndicator from "../components/molecules/PageIndicator";
 import Modal from "../components/atoms/Modal";
 import { useRef } from 'react'
+import { createClient } from "next-sanity";
 import MetaTag from "../components/atoms/MetaTag";
 
 /** eslint-ignore react/react-in-jsx-scope */
-const Home = () => {
+const Home = ({ pets }) => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false)
   const [isModal, setIsModal] = useState<boolean>(false)
   const [isOne, setIsOne] = useState<boolean>(false)
@@ -102,6 +103,13 @@ const Home = () => {
 
         {isModal && <Modal isModal={isModal} setIsModal={setIsModal}></Modal>}
         <HeroSection myRefOne={myRefOne} />
+        {pets.length > 0 && (
+          <ul>
+            {pets.map((pet) => (
+              <li key={pet._id}>{pet?.name}</li>
+            ))}
+          </ul>
+        )}
         <SectionSeperator />
         <PageIndicator />
         <CreateSection isTwo={isTwos} myRefTwo={myRefTwos} />
@@ -116,3 +124,19 @@ const Home = () => {
 }
 
 export default Home
+const client = createClient({
+  projectId: "wp2qqfu9",
+  dataset: "production",
+  apiVersion: "2023-03-22",
+  useCdn: false
+});
+
+export async function getStaticProps() {
+  const pets = await client.fetch(`*[_type == "pet"]`);
+
+  return {
+    props: {
+      pets
+    }
+  };
+}
