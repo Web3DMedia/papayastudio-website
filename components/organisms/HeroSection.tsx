@@ -84,7 +84,7 @@ const HeroSection = ({ myRefOne }: IProps) => {
               {textNumber === 2 && (
                 <SpanTwo className="hidden xl:pl-16 3xl:pl-0 sm:block sm:text-[35px] md:text-[40px] lg:text-[60px] xl:text-[65px] 4xl:text-[80px] duration-500 ease-in font-[500]">
                   Transform{" "}<TextSpan width="100%">digital</TextSpan>{" "}
-                  <TextSpan width="85%">experience</TextSpan>
+                  <TextSpan width="85%">presence</TextSpan>
                 </SpanTwo>
               )}
               {textNumber === 3 && (
@@ -130,7 +130,7 @@ const HeroSection = ({ myRefOne }: IProps) => {
               <SpanTwo>
                 {textNumber === 2 && (
                   <SpanTwo className="block sm:hidden text-[30px] font-[500] ml-4">
-                    <TextSpan width="85%">presence</TextSpan>{" "}into a captivating
+                    <TextSpan width="85%">presence</TextSpan>{" "}into alluring
                   </SpanTwo>
                 )}
               </SpanTwo>
@@ -167,12 +167,12 @@ const HeroSection = ({ myRefOne }: IProps) => {
               )}
               {textNumber === 3 && (
                 <SpanThree className="block sm:hidden leading-9 text-[30px] font-[500]">
-                  client services
+                  client services.
                 </SpanThree>
               )}
               {textNumber === 4 && (
                 <SpanFour className="block sm:hidden leading-9 text-[30px] font-[500]">
-                  expectations
+                  expectations.
                 </SpanFour>
               )}
 
@@ -184,17 +184,17 @@ const HeroSection = ({ myRefOne }: IProps) => {
               )}
               {textNumber === 2 && (
                 <SpanTwo className="hidden sm:block sm:text-[35px] md:text-[40px] lg:text-[60px] xl:text-[65px] 4xl:text-[80px] duration-500 ease-in font-[500]">
-                  into a captivating experience
+                  into alluring experiences.
                 </SpanTwo>
               )}
               {textNumber === 3 && (
                 <SpanThree className="hidden sm:block sm:text-[35px] md:text-[40px] lg:text-[60px] xl:text-[65px] 4xl:text-[80px] duration-500 ease-in font-[500]">
-                  exceptional client services
+                  first-rate client services.
                 </SpanThree>
               )}
               {textNumber === 4 && (
                 <SpanFour className="hidden sm:block sm:text-[35px] md:text-[40px] lg:text-[60px] xl:text-[65px] 4xl:text-[80px] duration-500 ease-in font-[500]">
-                  exceeds expectations
+                  exceeds expectations.
                 </SpanFour>
               )}
             </span>
@@ -218,7 +218,7 @@ const HeroSection = ({ myRefOne }: IProps) => {
 
           {papayamascots.map((papayamascot, index) => {
             return (index + 1) == mascot &&
-              <div className="relative top-2 -right-4 sm:-right-14 md:absolute bg-transparent md:-top-20 lg:-top-2 md:-right-[270px] lg:-right-96 xl:-top-4 xl:-right-36 2xl:-right-48 4xl:-right-80 w-[400px] h-[400px] sm:h-[500px] sm:w-[500px] lg:h-[700px] lg:w-[600px] 4xl:w-[600px] 4xl:h-[700px]" key={index}>
+              <div className="relative top-2 -right-4 sm:-right-14 md:absolute bg-transparent md:-top-20 lg:-top-2 md:-right-[270px] lg:-right-96 xl:-top-4 xl:-right-44 2xl:-right-48 4xl:-right-80 w-[400px] h-[400px] sm:h-[500px] sm:w-[500px] lg:h-[700px] lg:w-[600px] 4xl:w-[600px] 4xl:h-[700px]" key={index}>
                 <div className={index + 1 === 2 ? "mt-0 w-[375px] sm:w-full xl:mt-10" : ""}>
                   <Image
                     key={index}
