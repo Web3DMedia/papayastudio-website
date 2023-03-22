@@ -11,7 +11,8 @@ import SectionSeperator from "../components/molecules/SectionSeperator";
 import PageIndicator from "../components/molecules/PageIndicator";
 import Modal from "../components/atoms/Modal";
 import { useRef } from 'react'
-import { createClient } from "next-sanity";
+// import { createClient } from "next-sanity";
+import { createClient } from "@sanity/client"
 import MetaTag from "../components/atoms/MetaTag";
 
 /** eslint-ignore react/react-in-jsx-scope */
@@ -103,13 +104,13 @@ const Home = ({ pets }) => {
 
         {isModal && <Modal isModal={isModal} setIsModal={setIsModal}></Modal>}
         <HeroSection myRefOne={myRefOne} />
-        {/* {pets.length > 0 && (
+        {pets.length > 0 && (
           <ul>
             {pets.map((pet) => (
               <li key={pet._id}>{pet?.name}</li>
             ))}
           </ul>
-        )} */}
+        )}
         <SectionSeperator />
         <PageIndicator />
         <CreateSection isTwo={isTwos} myRefTwo={myRefTwos} />
@@ -128,7 +129,7 @@ const client = createClient({
   projectId: "wp2qqfu9",
   dataset: "production",
   apiVersion: "2023-03-22",
-  useCdn: true
+  // useCdn: true
 });
 
 export async function getStaticProps() {
