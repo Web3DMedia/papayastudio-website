@@ -103,13 +103,13 @@ const Home = ({ pets }) => {
 
         {isModal && <Modal isModal={isModal} setIsModal={setIsModal}></Modal>}
         <HeroSection myRefOne={myRefOne} />
-        {pets.length > 0 && (
+        {/* {pets.length > 0 && (
           <ul>
             {pets.map((pet) => (
               <li key={pet._id}>{pet?.name}</li>
             ))}
           </ul>
-        )}
+        )} */}
         <SectionSeperator />
         <PageIndicator />
         <CreateSection isTwo={isTwos} myRefTwo={myRefTwos} />
