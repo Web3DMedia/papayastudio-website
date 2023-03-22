@@ -13,29 +13,29 @@ const CreateSection = ({ myRefTwo, isTwo }: IProps) => {
 
   const activityData = [
     {
-      name: "Animations",
-      text: "Are you in need of a high-quality 2D or 3D design and animation service? Look no further! Our team of expert designers and animators will bring your ideas to life with stunning visuals and animations that will captivate your audience.",
+      name: "Video Production",
+      text: "Elevate your brand with our expert video production services. Whether you need a promotional video, a product demo, corporate training video, commercials to ads . With state-of-the-art equipment and a passion for storytelling, we will bring your vision to life.",
     },
     {
       name: "Studio Rentals",
-      text: "Our design studio facilities in Lagos provide rentals and creative production globally, and we are ready to take up your next big project mainstream. Trust us for effective media experiences.",
+      text: "Create captivating content in our state-of-the-art studio rentals. Whether you're hosting a talk show, recording a podcast, or producing any other type of media, our versatile spaces are designed to meet your needs.",
     },
-
+    {
+      name: "Animations",
+      text: " Bring your ideas to life with our professional animation services. Our team of skilled animators specialize in 2D and 3D animation, offering unparalleled creativity and attention to detail. Let us help you tell your story through stunning visuals.",
+    },
     {
       name: "Motion Design",
       text: "We create captivating animations that bring your brand to life. From explainer videos to animated logos, our expert motion design services will help you stand out in a competitive market. Contact us to see how we can elevate your brand.",
     },
     {
       name: "Event Coverage",
-      text: "Capture the essence of your event with our professional coverage services. Whether it's a corporate conference, a music festival or training, we provide high-quality coverage that captures the atmosphere and excitement of the occasion.",
+      text: "Capture the essence of your event with our professional coverage services. Whether it's a corporate conference or training, we provide high-quality coverage that captures the atmosphere and excitement of the occasion.",
     },
-    {
-      name: "Video Production",
-      text: "We specialize in creating compelling visual content that captures your brand's essence and communicates your message effectively to your audience. Whether you need a promotional video, a product demo or a corporate training video, we have the expertise and experience to bring your vision to life.",
-    },
+
     {
       name: "Branding",
-      text: "Having a purposeful brand is a game-changer for your company, a brand that aligns with your values and attracts your dream clients. Our studio offers branding deals and we strive to make your brand stand out. Creative problem solution for brands and product.",
+      text: "Having a purposeful brand is a game-changer for your company, a brand that aligns with your values and attracts your dream clients. Our studio offers branding deals and we strive to make your brand stand out.",
     },
   ];
   return (
@@ -62,7 +62,7 @@ const CreateSection = ({ myRefTwo, isTwo }: IProps) => {
               className=" text-[24px] leading-tight md:text-[32px] lg:text-[36px] xl:text-[48px] font-[500] pl-5 md:pl-14 lg:pl-0 md:pt-12 xl:pt-0"
               data-aos="fade-up"
             >
-              Our <br /> services include:
+              Our services include:
             </h2>
             <div
               className=" w-full grid grid-cols-1 lg:grid-cols-2 gap-4 mt-5 px-5 md:pl-14 lg:pl-[0px] lg:px-0"

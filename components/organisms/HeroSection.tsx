@@ -4,6 +4,7 @@ import { Link as BtnLink } from "react-scroll";
 import styled, { keyframes } from "styled-components";
 import { useState, useEffect } from "react";
 import BgTransfromation from "../atoms/BgTransfromation";
+import Link from "next/link";
 
 interface IProps {
   myRefOne: any;
@@ -202,17 +203,12 @@ const HeroSection = ({ myRefOne }: IProps) => {
               <p className="md:w-11/12 lg:max-w-[550px] xl:pl-16 3xl:pl-0 xl:max-w-[800px] 4xl:max-w-[780px] text-[16px] sm:text-[18px] lg:text-[20px] xl:text-[24px] font-normal text-backboneText leading-[30px] px-2 pt-9 sm:pt-0">
                 Our passion for innovative design and cutting-edge technology sets us apart from other design studios. Let us help you create a lasting impact with our creative and effective digital solutions.
               </p>
-              {/*@ts-ignore */}
-              <BtnLink
-                to="productsSection"
-                spy={true}
-                smooth={true}
-                offset={50}
-                duration={500}
-                className="pb-[175px] pt-[15px] sm:pb-0 xl:pl-14 3xl:pl-0 flex items-center text-base xl:text-lg font-[500] mt-2   ml-2 w-[205px]"
+              <Link href="/our-works" passHref
               >
-                <BtnSpan className="cursor-dark">Our Works</BtnSpan>
-              </BtnLink>
+                <a className="pb-[175px] pt-[15px] sm:pb-0 xl:pl-14 3xl:pl-0 flex items-center text-base xl:text-lg font-[500] mt-2 cursor-dark ml-2 w-[135px]">
+                  <BtnSpan className="cursor-dark">Our Works</BtnSpan>
+                </a>
+              </Link>
             </div>
           </div>
 
