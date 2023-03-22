@@ -130,12 +130,11 @@ const client = createClient({
   projectId: "wp2qqfu9",
   dataset: "production",
   apiVersion: "2023-03-22",
-  // useCdn: true
+  useCdn: false
 });
 
 export async function getStaticProps() {
   const pets = await client.fetch(`*[_type == "pet"]`);
-  console.log(pets)
 
   return {
     props: {
