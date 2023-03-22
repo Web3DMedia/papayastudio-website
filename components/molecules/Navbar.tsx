@@ -79,7 +79,7 @@ const Navbar = ({ setIsMenuOpen, isOne, isTwo, isThree, change }: IProps) => {
                   what
                </NavLinks>
             </Link>
-            <Link href="/#OurWorks" passHref>
+            <Link href="/our-works" passHref>
                <NavLinks className="flex items-center font-[500] cursor-light xl:text-lg" >
                   <Image
                      src='/assets/orange-logo.svg'
