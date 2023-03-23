@@ -139,6 +139,7 @@ export async function getStaticProps() {
   return {
     props: {
       pets
-    }
+    },
+    revalidate: 5
   };
 }
