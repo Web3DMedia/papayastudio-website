@@ -17,7 +17,6 @@ import MetaTag from "../components/atoms/MetaTag";
 
 /** eslint-ignore react/react-in-jsx-scope */
 const Home = ({ pets }) => {
-  console.log(pets)
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false)
   const [isModal, setIsModal] = useState<boolean>(false)
   const [isOne, setIsOne] = useState<boolean>(false)
@@ -105,13 +104,13 @@ const Home = ({ pets }) => {
 
         {isModal && <Modal isModal={isModal} setIsModal={setIsModal}></Modal>}
         <HeroSection myRefOne={myRefOne} />
-        {pets.length > 0 && (
+        {/* {pets.length > 0 && (
           <ul>
             {pets.map((pet) => (
               <li key={pet._id}>{pet.name}</li>
             ))}
           </ul>
-        )}
+        )} */}
         <SectionSeperator />
         <PageIndicator />
         <CreateSection isTwo={isTwos} myRefTwo={myRefTwos} />
