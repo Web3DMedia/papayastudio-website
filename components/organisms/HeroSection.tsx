@@ -205,7 +205,7 @@ const HeroSection = ({ myRefOne }: IProps) => {
               </p>
               <Link href="/our-works" passHref
               >
-                <a className="pb-[175px] pt-[15px] sm:pb-0 xl:pl-14 3xl:pl-0 flex items-center text-base xl:text-lg font-[500] mt-2 cursor-dark ml-2 w-[135px]">
+                <a className="pb-[175px] pt-[15px] sm:pb-0 xl:pl-14 3xl:pl-0 flex items-center text-base xl:text-lg font-[500] mt-2 cursor-dark ml-2 w-[150px]">
                   <BtnSpan className="cursor-dark">Our Works</BtnSpan>
                 </a>
               </Link>
