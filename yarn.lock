@@ -653,6 +653,25 @@
     get-it "^8"
     rxjs "^7"
 
+"@sanity/client@^5.3.1":
+  version "5.3.1"
+  resolved "https://registry.yarnpkg.com/@sanity/client/-/client-5.3.1.tgz#c3fd97f2b40763f2bbd0a9c1daeb8a16f886f9c8"
+  integrity sha512-8xN0wQzUfzDXKXNWj3Kx9mU3tYXJ4OCKnKbT17rsJKvDcpx7tacm2waPYrDCqEkxmGgtoZa/knpbV1keSmpLGw==
+  dependencies:
+    "@sanity/eventsource" "5"
+    get-it "8"
+    rxjs "7"
+
+"@sanity/eventsource@5":
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/@sanity/eventsource/-/eventsource-5.0.0.tgz#45410c8259e0bb80b4e308e1872846439590805a"
+  integrity sha512-0ewT+BDzfiamHwitUfRcwsl/RREHjWv6VNZvQ8Q4OnnNKXfEEGXbWmqzof0okOTkp4XELgyliht4Qj28o9AU2g==
+  dependencies:
+    "@types/event-source-polyfill" "1.0.1"
+    "@types/eventsource" "1.1.11"
+    event-source-polyfill "1.0.31"
+    eventsource "2.0.2"
+
 "@sanity/eventsource@^4":
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/@sanity/eventsource/-/eventsource-4.0.0.tgz#ec9c352e87a2f79db8d25eedbb009ced21ec2e97"
@@ -675,6 +694,11 @@
     simple-get "^4.0.1"
     split2 "^4.1.0"
     throttle-debounce "^5.0.0"
+
+"@sanity/image-url@^1.0.2":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@sanity/image-url/-/image-url-1.0.2.tgz#1ff7259e9bad6bfca4169f21c53a4123f6ac78c3"
+  integrity sha512-C4+jb2ny3ZbMgEkLd7Z3C75DsxcTEoE+axXQJsQ75ou0AKWGdVsP351hqK6mJUUxn5HCSlu3vznoh7Yljye4cQ==
 
 "@sanity/preview-kit@^1.3":
   version "1.3.6"
@@ -776,10 +800,15 @@
   resolved "https://registry.npmjs.org/@types/aos/-/aos-3.0.4.tgz"
   integrity sha512-mna6Jd6bdK1NpwarLopGvXOgUoCfj0470IwLxuVOFDElTGI0JTd7xSGQ0AjbAEnHErC/b3fA9t2uB3IXVKmckA==
 
-"@types/event-source-polyfill@^1.0.1":
+"@types/event-source-polyfill@1.0.1", "@types/event-source-polyfill@^1.0.1":
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/@types/event-source-polyfill/-/event-source-polyfill-1.0.1.tgz#ffcb4ca17bc35bc1ca5d3e047fe833292bb73c32"
   integrity sha512-dls8b0lUgJ/miRApF0efboQ9QZnAm7ofTO6P1ILu8bRPxUFKDxVwFf8+TeuuErmNui6blpltyr7+eV72dbQXlQ==
+
+"@types/eventsource@1.1.11":
+  version "1.1.11"
+  resolved "https://registry.yarnpkg.com/@types/eventsource/-/eventsource-1.1.11.tgz#a2c0bfd0436b7db42ed1b2b2117f7ec2e8478dc7"
+  integrity sha512-L7wLDZlWm5mROzv87W0ofIYeQP5K2UhoFnnUyEWLKM6UBb0ZNRgAqp98qE5DkgfBXdWfc2kYmw9KZm4NLjRbsw==
 
 "@types/hoist-non-react-statics@*":
   version "3.3.1"
@@ -2378,7 +2407,7 @@ event-source-polyfill@1.0.25:
   resolved "https://registry.yarnpkg.com/event-source-polyfill/-/event-source-polyfill-1.0.25.tgz#d8bb7f99cb6f8119c2baf086d9f6ee0514b6d9c8"
   integrity sha512-hQxu6sN1Eq4JjoI7ITdQeGGUN193A2ra83qC0Ltm9I2UJVAten3OFVN6k5RX4YWeCS0BoC8xg/5czOCIHVosQg==
 
-event-source-polyfill@^1.0.31:
+event-source-polyfill@1.0.31, event-source-polyfill@^1.0.31:
   version "1.0.31"
   resolved "https://registry.yarnpkg.com/event-source-polyfill/-/event-source-polyfill-1.0.31.tgz#45fb0a6fc1375b2ba597361ba4287ffec5bf2e0c"
   integrity sha512-4IJSItgS/41IxN5UVAVuAyczwZF7ZIEsM1XAoUzIHA6A+xzusEZUutdXz2Nr+MQPLxfTiCvqE79/C8HT8fKFvA==
@@ -2388,7 +2417,7 @@ eventemitter2@5.0.1:
   resolved "https://registry.npmjs.org/eventemitter2/-/eventemitter2-5.0.1.tgz"
   integrity sha1-YZegldX7a1folC9v1+qtY6CclFI=
 
-eventsource@2, eventsource@^2.0.2:
+eventsource@2, eventsource@2.0.2, eventsource@^2.0.2:
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/eventsource/-/eventsource-2.0.2.tgz#76dfcc02930fb2ff339520b6d290da573a9e8508"
   integrity sha512-IzUmBGPR3+oUG9dUeXynyNmf91/3zUSJg1lCktzKw47OXuhco54U3r9B7O4XX+Rb1Itm9OZ2b0RkTs10bICOxA==
@@ -2714,7 +2743,7 @@ get-intrinsic@^1.0.2, get-intrinsic@^1.1.0, get-intrinsic@^1.1.1:
     has "^1.0.3"
     has-symbols "^1.0.1"
 
-get-it@^8:
+get-it@8, get-it@^8:
   version "8.0.11"
   resolved "https://registry.yarnpkg.com/get-it/-/get-it-8.0.11.tgz#c489c46eba3e7b94e411e4e831ae34696662086c"
   integrity sha512-x7AlRWAWJKDve52Sk9Nkki1Ne9TwH2cZ4KknCswya88nM6IGoK/kDKv+FKAzBZ1QzhZGqTaqb+qzrectzYdTHw==
@@ -3677,6 +3706,13 @@ next-recaptcha-v3@^1.0.3:
     next "^12.2.5"
     react "^18.2.0"
     react-dom "^18.2.0"
+
+next-sanity-image@^6.0.0:
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/next-sanity-image/-/next-sanity-image-6.0.0.tgz#38968317aa294fd06c7ff2e9df64ef8c8d0b3255"
+  integrity sha512-U4fl8CfJRgsUh3sJGoxgVrJ4bovCZDmWsjwowzDYbf66ci97j1mjdB+i3pz2CGFz//qbfmG8v2XL6dsYx1xFBg==
+  dependencies:
+    "@sanity/image-url" "^1.0.2"
 
 next-sanity@^4.1.5:
   version "4.1.5"
@@ -4872,7 +4908,7 @@ run-parallel@^1.1.9:
   dependencies:
     queue-microtask "^1.2.2"
 
-rxjs@^7:
+rxjs@7, rxjs@^7:
   version "7.8.0"
   resolved "https://registry.yarnpkg.com/rxjs/-/rxjs-7.8.0.tgz#90a938862a82888ff4c7359811a595e14e1e09a4"
   integrity sha512-F2+gxDshqmIub1KdvZkaEfGDwLNpPvk9Fs6LD/MyQxNgMds/WH9OdDDXOmxUZpME+iSK3rQCctkL0DYyytUqMg==
