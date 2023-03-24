@@ -78,28 +78,28 @@ const HeroSection = ({ myRefOne }: IProps) => {
               {/*Large screen*/}
               { }
               {textNumber === 1 && (
-                <Span className="hidden xl:pl-16 3xl:pl-0  sm:block sm:text-[35px] md:text-[40px] lg:text-[60px] xl:text-[65px] 4xl:text-[80px] duration-500 ease-in font-[500]">
+                <Span className="hidden xl:pl-16 3xl:pl-0  sm:block sm:text-[35px] md:text-[40px] lg:text-[60px] xl:text-[62px] 4xl:text-[80px] duration-500 ease-in font-[500]">
                   Innovative{" "}
                   <TextSpan width="100%">design</TextSpan>{" "}
                   <TextSpan width="85%">studio</TextSpan>
                 </Span>
               )}
               {textNumber === 2 && (
-                <SpanTwo className="hidden xl:pl-16 3xl:pl-0 sm:block sm:text-[35px] md:text-[40px] lg:text-[60px] xl:text-[65px] 4xl:text-[80px] duration-500 ease-in font-[500]">
+                <SpanTwo className="hidden xl:pl-16 3xl:pl-0 sm:block sm:text-[35px] md:text-[40px] lg:text-[60px] xl:text-[62px] 4xl:text-[80px] duration-500 ease-in font-[500]">
                   Intersection{" "}
                   <TextSpan width="100%">of</TextSpan>{" "}
                   <TextSpan width="85%">design</TextSpan>
                 </SpanTwo>
               )}
               {textNumber === 3 && (
-                <SpanThree className="hidden xl:pl-16 3xl:pl-0 sm:block sm:text-[35px] md:text-[40px] lg:text-[60px] xl:text-[65px] 4xl:text-[80px] duration-500 ease-in font-[500]">
+                <SpanThree className="hidden xl:pl-16 3xl:pl-0 sm:block sm:text-[35px] md:text-[40px] lg:text-[60px] xl:text-[62px] 4xl:text-[80px] duration-500 ease-in font-[500]">
                   Dedicated{" "}
                   <TextSpan width="100%">to</TextSpan>{" "}
                   <TextSpan width="85%">providing</TextSpan>
                 </SpanThree>
               )}
               {textNumber === 4 && (
-                <SpanFour className="hidden xl:pl-16 3xl:pl-0 sm:block sm:text-[35px] md:text-[40px] lg:text-[60px] xl:text-[65px] 4xl:text-[80px] duration-500 ease-in font-[500]">
+                <SpanFour className="hidden xl:pl-16 3xl:pl-0 sm:block sm:text-[35px] md:text-[40px] lg:text-[60px] xl:text-[62px] 4xl:text-[80px] duration-500 ease-in font-[500]">
                   Peak{" "}
                   <TextSpan width="100%">Storytelling</TextSpan>{" "}
                   <TextSpan width="85%">that</TextSpan>
@@ -146,7 +146,7 @@ const HeroSection = ({ myRefOne }: IProps) => {
               </SpanTwo>
               {textNumber === 3 && (
                 <SpanThree className="block sm:hidden text-[30px] font-[500] ml-4">
-                  <TextSpan width="85%">providing</TextSpan>{" "}Outstanding
+                  <TextSpan width="85%">providing</TextSpan>{" "}outstanding
                 </SpanThree>
               )}
               {textNumber === 4 && (
@@ -188,22 +188,22 @@ const HeroSection = ({ myRefOne }: IProps) => {
 
               {/*Large screen*/}
               {textNumber === 1 && (
-                <Span className="hidden sm:block sm:text-[35px] md:text-[40px] lg:text-[60px] xl:text-[65px] 4xl:text-[80px] duration-500 ease-in font-[500]">
+                <Span className="hidden sm:block sm:text-[35px] md:text-[40px] lg:text-[60px] xl:text-[62px] 4xl:text-[80px] duration-500 ease-in font-[500]">
                   for brands & creators.
                 </Span>
               )}
               {textNumber === 2 && (
-                <SpanTwo className="hidden sm:block sm:text-[35px] md:text-[40px] lg:text-[60px] xl:text-[65px] 4xl:text-[80px] duration-500 ease-in font-[500]">
+                <SpanTwo className="hidden sm:block sm:text-[35px] md:text-[40px] lg:text-[60px] xl:text-[62px] 4xl:text-[80px] duration-500 ease-in font-[500]">
                   animation and technology.
                 </SpanTwo>
               )}
               {textNumber === 3 && (
-                <SpanThree className="hidden sm:block sm:text-[35px] md:text-[40px] lg:text-[60px] xl:text-[65px] 4xl:text-[80px] duration-500 ease-in font-[500]">
-                  Outsanding client services.
+                <SpanThree className="hidden sm:block sm:text-[35px] md:text-[40px] lg:text-[60px] xl:text-[62px] 4xl:text-[80px] duration-500 ease-in font-[500]">
+                  outstanding client services.
                 </SpanThree>
               )}
               {textNumber === 4 && (
-                <SpanFour className="hidden sm:block sm:text-[35px] md:text-[40px] lg:text-[60px] xl:text-[65px] 4xl:text-[80px] duration-500 ease-in font-[500]">
+                <SpanFour className="hidden sm:block sm:text-[35px] md:text-[40px] lg:text-[60px] xl:text-[62px] 4xl:text-[80px] duration-500 ease-in font-[500]">
                   exceeds expectations.
                 </SpanFour>
               )}
