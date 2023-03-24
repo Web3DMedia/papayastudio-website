@@ -58,7 +58,7 @@ const OurWorks = () => {
                 "Super engaging explainer video created for Blocasset contributors launch.",
             btnTxt: "View Work",
             cardImage: "/assets/bloccasset-contributors.jpeg",
-            Links: "/case-study/5",
+            Links: "",
         },
     ];
     return (
