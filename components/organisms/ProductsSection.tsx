@@ -16,8 +16,6 @@ interface IProps {
 
 const ProductsSection = ({ myRefThree, isThree }: IProps) => {
   const [img, setImg] = useState<Number>(1);
-  console.log(myRefThree)
-  console.log(isThree)
   useEffect(() => {
     const interval = setInterval(() => {
       setImg((bg) => (Number(bg) + Number(1) > 3 ? 1 : Number(bg) + Number(1)));
