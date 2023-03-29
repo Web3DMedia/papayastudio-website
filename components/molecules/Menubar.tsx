@@ -64,7 +64,7 @@ const Menubar = ({ isMenuOpen, setIsMenuOpen, isOne, isTwo, isThree }: IProps) =
                      </a>
                   </ScrollLink>
                </Link>
-               <Link href="/#OurWorks" passHref>
+               <Link href="/our-works" passHref>
                   {/*@ts-ignore */}
                   <ScrollLink to="productsSection" spy={true} smooth={true} offset={50} duration={500} onClick={closeMenuBar}>
                      <a className="flex items-center font-bold xl:text-lg cursor-light text-[#FFFFFF] mb-10">

@@ -29,12 +29,40 @@ const CaseStudy = () => {
                     {/*@ts-ignore */}
                     <Menubar isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} isThree={true} />
                     <BgTransfromation></BgTransfromation>
-                    <div className="mx-1 h-[150px] absolute top-20 left-7 hidden lg:block ">
-                        <TrackerOutter isTwo={isTwo} />
-                        <TrackerInner />
+                    <div className="absolute left-6 top-40 hidden lg:block flex-col items-center">
+                        <h4 className="text-xs font-normal">01</h4>
+                        <div className="relative mx-1 h-[150px] my-2">
+                            <TrackerOutter isTwo={isTwo} />
+                            <TrackerInner />
+                        </div>
+                        <h4 className="text-xs font-normal">04</h4>
                     </div>
                     <div className="pt-[112px] pb-[164px] 2xl:w-[1440px] m-auto">
+                        <div className="pt-[74px] sm:mt-[144px] relative w-full h-full mx-auto md:px-0 lg:px-20 xl:px-40 4xl:py-20">
+                            <p
+                                className=" absolute left-5 md:left-14 -top-[20px] sm:-top-[60px] lg:left-20 xl:left-[80px] md:-top-[50px] xl:-top-[115px] 4xl:-top-16 4xl:left-20 font-normal text-xs uppercase"
+                                data-aos="fade-up"
+                            >
+                                CASE STUDY
+                            </p>
 
+
+                            <div className='flex justify-between items-center mb-[50px]'>
+                                <h1 className='text-backboneText w-[100%] sm:text-[35px] md:text-[40px] lg:text-[60px] xl:text-[72px] font-[500]'>eGator</h1>
+                                <p className='w-[95%] text-backboneText1 sm:text-[18px] leading-[27px] font-[400]'>Our render farm technology offers high-quality renders that are 10X faster than the average speed. web3 creators can now render their large project files at our studio.</p>
+                            </div>
+
+                            <div className='flex justify-between'>
+                                <div className=''>
+                                    <h1 className='text-backboneText text-[20px] font-[500] pb-[12px]'>Project type</h1>
+                                    <p className='text-backboneText1 text-[18px] font-[400]'>Logo Design, Animation and Mobile Design</p>
+                                </div>
+                                <div>
+                                    <h1 className='text-backboneText text-[20px] font-[500] pb-[12px]' >Date</h1>
+                                    <p className='text-backboneText1  text-[18px] font-[400]'>September 2023</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <Footer />
                 </main>
