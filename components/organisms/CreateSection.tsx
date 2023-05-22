@@ -29,7 +29,7 @@ const CreateSection = ({ myRefTwo, isTwo }: IProps) => {
       text: "We create captivating animations that bring your brand to life. From explainer videos to animated logos, our expert motion design services will help you stand out in a competitive market. Contact us to see how we can elevate your brand.",
     },
     {
-      name: "Event Coverage",
+      name: "Live Video Production",
       text: "Capture the essence of your event with our professional coverage services. Whether it's a corporate conference or training, we provide high-quality coverage that captures the atmosphere and excitement of the occasion.",
     },
 

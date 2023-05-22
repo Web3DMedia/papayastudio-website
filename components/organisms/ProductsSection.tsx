@@ -45,30 +45,22 @@ const ProductsSection = ({ myRefThree, isThree }: IProps) => {
   const products = [
     {
       cardH2: "Assets for Blocasset",
-      cardP:
-        "Hundreds of digital asset and designs created for Web3 designers and digital creators.",
+      tags: ["3D Animation"],
       btnTxt: "View Work",
       cardImage: `/assets/bloccassets-asset.png`,
       Links: "https://blocasset.com/",
     },
     {
       cardH2: "DesignBant Show",
-      cardP:
-        "Highly interactive and engaging videos produced in-house for Papayas YouTube Channel.",
+      tags: ["Video Production", "Podcast"],
       btnTxt: "View Work",
       cardImage: "/assets/design-bant.jpeg",
       Links: "https://www.youtube.com/channel/UCKcRE2nLh_iN2yrfygPr_SA",
     },
     {
-      cardH2: "Papito and Papina Mascot",
-      cardP: "Our signature brand mascot for Papayas studio.",
-      btnTxt: "View Work",
-      cardImage: "/assets/papito-and-papina-new-two.jpeg",
-      Links: "",
-    },
-    {
       cardH2: "Avatars",
       cardP: "Stunning custom-made avatars for days!",
+      tags: [],
       btnTxt: "View Work",
       cardImage: `/assets/backbone${img}1.jpeg`,
       Links: "",
@@ -77,6 +69,7 @@ const ProductsSection = ({ myRefThree, isThree }: IProps) => {
       cardH2: "Blocasset Contributor Launch Video",
       cardP:
         "Super engaging explainer video created for Blocasset contributors launch.",
+      tags: [],
       btnTxt: "View Work",
       cardImage: "/assets/bloccasset-contributors.jpeg",
       Links: "",

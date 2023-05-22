@@ -195,7 +195,7 @@ const ContactForm = () => {
 						{error && <h2 className="text-red-700">{error}</h2>}
 						<button
 							type="submit"
-							className="mt-[24px] mb-[84px] bg-[#FF6661] w-full md:w-3/6 cursor-pointer text-center py-3 md:py-5 text-[#FFFFFF] font-bold text-[16px] rounded-xl"
+							className="mt-[24px] mb-[84px] bg-[#FF6661] w-full md:w-3/6 cursor-dark text-center py-3 md:py-5 text-[#FFFFFF] font-bold text-[16px] rounded-xl"
 						>
 							{loading ? (
 								<ClipLoader size={20} color="#FFF" />

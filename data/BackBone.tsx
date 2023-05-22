@@ -24,9 +24,65 @@ const data = [
     },
     {
         id: 4,
-        title: 'Film & Video Director',
+        title: 'Creative Director',
         name: 'Adeyinka Ibidapo',
         image: '/assets/backbone51.jpg',
+        linkedin: 'https://www.linkedin.com/in/adeyinka-ibidapo/'
+    },
+    {
+        id: 5,
+        title: ' Designer',
+        name: 'Anthony Onyia',
+        image: '/assets/backbone61.webp',
+        linkedin: 'https://www.linkedin.com/in/adeyinka-ibidapo/'
+    },
+    {
+        id: 6,
+        title: 'Marketer',
+        name: 'Chiamaka Ugah',
+        image: '/assets/backbone71.webp',
+        linkedin: 'https://www.linkedin.com/in/adeyinka-ibidapo/'
+    },
+    {
+        id: 7,
+        title: 'Designer',
+        name: 'Glory Falake',
+        image: '/assets/backbone81.jpg',
+        linkedin: 'https://www.linkedin.com/in/adeyinka-ibidapo/'
+    },
+    {
+        id: 8,
+        title: 'Designer',
+        name: 'Fatima Adbulkadir',
+        image: '/assets/backbone91.jpg',
+        linkedin: 'https://www.linkedin.com/in/adeyinka-ibidapo/'
+    },
+    {
+        id: 9,
+        title: 'Developer',
+        name: 'Martins Ikpe',
+        image: '/assets/backbone101.jpg',
+        linkedin: 'https://www.linkedin.com/in/adeyinka-ibidapo/'
+    },
+    {
+        id: 10,
+        title: 'Developer',
+        name: 'Joshua Magani',
+        image: '/assets/backbone112.jpg',
+        linkedin: 'https://www.linkedin.com/in/adeyinka-ibidapo/'
+    },
+    {
+        id: 11,
+        title: 'Designer',
+        name: 'Leon Johnson',
+        image: '/assets/backbone111.webp',
+        linkedin: 'https://www.linkedin.com/in/adeyinka-ibidapo/'
+    },
+    {
+        id: 12,
+        title: 'Designer',
+        name: 'Feranmi Oladepo',
+        image: '/assets/backbone113.webp',
         linkedin: 'https://www.linkedin.com/in/adeyinka-ibidapo/'
     },
 ]

@@ -38,7 +38,7 @@ const DropdownMenu = ({ setUserDropdown, userDropdown, options }) => {
         ))}
       </div>
       {optionSelect && (
-        <OptionContainer className="absolute overflow-y-scroll customInfoWrapper h-[135px] sm:h-[180px] z-10 bg-white w-full">
+        <OptionContainer className="absolute overflow-y-scroll customInfoWrapper h-[135px] sm:h-[140px] z-10 bg-white w-full">
           {options.map((option: any, index: any) => (
             <Option
               className="flex justify-between pr-[16px]"
