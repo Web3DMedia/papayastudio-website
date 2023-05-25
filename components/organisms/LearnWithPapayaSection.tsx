@@ -1,6 +1,7 @@
 import React, { useState, useEffect, SetStateAction, Dispatch } from 'react'
 import styled from 'styled-components'
 import Image from 'next/image'
+import Link from 'next/link'
 interface Props {
     imgs: String,
 }
@@ -140,7 +141,7 @@ background-position-y: -50px;
 width:217px;
 height: 237px;
 background-size: 1050px;
-background-position-x: 310px;
+background-position-x: 350px;
 background-position-y: -95px;
 }
 
@@ -163,7 +164,7 @@ width:167px;
 height: 192px;
 background-size: 900px;
 background-position-x: 270px;
-background-position-y: -85px;
+background-position-y: -95px;
 }
 
 @media (max-width: 850px) {
@@ -185,7 +186,7 @@ background-position-y: -15px;
 width:167px;
 height: 192px;
 background-size: 750px;
-background-position-x: 255px;
+background-position-x: 225px;
 background-position-y: -55px;
 }
 
@@ -249,7 +250,7 @@ width:521px;
 height: 237px;    
 background-size: 1050px;
 background-repeat: no-repeat;
-background-position-x: 15px;
+background-position-x: 0px;
 background-position-y: -370px;
 }
 &:nth-child(2){
@@ -257,7 +258,7 @@ width:517px;
 height: 285px;
 background-size: 1050px;
 background-repeat: no-repeat;
-background-position-x: -540px;
+background-position-x: -470px;
 background-position-y: -370px;
 }
 
@@ -266,14 +267,14 @@ background-position-y: -370px;
             width:427px;
             height:193px;
             background-size: 900px;
-            background-position-x: -30px;
+            background-position-x: -50px;
             background-position-y: -320px;
         }
         &:nth-child(2){
             width:421px;
             height: 232px;
             background-size: 800px;
-            background-position-x: -380px;
+            background-position-x: -370px;
             background-position-y: -270px;
         }
     }
@@ -283,14 +284,14 @@ background-position-y: -370px;
 width:521px;
 height: 237px;
 background-size: 800px;
-background-position-x: -15px;
+background-position-x: -0px;
 background-position-y: -275px;
 }
 &:nth-child(2){
 width:517px;
 height: 285px;
 background-size: 800px;
-background-position-x: -350px;
+background-position-x: -380px;
 background-position-y: -275px;
 }
 
@@ -332,11 +333,11 @@ interface IProps {
 }
 
 const LearnWithPapayaSection = ({ setIsModal, myRefFour, isFour }: IProps) => {
-    const [bg, setBg] = useState<Number>(1)
+    const [bg, setBg] = useState<Number>(4)
 
     useEffect(() => {
         const interval = setInterval(() => {
-            setBg(bg => Number(bg) + Number(1) > 3 ? 1 : Number(bg) + Number(1))
+            setBg(bg => Number(bg) + Number(1) > 6 ? 4 : Number(bg) + Number(1))
         }, 5000)
         return () => {
             clearInterval(interval)
@@ -356,15 +357,21 @@ const LearnWithPapayaSection = ({ setIsModal, myRefFour, isFour }: IProps) => {
                     <TrackerInner />
                 </div>
                 <div className='2xl:w-[1440px] m-auto' data-aos="fade-right">
-                    <FirstText className='pt-24 pl-5 md:pl-14 lg:pl-20 pb-12 text-primary3' >LEARN <br />  WITH PAPAYAS</FirstText>
+                    <FirstText className='pt-24 pl-5 md:pl-14 lg:pl-20 pb-12 text-primary3' >STUDIO</FirstText>
 
-                    <SecondText className='pl-5 md:pl-14 lg:pl-20 xl:pl-40 text-learnpapayatext'>Join Our Learning Academy</SecondText>
+                    <SecondText className='pl-5 md:pl-14 lg:pl-20 xl:pl-40 text-learnpapayatext'>Book your Studio Session</SecondText>
 
                     <div className='pl-5 md:pl-14 lg:pl-20 xl:pl-56 pt-11'>
-                        <ThirdText className=' text-learnpapayatext2 pb-5'>Learn from professionals across the animation and tech industry and build expert skills. We help creative talent build expert skills by training, hiring, and empowering them.</ThirdText>
+                        <ThirdText className=' text-learnpapayatext2 pb-5'>
 
-                        <ThirdText className=' text-learnpapayatext2'>Ready to kickstart your career?</ThirdText>
-                        <FourthText className=' text-learnpapayatext cursor-dark mb-4' onClick={() => Modal()}>Join waitlist </FourthText>
+                            We are dedicated to providing you with a space to unleash your creativity and bring your ideas to life.</ThirdText>
+
+                        {/* <ThirdText className=' text-learnpapayatext2'>Ready to kickstart your career?</ThirdText> */}
+                        {/* <FourthText className=' text-learnpapayatext cursor-dark mb-4' onClick={() => Modal()}>Join waitlist </FourthText> */}
+
+                        <Link href="/book-a-session">
+                            <FourthText className=' text-learnpapayatext cursor-dark mb-4'>Book a session</FourthText>
+                        </Link>
 
                     </div>
 

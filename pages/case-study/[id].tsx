@@ -5,7 +5,7 @@ import Navbar from "../../components/molecules/Navbar";
 import Menubar from "../../components/molecules/Menubar";
 import Footer from "../../components/organisms/Footer";
 import SectionSeperator from "../../components/molecules/SectionSeperator";
-
+import Image from 'next/image'
 import MetaTag from '../../components/atoms/MetaTag'
 import styled from 'styled-components';
 import BgTransfromation from '../../components/atoms/BgTransfromation';
@@ -14,6 +14,7 @@ import PageIndicator from '../../components/molecules/PageIndicator';
 const CaseStudy = () => {
     const router = useRouter()
     const { id } = router.query
+    console.log(router.query)
     const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false)
     const isTwo = false
     return (
@@ -21,7 +22,7 @@ const CaseStudy = () => {
             post: {id}
             <div>
 
-                <MetaTag title='Our Works' />
+                <MetaTag title={`${id}`} />
                 <main className="w-full relative overflow-hidden">
                     <PageIndicator />
                     {/*@ts-ignore */}
@@ -47,20 +48,37 @@ const CaseStudy = () => {
                             </p>
 
 
-                            <div className='flex justify-between items-center mb-[50px]'>
-                                <h1 className='text-backboneText w-[100%] sm:text-[35px] md:text-[40px] lg:text-[60px] xl:text-[72px] font-[500]'>eGator</h1>
-                                <p className='w-[95%] text-backboneText1 sm:text-[18px] leading-[27px] font-[400]'>Our render farm technology offers high-quality renders that are 10X faster than the average speed. web3 creators can now render their large project files at our studio.</p>
-                            </div>
+                            <div className='px-[20px] xl:px-0'>
+                                <div className='flex justify-between items-center mb-[50px]'>
+                                    <h1 className='text-backboneText w-[100%] text-[35px] md:text-[40px] lg:text-[60px] xl:text-[72px] font-[500]'>eGator</h1>
+                                    <p className='w-[95%] text-backboneText1 sm:text-[18px] leading-[27px] font-[400]'>{ }</p>
+                                </div>
 
-                            <div className='flex justify-between'>
-                                <div className=''>
-                                    <h1 className='text-backboneText text-[20px] font-[500] pb-[12px]'>Project type</h1>
-                                    <p className='text-backboneText1 text-[18px] font-[400]'>Logo Design, Animation and Mobile Design</p>
+                                <div className='flex justify-between flex-col sm:flex-row gap-y-[24px]'>
+                                    <div className=''>
+                                        <h1 className='text-backboneText text-[20px] font-[500] pb-[12px]'>Project type</h1>
+                                        <p className='text-backboneText1 text-[15px]text-[18px] font-[400]'>Logo Design, Animation and Mobile Design</p>
+                                    </div>
+                                    <div>
+                                        <h1 className='text-backboneText text-[20px] font-[500] pb-[12px]' >Date</h1>
+                                        <p className='text-backboneText1  text-[18px] font-[400]'>September 2023</p>
+                                    </div>
                                 </div>
-                                <div>
-                                    <h1 className='text-backboneText text-[20px] font-[500] pb-[12px]' >Date</h1>
-                                    <p className='text-backboneText1  text-[18px] font-[400]'>September 2023</p>
+
+                                <div className={`relative overflow-hidden rounded-[24px] mt-[70px]  sm:mt-[131px]`}>
+                                    <Image src="/assets/egator-one.png" width={1200} height={696} />
                                 </div>
+
+                                <div className={`relative overflow-hidden mt-[31px]`}>
+                                    <Image src="/assets/egator-two.png" width={1200} height={696} />
+                                </div>
+
+                                <div className={`relative overflow-hidden mt-[-10px]`}>
+                                    <Image src="/assets/egator-three.png" width={1200} height={696} />
+                                </div>
+
+                                <h1 className='text-backboneText text-[20px] font-[500] pb-[32px] sm:pb-[63px] pt-[40px] sm:pt-[90px]'>High fidelity transformations of sketches</h1>
+
                             </div>
                         </div>
                     </div>

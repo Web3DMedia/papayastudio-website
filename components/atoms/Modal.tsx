@@ -8,16 +8,23 @@ import axios from 'axios';
 
 interface IProps {
   setIsModal: Dispatch<SetStateAction<boolean>>
-  isModal: boolean
+  isModal: boolean,
+  userTime?: string,
+  userDate?: string,
+  setUserTime?: Dispatch<SetStateAction<string>>,
+  setUserDate?: Dispatch<SetStateAction<string>>,
+  bookasession?: any
+  error?: string,
+  messageIsSent?: boolean
+  setmessageIsSent?: Dispatch<SetStateAction<boolean>>
 
 }
 
-const Modal = ({ setIsModal, isModal }: IProps) => {
-  const [userMail, setUserMail] = useState<string>("");
-  const [userName, setUserName] = useState<string>("");
-  const [error, setError] = useState<string>("");
-  const [messageIsSent, setmessageIsSent] = useState<boolean>(false);
-  const { executeRecaptcha } = useGoogleReCaptcha();
+const Modal = ({ setIsModal, isModal, messageIsSent, userTime, userDate, error, setmessageIsSent, setUserDate, setUserTime, bookasession, }: IProps) => {
+
+  // const [error, setError] = useState<string>("");
+  // const [messageIsSent, setmessageIsSent] = useState<boolean>(false);
+  // const { executeRecaptcha } = useGoogleReCaptcha();
   const [notification, setNotification] = useState("");
   const [loading, setLoading] = useState<boolean>(false);
 
@@ -31,7 +38,7 @@ const Modal = ({ setIsModal, isModal }: IProps) => {
   //     },
   //     body: JSON.stringify({
   //       name: userName,
-  //       email: userMail,
+  //       email: userTime,
   //       gRecaptchaToken: gReCaptchaToken,
   //     }),
   //   })
@@ -46,54 +53,40 @@ const Modal = ({ setIsModal, isModal }: IProps) => {
   //     });
   // };
 
-  const addToWaitlist = async (e: { preventDefault: () => void }) => {
-    e.preventDefault();
-    setError("");
+  // const addToWaitlist = async (e: { preventDefault: () => void }) => {
+  //   e.preventDefault();
+  //   setError("");
 
-    if (userMail.trim() === "") {
-      setError("Please fill all the fields");
-      return true;
-    }
-    if (userName.trim() === "") {
-      return true;
-    }
-    setLoading(true);
-    axios
-      .post("/api/waitlist/", { email: userMail, name: userName })
-      .then((res) => {
-        setUserMail("");
-        setUserName("");
-        setmessageIsSent(true);
-      })
-      .catch((err) => {
-        if (err?.message === "Request failed with status code 500") {
-          setmessageIsSent(true);
-          return;
-        }
+  //   if (userTime.trim() === "") {
+  //     setError("Please fill all the fields");
+  //     return true;
+  //   }
+  //   if (userName.trim() === "") {
+  //     return true;
+  //   }
+  //   setLoading(true);
+  //   axios
+  //     .post("/api/waitlist/", { email: userTime, name: userName })
+  //     .then((res) => {
+  //       setUserTime("");
+  //       setUserName("");
+  //       setmessageIsSent(true);
+  //     })
+  //     .catch((err) => {
+  //       if (err?.message === "Request failed with status code 500") {
+  //         setmessageIsSent(true);
+  //         return;
+  //       }
 
-        setError(
-          err.response.data?.message ?? "Something went wrong! try again later"
-        );
-      })
-      .finally(() => {
-        setLoading(false);
-      });
-  };
-
-  // const handleSumitForm = useCallback(
-  //   (e) => {
-  //     e.preventDefault();
-  //     if (!executeRecaptcha) {
-  //       console.log("Execute recaptcha not yet available");
-  //       return;
-  //     }
-  //     executeRecaptcha("enquiryFormSubmit").then((gReCaptchaToken) => {
-  //       console.log(gReCaptchaToken, "response Google reCaptcha server");
-  //       submitEnquiryForm(gReCaptchaToken);
+  //       setError(
+  //         err.response.data?.message ?? "Something went wrong! try again later"
+  //       );
+  //     })
+  //     .finally(() => {
+  //       setLoading(false);
   //     });
-  //   },
-  //   [executeRecaptcha]
-  // );
+  // };
+
 
   const RemoveModal = () => {
     document.body.style.overflow = "visible";
@@ -102,51 +95,50 @@ const Modal = ({ setIsModal, isModal }: IProps) => {
   return (
     <FormContainer>
       {messageIsSent === false && (
-        <div className="bg-white w-[330px] sm:w-[664px] px-8 sm:px-16 py-10 rounded-[16px] md:rounded-[32px] z-20 fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+        <div className="bg-white w-[330px] sm:w-[664px] px-8 sm:px-16 py-10 rounded-[16px] md:rounded-[32px] z-90 fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
           <div>
             <div className="text-left">
               <div className='flex justify-end pb-[10px]'>
                 <Image src="/assets/close-button.png" width={15} height={15} onClick={() => RemoveModal()} alt="close-button" />
               </div>
               <h2 className="text-[#002F31] text-[30px] md:text-[40px] font-bold leading-[46px]">
-                Join our Waitlist
+                Wait a sec!
               </h2>
               <p className="text-[#4A5567] text-[16px] font-normal leading-[24px] pt-5 w-full md:w-10/12">
-                Be on our waitlist to get to be the first to enroll when we start
-                the academy, only limited slots available
+                Pleas select the date and time you will like to use our Studio
               </p>
             </div>
-            <form className="mt-[33px]" onSubmit={addToWaitlist}>
+            <form className="mt-[33px]">
               <div className="form-group flex flex-col">
                 <label
-                  htmlFor="userName"
+                  htmlFor="userTime"
                   className="mb-2 text-[#4A5567] text-[14px] font-bold"
                 >
-                  Full name
+                  Time
                 </label>
                 <Input
                   className="h-[50px] sm:h-[56px] text-[14px] md:text-[16px]"
-                  name="userName"
-                  type="text"
-                  value={userName}
-                  onChange={(e) => setUserName(e.target.value)}
+                  name="userTime"
+                  type="time"
+                  value={userTime}
+                  onChange={(e) => setUserTime(e.target.value)}
                   placeholder="Enter your name"
                 />
 
               </div>
               <div className="form-group flex flex-col my-5">
                 <label
-                  htmlFor="userMail"
+                  htmlFor="userDate"
                   className="mb-2 text-[#4A5567] text-[14px] font-bold"
                 >
-                  Email address
+                  Date
                 </label>
                 <Input
                   className="h-[50px] sm:h-[56px] text-[14px] md:text-[16px]"
-                  name="userMail"
-                  value={userMail}
-                  type="email"
-                  onChange={(e) => setUserMail(e.target.value)}
+                  name="userDate"
+                  value={userDate}
+                  type="date"
+                  onChange={(e) => setUserDate(e.target.value)}
                   placeholder="Enter your email"
                 />
               </div>
@@ -156,9 +148,10 @@ const Modal = ({ setIsModal, isModal }: IProps) => {
               {notification && <p className="text-red-700 pt-2">{notification}</p>}
               <button
                 type="submit"
+                onClick={bookasession}
                 className="mt-[24px] bg-[#FF6661] w-full md:w-[204px] cursor-dark py-3 md:py-5 text-[#FFFFFF] font-bold text-[16px] rounded-xl"
               >
-              Join Waitlist
+                Join Waitlist
               </button>
             </form>
           </div>
@@ -179,15 +172,16 @@ overflow:scroll;
 background: rgba(0, 0, 0, 0.16);
 backdrop-filter: blur(8px);
 width:100%;
+top:0;
 height:100%;
-z-index: 15;
+z-index: 50;
 &::-webkit-scrollbar {
   width: 0;
 `;
 
 const Input = styled.input`
   border: 1px solid #e3e8ef;
-  padding-left: 10px;
+  padding:0 10px;
   outline: none;
   border-radius: 12px;
   font-size: 18px;
@@ -197,7 +191,7 @@ const Input = styled.input`
     box-shadow: 0px 0px 0px 4px #e1e1fe;
     transition: all 0.1s ease-out;
   }
-
+  
   &::placeholder {
     font-weight: 400;
     font-size: 14px;
@@ -206,6 +200,8 @@ const Input = styled.input`
   }
 `;
 
+const InputDateTime = styled.input`
+`
 
 export default Modal
 

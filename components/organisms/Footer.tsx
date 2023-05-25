@@ -235,7 +235,7 @@ const Footer = () => {
           </Div>
           <div className="flex items-center pb-7 pt-12 md:pt-0">
             <ThirdText className="text-footerText2">
-              © 2023 Web3D Media Inc. All rights reserved
+              ©{new Date().getFullYear()} Web3D Media Inc. All rights reserved
             </ThirdText>
             <div className="hidden sm:flex sm:items-center">
               <Circle></Circle>
