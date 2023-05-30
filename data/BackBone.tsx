@@ -37,13 +37,6 @@ const data = [
         linkedin: 'https://www.linkedin.com/in/adeyinka-ibidapo/'
     },
     {
-        id: 6,
-        title: 'Marketer',
-        name: 'Chiamaka Ugah',
-        image: '/assets/backbone71.webp',
-        linkedin: 'https://www.linkedin.com/in/adeyinka-ibidapo/'
-    },
-    {
         id: 7,
         title: 'Designer',
         name: 'Glory Falake',
@@ -78,13 +71,13 @@ const data = [
         image: '/assets/backbone111.webp',
         linkedin: 'https://www.linkedin.com/in/adeyinka-ibidapo/'
     },
-    {
-        id: 12,
-        title: 'Designer',
-        name: 'Feranmi Oladepo',
-        image: '/assets/backbone113.webp',
-        linkedin: 'https://www.linkedin.com/in/adeyinka-ibidapo/'
-    },
+    // {
+    //     id: 12,
+    //     title: 'Designer',
+    //     name: 'Feranmi Oladepo',
+    //     image: '/assets/backbone113.webp',
+    //     linkedin: 'https://www.linkedin.com/in/adeyinka-ibidapo/'
+    // },
 ]
 
 export default data

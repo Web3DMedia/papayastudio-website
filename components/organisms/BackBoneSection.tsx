@@ -120,7 +120,7 @@ const BackBoneSection = ({ myRefFive, isFive }: IProps) => {
                 <div className='w-[100px] xl:w-[110px]'>
 
                   {
-                    person.id > 3 ? (
+                    person.id > 4 ? (
                       <FifthText className='text-backboneText w-[30px] flex items-center pt-1 opacity-30'> <img src='/assets/linkedln.png' alt='Linkedln' className='mr-2 w-4 h-4' />  Linkedin <span className='ml-2'>&#8594;</span> </FifthText>
 
                     ) : (<Link href={person.linkedin}>
