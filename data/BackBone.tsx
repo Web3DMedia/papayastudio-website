@@ -37,13 +37,6 @@ const data = [
         linkedin: 'https://www.linkedin.com/in/adeyinka-ibidapo/'
     },
     {
-        id: 6,
-        title: 'Marketer',
-        name: 'Chiamaka Ugah',
-        image: '/assets/backbone71.webp',
-        linkedin: 'https://www.linkedin.com/in/adeyinka-ibidapo/'
-    },
-    {
         id: 7,
         title: 'Designer',
         name: 'Glory Falake',
