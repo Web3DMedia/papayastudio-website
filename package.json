@@ -17,6 +17,7 @@
     "@popperjs/core": "^2.11.7",
     "@sendgrid/client": "^7.7.0",
     "@supabase/supabase-js": "^1.35.6",
+        "@types/gtag.js": "^0.0.12",
     "@types/nuka-carousel": "^4.4.6",
     "@types/react-google-recaptcha": "^2.1.5",
     "@types/react-scroll": "^1.8.3",

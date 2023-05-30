@@ -377,13 +377,13 @@ const LearnWithPapayaSection = ({ setIsModal, myRefFour, isFour }: IProps) => {
 
                     <Im data-aos="fade-up">
                         <div className='flex items-end'>
-                            <Span imgs={`/assets/Learn${bg}.jpeg`}></Span>
-                            <Span imgs={`/assets/Learn${bg}.jpeg`}></Span>
-                            <Span imgs={`/assets/Learn${bg}.jpeg`}></Span>
+                            <Span imgs={`/assets/Learn${bg}.webp`}></Span>
+                            <Span imgs={`/assets/Learn${bg}.webp`}></Span>
+                            <Span imgs={`/assets/Learn${bg}.webp`}></Span>
                         </div>
                         <div className='flex pt-[13px] md:pt-[20px] xl:pt-[34px]'>
-                            <SpanTwo imgs={`/assets/Learn${bg}.jpeg`}></SpanTwo>
-                            <SpanTwo imgs={`/assets/Learn${bg}.jpeg`}></SpanTwo>
+                            <SpanTwo imgs={`/assets/Learn${bg}.webp`}></SpanTwo>
+                            <SpanTwo imgs={`/assets/Learn${bg}.webp`}></SpanTwo>
                         </div>
                     </Im>
 
