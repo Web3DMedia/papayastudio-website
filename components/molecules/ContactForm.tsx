@@ -84,7 +84,7 @@ const ContactForm = () => {
 			};
 
 			await axios.post(
-				`${process.env.NEXT_PUBLIC_AXIOS_BACKEND_BASE_URL}/papaya/create`,
+				`${process.env.NEXT_PUBLIC_AXIOS_BACKEND_BASE_URL}/papaya/contact/create`,
 				formData,
 				config
 			);
