@@ -20,6 +20,7 @@ const BookASessionForm = () => {
     ];
     //opening hours 9-5 mon fri
     const [userName, setUserName] = useState<string>("");
+    const [userPhone, setUserPhone] = useState<string>("");
     const [userMail, setUserMail] = useState<string>("");
     const [userDropdown, setUserDropdown] = useState<string>("Studio Rentals");
     const [userPackages, setUserPackages] = useState<string>("2 hours");
@@ -45,13 +46,15 @@ const BookASessionForm = () => {
                 },
             };
             const formData = {
+                name: userName,
                 email: userMail,
-                phone_number: userName,
+                phone_number: userPhone,
                 interest: userDropdown,
                 package: userPackages,
                 session_start_time: userTime,
                 session_date: userDate,
             };
+            console.log(formData)
             if (userTime === "" || userDate === "") {
                 setError("Please fill all the fields");
             } else {
@@ -59,6 +62,7 @@ const BookASessionForm = () => {
                 setmessageIsSent(true)
                 setUserName("")
                 setUserMail("")
+                setUserPhone("")
                 setUserDate("")
                 setUserDropdown("Studio Rentals")
                 setUserPrice("350")
@@ -103,6 +107,23 @@ const BookASessionForm = () => {
                         <form className="mt-[33px]">
                             <div className="form-group flex flex-col mt-6">
                                 <label
+                                    htmlFor="userName"
+                                    className="mb-2 text-[#4A5567] text-[14px] font-bold"
+                                >
+                                    Name
+                                </label>
+                                <Input
+                                    className="h-[50px] sm:h-[56px] mb-2 text-[14px] md:text-[16px]"
+                                    name="userName"
+                                    value={userName}
+                                    type="name"
+                                    onChange={(e) => setUserName(e.target.value)}
+                                    placeholder="Enter your name"
+                                />
+                            </div>
+
+                            <div className="form-group flex flex-col mt-6">
+                                <label
                                     htmlFor="userMail"
                                     className="mb-2 text-[#4A5567] text-[14px] font-bold"
                                 >
@@ -116,22 +137,21 @@ const BookASessionForm = () => {
                                     onChange={(e) => setUserMail(e.target.value)}
                                     placeholder="Enter your email"
                                 />
-
                             </div>
 
                             <div className="form-group flex flex-col mt-6">
                                 <label
-                                    htmlFor="userName"
+                                    htmlFor="userPhone"
                                     className="mb-2 text-[#4A5567] text-[14px] font-bold"
                                 >
                                     Phone Number
                                 </label>
                                 <Input
                                     className="h-[50px] sm:h-[56px] mb-2 text-[14px] md:text-[16px]"
-                                    name="userName"
-                                    value={userName}
+                                    name="userPhone"
+                                    value={userPhone}
                                     type="number"
-                                    onChange={(e) => setUserName(e.target.value)}
+                                    onChange={(e) => setUserPhone(e.target.value)}
                                     placeholder="Enter your number"
                                 />
                             </div>
