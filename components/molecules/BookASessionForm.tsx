@@ -93,7 +93,7 @@ const BookASessionForm = () => {
     return (
         <>
 
-            {isModal && <Modal isModal={isModal} messageIsSent={messageIsSent} setmessageIsSent={setmessageIsSent} error={error} setIsModal={setIsModal} userTime={userTime} userDate={userDate} setUserDate={setUserDate} setUserTime={setUserTime} bookasession={bookasession}></Modal>}
+            {isModal && <Modal loading={loading} isModal={isModal} messageIsSent={messageIsSent} setmessageIsSent={setmessageIsSent} error={error} setIsModal={setIsModal} userTime={userTime} userDate={userDate} setUserDate={setUserDate} setUserTime={setUserTime} bookasession={bookasession}></Modal>}
             <FormContainer className="bg-white md:w-[600px]  xl:w-[650px] px-4 sm:px-10 py-5 rounded-t-[32px]">
                 {(
                     <div>

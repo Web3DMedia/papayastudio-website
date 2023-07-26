@@ -84,14 +84,14 @@ const ContactForm = () => {
 			};
 
 			await axios.post(
-				`${process.env.NEXT_PUBLIC_AXIOS_BACKEND_BASE_URL}/papaya/create`,
+				`${process.env.NEXT_PUBLIC_AXIOS_BACKEND_BASE_URL}/papayas/contact/create`,
 				formData,
 				config
 			);
 			setLoading(false);
 			setmessageIsSent(true);
 		} catch (error) {
-			console.log(error);
+			setError(error);
 			setLoading(false);
 		}
 	};
