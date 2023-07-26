@@ -58,22 +58,23 @@ const BookASessionForm = () => {
             if (userTime === "" || userDate === "") {
                 setError("Please fill all the fields");
             } else {
-                setLoading(false);
-                setmessageIsSent(true)
-                setUserName("")
-                setUserMail("")
-                setUserPhone("")
-                setUserDate("")
-                setUserDropdown("Studio Rentals")
-                setUserPrice("350")
-                setUserPackages("2 hours")
-                setUserTime("")
+
             }
             await axios.post(
                 `${process.env.NEXT_PUBLIC_BACKEND_BASE_URL}/api/papayas/booking`,
                 formData,
                 config
             );
+            setmessageIsSent(true)
+            setLoading(false);
+            setUserName("")
+            setUserMail("")
+            setUserPhone("")
+            setUserDate("")
+            setUserDropdown("Studio Rentals")
+            setUserPrice("350")
+            setUserPackages("2 hours")
+            setUserTime("")
 
         } catch (error) {
             setLoading(false);

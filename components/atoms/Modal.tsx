@@ -151,7 +151,7 @@ const Modal = ({ setIsModal, isModal, messageIsSent, userTime, userDate, error, 
                 onClick={bookasession}
                 className="mt-[24px] bg-[#FF6661] w-full md:w-[204px] cursor-dark py-3 md:py-5 text-[#FFFFFF] font-bold text-[16px] rounded-xl"
               >
-                Join Waitlist
+                Book Session
               </button>
             </form>
           </div>
