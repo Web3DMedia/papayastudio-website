@@ -58,22 +58,23 @@ const BookASessionForm = () => {
             if (userTime === "" || userDate === "") {
                 setError("Please fill all the fields");
             } else {
-                setLoading(false);
-                setmessageIsSent(true)
-                setUserName("")
-                setUserMail("")
-                setUserPhone("")
-                setUserDate("")
-                setUserDropdown("Studio Rentals")
-                setUserPrice("350")
-                setUserPackages("2 hours")
-                setUserTime("")
+
             }
             await axios.post(
                 `${process.env.NEXT_PUBLIC_BACKEND_BASE_URL}/api/papayas/booking`,
                 formData,
                 config
             );
+            setmessageIsSent(true)
+            setLoading(false);
+            setUserName("")
+            setUserMail("")
+            setUserPhone("")
+            setUserDate("")
+            setUserDropdown("Studio Rentals")
+            setUserPrice("350")
+            setUserPackages("2 hours")
+            setUserTime("")
 
         } catch (error) {
             setLoading(false);
@@ -92,7 +93,7 @@ const BookASessionForm = () => {
     return (
         <>
 
-            {isModal && <Modal isModal={isModal} messageIsSent={messageIsSent} setmessageIsSent={setmessageIsSent} error={error} setIsModal={setIsModal} userTime={userTime} userDate={userDate} setUserDate={setUserDate} setUserTime={setUserTime} bookasession={bookasession}></Modal>}
+            {isModal && <Modal loading={loading} isModal={isModal} messageIsSent={messageIsSent} setmessageIsSent={setmessageIsSent} error={error} setIsModal={setIsModal} userTime={userTime} userDate={userDate} setUserDate={setUserDate} setUserTime={setUserTime} bookasession={bookasession}></Modal>}
             <FormContainer className="bg-white md:w-[600px]  xl:w-[650px] px-4 sm:px-10 py-5 rounded-t-[32px]">
                 {(
                     <div>

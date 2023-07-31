@@ -91,7 +91,7 @@ const ContactForm = () => {
 			setLoading(false);
 			setmessageIsSent(true);
 		} catch (error) {
-			console.log(error);
+			setError(error);
 			setLoading(false);
 		}
 	};

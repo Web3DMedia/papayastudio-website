@@ -5,6 +5,7 @@ import MessageConfirmationTwo from '../molecules/MessageConfirmationTwo';
 import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
 import Script from 'next/script';
 import axios from 'axios';
+import { ClipLoader } from 'react-spinners';
 
 interface IProps {
   setIsModal: Dispatch<SetStateAction<boolean>>
@@ -13,20 +14,20 @@ interface IProps {
   userDate?: string,
   setUserTime?: Dispatch<SetStateAction<string>>,
   setUserDate?: Dispatch<SetStateAction<string>>,
-  bookasession?: any
+  bookasession?: any,
   error?: string,
-  messageIsSent?: boolean
-  setmessageIsSent?: Dispatch<SetStateAction<boolean>>
+  messageIsSent?: boolean,
+  setmessageIsSent?: Dispatch<SetStateAction<boolean>>,
+  loading?: boolean
 
 }
 
-const Modal = ({ setIsModal, isModal, messageIsSent, userTime, userDate, error, setmessageIsSent, setUserDate, setUserTime, bookasession, }: IProps) => {
+const Modal = ({ setIsModal, isModal, messageIsSent, userTime, userDate, error, setmessageIsSent, setUserDate, setUserTime, bookasession, loading }: IProps) => {
 
   // const [error, setError] = useState<string>("");
   // const [messageIsSent, setmessageIsSent] = useState<boolean>(false);
   // const { executeRecaptcha } = useGoogleReCaptcha();
   const [notification, setNotification] = useState("");
-  const [loading, setLoading] = useState<boolean>(false);
 
 
   // const submitEnquiryForm = (gReCaptchaToken: string) => {
@@ -151,7 +152,11 @@ const Modal = ({ setIsModal, isModal, messageIsSent, userTime, userDate, error, 
                 onClick={bookasession}
                 className="mt-[24px] bg-[#FF6661] w-full md:w-[204px] cursor-dark py-3 md:py-5 text-[#FFFFFF] font-bold text-[16px] rounded-xl"
               >
-                Join Waitlist
+                {loading ? (
+                  <ClipLoader size={20} color="#FFF" />
+                ) : (
+                  "Book Session"
+                )}
               </button>
             </form>
           </div>

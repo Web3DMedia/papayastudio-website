@@ -66,7 +66,7 @@ const data = [
     },
     {
         id: 11,
-        title: 'Designer',
+        title: 'Studio Manager',
         name: 'Leon Johnson',
         image: '/assets/backbone111.webp',
         linkedin: 'https://www.linkedin.com/in/adeyinka-ibidapo/'
