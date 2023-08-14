@@ -12,7 +12,7 @@ import PageIndicator from "../components/molecules/PageIndicator";
 import Modal from "../components/atoms/Modal";
 import { useRef } from 'react'
 // import { createClient } from "next-sanity";
-import { createClient } from "@sanity/client"
+// import { createClient } from "@sanity/client"
 import MetaTag from "../components/atoms/MetaTag";
 
 /** eslint-ignore react/react-in-jsx-scope */
@@ -125,19 +125,19 @@ const Home = ({ pets }) => {
 }
 
 export default Home
-const client = createClient({
-  projectId: "wp2qqfu9",
-  dataset: "production",
-  apiVersion: "2023-03-22",
-  useCdn: false
-});
+// const client = createClient({
+//   projectId: "wp2qqfu9",
+//   dataset: "production",
+//   apiVersion: "2023-03-22",
+//   useCdn: false
+// });
 
 export async function getStaticProps() {
-  const pets = await client.fetch(`*[_type == "pet"]`);
+  // const pets = await client.fetch(`*[_type == "pet"]`);
 
   return {
     props: {
-      pets
+      // pets
     },
     revalidate: 5
   };

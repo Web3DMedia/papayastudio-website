@@ -190,7 +190,7 @@ const Footer = () => {
               </Link>
             </div>
 
-            <div className="flex justify-between pr-10 md:block md:pr-12 xl:pr-32">
+            <div className="flex justify-between pr-10 md:block md:pr-12 xl:pr-0">
               <SocialContainer className="md:pb-5">
                 <Socials >
                   <Link href="https://www.youtube.com/channel/UCKcRE2nLh_iN2yrfygPr_SA">
@@ -233,17 +233,24 @@ const Footer = () => {
               </SocialContainer>
             </div>
           </Div>
-          <div className="flex items-center pb-7 pt-12 md:pt-0">
-            <ThirdText className="text-footerText2">
-              © 2023 Web3D Media Inc. All rights reserved
-            </ThirdText>
-            <div className="hidden sm:flex sm:items-center">
-              <Circle></Circle>
-              <Link href="/legal">
-                <a className="cursor-light">
-                  <ThirdText className="text-footerText3 z-10">Legal</ThirdText>
-                </a>
-              </Link>
+          <div className=" lg:flex justify-between items-center pb-7 pt-12 md:pt-0">
+            <div className="pb-[20px] relative z-[4]">
+              <ThirdText className="text-footerText2 leading-[28px]">
+                28B Gateway Crescent, Gateway Zone Estate, Magodo, <br className="hidden sm:block" /> GRA Phase1 Lagos.
+              </ThirdText>
+            </div>
+            <div className="flex items-center">
+              <ThirdText className="text-footerText2">
+                ©{new Date().getFullYear()} Web3D Media Inc. All rights reserved
+              </ThirdText>
+              <div className="hidden sm:flex sm:items-center">
+                <Circle></Circle>
+                <Link href="/legal">
+                  <a className="cursor-light">
+                    <ThirdText className="text-footerText3 z-10">Legal</ThirdText>
+                  </a>
+                </Link>
+              </div>
             </div>
           </div>
           <Aya>

@@ -10,7 +10,7 @@ const TextHeader = styled.h1`
   font-weight: 700;
   font-size: 24px;
   line-height: 46px;
-  padding: 24px 0;
+  padding: 24px 0 0;
   mix-blend-mode: normal;
   color: var(--MessageSent);
 `;
@@ -20,7 +20,7 @@ const TextParagraph = styled.p`
   line-height: 24px;
   mix-blend-mode: normal;
   color: var(--MessageSentTwo);
-  width: 80%;
+  width: 90%;
   margin: auto;
   padding: 0px 0 90px 0;
 `;
@@ -59,9 +59,16 @@ const MessageConfirmationTwo = ({ setmessageIsSent, isModal, setIsModal }: IProp
           ></Image></div>}
         {/*@ts-ignore */}
         {/* {hide === false && <Player src={MessageConfirmed} background="transparent" style={{ width: "120px", height: "120px" }} autoplay speed={1} keepLastFrame></Player>} */}
-        <TextParagraph className={isModal ? "pt-8" : ""}>
-<div>Thank you <br/> You have been added to our waitlist</div>
-          
+
+        <TextHeader>Booking Submitted</TextHeader>
+        <TextParagraph>
+          We’ve recorded your details  and will be intouch, in the meantime,
+          checkout our design assets market place{" "}
+          <Link href="https://blocasset.com/">
+            <a target="_blank" className="text-primary1">
+              Blocasset.
+            </a>
+          </Link>
         </TextParagraph>
       </div>
     </div>

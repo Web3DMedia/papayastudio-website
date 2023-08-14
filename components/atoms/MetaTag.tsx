@@ -2,7 +2,7 @@ import Head from "next/head";
 import React, { FC } from "react";
 
 interface MetaTagProps {
-    title?: string;
+    title?: string
     desc?: string;
     image?: string;
 }

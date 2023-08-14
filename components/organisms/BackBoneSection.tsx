@@ -55,11 +55,6 @@ font-weight: 400;
 font-size: 16px;
 line-height: 160%;
 width:max-content;
-:hover {
-    color: var(--PrimaryOne);
-    transform:scale(1.1);
-    margin-left:5px;
-}
 @media (max-width: 1024px) {
 font-size: 14px;
 }`
@@ -109,7 +104,7 @@ const BackBoneSection = ({ myRefFive, isFive }: IProps) => {
 
         <SecondText className='pl-6 md:pl-20 xl:pl-40 text-backboneText' data-aos="fade-up">Meet The Super Heroes</SecondText>
 
-        <Person className='flex pt-12 xl:pt-20 pl-5 md:pl-14 lg:pl-20 xl:pl-40 overflow-x-scroll pb-24' data-aos="fade-up">
+        <Person className='flex pt-12 xl:pt-20 ml-[20px] md:ml-14 lg:ml-20 xl:pl-0 overflow-x-scroll pb-24 xl:ml-40' data-aos="fade-up">
           {data.map(person => {
             return (
               <div key={person.id} className='mr-6'>
@@ -125,12 +120,12 @@ const BackBoneSection = ({ myRefFive, isFive }: IProps) => {
                 <div className='w-[100px] xl:w-[110px]'>
 
                   {
-                    person.id === 5 ? (
+                    person.id > 4 ? (
                       <FifthText className='text-backboneText w-[30px] flex items-center pt-1 opacity-30'> <img src='/assets/linkedln.png' alt='Linkedln' className='mr-2 w-4 h-4' />  Linkedin <span className='ml-2'>&#8594;</span> </FifthText>
 
                     ) : (<Link href={person.linkedin}>
                       <a target="_blank" className='cursor-light'>
-                        <FifthText className='text-backboneText w-[30px] flex items-center pt-1'> <img src='/assets/linkedln.png' alt='Linkedln' className='mr-2 w-4 h-4' loading="lazy" />  Linkedin <span className='ml-2'>&#8594;</span> </FifthText>
+                        <FifthText className='text-backboneText w-[30px] flex items-center pt-1 hover:text-primary1 hover:scale-110 hover:ml-[5px]'> <img src='/assets/linkedln.png' alt='Linkedln' className='mr-2 w-4 h-4' loading="lazy" />  Linkedin <span className='ml-2'>&#8594;</span> </FifthText>
                       </a>
                     </Link>)
                   }
