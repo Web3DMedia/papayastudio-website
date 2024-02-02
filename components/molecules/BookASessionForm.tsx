@@ -8,22 +8,27 @@ import Modal from "../atoms/Modal";
 
 const BookASessionForm = () => {
     const options = [
-        { name: "Studio Rentals" },
-        { name: "Video Podcast" },
+        { name: "Studio Rental" },
+        { name: "Video Podcast Production" },
     ];
 
-    const Packages = [
-        { name: "2 hours" }, //350
-        { name: "4 hours" }, //600
-        { name: "8 hours" }, //950
-        { name: "12 hours" }, //1500 
+    const rentalPackages = [
+        { name: "1 hour" },
+        { name: "5 hours" },
+        { name: "10 hours" }
+    ];
+    const videoPackages = [
+        { name: "2 hours" },
+        { name: "4 hours" },
+        { name: "6 hours" },
+        { name: "8 hours" },
     ];
     //opening hours 9-5 mon fri
     const [userName, setUserName] = useState<string>("");
     const [userPhone, setUserPhone] = useState<string>("");
     const [userMail, setUserMail] = useState<string>("");
-    const [userDropdown, setUserDropdown] = useState<string>("Studio Rentals");
-    const [userPackages, setUserPackages] = useState<string>("2 hours");
+    const [userServiceDescription, setUserServiceDescription] = useState<string>("Studio Rental");
+    const [userPackages, setUserPackages] = useState<string>("");
     const [userMessage, setUserMessage] = useState<string>("");
     const [userPrice, setUserPrice] = useState<string>("350");
     const [userTime, setUserTime] = useState<string>("");
@@ -49,7 +54,7 @@ const BookASessionForm = () => {
                 name: userName,
                 email: userMail,
                 phone_number: userPhone,
-                interest: userDropdown,
+                interest: userServiceDescription,
                 package: userPackages,
                 session_start_time: userTime,
                 session_date: userDate,
@@ -71,7 +76,7 @@ const BookASessionForm = () => {
             setUserMail("")
             setUserPhone("")
             setUserDate("")
-            setUserDropdown("Studio Rentals")
+            setUserServiceDescription("Studio Rentals")
             setUserPrice("350")
             setUserPackages("2 hours")
             setUserTime("")
@@ -82,14 +87,20 @@ const BookASessionForm = () => {
     };
     const Modals = (e: { preventDefault: () => void }) => {
         e.preventDefault();
-        if (userName === "" || userMail === "" || userDropdown === "" || userPackages === "" || userPrice === "") {
+        if (userName === "" || userMail === "" || userServiceDescription === "" || userPackages === "" || userPrice === "") {
             setError("Please fill all the fields");
         } else {
             document.body.style.overflow = "hidden";
             setIsModal(true)
         }
     }
-
+    useEffect(() => {
+        if (userServiceDescription === "Studio Rental") {
+            setUserPackages("1 hour")
+        } else {
+            setUserPackages("2 hours")
+        }
+    }, [userServiceDescription])
     return (
         <>
 
@@ -102,7 +113,7 @@ const BookASessionForm = () => {
                                 Book a Studio Session
                             </h2>
                             <p className="text-[#4A5567] text-[16px] font-normal leading-[24px]">
-                                Fill the form below to book a session with us at Papayas Studio
+                                Book your podcast recording session today. Each booking is per day; feel free to book multiple days or reach out with any questions. For editing services, please contact us for a personalized quote
                             </p>
                         </div>
                         <form className="mt-[33px]">
@@ -160,14 +171,14 @@ const BookASessionForm = () => {
 
                             <div className="form-group flex flex-col mt-6">
                                 <label
-                                    htmlFor="userDropdown"
+                                    htmlFor="userServiceDescription"
                                     className="mb-2 text-[#4A5567] text-[14px] font-bold"
                                 >
                                     Service Description
                                 </label>
                                 <DropdownMenu
-                                    setUserDropdown={setUserDropdown}
-                                    userDropdown={userDropdown}
+                                    setUserDropdown={setUserServiceDescription}
+                                    userDropdown={userServiceDescription}
                                     options={options}
                                 ></DropdownMenu>
                             </div>
@@ -182,7 +193,7 @@ const BookASessionForm = () => {
                                 <DropdownMenu
                                     setUserDropdown={setUserPackages}
                                     userDropdown={userPackages}
-                                    options={Packages}
+                                    options={userServiceDescription === "Studio Rental" ? rentalPackages : videoPackages}
                                 ></DropdownMenu>
                             </div>
                             <div className="form-group flex flex-col mt-6">
@@ -192,13 +203,21 @@ const BookASessionForm = () => {
                                 >
                                     Price
                                 </label>
-                                <Input
+                                {userServiceDescription === "Studio Rental" && <Input
                                     className="h-[50px] sm:h-[56px] mb-2 text-[14px] md:text-[16px] text-[#6A7D88]"
                                     name="userPrice"
-                                    value={`$${userPackages === "2 hours" && " 350" || userPackages === "4 hours" && " 600" || userPackages === "8 hours" && " 950" || userPackages === "12 hours" && " 1500"}`}
-                                    type="email"
+                                    value={`₦${userPackages === "1 hour" && " 100,000" || userPackages === "5 hours" && " 480,00" || userPackages === "10 hours" && " 980,00"}`}
+                                    type="text"
                                     readOnly
-                                />
+                                />}
+                                {userServiceDescription === "Video Podcast Production" &&
+                                    <Input
+                                        className="h-[50px] sm:h-[56px] mb-2 text-[14px] md:text-[16px] text-[#6A7D88]"
+                                        name="userPrice"
+                                        value={`₦${userPackages === "2 hours" && " 120,000" || userPackages === "4 hours" && " 220,000" || userPackages === "6 hours" && " 460,000" || userPackages === "8 hours" && " 940,000"}`}
+                                        type="text"
+                                        readOnly
+                                    />}
                                 <p className="text-[#9CA3AF] text-xs font-medium">
                                     Fixed price for {userPackages} package
                                 </p>
