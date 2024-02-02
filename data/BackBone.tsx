@@ -31,45 +31,31 @@ const data = [
     },
     {
         id: 5,
-        title: ' Designer',
-        name: 'Anthony Onyia',
+        title: 'Motion Designer',
+        name: 'Feranmi Oladepo',
         image: '/assets/backbone61.webp',
-        linkedin: 'https://www.linkedin.com/in/adeyinka-ibidapo/'
+        linkedin: '/'
     },
     {
         id: 7,
         title: 'Designer',
         name: 'Glory Falake',
         image: '/assets/backbone81.jpg',
-        linkedin: 'https://www.linkedin.com/in/adeyinka-ibidapo/'
+        linkedin: '/'
     },
     {
         id: 8,
         title: 'Designer',
         name: 'Fatima Adbulkadir',
         image: '/assets/backbone91.jpg',
-        linkedin: 'https://www.linkedin.com/in/adeyinka-ibidapo/'
-    },
-    {
-        id: 9,
-        title: 'Developer',
-        name: 'Martins Ikpe',
-        image: '/assets/backbone101.jpg',
-        linkedin: 'https://www.linkedin.com/in/adeyinka-ibidapo/'
-    },
-    {
-        id: 10,
-        title: 'Developer',
-        name: 'Joshua Magani',
-        image: '/assets/backbone112.jpg',
-        linkedin: 'https://www.linkedin.com/in/adeyinka-ibidapo/'
+        linkedin: '/'
     },
     {
         id: 11,
         title: 'Studio Manager',
         name: 'Leon Johnson',
         image: '/assets/backbone111.webp',
-        linkedin: 'https://www.linkedin.com/in/adeyinka-ibidapo/'
+        linkedin: '/'
     },
     // {
     //     id: 12,
