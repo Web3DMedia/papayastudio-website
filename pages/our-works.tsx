@@ -173,7 +173,7 @@ const OurWorks = () => {
                             <Link href={product.Links} key={index}>
                                 <a target="_blank" className="bottom-0">
                                     <CardDiv className="ml-7 md:ml-14 lg:ml-7 h-[475px] cursor-light">
-                                        <div className="relative w-[300px] h-[300px] max-w-[300px] 4xl:w-[350px] 4xl:max-w-[386px] overflow-hidden rounded-[24px]">
+                                        <div className="relative w-[300px] h-[300px] 4xl:w-[350px] 4xl:max-w-[386px] overflow-hidden rounded-[24px]">
                                             <Image src={product.cardImage} layout="fill" objectFit='cover' alt="image" />
                                         </div>
                                         <div className="mt-[15px] ">

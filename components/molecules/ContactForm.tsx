@@ -8,7 +8,8 @@ import { ClipLoader } from "react-spinners";
 const ContactForm = () => {
 	const options = [
 		{ name: "Studio Rentals" },
-		{ name: "Event coverage" },
+		{ name: "Live Video Production" },
+		{ name: "Podcast Production" },
 		{ name: "Animations" },
 		{ name: "Motion Graphics" },
 		{ name: "Branding" },
@@ -188,7 +189,7 @@ const ContactForm = () => {
 									<strong className="font-semibold">
 										{messageNum}
 									</strong>{" "}
-									words remaining
+									characters remaining
 								</p>
 							)}
 						</div>
